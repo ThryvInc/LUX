@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LUX_Example' do
+  pod 'LUX', :path => '../'
+
+  target 'LUX_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
