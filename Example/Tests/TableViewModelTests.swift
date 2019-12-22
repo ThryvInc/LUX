@@ -1,0 +1,38 @@
+//
+//  TableViewModelTests.swift
+//  LUX_Tests
+//
+//  Created by Elliot Schrock on 12/10/19.
+//  Copyright © 2019 CocoaPods. All rights reserved.
+//
+
+import XCTest
+@testable import LUX
+import Combine
+import Prelude
+
+class TableViewModelTests: XCTestCase {
+    func testModels() {
+        var wasCalled = false
+        let subject = PassthroughSubject<[Human], Never>()
+        let vm = LUXModelTableViewModel(modelsPublisher: subject.eraseToAnyPublisher(), modelToItem: humanConfigurer >>> configurerToItem)
+        let cancel = vm.$models.sinkThrough { _ in
+            wasCalled = true
+        }
+        subject.send([Human]())
+        XCTAssert(wasCalled)
+        cancel.cancel()
+    }
+    
+    func testSections() {
+        var wasCalled = false
+        let subject = PassthroughSubject<[Human], Never>()
+        let vm = LUXModelTableViewModel(modelsPublisher: subject.eraseToAnyPublisher(), modelToItem: humanConfigurer >>> configurerToItem)
+        let cancel = vm.sectionsPublisher.sinkThrough { _ in
+            wasCalled = true
+        }
+        subject.send([neo])
+        XCTAssert(wasCalled)
+        cancel.cancel()
+    }
+}

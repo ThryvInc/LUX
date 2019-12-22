@@ -1,0 +1,44 @@
+{
+  "name": "LUX",
+  "version": "0.0.1",
+  "summary": "LUX contains everything you need to create a simple app.",
+  "description": "There's a bunch of really cool stuff in this pod, all targeted at letting you build the things that are *different* about your app, not the reproducing the same things over and over. Customizable, extendable, bare bones implementations of common UX components like splash, login, creds creation, commenting, and view/edit profile screens, an app delegate implementation that sets up fabric and crashlytics for you, a simple framework for handling user sessions, a material design based controller for table views... and more coming!",
+  "homepage": "https://github.com/ThryvInc/LUX",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Elliot": ""
+  },
+  "source": {
+    "git": "https://github.com/ThryvInc/LUX.git",
+    "tag": "0.0.1"
+  },
+  "social_media_url": "https://twitter.com/elliot_schrock",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "LUX/Classes/**/*.swift",
+  "resources": "LUX/**/*.xib",
+  "dependencies": {
+    "SSPullToRefresh": [
+
+    ],
+    "ISO8601DateFormatter": [
+
+    ],
+    "MultiModelTableViewDataSource": [
+
+    ],
+    "FunNet": [
+
+    ],
+    "THUXAuth": [
+
+    ],
+    "Prelude": [
+      "~> 3.0"
+    ]
+  }
+}

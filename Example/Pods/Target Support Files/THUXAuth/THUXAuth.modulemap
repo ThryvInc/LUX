@@ -1,0 +1,6 @@
+framework module THUXAuth {
+  umbrella header "THUXAuth-umbrella.h"
+
+  export *
+  module * { export * }
+}

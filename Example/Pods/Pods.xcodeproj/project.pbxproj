@@ -1,0 +1,2968 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01C34D62C16266656370992DCC4771B7 /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CC1B665343F46D1E0E868A7F95AA4 /* OHHTTPStubs.m */; };
+		01F39C33775C233B38F005D493E571AA /* LUXRefreshCallModelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A92DB897233046BFCEF54B72AF7059 /* LUXRefreshCallModelsManager.swift */; };
+		04781F42AAC7B68FB8724019F33FD7F7 /* OHHTTPStubsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 06EE3AE758E03F65E93048F25C3AF05B /* OHHTTPStubsResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		048FCB751C65CC7223A2BB7672C6B2EA /* NSURLRequest+HTTPBodyTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B64973E3EA80BB7D3AE7496C2EEE45C /* NSURLRequest+HTTPBodyTesting.m */; };
+		052B9CA4137A9492FDA7B171EA9E683A /* SSPullToRefreshSimpleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 278DB3D6752B7980B1FFDFD11B6AABF7 /* SSPullToRefreshSimpleContentView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		067A47236D3B02E553969C657DA167EE /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE8AAA67CB4F1FFD1AD2A054F29B21 /* Requests.swift */; };
+		092F325870E8E8EC0C18123C4EDD354F /* SSPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A33D5895BFA7F3B1C1EC93DAF1CFEC /* SSPullToRefreshDefaultContentView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0A3103A04DFEAB82627B71251F821220 /* LUXSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B594638A3AC673BDCCD24E59E8EF234 /* LUXSearchViewController.swift */; };
+		0BC94DE792BE98B3BF7EA03F1F3D1611 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90525B42553664D132BC29FB28747F3 /* Prelude.framework */; };
+		0D466A5A17DD8E67FF42B105E80A3159 /* LUXJsonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D719CAFF13B509BAB23D7A4D37F5A58 /* LUXJsonProvider.swift */; };
+		10B282A502B34394652CB2AFE216E93C /* MultiModelTableViewDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5349C25E1D38CEEEC7D7181016A70C1 /* MultiModelTableViewDataSourceSection.swift */; };
+		12D23B0E25810FD8662589F76C93415D /* THUXSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F89BB3C5F46D4ABFAB831951E5F39 /* THUXSessionManager.swift */; };
+		13A6F34D75968DF08FCB44E02797128E /* LUXCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1279C8506EC5C72598F73FE40AFD5DFB /* LUXCommentTableViewCell.xib */; };
+		164597592FD4239A4E2E8D7A775A0E26 /* FunNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6103B93817BEFB7FBC2B5D20F3CDC78 /* FunNet.framework */; };
+		17C09535CBDEB0C38672EBA67166B01A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		1988253E6AE9898BC16ABA086850C41D /* LUXTableViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F531428A777B1EE08401A5454FBF88D /* LUXTableViewDelegates.swift */; };
+		1AC1C657ED866A64AC19C5637BC2F5EE /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5FE41F012D3ED66D630691ACE1FC20 /* ISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1ADC875C464CF35A3DB1274A087C15F3 /* LUXMultiModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9A105F865B899E524F82283663D399 /* LUXMultiModelTableViewController.swift */; };
+		1D025501783EAE9C45B58CB0F7B52F25 /* NetworkErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7803EEC3FDFDFA448BA1F54AB3FB8E75 /* NetworkErrorHandler.swift */; };
+		1E4B1891EF6F05B82BD1708D3757B863 /* SSPullToRefreshSimpleContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5147848A4C7B00844D49832E7CBE2557 /* SSPullToRefreshSimpleContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FD0A51BDA1E543DFB0C27FAC81CFC03 /* FunNet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2990D86B8282524D318D4658CF9627E7 /* FunNet-dummy.m */; };
+		23C9718E17E6800B40FEA9748E437D60 /* FunNetCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2F547D84DAD59CE86A7BDCFB98F26 /* FunNetCall.swift */; };
+		25BE1B2EE40E4EFDDFF79FF1AFDF8E04 /* Prelude-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4690D15F9F382C8BFAC05FA0FBB0ABB /* Prelude-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		266E5472C3D8E21E95F07241A81A977B /* LUX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE766936F97AC2529EAB1ABA02442149 /* LUX-dummy.m */; };
+		26B62F3454FD70C2825B36DC3013E790 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		274555F21E1999A0CE9B276A2ACE1C97 /* LUXResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC31E2E73642062B6C13C5AB1D30C80 /* LUXResetPasswordViewController.xib */; };
+		2A6DB5F95C494A8B654BD80437CA2F7A /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90525B42553664D132BC29FB28747F3 /* Prelude.framework */; };
+		2B7A8D1E1CC191E6A880D6F80708BDA6 /* LUXSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A7CF10173630AF608E1C0D8DA2D043 /* LUXSearchTableViewCell.swift */; };
+		2BB6FA66F43F3ADC01C6BF2F50BC4FEB /* THUXAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070ABBA64F1EC88B51AEA3B51B30D8A /* THUXAuth-dummy.m */; };
+		2E0C5547A55E1192A59FF74D6076B700 /* Pods-LUX_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A7B00C6B13C155A06378788C600ECC /* Pods-LUX_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EC22786D0FDA19076B80DDC9DCA880E /* MultiModelTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B726DB6AEB34AE409D22D0B9FFABB1 /* MultiModelTableViewDataSource.swift */; };
+		318D8C1B22B766DCF8C145B9851837BA /* StubHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A63BC44F2FFA33DB297C8F0A3586C7 /* StubHolder.swift */; };
+		31C856689B2F81DD8AD284A1FB5FB7ED /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50238F0F407832414A27FE24A3AC1A2 /* ServerConfiguration.swift */; };
+		31D366EAD4C72CF87DF66587617EE545 /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288AFF519E19690C2BACEB6F6DB1E0A /* Prelude.swift */; };
+		33C99461D1BB434C1F938D35806A91D4 /* OHHTTPStubsMethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC34110B3A4B82A107C4044342C7BF4 /* OHHTTPStubsMethodSwizzling.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3452A68C62D5C34F8F42FF7D62200323 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		34BE91ADC0F11AA99484FE4BAD25D78A /* LUXRefreshableModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FFEF135521EF53E1E6212F89B6DB56 /* LUXRefreshableModelManager.swift */; };
+		36384D7935641C8EBE06A86B912671F5 /* OHHTTPStubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F4874CA67F5CF0F58A796086D334951 /* OHHTTPStubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36A37E018C2A83A063D1DCA47A8958FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		399B4E0D81035D6D3B2F4FC2EDDC58F2 /* PlaygroundVCHelpers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 778779EF8ABA1A943829DEA48DCDFC60 /* PlaygroundVCHelpers-dummy.m */; };
+		40EE5E139AE0F5B88B6EE3267C4F34FC /* ISO8601DateFormatter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E859335EE98ECE489613965B61DF1FA /* ISO8601DateFormatter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4709060854F9CF1F6089A998A586C559 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F9534A2360A1EA9C05452A23EBB568 /* Application.swift */; };
+		47B152F60771C4721440ED0E31F6CE4A /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D9ED31C7A06A1D37766717B6BCE47 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
+		486B079CB808A3F0882F460DE5A38517 /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CEE2AC642DD105A0781B6BE313C408 /* OHPathHelpers.m */; };
+		519BD9C0673BDF7DAA656CA3EA8E60CF /* LUXListDetailFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */; };
+		51D9DDC90A7FB59FF979635C191B9B73 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AA3D7956FB6F4E49353E29F105000 /* OHHTTPStubsResponse.m */; };
+		53BF4F977FE575B3E3E2321453DC2D3C /* SSPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DF916300ED4407FF8390A3EB01F693 /* SSPullToRefresh.framework */; };
+		54F3E7A2D868981058E61D15BAE4FE40 /* OHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B1CFB37B14CE3D5A0552175FCA530D66 /* OHPathHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		561592C0D2B7540CB59505999DDB2B23 /* LUXSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14DE4D8E6C095383C5F92E40A8B813C /* LUXSearchViewController.xib */; };
+		5B218240097E50AAAFA2EFFFE811F846 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEFA29F9C270C99DF822E4380EF25C4 /* Optional.swift */; };
+		5CAC984CFB13A42AD5D629AB3509F9AE /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABC2B3FEDA115D45AC25486009B0D9 /* NetworkCall.swift */; };
+		61C00B14EE5A74B94504E303AA68B8F4 /* LUXRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE12731EAFA64ED231C40994423795AE /* LUXRegistrationViewController.xib */; };
+		62A8568B501455A5D8FA9DBF11FE6119 /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 6058D7057B4D760538CDE88E5FC04B18 /* OHHTTPStubsResponse+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F00B806CEF2F3BC569DDB824D32713 /* ServerAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779D023378EEBEB63A1E4FF9AF226B8 /* ServerAuth.swift */; };
+		65943FFB67F762A7AA45C4569A830108 /* LUXRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2FA7927366893DE2E6CF5A8994A8C /* LUXRegistrationViewModel.swift */; };
+		66814FBB60D0696D900FE33BD5BBD1B3 /* LUXForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8C3F036573F6FF32BE911E46380C8 /* LUXForgotPasswordViewController.swift */; };
+		68713B2FECD432312EAA59E723A68FF8 /* MultiModelTableViewDataSource-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D861729A2FE0CC567B87C6CF0CB749 /* MultiModelTableViewDataSource-dummy.m */; };
+		6D241642E9CB12C716E9C122DAD5E09F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		6D5626ECDBFC49481C6951E71F867219 /* LUXLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E607E2C46FB758B72C4768745E2CEE52 /* LUXLoginViewController.xib */; };
+		6DFEF0931E016A5ADAEE7F2D04655F2F /* LUXVersionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65A44B40D938B6DC3359B68BB9AD69 /* LUXVersionChecker.swift */; };
+		6E594952AAE0211357528C61BBFB3535 /* ISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 87EE4960479E325E43808EA55BFD4A3F /* ISO8601DateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EEE3011ED2D0D9FDC5EB3F0796443B7 /* OHHTTPStubsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3948343EFAE21928F5DE87B40F3E147A /* OHHTTPStubsSwift.swift */; };
+		7200EBD3E0B0E8D13A8B391190594783 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F5D9AAEFE230F88FAFFABD89F45C0E /* CFNetwork.framework */; };
+		743A62F197A93D702E190374DB8A9C2A /* LUXDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9F41FD6738053DB754654FB3580B8 /* LUXDetailTableViewCell.swift */; };
+		7612C89F7E346597124693C7ECA7FD77 /* FunNet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD83C80DD6908BE3674A24421C1A3C52 /* FunNet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77C7334EE562D60AFCB5F1ADBE1476BB /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DEC45C9B2C7AD535FC4C0AABCDDD10 /* OHHTTPStubsResponse+JSON.m */; };
+		798CD9F09E60B4B2EB810ED471D2F7BF /* NetworkResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253783D29EF6E5EBB86E73EB074FE179 /* NetworkResponder.swift */; };
+		7B735AE62E3C0CA2030172C8147E3DE8 /* MultiModelTableViewDataSource-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B567BE03DAE28EE93058121EFBC8CFF /* MultiModelTableViewDataSource-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D20E361685E434EA5B885432AB8BCFC /* Pods-LUX_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB35E16CF10C8F3E7071E31CAE1C07 /* Pods-LUX_Example-dummy.m */; };
+		7D334C1E7EC4DE39F2234C3A5364A6C6 /* MultiModelTableViewDataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94409E309832D37D9DF705589CE97B96 /* MultiModelTableViewDataSourceItem.swift */; };
+		7E073998FDAFCA27D6E670B942781B4E /* PlaygroundVCHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58711F9B1A76E03CA94DCC2C02A2D2 /* PlaygroundVCHelpers.swift */; };
+		7FBFCD6C40BE3DB4F421F6F02E337FBE /* Prelude-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F62C9DCEC149D21E91814AAB5B7788E5 /* Prelude-dummy.m */; };
+		80A9E2AF32357C51CA14DD62C3369E04 /* SSPullToRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = 39F1280C230025BA5D59228679CB68EF /* SSPullToRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84ED141E9138FA8F2ECEFB9684FB6F93 /* LUXSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94EDBEDD0FCE9094341BE6110C34DBC /* LUXSplashViewController.swift */; };
+		89946A3FD1290477F7D7A849858C92D5 /* LUXLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E9D91E2D2DF9BF6EACE6585C078F7 /* LUXLoginViewController.swift */; };
+		8B0E62ADCA2E4E493EBB24F622BF5419 /* LithoOperators-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 494FCD30E864A8B221AA7131704CF132 /* LithoOperators-dummy.m */; };
+		8E02B9706B6113064F9927FB789A5E00 /* LUXCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D87FCB5686E032563642D365B2C96 /* LUXCommentTableViewCell.swift */; };
+		8EA15E501B912D77008C20BE1631A65B /* Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = D4083C4D320B327FCDDE918501011AF9 /* Compatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922482AA317729862C2D8A78CF108A82 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9113F3038E524BBB3736E73CE75D2D4A /* OHHTTPStubs.framework */; };
+		93F17358CC1FAF414F3BF55834E67552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		95C281E3DC77AF178B6EE2B48875E513 /* SSPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C296D5D785FC0537DB757FA00F7B6028 /* SSPullToRefresh-dummy.m */; };
+		9655A770C8CF2C902AAC5FE22B8FE66E /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC632FDA56F002F694B243BB036E562 /* Tuple.swift */; };
+		99882E3BA53A556049FBD6CE84248A39 /* OHHTTPStubs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0926BC0525081A11813D1CD788569E6 /* OHHTTPStubs-dummy.m */; };
+		9A35AA84CB2C47837005364CA7C3D2DB /* Pods-LUX_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9853D90465FBCBF47CA795B7FDDFECEE /* Pods-LUX_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CE07BCDC1D62ABFA2881043D5E9857E /* LithoOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AD8B8538E0DD6A9CB0A5D005C0C837 /* LithoOperators.framework */; };
+		A00EC946993C1AB25194626E5570973B /* LUXMultiModelTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B5045CF170D43AE91DB805835A5D24 /* LUXMultiModelTableViewController.xib */; };
+		A61C6856FF7C99B052079728972F10A7 /* LUXResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6446997F4F61B8461F25BD0C5E4943 /* LUXResetPasswordViewController.swift */; };
+		A70B83CE6BBB3A6A1C154C709E2B63BE /* THUXAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E2F9E1F805991AA3C4112B315CDA8F2 /* THUXAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A96957C90C9DE777CB6FED0E49A58ED9 /* OHHTTPStubsMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA432CF50A6B610459D74971C3C9431 /* OHHTTPStubsMethodSwizzling.m */; };
+		ABAF24EB6C7BF0461CE26B76D3A922F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		AF7F0F55E9DF60C82837CCAF8514DB92 /* LUXSplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F1BB96627AC4DB42BB1E34E4E6DF /* LUXSplashViewModel.swift */; };
+		AFD062518AB88C4876597C59EBC26C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		B1CA5025769FF34D2D854ECD9C3F9718 /* LUXAppOpenFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EECDD5247E251F5258ECB0366C367 /* LUXAppOpenFlowController.swift */; };
+		B718931AB4528F1033592567BDA25210 /* LUXPageableModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C3E0F67BA70393DF296663A9DE5E6F /* LUXPageableModelManager.swift */; };
+		B88D2771BC628899D41C1A65CB115002 /* StubbableReactiveNetCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F5AB0077C5FBAE11E0FAB16646EEB /* StubbableReactiveNetCall.swift */; };
+		BBEE69F0053E97412AEF0C684A5D5701 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C9CB9FE908D4F2ABA4190BEB477B24 /* ISO8601DateFormatter.framework */; };
+		BEE31815B2EFF204E4170FDAE86DFBD1 /* LUXModelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB24BFD61E0D00B0EA9C32B22C26F /* LUXModelListViewModel.swift */; };
+		C19C7144A9E1261B2F5E7647BCF92C7F /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DD5558C2954CE3EF8B2EB7F15D31FE /* Flip.swift */; };
+		C1EB2FB3FD9709BFA779845C6AB70BA8 /* Stubbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1087368397BD70BC2119B5FF532DDDDE /* Stubbable.swift */; };
+		C5DB8C5370DC2EF249EDD062CD159619 /* MultiModelTableViewDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A75A073F25536D90EA2B3D534CA4DE /* MultiModelTableViewDataSource.framework */; };
+		C703DB003C93CAFC7DFC2CD55D201A30 /* LUX-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C94CF84371B3ADA719204CD08675A4 /* LUX-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8077CA347270F6E3052F99AF4AEB250 /* Pods-LUX_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E8F3691552A5FB6AC7A7D645414575 /* Pods-LUX_Tests-dummy.m */; };
+		CA1BF28E5F1F25FE1734594BA6B8E3E3 /* LUXModelCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E26BFF8C9BEC245954987AC7642931 /* LUXModelCallViewModel.swift */; };
+		CB9AB0AA15FE324CAA99B246EB486C3F /* LUXRefreshablePagedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F6D625320474237881BAB4CD885C8 /* LUXRefreshablePagedTableViewController.xib */; };
+		CBA49C9DB4056A789AEDFCA22E34226B /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1CC9DB48F0AC3D93684D70B19431F /* Compose.swift */; };
+		CD5328CB54C6125BAEE6D02F12B333E1 /* Fix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C77BA5538B616B869543EC78CE264 /* Fix.swift */; };
+		CDA6C2E8B03FB53CAEEDDBB18EBAE25C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		CDA779DCE3DAE5FF621CC7AC368616BD /* LithoOperators-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 973418F0340DB90A5C2168D877FFAFD3 /* LithoOperators-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CECB75732DCE1C28C22EB8E8A29F6442 /* LithoOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C523949728796571E275C4B042FF25 /* LithoOperators.swift */; };
+		D08EA534DE0CBECD609C59B33EE0E3C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		D10C61B41ADBD68D8CF291C918AF117F /* SSPullToRefreshDefaultContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = E2487DFFA020724A91A960F323EB80C7 /* SSPullToRefreshDefaultContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D40B0F09BB88F7A69E825B3AF4F591D1 /* LUXForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7909ECBB2FB79165E72C55A8F7E4D3 /* LUXForgotPasswordViewController.xib */; };
+		D5E37580E2F2D38BF8AFCD972C31CCE7 /* LUXFunctionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21A4AFC5D2B3C0F4E1F216B1ADF5A9 /* LUXFunctionalViewController.swift */; };
+		D68DFFDA45BEAEF9666D7481173422DA /* CombineNetCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979BCC4C25D3F25812720B4892B086F5 /* CombineNetCall.swift */; };
+		DE20056050C29D2AFC47622FA03EE8BC /* SSPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F16FF6FF6E59C90A8CB8EAFF246757 /* SSPullToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0C45E19C1817C505FA507FF09F5E930 /* CombineModelFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDAB7AF8913E4220B5521BC09DB348 /* CombineModelFunctions.swift */; };
+		E0CDC8038964787E9BF2846B3E523E21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+		E14C7D12AE2FFC0E7DC732931FCFCDC7 /* LUXPageCallModelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1174A015E9B012FEED647C2CFF886830 /* LUXPageCallModelsManager.swift */; };
+		E2C09054E1767FF5B3F876689A9ABD6B /* LUXModelTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD0AFF0B1B75D6C2E05BD74D2F393BB /* LUXModelTableViewModel.swift */; };
+		E5D5A4BB35AF0B5208A33C794B6C1145 /* LUXLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5FA27A37DD03DBA91A2ACC21F7704 /* LUXLoginViewModel.swift */; };
+		E7193D7B334CCE6967BE2071A558E043 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4918D1AB4CD8865862BF79670C01963 /* Endpoint.swift */; };
+		E7D2C7B5312C50EBF24874500BAAEA58 /* LUXTextValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBFEF5D76E8B698F0A820C283148F4A /* LUXTextValidator.swift */; };
+		E8421BEE17D069C02103B6CFE1B11263 /* PlaygroundVCHelpers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21840ED3703A4D3D304FBEE6C8A26E83 /* PlaygroundVCHelpers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED6D937DD3101A526BE85A3C3F6C13E2 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA0542E66B1DAF67626F01D282B6F8 /* Curry.swift */; };
+		EDB67BAE6DFEE222328E1657FE5AE7A6 /* LUXRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7537492D3CD7861D6AEFA263A2599A3 /* LUXRegistrationViewController.swift */; };
+		EE59707F8AAFA3F78FFFAF7525D09CE2 /* THUXAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C0E2B8D3C48B5B169D339D5AE5781E /* THUXAuth.framework */; };
+		EEE2612FD8219235A036CF57774D860A /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10111F473B30D5917E2BF59EB480E41E /* SSPullToRefreshView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EFF983226F4537BD1D9E361AFAE09120 /* OHHTTPStubs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07AA7356C9710206A5316F176311F1B2 /* OHHTTPStubs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F367AB510890DDE41F88751AF940ED69 /* LUXSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D8F614561390071B02E8AC2719D22 /* LUXSearchTableViewCell.xib */; };
+		F6547D95905D7326DE68FF54CEB0DDB9 /* ISO8601DateFormatter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 803B8B2E105B342EB2706178B9E08C55 /* ISO8601DateFormatter-dummy.m */; };
+		F73B6A5DAD1116076C4EC2F3C9FBDC6D /* LUXFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE742A80FA104E86776F4FE5B9F9640C /* LUXFlowCoordinator.swift */; };
+		FAE9452441F34C7542D5ECE9C027020D /* NSURLRequest+HTTPBodyTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 681E208A03DFA44C512A09FCD19919B4 /* NSURLRequest+HTTPBodyTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBA6E7C629FFCC25EAADAC4E176A3861 /* SSPullToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F28B58D6893A75722396FA2099EE1774 /* SSPullToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC640B466ECDCBBAAF6B7632A429CBDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14C6D3C50EEA1F7F227E9F0DDC49D29A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F912D5BA9B2DA6D453752CCFAB059F1;
+			remoteInfo = ISO8601DateFormatter;
+		};
+		2780ECBCC92ED047B4D8FC443601B1F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDE9651E3D91FEDF74EB17C3CBDD3742;
+			remoteInfo = Prelude;
+		};
+		47289FAC69894F54DD429405A5BDFFC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82F977B2493B989A9D13FABFD6A0FB66;
+			remoteInfo = SSPullToRefresh;
+		};
+		4801D81A37D6E6C33A1E950D3BDCC9A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A983A2D06C5B6AA3D6ABA5CCC0A16725;
+			remoteInfo = OHHTTPStubs;
+		};
+		58BD427E06979C56B0467C12DC410561 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82F977B2493B989A9D13FABFD6A0FB66;
+			remoteInfo = SSPullToRefresh;
+		};
+		58C43A1E0318CBB5ED541B7710E094FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F23B1651D4D0DDA611CCBAFB8BFEED54;
+			remoteInfo = LithoOperators;
+		};
+		5B299EDF7ABB65B94B8C1A488CE8F8AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9873D5AF0743DBA379FF2C093A383B9;
+			remoteInfo = MultiModelTableViewDataSource;
+		};
+		62B53E0A31A0D0A6501B1BACEF186942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A983A2D06C5B6AA3D6ABA5CCC0A16725;
+			remoteInfo = OHHTTPStubs;
+		};
+		7DC8C1A58ABFDE9D6C55E67CC8FBEE02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53CD685FC2E9A4950DF443B5D9D621CA;
+			remoteInfo = FunNet;
+		};
+		85AA11BFEB61FB80E24AA2CB529F5BD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDE9651E3D91FEDF74EB17C3CBDD3742;
+			remoteInfo = Prelude;
+		};
+		893D37489E00F622C5885D53B3D8E7D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53CD685FC2E9A4950DF443B5D9D621CA;
+			remoteInfo = FunNet;
+		};
+		924AD743176050C83D8C438EEE1BF80F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9873D5AF0743DBA379FF2C093A383B9;
+			remoteInfo = MultiModelTableViewDataSource;
+		};
+		993C590F32EFE5AD27E60E2F6A7F720F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09EBB50F01EA8B8DF3777C92EAFD2FC1;
+			remoteInfo = LUX;
+		};
+		A4D8FC0AE1529165DD61891A736EE74D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F23B1651D4D0DDA611CCBAFB8BFEED54;
+			remoteInfo = LithoOperators;
+		};
+		A59C7C78969F454A99A41F6B1EC18633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A44F81A2809469733134E7BFB6B8A16;
+			remoteInfo = PlaygroundVCHelpers;
+		};
+		BB5EE8B0BAD8FE467504E878CAFD11F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B269CB2B11C40853B26617F230F7F0FE;
+			remoteInfo = "Pods-LUX_Example";
+		};
+		C89877A444D47EBD6976EF2C754A01C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD4DA7031A2850BE25C91D864B76C4B;
+			remoteInfo = THUXAuth;
+		};
+		CC2ACCD59F525ADB4EF411E3628B940E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F912D5BA9B2DA6D453752CCFAB059F1;
+			remoteInfo = ISO8601DateFormatter;
+		};
+		DD223E37668D37B73E1435F71E5FACA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD4DA7031A2850BE25C91D864B76C4B;
+			remoteInfo = THUXAuth;
+		};
+		F2FD8D71F5E3992303C5CDE8FAF5F3CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDE9651E3D91FEDF74EB17C3CBDD3742;
+			remoteInfo = Prelude;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00D9C5CF932333F8149EF54A644A7FC3 /* Pods-LUX_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LUX_Example.release.xcconfig"; sourceTree = "<group>"; };
+		05553F949BF24E2A285EF9DC32D15FCE /* LUX-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LUX-prefix.pch"; sourceTree = "<group>"; };
+		06C9CB9FE908D4F2ABA4190BEB477B24 /* ISO8601DateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISO8601DateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06EE3AE758E03F65E93048F25C3AF05B /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsResponse.h; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.h; sourceTree = "<group>"; };
+		07AA7356C9710206A5316F176311F1B2 /* OHHTTPStubs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-umbrella.h"; sourceTree = "<group>"; };
+		07FFEF135521EF53E1E6212F89B6DB56 /* LUXRefreshableModelManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXRefreshableModelManager.swift; sourceTree = "<group>"; };
+		0813499D73D7CCA51D29319F11A46091 /* LithoOperators.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LithoOperators.xcconfig; sourceTree = "<group>"; };
+		098C8733CCE4A551868EC91901CA2574 /* Pods-LUX_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LUX_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		09E67CCDB3CA6D828C0F077C76B37CB4 /* SSPullToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSPullToRefresh.modulemap; sourceTree = "<group>"; };
+		0AF7D6213FD286D04B6D8A88E61B134A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0F4874CA67F5CF0F58A796086D334951 /* OHHTTPStubs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubs.h; path = OHHTTPStubs/Sources/OHHTTPStubs.h; sourceTree = "<group>"; };
+		0FC679A41D0D34FD873B7D9F9E6BE8BB /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10111F473B30D5917E2BF59EB480E41E /* SSPullToRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSPullToRefreshView.m; path = SSPullToRefresh/SSPullToRefreshView.m; sourceTree = "<group>"; };
+		1087368397BD70BC2119B5FF532DDDDE /* Stubbable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stubbable.swift; path = FunNet/Classes/Stubbable.swift; sourceTree = "<group>"; };
+		1174A015E9B012FEED647C2CFF886830 /* LUXPageCallModelsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXPageCallModelsManager.swift; sourceTree = "<group>"; };
+		1279C8506EC5C72598F73FE40AFD5DFB /* LUXCommentTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXCommentTableViewCell.xib; sourceTree = "<group>"; };
+		1464344D0BC46AB4284355590F3ABB28 /* Pods-LUX_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LUX_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		16C3E0F67BA70393DF296663A9DE5E6F /* LUXPageableModelManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXPageableModelManager.swift; sourceTree = "<group>"; };
+		17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		180EEBD891D900E58892AAA1B62A0705 /* Pods-LUX_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LUX_Example-Info.plist"; sourceTree = "<group>"; };
+		183C77BA5538B616B869543EC78CE264 /* Fix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fix.swift; path = Prelude/Fix.swift; sourceTree = "<group>"; };
+		19C0E2B8D3C48B5B169D339D5AE5781E /* THUXAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THUXAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AF750C52FB35F7E3E5F1C7E9B5BBBA4 /* PlaygroundVCHelpers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PlaygroundVCHelpers.modulemap; sourceTree = "<group>"; };
+		1B6328735CF705234EF05999DF7AD20C /* PlaygroundVCHelpers-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PlaygroundVCHelpers-Info.plist"; sourceTree = "<group>"; };
+		1BC31E2E73642062B6C13C5AB1D30C80 /* LUXResetPasswordViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXResetPasswordViewController.xib; sourceTree = "<group>"; };
+		20574C340C819F6F8A2A6D65C9FC616C /* FunNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FunNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21840ED3703A4D3D304FBEE6C8A26E83 /* PlaygroundVCHelpers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlaygroundVCHelpers-umbrella.h"; sourceTree = "<group>"; };
+		253783D29EF6E5EBB86E73EB074FE179 /* NetworkResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkResponder.swift; path = FunNet/Classes/NetworkResponder.swift; sourceTree = "<group>"; };
+		271D142DC6BD22A49BBF77F6E4ED4BAF /* MultiModelTableViewDataSource.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MultiModelTableViewDataSource.xcconfig; sourceTree = "<group>"; };
+		278DB3D6752B7980B1FFDFD11B6AABF7 /* SSPullToRefreshSimpleContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSPullToRefreshSimpleContentView.m; path = SSPullToRefresh/SSPullToRefreshSimpleContentView.m; sourceTree = "<group>"; };
+		27C94CF84371B3ADA719204CD08675A4 /* LUX-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LUX-umbrella.h"; sourceTree = "<group>"; };
+		2990D86B8282524D318D4658CF9627E7 /* FunNet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FunNet-dummy.m"; sourceTree = "<group>"; };
+		2A72A1C36E20715EC0B1CCB606E30045 /* ISO8601DateFormatter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ISO8601DateFormatter-Info.plist"; sourceTree = "<group>"; };
+		2B59D031D5EB0BF5285BC13750E26BD4 /* FunNet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FunNet-prefix.pch"; sourceTree = "<group>"; };
+		2E8CC1B665343F46D1E0E868A7F95AA4 /* OHHTTPStubs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubs.m; path = OHHTTPStubs/Sources/OHHTTPStubs.m; sourceTree = "<group>"; };
+		2F4573B8EE90D4BA87B985997B0CC43C /* FunNet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FunNet.xcconfig; sourceTree = "<group>"; };
+		2FEFA29F9C270C99DF822E4380EF25C4 /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = Prelude/Optional.swift; sourceTree = "<group>"; };
+		30FE788F07C48FD025C58922C29058A3 /* Prelude.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Prelude.modulemap; sourceTree = "<group>"; };
+		319E00FB5A7AB1FB6EB80A38AC77AE0B /* SSPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32DD5558C2954CE3EF8B2EB7F15D31FE /* Flip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flip.swift; path = Prelude/Flip.swift; sourceTree = "<group>"; };
+		33F16FF6FF6E59C90A8CB8EAFF246757 /* SSPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSPullToRefresh.h; path = SSPullToRefresh/SSPullToRefresh.h; sourceTree = "<group>"; };
+		34A7B00C6B13C155A06378788C600ECC /* Pods-LUX_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LUX_Tests-umbrella.h"; sourceTree = "<group>"; };
+		38F5D9AAEFE230F88FAFFABD89F45C0E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		3948343EFAE21928F5DE87B40F3E147A /* OHHTTPStubsSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OHHTTPStubsSwift.swift; path = OHHTTPStubs/Sources/Swift/OHHTTPStubsSwift.swift; sourceTree = "<group>"; };
+		39CEE2AC642DD105A0781B6BE313C408 /* OHPathHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHPathHelpers.m; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.m; sourceTree = "<group>"; };
+		39E15C7A51CDA56923B8B0A7D589B198 /* THUXAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = THUXAuth.modulemap; sourceTree = "<group>"; };
+		39F1280C230025BA5D59228679CB68EF /* SSPullToRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSPullToRefreshView.h; path = SSPullToRefresh/SSPullToRefreshView.h; sourceTree = "<group>"; };
+		3A0C16AEAC17506CC3336F79E90DE583 /* Pods-LUX_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LUX_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3A21A4AFC5D2B3C0F4E1F216B1ADF5A9 /* LUXFunctionalViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXFunctionalViewController.swift; sourceTree = "<group>"; };
+		3D6B4C7FD9E68A979EC816101AD560A9 /* LUX.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LUX.modulemap; sourceTree = "<group>"; };
+		3D8238D43966BFAEF16A6BDB65F53C24 /* PlaygroundVCHelpers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlaygroundVCHelpers-prefix.pch"; sourceTree = "<group>"; };
+		3EE2F547D84DAD59CE86A7BDCFB98F26 /* FunNetCall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunNetCall.swift; path = FunNet/Classes/FunNetCall.swift; sourceTree = "<group>"; };
+		4288AFF519E19690C2BACEB6F6DB1E0A /* Prelude.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Prelude.swift; path = Prelude/Prelude.swift; sourceTree = "<group>"; };
+		44DF916300ED4407FF8390A3EB01F693 /* SSPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45CDA47363AB07452186680FC5C43018 /* FunNet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FunNet.modulemap; sourceTree = "<group>"; };
+		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		494FCD30E864A8B221AA7131704CF132 /* LithoOperators-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LithoOperators-dummy.m"; sourceTree = "<group>"; };
+		4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXListDetailFlowController.swift; sourceTree = "<group>"; };
+		4A4AEEDBE8ADCDBD48EF0F12C9F715BC /* SSPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
+		4B567BE03DAE28EE93058121EFBC8CFF /* MultiModelTableViewDataSource-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MultiModelTableViewDataSource-umbrella.h"; sourceTree = "<group>"; };
+		4BC632FDA56F002F694B243BB036E562 /* Tuple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tuple.swift; path = Prelude/Tuple.swift; sourceTree = "<group>"; };
+		4CA432CF50A6B610459D74971C3C9431 /* OHHTTPStubsMethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsMethodSwizzling.m; path = OHHTTPStubs/Sources/NSURLSession/OHHTTPStubsMethodSwizzling.m; sourceTree = "<group>"; };
+		4D58711F9B1A76E03CA94DCC2C02A2D2 /* PlaygroundVCHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlaygroundVCHelpers.swift; path = PlaygroundVCHelpers/Classes/PlaygroundVCHelpers.swift; sourceTree = "<group>"; };
+		4D6446997F4F61B8461F25BD0C5E4943 /* LUXResetPasswordViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXResetPasswordViewController.swift; sourceTree = "<group>"; };
+		4ED2414C5AA34501B4CE2F9F608DBB7C /* LithoOperators-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LithoOperators-prefix.pch"; sourceTree = "<group>"; };
+		5070ABBA64F1EC88B51AEA3B51B30D8A /* THUXAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "THUXAuth-dummy.m"; sourceTree = "<group>"; };
+		5147848A4C7B00844D49832E7CBE2557 /* SSPullToRefreshSimpleContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSPullToRefreshSimpleContentView.h; path = SSPullToRefresh/SSPullToRefreshSimpleContentView.h; sourceTree = "<group>"; };
+		51A8C3F036573F6FF32BE911E46380C8 /* LUXForgotPasswordViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		56AD8B8538E0DD6A9CB0A5D005C0C837 /* LithoOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LithoOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59167F1180D43B27D98CC3FCE11C6F9C /* Pods-LUX_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LUX_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A2F6D625320474237881BAB4CD885C8 /* LUXRefreshablePagedTableViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXRefreshablePagedTableViewController.xib; sourceTree = "<group>"; };
+		5B64973E3EA80BB7D3AE7496C2EEE45C /* NSURLRequest+HTTPBodyTesting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+HTTPBodyTesting.m"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.m"; sourceTree = "<group>"; };
+		5D719CAFF13B509BAB23D7A4D37F5A58 /* LUXJsonProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXJsonProvider.swift; sourceTree = "<group>"; };
+		5E9D9ED31C7A06A1D37766717B6BCE47 /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubs+NSURLSessionConfiguration.m"; path = "OHHTTPStubs/Sources/NSURLSession/OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
+		6058D7057B4D760538CDE88E5FC04B18 /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OHHTTPStubsResponse+JSON.h"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
+		61F23589698A0FE17B2BB9C06A39D6BF /* ISO8601DateFormatter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ISO8601DateFormatter.xcconfig; sourceTree = "<group>"; };
+		62F985DE1392D6676A0553DD7AA404C4 /* Prelude-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Prelude-Info.plist"; sourceTree = "<group>"; };
+		63EE8AAA67CB4F1FFD1AD2A054F29B21 /* Requests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Requests.swift; path = FunNet/Classes/Requests.swift; sourceTree = "<group>"; };
+		6423323BF2D521996A18D671D236D36E /* MultiModelTableViewDataSource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MultiModelTableViewDataSource-prefix.pch"; sourceTree = "<group>"; };
+		64F9534A2360A1EA9C05452A23EBB568 /* Application.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Application.swift; path = Prelude/Application.swift; sourceTree = "<group>"; };
+		65ABC2B3FEDA115D45AC25486009B0D9 /* NetworkCall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkCall.swift; path = FunNet/Classes/NetworkCall.swift; sourceTree = "<group>"; };
+		66A7CF10173630AF608E1C0D8DA2D043 /* LUXSearchTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSearchTableViewCell.swift; sourceTree = "<group>"; };
+		681E208A03DFA44C512A09FCD19919B4 /* NSURLRequest+HTTPBodyTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+HTTPBodyTesting.h"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.h"; sourceTree = "<group>"; };
+		6B67894BB2FFDF5292B425307CE3E040 /* OHHTTPStubs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OHHTTPStubs.xcconfig; sourceTree = "<group>"; };
+		6D5FE41F012D3ED66D630691ACE1FC20 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
+		6E2F9E1F805991AA3C4112B315CDA8F2 /* THUXAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THUXAuth-umbrella.h"; sourceTree = "<group>"; };
+		6E3E9D91E2D2DF9BF6EACE6585C078F7 /* LUXLoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXLoginViewController.swift; sourceTree = "<group>"; };
+		6E859335EE98ECE489613965B61DF1FA /* ISO8601DateFormatter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISO8601DateFormatter-umbrella.h"; sourceTree = "<group>"; };
+		6F531428A777B1EE08401A5454FBF88D /* LUXTableViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXTableViewDelegates.swift; sourceTree = "<group>"; };
+		716DDA03ADB5099FDC992D78ED613CA5 /* OHHTTPStubs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-prefix.pch"; sourceTree = "<group>"; };
+		721B5FCD8E3FA637B3108940C83B91B9 /* FunNet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FunNet-Info.plist"; sourceTree = "<group>"; };
+		774D8F614561390071B02E8AC2719D22 /* LUXSearchTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXSearchTableViewCell.xib; sourceTree = "<group>"; };
+		778779EF8ABA1A943829DEA48DCDFC60 /* PlaygroundVCHelpers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlaygroundVCHelpers-dummy.m"; sourceTree = "<group>"; };
+		7803EEC3FDFDFA448BA1F54AB3FB8E75 /* NetworkErrorHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkErrorHandler.swift; path = FunNet/Classes/NetworkErrorHandler.swift; sourceTree = "<group>"; };
+		798EECDD5247E251F5258ECB0366C367 /* LUXAppOpenFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXAppOpenFlowController.swift; sourceTree = "<group>"; };
+		7C1EAC328EC99BEE67F62DB8D5A7DA4A /* PlaygroundVCHelpers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlaygroundVCHelpers.xcconfig; sourceTree = "<group>"; };
+		7F4290EFF5FD0AC2709B45A32093D64E /* LUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		803B8B2E105B342EB2706178B9E08C55 /* ISO8601DateFormatter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ISO8601DateFormatter-dummy.m"; sourceTree = "<group>"; };
+		83C1CC9DB48F0AC3D93684D70B19431F /* Compose.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compose.swift; path = Prelude/Compose.swift; sourceTree = "<group>"; };
+		83CC0561069DC8567BB53D854DF3B1D9 /* THUXAuth-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "THUXAuth-Info.plist"; sourceTree = "<group>"; };
+		8635D146F4DA54C7FCF8813A8F02E590 /* LithoOperators.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LithoOperators.modulemap; sourceTree = "<group>"; };
+		87EE4960479E325E43808EA55BFD4A3F /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
+		88BFD543FFD40E08D9B56815D32B4E81 /* Pods_LUX_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUX_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88D861729A2FE0CC567B87C6CF0CB749 /* MultiModelTableViewDataSource-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MultiModelTableViewDataSource-dummy.m"; sourceTree = "<group>"; };
+		898635245B3FC8F470B52EFD42FFE281 /* SSPullToRefresh-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSPullToRefresh-Info.plist"; sourceTree = "<group>"; };
+		8B3620F145E912842BC32F818B308789 /* Pods_LUX_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUX_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BEA1D1860C971915771D9C8C89C816D /* Pods-LUX_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LUX_Tests.modulemap"; sourceTree = "<group>"; };
+		8DBB35E16CF10C8F3E7071E31CAE1C07 /* Pods-LUX_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LUX_Example-dummy.m"; sourceTree = "<group>"; };
+		8E1AA3D7956FB6F4E49353E29F105000 /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsResponse.m; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.m; sourceTree = "<group>"; };
+		8F8D87FCB5686E032563642D365B2C96 /* LUXCommentTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXCommentTableViewCell.swift; sourceTree = "<group>"; };
+		900CED4FE06B045D1F67455BCA7D37F2 /* Pods-LUX_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LUX_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9113F3038E524BBB3736E73CE75D2D4A /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9286C44D2352FD2738ED896E4289817D /* LUX.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LUX.xcconfig; sourceTree = "<group>"; };
+		935C6AE195E59BED8289A15D66AB2043 /* SSPullToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSPullToRefresh.xcconfig; sourceTree = "<group>"; };
+		94409E309832D37D9DF705589CE97B96 /* MultiModelTableViewDataSourceItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiModelTableViewDataSourceItem.swift; path = MultiModelTableViewDataSource/Classes/MultiModelTableViewDataSourceItem.swift; sourceTree = "<group>"; };
+		96FFE7F959AF76FEC9D050BBBBC3E520 /* LUX.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LUX.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		973418F0340DB90A5C2168D877FFAFD3 /* LithoOperators-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LithoOperators-umbrella.h"; sourceTree = "<group>"; };
+		9779D023378EEBEB63A1E4FF9AF226B8 /* ServerAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ServerAuth.swift; sourceTree = "<group>"; };
+		979BCC4C25D3F25812720B4892B086F5 /* CombineNetCall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CombineNetCall.swift; sourceTree = "<group>"; };
+		9853D90465FBCBF47CA795B7FDDFECEE /* Pods-LUX_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LUX_Example-umbrella.h"; sourceTree = "<group>"; };
+		9944071DFEF856513DE1F7ECF8A42CE9 /* ISO8601DateFormatter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ISO8601DateFormatter.modulemap; sourceTree = "<group>"; };
+		9B58274F1CF78688C6614874E623185E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9B594638A3AC673BDCCD24E59E8EF234 /* LUXSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSearchViewController.swift; sourceTree = "<group>"; };
+		9C65A44B40D938B6DC3359B68BB9AD69 /* LUXVersionChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXVersionChecker.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F6F89BB3C5F46D4ABFAB831951E5F39 /* THUXSessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = THUXSessionManager.swift; path = THUXAuth/Classes/THUXSessionManager.swift; sourceTree = "<group>"; };
+		A0926BC0525081A11813D1CD788569E6 /* OHHTTPStubs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs-dummy.m"; sourceTree = "<group>"; };
+		A4071336C6493504572EF9BFAA64638D /* ISO8601DateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISO8601DateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6103B93817BEFB7FBC2B5D20F3CDC78 /* FunNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FunNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F5FA27A37DD03DBA91A2ACC21F7704 /* LUXLoginViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXLoginViewModel.swift; sourceTree = "<group>"; };
+		A90525B42553664D132BC29FB28747F3 /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94EDBEDD0FCE9094341BE6110C34DBC /* LUXSplashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSplashViewController.swift; sourceTree = "<group>"; };
+		A999AB179B645710D612386D3D55C448 /* Pods-LUX_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AB9A105F865B899E524F82283663D399 /* LUXMultiModelTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXMultiModelTableViewController.swift; sourceTree = "<group>"; };
+		ABBFEF5D76E8B698F0A820C283148F4A /* LUXTextValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXTextValidator.swift; sourceTree = "<group>"; };
+		ABE9AB80128B12B44AF42DD3BA9CD328 /* MultiModelTableViewDataSource-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MultiModelTableViewDataSource-Info.plist"; sourceTree = "<group>"; };
+		B1CFB37B14CE3D5A0552175FCA530D66 /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
+		B3A33D5895BFA7F3B1C1EC93DAF1CFEC /* SSPullToRefreshDefaultContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSPullToRefreshDefaultContentView.m; path = SSPullToRefresh/SSPullToRefreshDefaultContentView.m; sourceTree = "<group>"; };
+		B6A2FA7927366893DE2E6CF5A8994A8C /* LUXRegistrationViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXRegistrationViewModel.swift; sourceTree = "<group>"; };
+		B7537492D3CD7861D6AEFA263A2599A3 /* LUXRegistrationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXRegistrationViewController.swift; sourceTree = "<group>"; };
+		B7E8F3691552A5FB6AC7A7D645414575 /* Pods-LUX_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LUX_Tests-dummy.m"; sourceTree = "<group>"; };
+		B9B726DB6AEB34AE409D22D0B9FFABB1 /* MultiModelTableViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiModelTableViewDataSource.swift; path = MultiModelTableViewDataSource/Classes/MultiModelTableViewDataSource.swift; sourceTree = "<group>"; };
+		BE12731EAFA64ED231C40994423795AE /* LUXRegistrationViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXRegistrationViewController.xib; sourceTree = "<group>"; };
+		C14DE4D8E6C095383C5F92E40A8B813C /* LUXSearchViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXSearchViewController.xib; sourceTree = "<group>"; };
+		C1C523949728796571E275C4B042FF25 /* LithoOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LithoOperators.swift; path = LithoOperators/Classes/LithoOperators.swift; sourceTree = "<group>"; };
+		C296D5D785FC0537DB757FA00F7B6028 /* SSPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSPullToRefresh-dummy.m"; sourceTree = "<group>"; };
+		C4A63BC44F2FFA33DB297C8F0A3586C7 /* StubHolder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubHolder.swift; path = FunNet/Classes/StubHolder.swift; sourceTree = "<group>"; };
+		C9BA0542E66B1DAF67626F01D282B6F8 /* Curry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Curry.swift; path = Prelude/Curry.swift; sourceTree = "<group>"; };
+		CC86F1BB96627AC4DB42BB1E34E4E6DF /* LUXSplashViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSplashViewModel.swift; sourceTree = "<group>"; };
+		CD19C0192248F56E220F7BBD82B6C2BB /* PlaygroundVCHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlaygroundVCHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE766936F97AC2529EAB1ABA02442149 /* LUX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LUX-dummy.m"; sourceTree = "<group>"; };
+		CFC34110B3A4B82A107C4044342C7BF4 /* OHHTTPStubsMethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsMethodSwizzling.h; path = OHHTTPStubs/Sources/NSURLSession/OHHTTPStubsMethodSwizzling.h; sourceTree = "<group>"; };
+		CFFE4F5673743F8E13DE24F45365264B /* OHHTTPStubs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OHHTTPStubs-Info.plist"; sourceTree = "<group>"; };
+		D0A75A073F25536D90EA2B3D534CA4DE /* MultiModelTableViewDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiModelTableViewDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A92DB897233046BFCEF54B72AF7059 /* LUXRefreshCallModelsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXRefreshCallModelsManager.swift; sourceTree = "<group>"; };
+		D1E26BFF8C9BEC245954987AC7642931 /* LUXModelCallViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXModelCallViewModel.swift; sourceTree = "<group>"; };
+		D2236A14B3B9F4CB637B16CCF253C8FA /* Pods-LUX_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LUX_Tests-Info.plist"; sourceTree = "<group>"; };
+		D26768571CEA509040B2E2CB619A95FA /* Pods-LUX_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LUX_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D275748608817EC71257EED8E7046F00 /* Prelude.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Prelude.xcconfig; sourceTree = "<group>"; };
+		D37F5AB0077C5FBAE11E0FAB16646EEB /* StubbableReactiveNetCall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StubbableReactiveNetCall.swift; sourceTree = "<group>"; };
+		D4083C4D320B327FCDDE918501011AF9 /* Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Compatibility.h; path = OHHTTPStubs/Sources/Compatibility.h; sourceTree = "<group>"; };
+		D5349C25E1D38CEEEC7D7181016A70C1 /* MultiModelTableViewDataSourceSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiModelTableViewDataSourceSection.swift; path = MultiModelTableViewDataSource/Classes/MultiModelTableViewDataSourceSection.swift; sourceTree = "<group>"; };
+		D7959930330368AA5EEC2C1B232F3DDD /* THUXAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THUXAuth-prefix.pch"; sourceTree = "<group>"; };
+		DD83C80DD6908BE3674A24421C1A3C52 /* FunNet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FunNet-umbrella.h"; sourceTree = "<group>"; };
+		DDD41C2A5488D17C300285739B804203 /* THUXAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THUXAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE742A80FA104E86776F4FE5B9F9640C /* LUXFlowCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXFlowCoordinator.swift; sourceTree = "<group>"; };
+		DE91869759BD338043C3C05342CBDC6A /* Pods-LUX_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LUX_Example.modulemap"; sourceTree = "<group>"; };
+		E029175CEE649638464374A7AA384DEF /* THUXAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = THUXAuth.xcconfig; sourceTree = "<group>"; };
+		E2487DFFA020724A91A960F323EB80C7 /* SSPullToRefreshDefaultContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSPullToRefreshDefaultContentView.h; path = SSPullToRefresh/SSPullToRefreshDefaultContentView.h; sourceTree = "<group>"; };
+		E2B5045CF170D43AE91DB805835A5D24 /* LUXMultiModelTableViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXMultiModelTableViewController.xib; sourceTree = "<group>"; };
+		E4918D1AB4CD8865862BF79670C01963 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = FunNet/Classes/Endpoint.swift; sourceTree = "<group>"; };
+		E50238F0F407832414A27FE24A3AC1A2 /* ServerConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerConfiguration.swift; path = FunNet/Classes/ServerConfiguration.swift; sourceTree = "<group>"; };
+		E607E2C46FB758B72C4768745E2CEE52 /* LUXLoginViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXLoginViewController.xib; sourceTree = "<group>"; };
+		EAE9EB89EB17FD9F6A5B12ABB4A752BD /* LithoOperators-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LithoOperators-Info.plist"; sourceTree = "<group>"; };
+		ED716B8C84E802C16A8BDBA8314E3DE5 /* Prelude-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Prelude-prefix.pch"; sourceTree = "<group>"; };
+		EDCDAB7AF8913E4220B5521BC09DB348 /* CombineModelFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CombineModelFunctions.swift; sourceTree = "<group>"; };
+		EF7909ECBB2FB79165E72C55A8F7E4D3 /* LUXForgotPasswordViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		F02BB82B3FFD1B4A5BE1C7443584444C /* LithoOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LithoOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1ADB4E0097A12239180DDB8A46CF9E9 /* OHHTTPStubs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OHHTTPStubs.modulemap; sourceTree = "<group>"; };
+		F28B58D6893A75722396FA2099EE1774 /* SSPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
+		F4690D15F9F382C8BFAC05FA0FBB0ABB /* Prelude-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Prelude-umbrella.h"; sourceTree = "<group>"; };
+		F4DEC45C9B2C7AD535FC4C0AABCDDD10 /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubsResponse+JSON.m"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
+		F5B1A9149DC8FDCA5A4A46EBD4CE20D6 /* MultiModelTableViewDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiModelTableViewDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62C9DCEC149D21E91814AAB5B7788E5 /* Prelude-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Prelude-dummy.m"; sourceTree = "<group>"; };
+		F6FAB24BFD61E0D00B0EA9C32B22C26F /* LUXModelListViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXModelListViewModel.swift; sourceTree = "<group>"; };
+		F8F9F41FD6738053DB754654FB3580B8 /* LUXDetailTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXDetailTableViewCell.swift; sourceTree = "<group>"; };
+		FCD0AFF0B1B75D6C2E05BD74D2F393BB /* LUXModelTableViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXModelTableViewModel.swift; sourceTree = "<group>"; };
+		FDE29E3ADF4029DF8B2A4D9731D12FD2 /* MultiModelTableViewDataSource.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MultiModelTableViewDataSource.modulemap; sourceTree = "<group>"; };
+		FE964465EF78CA94C82F3DE546D0E71C /* LUX-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LUX-Info.plist"; sourceTree = "<group>"; };
+		FFE850CAE9FF73C5CD8454526E1D26AC /* ISO8601DateFormatter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISO8601DateFormatter-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09578EEFFD93FEA82886FDC461124586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD062518AB88C4876597C59EBC26C70 /* Foundation.framework in Frameworks */,
+				9CE07BCDC1D62ABFA2881043D5E9857E /* LithoOperators.framework in Frameworks */,
+				922482AA317729862C2D8A78CF108A82 /* OHHTTPStubs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F94175BE3CD8A88CB1221B196E00F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A37E018C2A83A063D1DCA47A8958FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B454DB57A9FAB37B534E0A98B606B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17C09535CBDEB0C38672EBA67166B01A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EF18E6A2EFF1B5E0BC7F8B673844312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3452A68C62D5C34F8F42FF7D62200323 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D7DBF1C517E3CFBD83D7B43F6C6EDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B62F3454FD70C2825B36DC3013E790 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2526E094391CE38EB1EC40B065F3530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F17358CC1FAF414F3BF55834E67552 /* Foundation.framework in Frameworks */,
+				164597592FD4239A4E2E8D7A775A0E26 /* FunNet.framework in Frameworks */,
+				BBEE69F0053E97412AEF0C684A5D5701 /* ISO8601DateFormatter.framework in Frameworks */,
+				C5DB8C5370DC2EF249EDD062CD159619 /* MultiModelTableViewDataSource.framework in Frameworks */,
+				2A6DB5F95C494A8B654BD80437CA2F7A /* Prelude.framework in Frameworks */,
+				53BF4F977FE575B3E3E2321453DC2D3C /* SSPullToRefresh.framework in Frameworks */,
+				EE59707F8AAFA3F78FFFAF7525D09CE2 /* THUXAuth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5DF454E2F639ABF93C6F1545D21B3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08EA534DE0CBECD609C59B33EE0E3C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D694296792F6FF870C933D84B834CFC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA6C2E8B03FB53CAEEDDBB18EBAE25C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA8AA2F237EE957813843D6AEA653CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D241642E9CB12C716E9C122DAD5E09F /* Foundation.framework in Frameworks */,
+				0BC94DE792BE98B3BF7EA03F1F3D1611 /* Prelude.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6C22F7D3032FF3B0A96AF2E25C9A77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7200EBD3E0B0E8D13A8B391190594783 /* CFNetwork.framework in Frameworks */,
+				ABAF24EB6C7BF0461CE26B76D3A922F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27BA505B4723B9BFFEA9DA056E8AED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC640B466ECDCBBAAF6B7632A429CBDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC9A92E1CD35ACF1CC433AFD4B3C5FE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0CDC8038964787E9BF2846B3E523E21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0567903702A203FB0648EA221633C92E /* OHHTTPStubs */ = {
+			isa = PBXGroup;
+			children = (
+				2933C47FF66FD385B14492131938D583 /* Core */,
+				8DFC9DDBCC136672DF71BBD6BB1D7FB5 /* JSON */,
+				CA68F6BF509D8888116E7FAD07C0B7A3 /* NSURLSession */,
+				EC626E6FDC0865CF8E1D856D0AE53CDA /* OHPathHelpers */,
+				D721D67D9AE1B85A9F595E500780D27B /* Support Files */,
+				2BD2389F156FF155833FF6ACDAADB4AC /* Swift */,
+			);
+			path = OHHTTPStubs;
+			sourceTree = "<group>";
+		};
+		063E6904068A32A8248C10E49390B667 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D6B4C7FD9E68A979EC816101AD560A9 /* LUX.modulemap */,
+				9286C44D2352FD2738ED896E4289817D /* LUX.xcconfig */,
+				CE766936F97AC2529EAB1ABA02442149 /* LUX-dummy.m */,
+				FE964465EF78CA94C82F3DE546D0E71C /* LUX-Info.plist */,
+				05553F949BF24E2A285EF9DC32D15FCE /* LUX-prefix.pch */,
+				27C94CF84371B3ADA719204CD08675A4 /* LUX-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LUX";
+			sourceTree = "<group>";
+		};
+		0DF11B298C054805A19EFA00B73BA47C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				979BCC4C25D3F25812720B4892B086F5 /* CombineNetCall.swift */,
+				9779D023378EEBEB63A1E4FF9AF226B8 /* ServerAuth.swift */,
+				D37F5AB0077C5FBAE11E0FAB16646EEB /* StubbableReactiveNetCall.swift */,
+			);
+			name = Networking;
+			path = LUX/Classes/Networking;
+			sourceTree = "<group>";
+		};
+		170CF42BF045433057DA258888411551 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8BD7735EB81D2E074C5186DCB08FE7A /* Pods-LUX_Example */,
+				AE14E25615D8DD4124ACB8174B0AF995 /* Pods-LUX_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1A3E8A613A9ED1504F735940C84B0D72 /* LithoOperators */ = {
+			isa = PBXGroup;
+			children = (
+				C1C523949728796571E275C4B042FF25 /* LithoOperators.swift */,
+				4B9EC46E0A3299FA9428A9B00ADFA8BF /* Support Files */,
+			);
+			path = LithoOperators;
+			sourceTree = "<group>";
+		};
+		1D69F2864F15499A4830BBE5D40F949D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDE29E3ADF4029DF8B2A4D9731D12FD2 /* MultiModelTableViewDataSource.modulemap */,
+				271D142DC6BD22A49BBF77F6E4ED4BAF /* MultiModelTableViewDataSource.xcconfig */,
+				88D861729A2FE0CC567B87C6CF0CB749 /* MultiModelTableViewDataSource-dummy.m */,
+				ABE9AB80128B12B44AF42DD3BA9CD328 /* MultiModelTableViewDataSource-Info.plist */,
+				6423323BF2D521996A18D671D236D36E /* MultiModelTableViewDataSource-prefix.pch */,
+				4B567BE03DAE28EE93058121EFBC8CFF /* MultiModelTableViewDataSource-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MultiModelTableViewDataSource";
+			sourceTree = "<group>";
+		};
+		1E890ADC4B08ED0FE1B31D87161FD34D /* LUX */ = {
+			isa = PBXGroup;
+			children = (
+				DE5D8C6408F10CBF19EEE20AC5FD8BE6 /* Models */,
+				0DF11B298C054805A19EFA00B73BA47C /* Networking */,
+				5B63A3ADFD16A0BBD707CFD7E369D8D1 /* Pod */,
+				C02D101E28BB5F27BCB9F42E38512408 /* Resources */,
+				063E6904068A32A8248C10E49390B667 /* Support Files */,
+				7595AC691FED2DCBC84EAB1E40AE113C /* ViewControllers */,
+				FF8BC4B4E2A23B8B267F1FE6CFF454E1 /* Views */,
+			);
+			name = LUX;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2933C47FF66FD385B14492131938D583 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D4083C4D320B327FCDDE918501011AF9 /* Compatibility.h */,
+				0F4874CA67F5CF0F58A796086D334951 /* OHHTTPStubs.h */,
+				2E8CC1B665343F46D1E0E868A7F95AA4 /* OHHTTPStubs.m */,
+				06EE3AE758E03F65E93048F25C3AF05B /* OHHTTPStubsResponse.h */,
+				8E1AA3D7956FB6F4E49353E29F105000 /* OHHTTPStubsResponse.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		2A341311327655735A5829AB127AA190 /* FlowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				798EECDD5247E251F5258ECB0366C367 /* LUXAppOpenFlowController.swift */,
+				DE742A80FA104E86776F4FE5B9F9640C /* LUXFlowCoordinator.swift */,
+				4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */,
+			);
+			path = FlowControllers;
+			sourceTree = "<group>";
+		};
+		2BD2389F156FF155833FF6ACDAADB4AC /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3948343EFAE21928F5DE87B40F3E147A /* OHHTTPStubsSwift.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		2FFB216B7252DB385F3597F5A6891C61 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				38F5D9AAEFE230F88FAFFABD89F45C0E /* CFNetwork.framework */,
+				32DB8D20DDF3323308AAC987634912DB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3589504771880DE4063A0CCBFA9334C1 /* MultiModelTableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B9B726DB6AEB34AE409D22D0B9FFABB1 /* MultiModelTableViewDataSource.swift */,
+				94409E309832D37D9DF705589CE97B96 /* MultiModelTableViewDataSourceItem.swift */,
+				D5349C25E1D38CEEEC7D7181016A70C1 /* MultiModelTableViewDataSourceSection.swift */,
+				1D69F2864F15499A4830BBE5D40F949D /* Support Files */,
+			);
+			path = MultiModelTableViewDataSource;
+			sourceTree = "<group>";
+		};
+		38B7D549047B8DAC8B7FC971AB08A5F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				774D8F614561390071B02E8AC2719D22 /* LUXSearchTableViewCell.xib */,
+				1279C8506EC5C72598F73FE40AFD5DFB /* LUXCommentTableViewCell.xib */,
+			);
+			name = Views;
+			path = LUX/Classes/Views;
+			sourceTree = "<group>";
+		};
+		4B9EC46E0A3299FA9428A9B00ADFA8BF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8635D146F4DA54C7FCF8813A8F02E590 /* LithoOperators.modulemap */,
+				0813499D73D7CCA51D29319F11A46091 /* LithoOperators.xcconfig */,
+				494FCD30E864A8B221AA7131704CF132 /* LithoOperators-dummy.m */,
+				EAE9EB89EB17FD9F6A5B12ABB4A752BD /* LithoOperators-Info.plist */,
+				4ED2414C5AA34501B4CE2F9F608DBB7C /* LithoOperators-prefix.pch */,
+				973418F0340DB90A5C2168D877FFAFD3 /* LithoOperators-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LithoOperators";
+			sourceTree = "<group>";
+		};
+		4DCE87B87B9DE5DDCE47E66AAC57F140 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF7909ECBB2FB79165E72C55A8F7E4D3 /* LUXForgotPasswordViewController.xib */,
+				E607E2C46FB758B72C4768745E2CEE52 /* LUXLoginViewController.xib */,
+				E2B5045CF170D43AE91DB805835A5D24 /* LUXMultiModelTableViewController.xib */,
+				5A2F6D625320474237881BAB4CD885C8 /* LUXRefreshablePagedTableViewController.xib */,
+				BE12731EAFA64ED231C40994423795AE /* LUXRegistrationViewController.xib */,
+				1BC31E2E73642062B6C13C5AB1D30C80 /* LUXResetPasswordViewController.xib */,
+				C14DE4D8E6C095383C5F92E40A8B813C /* LUXSearchViewController.xib */,
+			);
+			name = ViewControllers;
+			path = LUX/Classes/ViewControllers;
+			sourceTree = "<group>";
+		};
+		4FC9885E576B53CDFF8799836470084C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AF750C52FB35F7E3E5F1C7E9B5BBBA4 /* PlaygroundVCHelpers.modulemap */,
+				7C1EAC328EC99BEE67F62DB8D5A7DA4A /* PlaygroundVCHelpers.xcconfig */,
+				778779EF8ABA1A943829DEA48DCDFC60 /* PlaygroundVCHelpers-dummy.m */,
+				1B6328735CF705234EF05999DF7AD20C /* PlaygroundVCHelpers-Info.plist */,
+				3D8238D43966BFAEF16A6BDB65F53C24 /* PlaygroundVCHelpers-prefix.pch */,
+				21840ED3703A4D3D304FBEE6C8A26E83 /* PlaygroundVCHelpers-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PlaygroundVCHelpers";
+			sourceTree = "<group>";
+		};
+		54A1CDBE9CFE5B5D3F7654CF2256A1C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6103B93817BEFB7FBC2B5D20F3CDC78 /* FunNet.framework */,
+				06C9CB9FE908D4F2ABA4190BEB477B24 /* ISO8601DateFormatter.framework */,
+				56AD8B8538E0DD6A9CB0A5D005C0C837 /* LithoOperators.framework */,
+				D0A75A073F25536D90EA2B3D534CA4DE /* MultiModelTableViewDataSource.framework */,
+				9113F3038E524BBB3736E73CE75D2D4A /* OHHTTPStubs.framework */,
+				A90525B42553664D132BC29FB28747F3 /* Prelude.framework */,
+				44DF916300ED4407FF8390A3EB01F693 /* SSPullToRefresh.framework */,
+				19C0E2B8D3C48B5B169D339D5AE5781E /* THUXAuth.framework */,
+				2FFB216B7252DB385F3597F5A6891C61 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B63A3ADFD16A0BBD707CFD7E369D8D1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0AF7D6213FD286D04B6D8A88E61B134A /* LICENSE */,
+				96FFE7F959AF76FEC9D050BBBBC3E520 /* LUX.podspec */,
+				9B58274F1CF78688C6614874E623185E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6165AE33497658B7E1AD9BC0DB8CF74A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7F5FA27A37DD03DBA91A2ACC21F7704 /* LUXLoginViewModel.swift */,
+				D1E26BFF8C9BEC245954987AC7642931 /* LUXModelCallViewModel.swift */,
+				F6FAB24BFD61E0D00B0EA9C32B22C26F /* LUXModelListViewModel.swift */,
+				FCD0AFF0B1B75D6C2E05BD74D2F393BB /* LUXModelTableViewModel.swift */,
+				B6A2FA7927366893DE2E6CF5A8994A8C /* LUXRegistrationViewModel.swift */,
+				CC86F1BB96627AC4DB42BB1E34E4E6DF /* LUXSplashViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		7595AC691FED2DCBC84EAB1E40AE113C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51A8C3F036573F6FF32BE911E46380C8 /* LUXForgotPasswordViewController.swift */,
+				3A21A4AFC5D2B3C0F4E1F216B1ADF5A9 /* LUXFunctionalViewController.swift */,
+				6E3E9D91E2D2DF9BF6EACE6585C078F7 /* LUXLoginViewController.swift */,
+				AB9A105F865B899E524F82283663D399 /* LUXMultiModelTableViewController.swift */,
+				B7537492D3CD7861D6AEFA263A2599A3 /* LUXRegistrationViewController.swift */,
+				4D6446997F4F61B8461F25BD0C5E4943 /* LUXResetPasswordViewController.swift */,
+				9B594638A3AC673BDCCD24E59E8EF234 /* LUXSearchViewController.swift */,
+				A94EDBEDD0FCE9094341BE6110C34DBC /* LUXSplashViewController.swift */,
+			);
+			name = ViewControllers;
+			path = LUX/Classes/ViewControllers;
+			sourceTree = "<group>";
+		};
+		80D85A306E15656BE5784DF88F453E39 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39E15C7A51CDA56923B8B0A7D589B198 /* THUXAuth.modulemap */,
+				E029175CEE649638464374A7AA384DEF /* THUXAuth.xcconfig */,
+				5070ABBA64F1EC88B51AEA3B51B30D8A /* THUXAuth-dummy.m */,
+				83CC0561069DC8567BB53D854DF3B1D9 /* THUXAuth-Info.plist */,
+				D7959930330368AA5EEC2C1B232F3DDD /* THUXAuth-prefix.pch */,
+				6E2F9E1F805991AA3C4112B315CDA8F2 /* THUXAuth-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/THUXAuth";
+			sourceTree = "<group>";
+		};
+		85B3A4D9814BC555598473BCB0732E90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F40C84798200EE8B6D9FC38246B8D0B5 /* FunNet */,
+				C2AE2D30EE50DEFD21D0B57F8E1451B6 /* ISO8601DateFormatter */,
+				1A3E8A613A9ED1504F735940C84B0D72 /* LithoOperators */,
+				3589504771880DE4063A0CCBFA9334C1 /* MultiModelTableViewDataSource */,
+				0567903702A203FB0648EA221633C92E /* OHHTTPStubs */,
+				C8AFC2136673A428516C3969CE42FE6A /* PlaygroundVCHelpers */,
+				F5C5800C32584B19C836A930814C81E8 /* Prelude */,
+				F943B141366756A09086B90AA7EA466E /* SSPullToRefresh */,
+				C6E76DA2CB73CB85951A38B84796066B /* THUXAuth */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8DFC9DDBCC136672DF71BBD6BB1D7FB5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				6058D7057B4D760538CDE88E5FC04B18 /* OHHTTPStubsResponse+JSON.h */,
+				F4DEC45C9B2C7AD535FC4C0AABCDDD10 /* OHHTTPStubsResponse+JSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		AE14E25615D8DD4124ACB8174B0AF995 /* Pods-LUX_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA1D1860C971915771D9C8C89C816D /* Pods-LUX_Tests.modulemap */,
+				494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */,
+				900CED4FE06B045D1F67455BCA7D37F2 /* Pods-LUX_Tests-acknowledgements.plist */,
+				B7E8F3691552A5FB6AC7A7D645414575 /* Pods-LUX_Tests-dummy.m */,
+				D2236A14B3B9F4CB637B16CCF253C8FA /* Pods-LUX_Tests-Info.plist */,
+				34A7B00C6B13C155A06378788C600ECC /* Pods-LUX_Tests-umbrella.h */,
+				59167F1180D43B27D98CC3FCE11C6F9C /* Pods-LUX_Tests.debug.xcconfig */,
+				098C8733CCE4A551868EC91901CA2574 /* Pods-LUX_Tests.release.xcconfig */,
+			);
+			name = "Pods-LUX_Tests";
+			path = "Target Support Files/Pods-LUX_Tests";
+			sourceTree = "<group>";
+		};
+		AE306C1A42D6104D5E5641EA30598265 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30FE788F07C48FD025C58922C29058A3 /* Prelude.modulemap */,
+				D275748608817EC71257EED8E7046F00 /* Prelude.xcconfig */,
+				F62C9DCEC149D21E91814AAB5B7788E5 /* Prelude-dummy.m */,
+				62F985DE1392D6676A0553DD7AA404C4 /* Prelude-Info.plist */,
+				ED716B8C84E802C16A8BDBA8314E3DE5 /* Prelude-prefix.pch */,
+				F4690D15F9F382C8BFAC05FA0FBB0ABB /* Prelude-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Prelude";
+			sourceTree = "<group>";
+		};
+		C02D101E28BB5F27BCB9F42E38512408 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DCE87B87B9DE5DDCE47E66AAC57F140 /* ViewControllers */,
+				38B7D549047B8DAC8B7FC971AB08A5F8 /* Views */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C071A57D876D797BFCD7BD1F8CD4FA0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20574C340C819F6F8A2A6D65C9FC616C /* FunNet.framework */,
+				A4071336C6493504572EF9BFAA64638D /* ISO8601DateFormatter.framework */,
+				F02BB82B3FFD1B4A5BE1C7443584444C /* LithoOperators.framework */,
+				7F4290EFF5FD0AC2709B45A32093D64E /* LUX.framework */,
+				F5B1A9149DC8FDCA5A4A46EBD4CE20D6 /* MultiModelTableViewDataSource.framework */,
+				17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */,
+				CD19C0192248F56E220F7BBD82B6C2BB /* PlaygroundVCHelpers.framework */,
+				8B3620F145E912842BC32F818B308789 /* Pods_LUX_Example.framework */,
+				88BFD543FFD40E08D9B56815D32B4E81 /* Pods_LUX_Tests.framework */,
+				0FC679A41D0D34FD873B7D9F9E6BE8BB /* Prelude.framework */,
+				319E00FB5A7AB1FB6EB80A38AC77AE0B /* SSPullToRefresh.framework */,
+				DDD41C2A5488D17C300285739B804203 /* THUXAuth.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1B894576F7A10239F64EF2FE4497E7B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9944071DFEF856513DE1F7ECF8A42CE9 /* ISO8601DateFormatter.modulemap */,
+				61F23589698A0FE17B2BB9C06A39D6BF /* ISO8601DateFormatter.xcconfig */,
+				803B8B2E105B342EB2706178B9E08C55 /* ISO8601DateFormatter-dummy.m */,
+				2A72A1C36E20715EC0B1CCB606E30045 /* ISO8601DateFormatter-Info.plist */,
+				FFE850CAE9FF73C5CD8454526E1D26AC /* ISO8601DateFormatter-prefix.pch */,
+				6E859335EE98ECE489613965B61DF1FA /* ISO8601DateFormatter-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ISO8601DateFormatter";
+			sourceTree = "<group>";
+		};
+		C2AE2D30EE50DEFD21D0B57F8E1451B6 /* ISO8601DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				87EE4960479E325E43808EA55BFD4A3F /* ISO8601DateFormatter.h */,
+				6D5FE41F012D3ED66D630691ACE1FC20 /* ISO8601DateFormatter.m */,
+				C1B894576F7A10239F64EF2FE4497E7B /* Support Files */,
+			);
+			path = ISO8601DateFormatter;
+			sourceTree = "<group>";
+		};
+		C4C429EFA3CA729B339F2C35C9D7CD25 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45CDA47363AB07452186680FC5C43018 /* FunNet.modulemap */,
+				2F4573B8EE90D4BA87B985997B0CC43C /* FunNet.xcconfig */,
+				2990D86B8282524D318D4658CF9627E7 /* FunNet-dummy.m */,
+				721B5FCD8E3FA637B3108940C83B91B9 /* FunNet-Info.plist */,
+				2B59D031D5EB0BF5285BC13750E26BD4 /* FunNet-prefix.pch */,
+				DD83C80DD6908BE3674A24421C1A3C52 /* FunNet-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FunNet";
+			sourceTree = "<group>";
+		};
+		C6E76DA2CB73CB85951A38B84796066B /* THUXAuth */ = {
+			isa = PBXGroup;
+			children = (
+				9F6F89BB3C5F46D4ABFAB831951E5F39 /* THUXSessionManager.swift */,
+				80D85A306E15656BE5784DF88F453E39 /* Support Files */,
+			);
+			path = THUXAuth;
+			sourceTree = "<group>";
+		};
+		C73583D9FA1F3AB6FC0407536D8A47E6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E890ADC4B08ED0FE1B31D87161FD34D /* LUX */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C8AFC2136673A428516C3969CE42FE6A /* PlaygroundVCHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D58711F9B1A76E03CA94DCC2C02A2D2 /* PlaygroundVCHelpers.swift */,
+				4FC9885E576B53CDFF8799836470084C /* Support Files */,
+			);
+			path = PlaygroundVCHelpers;
+			sourceTree = "<group>";
+		};
+		CA68F6BF509D8888116E7FAD07C0B7A3 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				681E208A03DFA44C512A09FCD19919B4 /* NSURLRequest+HTTPBodyTesting.h */,
+				5B64973E3EA80BB7D3AE7496C2EEE45C /* NSURLRequest+HTTPBodyTesting.m */,
+				5E9D9ED31C7A06A1D37766717B6BCE47 /* OHHTTPStubs+NSURLSessionConfiguration.m */,
+				CFC34110B3A4B82A107C4044342C7BF4 /* OHHTTPStubsMethodSwizzling.h */,
+				4CA432CF50A6B610459D74971C3C9431 /* OHHTTPStubsMethodSwizzling.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C73583D9FA1F3AB6FC0407536D8A47E6 /* Development Pods */,
+				54A1CDBE9CFE5B5D3F7654CF2256A1C0 /* Frameworks */,
+				85B3A4D9814BC555598473BCB0732E90 /* Pods */,
+				C071A57D876D797BFCD7BD1F8CD4FA0C /* Products */,
+				170CF42BF045433057DA258888411551 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D721D67D9AE1B85A9F595E500780D27B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1ADB4E0097A12239180DDB8A46CF9E9 /* OHHTTPStubs.modulemap */,
+				6B67894BB2FFDF5292B425307CE3E040 /* OHHTTPStubs.xcconfig */,
+				A0926BC0525081A11813D1CD788569E6 /* OHHTTPStubs-dummy.m */,
+				CFFE4F5673743F8E13DE24F45365264B /* OHHTTPStubs-Info.plist */,
+				716DDA03ADB5099FDC992D78ED613CA5 /* OHHTTPStubs-prefix.pch */,
+				07AA7356C9710206A5316F176311F1B2 /* OHHTTPStubs-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OHHTTPStubs";
+			sourceTree = "<group>";
+		};
+		D8BD7735EB81D2E074C5186DCB08FE7A /* Pods-LUX_Example */ = {
+			isa = PBXGroup;
+			children = (
+				DE91869759BD338043C3C05342CBDC6A /* Pods-LUX_Example.modulemap */,
+				A999AB179B645710D612386D3D55C448 /* Pods-LUX_Example-acknowledgements.markdown */,
+				D26768571CEA509040B2E2CB619A95FA /* Pods-LUX_Example-acknowledgements.plist */,
+				8DBB35E16CF10C8F3E7071E31CAE1C07 /* Pods-LUX_Example-dummy.m */,
+				3A0C16AEAC17506CC3336F79E90DE583 /* Pods-LUX_Example-frameworks.sh */,
+				180EEBD891D900E58892AAA1B62A0705 /* Pods-LUX_Example-Info.plist */,
+				9853D90465FBCBF47CA795B7FDDFECEE /* Pods-LUX_Example-umbrella.h */,
+				1464344D0BC46AB4284355590F3ABB28 /* Pods-LUX_Example.debug.xcconfig */,
+				00D9C5CF932333F8149EF54A644A7FC3 /* Pods-LUX_Example.release.xcconfig */,
+			);
+			name = "Pods-LUX_Example";
+			path = "Target Support Files/Pods-LUX_Example";
+			sourceTree = "<group>";
+		};
+		DE5D8C6408F10CBF19EEE20AC5FD8BE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDCDAB7AF8913E4220B5521BC09DB348 /* CombineModelFunctions.swift */,
+				5D719CAFF13B509BAB23D7A4D37F5A58 /* LUXJsonProvider.swift */,
+				16C3E0F67BA70393DF296663A9DE5E6F /* LUXPageableModelManager.swift */,
+				1174A015E9B012FEED647C2CFF886830 /* LUXPageCallModelsManager.swift */,
+				07FFEF135521EF53E1E6212F89B6DB56 /* LUXRefreshableModelManager.swift */,
+				D1A92DB897233046BFCEF54B72AF7059 /* LUXRefreshCallModelsManager.swift */,
+				6F531428A777B1EE08401A5454FBF88D /* LUXTableViewDelegates.swift */,
+				ABBFEF5D76E8B698F0A820C283148F4A /* LUXTextValidator.swift */,
+				9C65A44B40D938B6DC3359B68BB9AD69 /* LUXVersionChecker.swift */,
+				2A341311327655735A5829AB127AA190 /* FlowControllers */,
+				6165AE33497658B7E1AD9BC0DB8CF74A /* View Models */,
+			);
+			name = Models;
+			path = LUX/Classes/Models;
+			sourceTree = "<group>";
+		};
+		E5F223B4090EEEFDFDF8A8A44002DF06 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09E67CCDB3CA6D828C0F077C76B37CB4 /* SSPullToRefresh.modulemap */,
+				935C6AE195E59BED8289A15D66AB2043 /* SSPullToRefresh.xcconfig */,
+				C296D5D785FC0537DB757FA00F7B6028 /* SSPullToRefresh-dummy.m */,
+				898635245B3FC8F470B52EFD42FFE281 /* SSPullToRefresh-Info.plist */,
+				4A4AEEDBE8ADCDBD48EF0F12C9F715BC /* SSPullToRefresh-prefix.pch */,
+				F28B58D6893A75722396FA2099EE1774 /* SSPullToRefresh-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSPullToRefresh";
+			sourceTree = "<group>";
+		};
+		EC626E6FDC0865CF8E1D856D0AE53CDA /* OHPathHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B1CFB37B14CE3D5A0552175FCA530D66 /* OHPathHelpers.h */,
+				39CEE2AC642DD105A0781B6BE313C408 /* OHPathHelpers.m */,
+			);
+			name = OHPathHelpers;
+			sourceTree = "<group>";
+		};
+		F40C84798200EE8B6D9FC38246B8D0B5 /* FunNet */ = {
+			isa = PBXGroup;
+			children = (
+				E4918D1AB4CD8865862BF79670C01963 /* Endpoint.swift */,
+				3EE2F547D84DAD59CE86A7BDCFB98F26 /* FunNetCall.swift */,
+				65ABC2B3FEDA115D45AC25486009B0D9 /* NetworkCall.swift */,
+				7803EEC3FDFDFA448BA1F54AB3FB8E75 /* NetworkErrorHandler.swift */,
+				253783D29EF6E5EBB86E73EB074FE179 /* NetworkResponder.swift */,
+				63EE8AAA67CB4F1FFD1AD2A054F29B21 /* Requests.swift */,
+				E50238F0F407832414A27FE24A3AC1A2 /* ServerConfiguration.swift */,
+				1087368397BD70BC2119B5FF532DDDDE /* Stubbable.swift */,
+				C4A63BC44F2FFA33DB297C8F0A3586C7 /* StubHolder.swift */,
+				C4C429EFA3CA729B339F2C35C9D7CD25 /* Support Files */,
+			);
+			path = FunNet;
+			sourceTree = "<group>";
+		};
+		F5C5800C32584B19C836A930814C81E8 /* Prelude */ = {
+			isa = PBXGroup;
+			children = (
+				64F9534A2360A1EA9C05452A23EBB568 /* Application.swift */,
+				83C1CC9DB48F0AC3D93684D70B19431F /* Compose.swift */,
+				C9BA0542E66B1DAF67626F01D282B6F8 /* Curry.swift */,
+				183C77BA5538B616B869543EC78CE264 /* Fix.swift */,
+				32DD5558C2954CE3EF8B2EB7F15D31FE /* Flip.swift */,
+				2FEFA29F9C270C99DF822E4380EF25C4 /* Optional.swift */,
+				4288AFF519E19690C2BACEB6F6DB1E0A /* Prelude.swift */,
+				4BC632FDA56F002F694B243BB036E562 /* Tuple.swift */,
+				AE306C1A42D6104D5E5641EA30598265 /* Support Files */,
+			);
+			path = Prelude;
+			sourceTree = "<group>";
+		};
+		F943B141366756A09086B90AA7EA466E /* SSPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				33F16FF6FF6E59C90A8CB8EAFF246757 /* SSPullToRefresh.h */,
+				E2487DFFA020724A91A960F323EB80C7 /* SSPullToRefreshDefaultContentView.h */,
+				B3A33D5895BFA7F3B1C1EC93DAF1CFEC /* SSPullToRefreshDefaultContentView.m */,
+				5147848A4C7B00844D49832E7CBE2557 /* SSPullToRefreshSimpleContentView.h */,
+				278DB3D6752B7980B1FFDFD11B6AABF7 /* SSPullToRefreshSimpleContentView.m */,
+				39F1280C230025BA5D59228679CB68EF /* SSPullToRefreshView.h */,
+				10111F473B30D5917E2BF59EB480E41E /* SSPullToRefreshView.m */,
+				E5F223B4090EEEFDFDF8A8A44002DF06 /* Support Files */,
+			);
+			path = SSPullToRefresh;
+			sourceTree = "<group>";
+		};
+		FF8BC4B4E2A23B8B267F1FE6CFF454E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8F9F41FD6738053DB754654FB3580B8 /* LUXDetailTableViewCell.swift */,
+				66A7CF10173630AF608E1C0D8DA2D043 /* LUXSearchTableViewCell.swift */,
+				8F8D87FCB5686E032563642D365B2C96 /* LUXCommentTableViewCell.swift */,
+			);
+			name = Views;
+			path = LUX/Classes/Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3BB98D95703C175E9EB38561E982A5AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7612C89F7E346597124693C7ECA7FD77 /* FunNet-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D2EE26E383D31592F3D2934D1A9527C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70B83CE6BBB3A6A1C154C709E2B63BE /* THUXAuth-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		520699E4BB5552FBA8EC54E2AAE737E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0C5547A55E1192A59FF74D6076B700 /* Pods-LUX_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6040C99FC7BC161A94295ABF8A99AFA6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA779DCE3DAE5FF621CC7AC368616BD /* LithoOperators-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF0523CFF4D98DE9F3AF355F9F0E57A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35AA84CB2C47837005364CA7C3D2DB /* Pods-LUX_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E393444AE1D2B1674D769240BA66A6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C703DB003C93CAFC7DFC2CD55D201A30 /* LUX-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A5DACB85B971BA85D5E24D18F2F5AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40EE5E139AE0F5B88B6EE3267C4F34FC /* ISO8601DateFormatter-umbrella.h in Headers */,
+				6E594952AAE0211357528C61BBFB3535 /* ISO8601DateFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0A5CDAE473C76328C952740CCCDB6E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25BE1B2EE40E4EFDDFF79FF1AFDF8E04 /* Prelude-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07A449BEAA813E52D8FDFD51AFFF2D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B735AE62E3C0CA2030172C8147E3DE8 /* MultiModelTableViewDataSource-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C901C7802474C2D96EE5590D30F9BE51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8421BEE17D069C02103B6CFE1B11263 /* PlaygroundVCHelpers-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99FB8C6DE7BBE8E8BD957063E4CABC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA6E7C629FFCC25EAADAC4E176A3861 /* SSPullToRefresh-umbrella.h in Headers */,
+				DE20056050C29D2AFC47622FA03EE8BC /* SSPullToRefresh.h in Headers */,
+				D10C61B41ADBD68D8CF291C918AF117F /* SSPullToRefreshDefaultContentView.h in Headers */,
+				1E4B1891EF6F05B82BD1708D3757B863 /* SSPullToRefreshSimpleContentView.h in Headers */,
+				80A9E2AF32357C51CA14DD62C3369E04 /* SSPullToRefreshView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E29B21170D80358198A69B3ED4651692 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA15E501B912D77008C20BE1631A65B /* Compatibility.h in Headers */,
+				FAE9452441F34C7542D5ECE9C027020D /* NSURLRequest+HTTPBodyTesting.h in Headers */,
+				EFF983226F4537BD1D9E361AFAE09120 /* OHHTTPStubs-umbrella.h in Headers */,
+				36384D7935641C8EBE06A86B912671F5 /* OHHTTPStubs.h in Headers */,
+				33C99461D1BB434C1F938D35806A91D4 /* OHHTTPStubsMethodSwizzling.h in Headers */,
+				62A8568B501455A5D8FA9DBF11FE6119 /* OHHTTPStubsResponse+JSON.h in Headers */,
+				04781F42AAC7B68FB8724019F33FD7F7 /* OHHTTPStubsResponse.h in Headers */,
+				54F3E7A2D868981058E61D15BAE4FE40 /* OHPathHelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09EBB50F01EA8B8DF3777C92EAFD2FC1 /* LUX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B13E6488F352AF48217F2EB00FFA4D5 /* Build configuration list for PBXNativeTarget "LUX" */;
+			buildPhases = (
+				6E393444AE1D2B1674D769240BA66A6C /* Headers */,
+				2E3EC4F929915DED1722BE75D4E2EAC4 /* Sources */,
+				A2526E094391CE38EB1EC40B065F3530 /* Frameworks */,
+				C3D53BAEB4335E565A81C7A64AC8F7AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E2412002D059EE65338D4F033AD4B01 /* PBXTargetDependency */,
+				A9B1EEDF1AE34DF5AB46FEB4490CCFED /* PBXTargetDependency */,
+				D684A79DAFD08B055B1B0D9D91D82DFD /* PBXTargetDependency */,
+				967E056CA47E50458068EF00208DCBD7 /* PBXTargetDependency */,
+				01E0B67604950C7E7A96BAE7320AF219 /* PBXTargetDependency */,
+				E9671DAF96042BD8D76771FFD25CB0CA /* PBXTargetDependency */,
+			);
+			name = LUX;
+			productName = LUX;
+			productReference = 7F4290EFF5FD0AC2709B45A32093D64E /* LUX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0A44F81A2809469733134E7BFB6B8A16 /* PlaygroundVCHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 830F232C3056B910DFE30F60F3FE603D /* Build configuration list for PBXNativeTarget "PlaygroundVCHelpers" */;
+			buildPhases = (
+				C901C7802474C2D96EE5590D30F9BE51 /* Headers */,
+				D39D87B27182B57A16C00C0EFF8354FA /* Sources */,
+				75D7DBF1C517E3CFBD83D7B43F6C6EDE /* Frameworks */,
+				8BFD3E22D697C39B8041DD6E30CC1840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaygroundVCHelpers;
+			productName = PlaygroundVCHelpers;
+			productReference = CD19C0192248F56E220F7BBD82B6C2BB /* PlaygroundVCHelpers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4BBD6DC6173664EC2AEE7A16ADE590B8 /* Pods-LUX_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D49A5AD894F12D1DC5749695EA62D7 /* Build configuration list for PBXNativeTarget "Pods-LUX_Tests" */;
+			buildPhases = (
+				520699E4BB5552FBA8EC54E2AAE737E0 /* Headers */,
+				55D3A5E009DD94F5A8D5EC04774BEA19 /* Sources */,
+				0C3F94175BE3CD8A88CB1221B196E00F /* Frameworks */,
+				814456FCB1B97D37AF6699709BC4ED0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84252BA503CA066977C334B0383A22AD /* PBXTargetDependency */,
+			);
+			name = "Pods-LUX_Tests";
+			productName = "Pods-LUX_Tests";
+			productReference = 88BFD543FFD40E08D9B56815D32B4E81 /* Pods_LUX_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4FD4DA7031A2850BE25C91D864B76C4B /* THUXAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A5F24C7666DE80998D81FF3686E3FE9 /* Build configuration list for PBXNativeTarget "THUXAuth" */;
+			buildPhases = (
+				4D2EE26E383D31592F3D2934D1A9527C /* Headers */,
+				CBE7758C12BA20CD318983507C3FAA9A /* Sources */,
+				CC5DF454E2F639ABF93C6F1545D21B3E /* Frameworks */,
+				23274D4D3225E7098609B98767147FFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = THUXAuth;
+			productName = THUXAuth;
+			productReference = DDD41C2A5488D17C300285739B804203 /* THUXAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		53CD685FC2E9A4950DF443B5D9D621CA /* FunNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D9EC9CD1FDBCEC642B1B4E974A3D998 /* Build configuration list for PBXNativeTarget "FunNet" */;
+			buildPhases = (
+				3BB98D95703C175E9EB38561E982A5AD /* Headers */,
+				0A0290DD7FE55AA0F6922227AEFF409F /* Sources */,
+				09578EEFFD93FEA82886FDC461124586 /* Frameworks */,
+				57B90800F07C2EAD2B7D8290EED81AA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB529502932EA214324FA479AE571FB7 /* PBXTargetDependency */,
+				23E1CD97C82B9B01F662E77ACC86D7B4 /* PBXTargetDependency */,
+			);
+			name = FunNet;
+			productName = FunNet;
+			productReference = 20574C340C819F6F8A2A6D65C9FC616C /* FunNet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		82F977B2493B989A9D13FABFD6A0FB66 /* SSPullToRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4FC635CD8B4C92CE35E16DA68DAD2E /* Build configuration list for PBXNativeTarget "SSPullToRefresh" */;
+			buildPhases = (
+				C99FB8C6DE7BBE8E8BD957063E4CABC5 /* Headers */,
+				1E3987270F1C6B0D8432D8F5B47EED94 /* Sources */,
+				D694296792F6FF870C933D84B834CFC3 /* Frameworks */,
+				708BD750B53215117AAC4E8E25BF8674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSPullToRefresh;
+			productName = SSPullToRefresh;
+			productReference = 319E00FB5A7AB1FB6EB80A38AC77AE0B /* SSPullToRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8F912D5BA9B2DA6D453752CCFAB059F1 /* ISO8601DateFormatter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C7EEACD22378359942CE0D689ACCBB /* Build configuration list for PBXNativeTarget "ISO8601DateFormatter" */;
+			buildPhases = (
+				87A5DACB85B971BA85D5E24D18F2F5AB /* Headers */,
+				9F36584358479BFCD931CE26CCD4966A /* Sources */,
+				FC9A92E1CD35ACF1CC433AFD4B3C5FE0 /* Frameworks */,
+				1E8538F018E37DF4E710EDBB271DED18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISO8601DateFormatter;
+			productName = ISO8601DateFormatter;
+			productReference = A4071336C6493504572EF9BFAA64638D /* ISO8601DateFormatter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A983A2D06C5B6AA3D6ABA5CCC0A16725 /* OHHTTPStubs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA464D00AECBEE907599C7ED4A5910BE /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */;
+			buildPhases = (
+				E29B21170D80358198A69B3ED4651692 /* Headers */,
+				6047EC6B9C1B666DA12CF16335690DB4 /* Sources */,
+				EE6C22F7D3032FF3B0A96AF2E25C9A77 /* Frameworks */,
+				415FDC0183AED155D94BD27666DFDC15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OHHTTPStubs;
+			productName = OHHTTPStubs;
+			productReference = 17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B269CB2B11C40853B26617F230F7F0FE /* Pods-LUX_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 177988512A27C8AF5BE1C2C4F7E4F189 /* Build configuration list for PBXNativeTarget "Pods-LUX_Example" */;
+			buildPhases = (
+				6BF0523CFF4D98DE9F3AF355F9F0E57A /* Headers */,
+				51592E3B7FAC0ABE332D8632B38D7516 /* Sources */,
+				F27BA505B4723B9BFFEA9DA056E8AED2 /* Frameworks */,
+				39DEB9597B74F3CC7F263C4BC9AF45A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				297F7803BDA9C987B45EC2012C179A1A /* PBXTargetDependency */,
+				C4F10EFBD59DF30392EB3F6A89D6109A /* PBXTargetDependency */,
+				C3DC895608AE049D01BA571309149BBE /* PBXTargetDependency */,
+				42BB5C5F68E49E4DEBF7369B15AC060E /* PBXTargetDependency */,
+				387F0DA55AFA0593D6EF949A532E85A0 /* PBXTargetDependency */,
+				ACB84301D3808049AD512E1B1E2C11EC /* PBXTargetDependency */,
+				667FE1215B31C73EE06E1AD26DA7F03C /* PBXTargetDependency */,
+				4B0350F85624E5CF1BA3728677EAA521 /* PBXTargetDependency */,
+				1E6B44DC8946AF3B52FF01E44A2FEE2C /* PBXTargetDependency */,
+				04092C17F283A882DAFE3A37F3E3689E /* PBXTargetDependency */,
+			);
+			name = "Pods-LUX_Example";
+			productName = "Pods-LUX_Example";
+			productReference = 8B3620F145E912842BC32F818B308789 /* Pods_LUX_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BDE9651E3D91FEDF74EB17C3CBDD3742 /* Prelude */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A58ABD1C8FCBB9C0AA792D72ED5D3C6 /* Build configuration list for PBXNativeTarget "Prelude" */;
+			buildPhases = (
+				A0A5CDAE473C76328C952740CCCDB6E6 /* Headers */,
+				AD12D10A7879885FEFAFE226E500AD52 /* Sources */,
+				4EF18E6A2EFF1B5E0BC7F8B673844312 /* Frameworks */,
+				1B3ABD84C4EF22E267D6B012168349EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Prelude;
+			productName = Prelude;
+			productReference = 0FC679A41D0D34FD873B7D9F9E6BE8BB /* Prelude.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9873D5AF0743DBA379FF2C093A383B9 /* MultiModelTableViewDataSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1770D961EE6A30EFA687B2A6A4656F48 /* Build configuration list for PBXNativeTarget "MultiModelTableViewDataSource" */;
+			buildPhases = (
+				B07A449BEAA813E52D8FDFD51AFFF2D7 /* Headers */,
+				5B24BA94B365CD05AB150D6F347A6A1F /* Sources */,
+				24B454DB57A9FAB37B534E0A98B606B3 /* Frameworks */,
+				EA3F6F0B0250CB833D3798D23346907D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiModelTableViewDataSource;
+			productName = MultiModelTableViewDataSource;
+			productReference = F5B1A9149DC8FDCA5A4A46EBD4CE20D6 /* MultiModelTableViewDataSource.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F23B1651D4D0DDA611CCBAFB8BFEED54 /* LithoOperators */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C36A88840521300C27CA7530804F1D3B /* Build configuration list for PBXNativeTarget "LithoOperators" */;
+			buildPhases = (
+				6040C99FC7BC161A94295ABF8A99AFA6 /* Headers */,
+				D3E598BF48A39423015C34A85AB7E070 /* Sources */,
+				DA8AA2F237EE957813843D6AEA653CCD /* Frameworks */,
+				68579B6F2571E77E15CA89E3D5E0559C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5681272C843F3A62FDBD5BAB292DF536 /* PBXTargetDependency */,
+			);
+			name = LithoOperators;
+			productName = LithoOperators;
+			productReference = F02BB82B3FFD1B4A5BE1C7443584444C /* LithoOperators.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C071A57D876D797BFCD7BD1F8CD4FA0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53CD685FC2E9A4950DF443B5D9D621CA /* FunNet */,
+				8F912D5BA9B2DA6D453752CCFAB059F1 /* ISO8601DateFormatter */,
+				F23B1651D4D0DDA611CCBAFB8BFEED54 /* LithoOperators */,
+				09EBB50F01EA8B8DF3777C92EAFD2FC1 /* LUX */,
+				C9873D5AF0743DBA379FF2C093A383B9 /* MultiModelTableViewDataSource */,
+				A983A2D06C5B6AA3D6ABA5CCC0A16725 /* OHHTTPStubs */,
+				0A44F81A2809469733134E7BFB6B8A16 /* PlaygroundVCHelpers */,
+				B269CB2B11C40853B26617F230F7F0FE /* Pods-LUX_Example */,
+				4BBD6DC6173664EC2AEE7A16ADE590B8 /* Pods-LUX_Tests */,
+				BDE9651E3D91FEDF74EB17C3CBDD3742 /* Prelude */,
+				82F977B2493B989A9D13FABFD6A0FB66 /* SSPullToRefresh */,
+				4FD4DA7031A2850BE25C91D864B76C4B /* THUXAuth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B3ABD84C4EF22E267D6B012168349EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8538F018E37DF4E710EDBB271DED18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23274D4D3225E7098609B98767147FFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39DEB9597B74F3CC7F263C4BC9AF45A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415FDC0183AED155D94BD27666DFDC15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57B90800F07C2EAD2B7D8290EED81AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68579B6F2571E77E15CA89E3D5E0559C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708BD750B53215117AAC4E8E25BF8674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814456FCB1B97D37AF6699709BC4ED0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BFD3E22D697C39B8041DD6E30CC1840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D53BAEB4335E565A81C7A64AC8F7AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40B0F09BB88F7A69E825B3AF4F591D1 /* LUXForgotPasswordViewController.xib in Resources */,
+				6D5626ECDBFC49481C6951E71F867219 /* LUXLoginViewController.xib in Resources */,
+				A00EC946993C1AB25194626E5570973B /* LUXMultiModelTableViewController.xib in Resources */,
+				CB9AB0AA15FE324CAA99B246EB486C3F /* LUXRefreshablePagedTableViewController.xib in Resources */,
+				61C00B14EE5A74B94504E303AA68B8F4 /* LUXRegistrationViewController.xib in Resources */,
+				274555F21E1999A0CE9B276A2ACE1C97 /* LUXResetPasswordViewController.xib in Resources */,
+				F367AB510890DDE41F88751AF940ED69 /* LUXSearchTableViewCell.xib in Resources */,
+				561592C0D2B7540CB59505999DDB2B23 /* LUXSearchViewController.xib in Resources */,
+				13A6F34D75968DF08FCB44E02797128E /* LUXCommentTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA3F6F0B0250CB833D3798D23346907D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A0290DD7FE55AA0F6922227AEFF409F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7193D7B334CCE6967BE2071A558E043 /* Endpoint.swift in Sources */,
+				1FD0A51BDA1E543DFB0C27FAC81CFC03 /* FunNet-dummy.m in Sources */,
+				23C9718E17E6800B40FEA9748E437D60 /* FunNetCall.swift in Sources */,
+				5CAC984CFB13A42AD5D629AB3509F9AE /* NetworkCall.swift in Sources */,
+				1D025501783EAE9C45B58CB0F7B52F25 /* NetworkErrorHandler.swift in Sources */,
+				798CD9F09E60B4B2EB810ED471D2F7BF /* NetworkResponder.swift in Sources */,
+				067A47236D3B02E553969C657DA167EE /* Requests.swift in Sources */,
+				31C856689B2F81DD8AD284A1FB5FB7ED /* ServerConfiguration.swift in Sources */,
+				C1EB2FB3FD9709BFA779845C6AB70BA8 /* Stubbable.swift in Sources */,
+				318D8C1B22B766DCF8C145B9851837BA /* StubHolder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E3987270F1C6B0D8432D8F5B47EED94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C281E3DC77AF178B6EE2B48875E513 /* SSPullToRefresh-dummy.m in Sources */,
+				092F325870E8E8EC0C18123C4EDD354F /* SSPullToRefreshDefaultContentView.m in Sources */,
+				052B9CA4137A9492FDA7B171EA9E683A /* SSPullToRefreshSimpleContentView.m in Sources */,
+				EEE2612FD8219235A036CF57774D860A /* SSPullToRefreshView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3EC4F929915DED1722BE75D4E2EAC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0C45E19C1817C505FA507FF09F5E930 /* CombineModelFunctions.swift in Sources */,
+				D68DFFDA45BEAEF9666D7481173422DA /* CombineNetCall.swift in Sources */,
+				266E5472C3D8E21E95F07241A81A977B /* LUX-dummy.m in Sources */,
+				B1CA5025769FF34D2D854ECD9C3F9718 /* LUXAppOpenFlowController.swift in Sources */,
+				743A62F197A93D702E190374DB8A9C2A /* LUXDetailTableViewCell.swift in Sources */,
+				F73B6A5DAD1116076C4EC2F3C9FBDC6D /* LUXFlowCoordinator.swift in Sources */,
+				66814FBB60D0696D900FE33BD5BBD1B3 /* LUXForgotPasswordViewController.swift in Sources */,
+				D5E37580E2F2D38BF8AFCD972C31CCE7 /* LUXFunctionalViewController.swift in Sources */,
+				0D466A5A17DD8E67FF42B105E80A3159 /* LUXJsonProvider.swift in Sources */,
+				519BD9C0673BDF7DAA656CA3EA8E60CF /* LUXListDetailFlowController.swift in Sources */,
+				89946A3FD1290477F7D7A849858C92D5 /* LUXLoginViewController.swift in Sources */,
+				E5D5A4BB35AF0B5208A33C794B6C1145 /* LUXLoginViewModel.swift in Sources */,
+				CA1BF28E5F1F25FE1734594BA6B8E3E3 /* LUXModelCallViewModel.swift in Sources */,
+				BEE31815B2EFF204E4170FDAE86DFBD1 /* LUXModelListViewModel.swift in Sources */,
+				E2C09054E1767FF5B3F876689A9ABD6B /* LUXModelTableViewModel.swift in Sources */,
+				1ADC875C464CF35A3DB1274A087C15F3 /* LUXMultiModelTableViewController.swift in Sources */,
+				B718931AB4528F1033592567BDA25210 /* LUXPageableModelManager.swift in Sources */,
+				E14C7D12AE2FFC0E7DC732931FCFCDC7 /* LUXPageCallModelsManager.swift in Sources */,
+				34BE91ADC0F11AA99484FE4BAD25D78A /* LUXRefreshableModelManager.swift in Sources */,
+				01F39C33775C233B38F005D493E571AA /* LUXRefreshCallModelsManager.swift in Sources */,
+				EDB67BAE6DFEE222328E1657FE5AE7A6 /* LUXRegistrationViewController.swift in Sources */,
+				65943FFB67F762A7AA45C4569A830108 /* LUXRegistrationViewModel.swift in Sources */,
+				A61C6856FF7C99B052079728972F10A7 /* LUXResetPasswordViewController.swift in Sources */,
+				2B7A8D1E1CC191E6A880D6F80708BDA6 /* LUXSearchTableViewCell.swift in Sources */,
+				0A3103A04DFEAB82627B71251F821220 /* LUXSearchViewController.swift in Sources */,
+				84ED141E9138FA8F2ECEFB9684FB6F93 /* LUXSplashViewController.swift in Sources */,
+				AF7F0F55E9DF60C82837CCAF8514DB92 /* LUXSplashViewModel.swift in Sources */,
+				1988253E6AE9898BC16ABA086850C41D /* LUXTableViewDelegates.swift in Sources */,
+				E7D2C7B5312C50EBF24874500BAAEA58 /* LUXTextValidator.swift in Sources */,
+				6DFEF0931E016A5ADAEE7F2D04655F2F /* LUXVersionChecker.swift in Sources */,
+				62F00B806CEF2F3BC569DDB824D32713 /* ServerAuth.swift in Sources */,
+				B88D2771BC628899D41C1A65CB115002 /* StubbableReactiveNetCall.swift in Sources */,
+				8E02B9706B6113064F9927FB789A5E00 /* LUXCommentTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51592E3B7FAC0ABE332D8632B38D7516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D20E361685E434EA5B885432AB8BCFC /* Pods-LUX_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D3A5E009DD94F5A8D5EC04774BEA19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8077CA347270F6E3052F99AF4AEB250 /* Pods-LUX_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B24BA94B365CD05AB150D6F347A6A1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68713B2FECD432312EAA59E723A68FF8 /* MultiModelTableViewDataSource-dummy.m in Sources */,
+				2EC22786D0FDA19076B80DDC9DCA880E /* MultiModelTableViewDataSource.swift in Sources */,
+				7D334C1E7EC4DE39F2234C3A5364A6C6 /* MultiModelTableViewDataSourceItem.swift in Sources */,
+				10B282A502B34394652CB2AFE216E93C /* MultiModelTableViewDataSourceSection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6047EC6B9C1B666DA12CF16335690DB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048FCB751C65CC7223A2BB7672C6B2EA /* NSURLRequest+HTTPBodyTesting.m in Sources */,
+				47B152F60771C4721440ED0E31F6CE4A /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */,
+				99882E3BA53A556049FBD6CE84248A39 /* OHHTTPStubs-dummy.m in Sources */,
+				01C34D62C16266656370992DCC4771B7 /* OHHTTPStubs.m in Sources */,
+				A96957C90C9DE777CB6FED0E49A58ED9 /* OHHTTPStubsMethodSwizzling.m in Sources */,
+				77C7334EE562D60AFCB5F1ADBE1476BB /* OHHTTPStubsResponse+JSON.m in Sources */,
+				51D9DDC90A7FB59FF979635C191B9B73 /* OHHTTPStubsResponse.m in Sources */,
+				6EEE3011ED2D0D9FDC5EB3F0796443B7 /* OHHTTPStubsSwift.swift in Sources */,
+				486B079CB808A3F0882F460DE5A38517 /* OHPathHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F36584358479BFCD931CE26CCD4966A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6547D95905D7326DE68FF54CEB0DDB9 /* ISO8601DateFormatter-dummy.m in Sources */,
+				1AC1C657ED866A64AC19C5637BC2F5EE /* ISO8601DateFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD12D10A7879885FEFAFE226E500AD52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4709060854F9CF1F6089A998A586C559 /* Application.swift in Sources */,
+				CBA49C9DB4056A789AEDFCA22E34226B /* Compose.swift in Sources */,
+				ED6D937DD3101A526BE85A3C3F6C13E2 /* Curry.swift in Sources */,
+				CD5328CB54C6125BAEE6D02F12B333E1 /* Fix.swift in Sources */,
+				C19C7144A9E1261B2F5E7647BCF92C7F /* Flip.swift in Sources */,
+				5B218240097E50AAAFA2EFFFE811F846 /* Optional.swift in Sources */,
+				7FBFCD6C40BE3DB4F421F6F02E337FBE /* Prelude-dummy.m in Sources */,
+				31D366EAD4C72CF87DF66587617EE545 /* Prelude.swift in Sources */,
+				9655A770C8CF2C902AAC5FE22B8FE66E /* Tuple.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE7758C12BA20CD318983507C3FAA9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB6FA66F43F3ADC01C6BF2F50BC4FEB /* THUXAuth-dummy.m in Sources */,
+				12D23B0E25810FD8662589F76C93415D /* THUXSessionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39D87B27182B57A16C00C0EFF8354FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				399B4E0D81035D6D3B2F4FC2EDDC58F2 /* PlaygroundVCHelpers-dummy.m in Sources */,
+				7E073998FDAFCA27D6E670B942781B4E /* PlaygroundVCHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3E598BF48A39423015C34A85AB7E070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0E62ADCA2E4E493EBB24F622BF5419 /* LithoOperators-dummy.m in Sources */,
+				CECB75732DCE1C28C22EB8E8A29F6442 /* LithoOperators.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01E0B67604950C7E7A96BAE7320AF219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSPullToRefresh;
+			target = 82F977B2493B989A9D13FABFD6A0FB66 /* SSPullToRefresh */;
+			targetProxy = 47289FAC69894F54DD429405A5BDFFC5 /* PBXContainerItemProxy */;
+		};
+		04092C17F283A882DAFE3A37F3E3689E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = THUXAuth;
+			target = 4FD4DA7031A2850BE25C91D864B76C4B /* THUXAuth */;
+			targetProxy = C89877A444D47EBD6976EF2C754A01C5 /* PBXContainerItemProxy */;
+		};
+		1E6B44DC8946AF3B52FF01E44A2FEE2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSPullToRefresh;
+			target = 82F977B2493B989A9D13FABFD6A0FB66 /* SSPullToRefresh */;
+			targetProxy = 58BD427E06979C56B0467C12DC410561 /* PBXContainerItemProxy */;
+		};
+		23E1CD97C82B9B01F662E77ACC86D7B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OHHTTPStubs;
+			target = A983A2D06C5B6AA3D6ABA5CCC0A16725 /* OHHTTPStubs */;
+			targetProxy = 62B53E0A31A0D0A6501B1BACEF186942 /* PBXContainerItemProxy */;
+		};
+		297F7803BDA9C987B45EC2012C179A1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FunNet;
+			target = 53CD685FC2E9A4950DF443B5D9D621CA /* FunNet */;
+			targetProxy = 893D37489E00F622C5885D53B3D8E7D8 /* PBXContainerItemProxy */;
+		};
+		387F0DA55AFA0593D6EF949A532E85A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MultiModelTableViewDataSource;
+			target = C9873D5AF0743DBA379FF2C093A383B9 /* MultiModelTableViewDataSource */;
+			targetProxy = 5B299EDF7ABB65B94B8C1A488CE8F8AD /* PBXContainerItemProxy */;
+		};
+		42BB5C5F68E49E4DEBF7369B15AC060E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LithoOperators;
+			target = F23B1651D4D0DDA611CCBAFB8BFEED54 /* LithoOperators */;
+			targetProxy = 58C43A1E0318CBB5ED541B7710E094FF /* PBXContainerItemProxy */;
+		};
+		4B0350F85624E5CF1BA3728677EAA521 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Prelude;
+			target = BDE9651E3D91FEDF74EB17C3CBDD3742 /* Prelude */;
+			targetProxy = 2780ECBCC92ED047B4D8FC443601B1F9 /* PBXContainerItemProxy */;
+		};
+		5681272C843F3A62FDBD5BAB292DF536 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Prelude;
+			target = BDE9651E3D91FEDF74EB17C3CBDD3742 /* Prelude */;
+			targetProxy = 85AA11BFEB61FB80E24AA2CB529F5BD8 /* PBXContainerItemProxy */;
+		};
+		667FE1215B31C73EE06E1AD26DA7F03C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PlaygroundVCHelpers;
+			target = 0A44F81A2809469733134E7BFB6B8A16 /* PlaygroundVCHelpers */;
+			targetProxy = A59C7C78969F454A99A41F6B1EC18633 /* PBXContainerItemProxy */;
+		};
+		7E2412002D059EE65338D4F033AD4B01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FunNet;
+			target = 53CD685FC2E9A4950DF443B5D9D621CA /* FunNet */;
+			targetProxy = 7DC8C1A58ABFDE9D6C55E67CC8FBEE02 /* PBXContainerItemProxy */;
+		};
+		84252BA503CA066977C334B0383A22AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-LUX_Example";
+			target = B269CB2B11C40853B26617F230F7F0FE /* Pods-LUX_Example */;
+			targetProxy = BB5EE8B0BAD8FE467504E878CAFD11F8 /* PBXContainerItemProxy */;
+		};
+		967E056CA47E50458068EF00208DCBD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Prelude;
+			target = BDE9651E3D91FEDF74EB17C3CBDD3742 /* Prelude */;
+			targetProxy = F2FD8D71F5E3992303C5CDE8FAF5F3CB /* PBXContainerItemProxy */;
+		};
+		A9B1EEDF1AE34DF5AB46FEB4490CCFED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ISO8601DateFormatter;
+			target = 8F912D5BA9B2DA6D453752CCFAB059F1 /* ISO8601DateFormatter */;
+			targetProxy = 14C6D3C50EEA1F7F227E9F0DDC49D29A /* PBXContainerItemProxy */;
+		};
+		AB529502932EA214324FA479AE571FB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LithoOperators;
+			target = F23B1651D4D0DDA611CCBAFB8BFEED54 /* LithoOperators */;
+			targetProxy = A4D8FC0AE1529165DD61891A736EE74D /* PBXContainerItemProxy */;
+		};
+		ACB84301D3808049AD512E1B1E2C11EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OHHTTPStubs;
+			target = A983A2D06C5B6AA3D6ABA5CCC0A16725 /* OHHTTPStubs */;
+			targetProxy = 4801D81A37D6E6C33A1E950D3BDCC9A8 /* PBXContainerItemProxy */;
+		};
+		C3DC895608AE049D01BA571309149BBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LUX;
+			target = 09EBB50F01EA8B8DF3777C92EAFD2FC1 /* LUX */;
+			targetProxy = 993C590F32EFE5AD27E60E2F6A7F720F /* PBXContainerItemProxy */;
+		};
+		C4F10EFBD59DF30392EB3F6A89D6109A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ISO8601DateFormatter;
+			target = 8F912D5BA9B2DA6D453752CCFAB059F1 /* ISO8601DateFormatter */;
+			targetProxy = CC2ACCD59F525ADB4EF411E3628B940E /* PBXContainerItemProxy */;
+		};
+		D684A79DAFD08B055B1B0D9D91D82DFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MultiModelTableViewDataSource;
+			target = C9873D5AF0743DBA379FF2C093A383B9 /* MultiModelTableViewDataSource */;
+			targetProxy = 924AD743176050C83D8C438EEE1BF80F /* PBXContainerItemProxy */;
+		};
+		E9671DAF96042BD8D76771FFD25CB0CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = THUXAuth;
+			target = 4FD4DA7031A2850BE25C91D864B76C4B /* THUXAuth */;
+			targetProxy = DD223E37668D37B73E1435F71E5FACA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		1761E20872D3080ABABEB6A6AFC26E4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 271D142DC6BD22A49BBF77F6E4ED4BAF /* MultiModelTableViewDataSource.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MultiModelTableViewDataSource/MultiModelTableViewDataSource-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MultiModelTableViewDataSource/MultiModelTableViewDataSource-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MultiModelTableViewDataSource/MultiModelTableViewDataSource.modulemap";
+				PRODUCT_MODULE_NAME = MultiModelTableViewDataSource;
+				PRODUCT_NAME = MultiModelTableViewDataSource;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1861C95039D1B8A329B1F91CF8D51C9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 935C6AE195E59BED8289A15D66AB2043 /* SSPullToRefresh.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSPullToRefresh/SSPullToRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSPullToRefresh/SSPullToRefresh-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSPullToRefresh/SSPullToRefresh.modulemap";
+				PRODUCT_MODULE_NAME = SSPullToRefresh;
+				PRODUCT_NAME = SSPullToRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1B245ED9F54889FF46ED299C4929844D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D275748608817EC71257EED8E7046F00 /* Prelude.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Prelude/Prelude-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Prelude/Prelude-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Prelude/Prelude.modulemap";
+				PRODUCT_MODULE_NAME = Prelude;
+				PRODUCT_NAME = Prelude;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2B1ECE030265D552788785628A9FA306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9286C44D2352FD2738ED896E4289817D /* LUX.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LUX/LUX-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LUX/LUX-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LUX/LUX.modulemap";
+				PRODUCT_MODULE_NAME = LUX;
+				PRODUCT_NAME = LUX;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3AD6758736EAA8AEC0EE0CA617BC4DC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59167F1180D43B27D98CC3FCE11C6F9C /* Pods-LUX_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LUX_Tests/Pods-LUX_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LUX_Tests/Pods-LUX_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4293106AE5FB4673B4BA800F89C48CDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E029175CEE649638464374A7AA384DEF /* THUXAuth.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/THUXAuth/THUXAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/THUXAuth/THUXAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/THUXAuth/THUXAuth.modulemap";
+				PRODUCT_MODULE_NAME = THUXAuth;
+				PRODUCT_NAME = THUXAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4CBC6B2EBF5FBF449D51AC182F0821F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 098C8733CCE4A551868EC91901CA2574 /* Pods-LUX_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LUX_Tests/Pods-LUX_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LUX_Tests/Pods-LUX_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53444052EBB91242D348B28329A11F18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F23589698A0FE17B2BB9C06A39D6BF /* ISO8601DateFormatter.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ISO8601DateFormatter/ISO8601DateFormatter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ISO8601DateFormatter/ISO8601DateFormatter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ISO8601DateFormatter/ISO8601DateFormatter.modulemap";
+				PRODUCT_MODULE_NAME = ISO8601DateFormatter;
+				PRODUCT_NAME = ISO8601DateFormatter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		630429FCE50ABDF6C2DA5B3EF792403D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F4573B8EE90D4BA87B985997B0CC43C /* FunNet.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FunNet/FunNet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FunNet/FunNet-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FunNet/FunNet.modulemap";
+				PRODUCT_MODULE_NAME = FunNet;
+				PRODUCT_NAME = FunNet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6894A9391C0E1934B0302F5118D8B895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0813499D73D7CCA51D29319F11A46091 /* LithoOperators.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LithoOperators/LithoOperators-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LithoOperators/LithoOperators-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LithoOperators/LithoOperators.modulemap";
+				PRODUCT_MODULE_NAME = LithoOperators;
+				PRODUCT_NAME = LithoOperators;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		68BA567008EEB7BFA2AA9F03328FB5A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D9C5CF932333F8149EF54A644A7FC3 /* Pods-LUX_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LUX_Example/Pods-LUX_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LUX_Example/Pods-LUX_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6D2A2972A54B518C7FF1587A0F2D7DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 271D142DC6BD22A49BBF77F6E4ED4BAF /* MultiModelTableViewDataSource.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MultiModelTableViewDataSource/MultiModelTableViewDataSource-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MultiModelTableViewDataSource/MultiModelTableViewDataSource-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MultiModelTableViewDataSource/MultiModelTableViewDataSource.modulemap";
+				PRODUCT_MODULE_NAME = MultiModelTableViewDataSource;
+				PRODUCT_NAME = MultiModelTableViewDataSource;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		75D081E2F07519764D3A5C3B043F9891 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1464344D0BC46AB4284355590F3ABB28 /* Pods-LUX_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LUX_Example/Pods-LUX_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LUX_Example/Pods-LUX_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		77F3FCDCBF90D7151E3BE96B59578BF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1EAC328EC99BEE67F62DB8D5A7DA4A /* PlaygroundVCHelpers.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlaygroundVCHelpers/PlaygroundVCHelpers-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlaygroundVCHelpers/PlaygroundVCHelpers-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlaygroundVCHelpers/PlaygroundVCHelpers.modulemap";
+				PRODUCT_MODULE_NAME = PlaygroundVCHelpers;
+				PRODUCT_NAME = PlaygroundVCHelpers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		988F6B27A1013723BBEDB5B66D755F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9286C44D2352FD2738ED896E4289817D /* LUX.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LUX/LUX-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LUX/LUX-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LUX/LUX.modulemap";
+				PRODUCT_MODULE_NAME = LUX;
+				PRODUCT_NAME = LUX;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9D2ED1F7741F18971791497A2858AB8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0813499D73D7CCA51D29319F11A46091 /* LithoOperators.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LithoOperators/LithoOperators-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LithoOperators/LithoOperators-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LithoOperators/LithoOperators.modulemap";
+				PRODUCT_MODULE_NAME = LithoOperators;
+				PRODUCT_NAME = LithoOperators;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A151F7EF795552EEA9B814F7FD955A45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D275748608817EC71257EED8E7046F00 /* Prelude.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Prelude/Prelude-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Prelude/Prelude-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Prelude/Prelude.modulemap";
+				PRODUCT_MODULE_NAME = Prelude;
+				PRODUCT_NAME = Prelude;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A204D768C886FE9F5747933EDC57A823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E029175CEE649638464374A7AA384DEF /* THUXAuth.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/THUXAuth/THUXAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/THUXAuth/THUXAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/THUXAuth/THUXAuth.modulemap";
+				PRODUCT_MODULE_NAME = THUXAuth;
+				PRODUCT_NAME = THUXAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A920BAA9504D54D067D2442F61F8BA1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B67894BB2FFDF5292B425307CE3E040 /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
+				PRODUCT_MODULE_NAME = OHHTTPStubs;
+				PRODUCT_NAME = OHHTTPStubs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B6A59D04CB732F5BA1372CDC631C1224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B67894BB2FFDF5292B425307CE3E040 /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
+				PRODUCT_MODULE_NAME = OHHTTPStubs;
+				PRODUCT_NAME = OHHTTPStubs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D82932A2C75EAE3B34DC5D3780902AD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F4573B8EE90D4BA87B985997B0CC43C /* FunNet.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FunNet/FunNet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FunNet/FunNet-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FunNet/FunNet.modulemap";
+				PRODUCT_MODULE_NAME = FunNet;
+				PRODUCT_NAME = FunNet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E6704785ABA1ADC07211C7FC1CDF62FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 935C6AE195E59BED8289A15D66AB2043 /* SSPullToRefresh.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSPullToRefresh/SSPullToRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSPullToRefresh/SSPullToRefresh-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSPullToRefresh/SSPullToRefresh.modulemap";
+				PRODUCT_MODULE_NAME = SSPullToRefresh;
+				PRODUCT_NAME = SSPullToRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E7704473F7D8500C2C888A7C244B9910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1EAC328EC99BEE67F62DB8D5A7DA4A /* PlaygroundVCHelpers.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlaygroundVCHelpers/PlaygroundVCHelpers-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlaygroundVCHelpers/PlaygroundVCHelpers-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlaygroundVCHelpers/PlaygroundVCHelpers.modulemap";
+				PRODUCT_MODULE_NAME = PlaygroundVCHelpers;
+				PRODUCT_NAME = PlaygroundVCHelpers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F3D8D4F9114124CC6D4B32B2A6724A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F23589698A0FE17B2BB9C06A39D6BF /* ISO8601DateFormatter.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ISO8601DateFormatter/ISO8601DateFormatter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ISO8601DateFormatter/ISO8601DateFormatter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ISO8601DateFormatter/ISO8601DateFormatter.modulemap";
+				PRODUCT_MODULE_NAME = ISO8601DateFormatter;
+				PRODUCT_NAME = ISO8601DateFormatter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1770D961EE6A30EFA687B2A6A4656F48 /* Build configuration list for PBXNativeTarget "MultiModelTableViewDataSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1761E20872D3080ABABEB6A6AFC26E4A /* Debug */,
+				6D2A2972A54B518C7FF1587A0F2D7DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		177988512A27C8AF5BE1C2C4F7E4F189 /* Build configuration list for PBXNativeTarget "Pods-LUX_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75D081E2F07519764D3A5C3B043F9891 /* Debug */,
+				68BA567008EEB7BFA2AA9F03328FB5A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A58ABD1C8FCBB9C0AA792D72ED5D3C6 /* Build configuration list for PBXNativeTarget "Prelude" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A151F7EF795552EEA9B814F7FD955A45 /* Debug */,
+				1B245ED9F54889FF46ED299C4929844D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D9EC9CD1FDBCEC642B1B4E974A3D998 /* Build configuration list for PBXNativeTarget "FunNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630429FCE50ABDF6C2DA5B3EF792403D /* Debug */,
+				D82932A2C75EAE3B34DC5D3780902AD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		830F232C3056B910DFE30F60F3FE603D /* Build configuration list for PBXNativeTarget "PlaygroundVCHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77F3FCDCBF90D7151E3BE96B59578BF8 /* Debug */,
+				E7704473F7D8500C2C888A7C244B9910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D49A5AD894F12D1DC5749695EA62D7 /* Build configuration list for PBXNativeTarget "Pods-LUX_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD6758736EAA8AEC0EE0CA617BC4DC2 /* Debug */,
+				4CBC6B2EBF5FBF449D51AC182F0821F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A5F24C7666DE80998D81FF3686E3FE9 /* Build configuration list for PBXNativeTarget "THUXAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4293106AE5FB4673B4BA800F89C48CDC /* Debug */,
+				A204D768C886FE9F5747933EDC57A823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B13E6488F352AF48217F2EB00FFA4D5 /* Build configuration list for PBXNativeTarget "LUX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				988F6B27A1013723BBEDB5B66D755F6C /* Debug */,
+				2B1ECE030265D552788785628A9FA306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4FC635CD8B4C92CE35E16DA68DAD2E /* Build configuration list for PBXNativeTarget "SSPullToRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6704785ABA1ADC07211C7FC1CDF62FD /* Debug */,
+				1861C95039D1B8A329B1F91CF8D51C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C7EEACD22378359942CE0D689ACCBB /* Build configuration list for PBXNativeTarget "ISO8601DateFormatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D8D4F9114124CC6D4B32B2A6724A8B /* Debug */,
+				53444052EBB91242D348B28329A11F18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA464D00AECBEE907599C7ED4A5910BE /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6A59D04CB732F5BA1372CDC631C1224 /* Debug */,
+				A920BAA9504D54D067D2442F61F8BA1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C36A88840521300C27CA7530804F1D3B /* Build configuration list for PBXNativeTarget "LithoOperators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6894A9391C0E1934B0302F5118D8B895 /* Debug */,
+				9D2ED1F7741F18971791497A2858AB8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

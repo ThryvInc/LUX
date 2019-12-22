@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LUXLoginViewController" customModule="LithoUXComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="forgotPasswordButton" destination="QtP-OY-4W3" id="iPp-Dq-PNA"/>
+                <outlet property="loginButton" destination="GAM-Sd-P0o" id="Jlu-eW-A1U"/>
+                <outlet property="loginHeight" destination="JeY-9G-eUo" id="7jS-F6-Snh"/>
+                <outlet property="logoHeight" destination="oI0-n1-GmB" id="bWn-b1-GUq"/>
+                <outlet property="logoImageView" destination="6kJ-Hx-FMJ" id="YUJ-lA-Pch"/>
+                <outlet property="passwordTextField" destination="R7Q-he-D1X" id="XmZ-tq-GFR"/>
+                <outlet property="signUpButton" destination="iOg-Mj-t8J" id="pnQ-YT-yiI"/>
+                <outlet property="spinner" destination="AGS-Ko-oC9" id="KTd-hY-ndE"/>
+                <outlet property="usernameTextField" destination="mzo-Zd-pbM" id="eJn-ml-OsK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzo-Zd-pbM">
+                    <rect key="frame" x="16" y="175" width="343" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" textContentType="username"/>
+                    <connections>
+                        <action selector="usernameChanged" destination="-1" eventType="editingChanged" id="eCK-A3-jGC"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R7Q-he-D1X">
+                    <rect key="frame" x="16" y="217" width="343" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                    <connections>
+                        <action selector="passwordChanged" destination="-1" eventType="editingChanged" id="z3z-1l-wTc"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAM-Sd-P0o">
+                    <rect key="frame" x="16" y="259" width="343" height="41"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="JeY-9G-eUo"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="loginButtonPressed" destination="-1" eventType="touchUpInside" id="uyb-7h-CfW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOg-Mj-t8J">
+                    <rect key="frame" x="16" y="606" width="343" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="1P9-pB-L8t"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Sign Up"/>
+                    <connections>
+                        <action selector="signUpPressed" destination="-1" eventType="touchUpInside" id="DWV-YA-Afv"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6kJ-Hx-FMJ">
+                    <rect key="frame" x="16" y="26" width="343" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="141" id="oI0-n1-GmB"/>
+                    </constraints>
+                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AGS-Ko-oC9">
+                    <rect key="frame" x="177.5" y="316" width="20" height="20"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtP-OY-4W3">
+                    <rect key="frame" x="257" y="310" width="102" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Forgot Password"/>
+                    <connections>
+                        <action selector="forgotPasswordPressed" destination="-1" eventType="touchUpInside" id="KUZ-Pk-Agd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R7Q-he-D1X" firstAttribute="trailing" secondItem="mzo-Zd-pbM" secondAttribute="trailing" id="4eo-0T-PN8"/>
+                <constraint firstItem="R7Q-he-D1X" firstAttribute="leading" secondItem="mzo-Zd-pbM" secondAttribute="leading" id="6qd-oC-bjS"/>
+                <constraint firstItem="R7Q-he-D1X" firstAttribute="top" secondItem="mzo-Zd-pbM" secondAttribute="bottom" constant="8" id="Bza-d9-mQm"/>
+                <constraint firstItem="QtP-OY-4W3" firstAttribute="top" secondItem="GAM-Sd-P0o" secondAttribute="bottom" constant="10" id="Dah-wc-ze3"/>
+                <constraint firstItem="QtP-OY-4W3" firstAttribute="trailing" secondItem="GAM-Sd-P0o" secondAttribute="trailing" id="I18-lK-ITj"/>
+                <constraint firstItem="6kJ-Hx-FMJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="26" id="JJ3-sX-fPH"/>
+                <constraint firstItem="6kJ-Hx-FMJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PS7-ru-mN3"/>
+                <constraint firstItem="AGS-Ko-oC9" firstAttribute="top" secondItem="GAM-Sd-P0o" secondAttribute="bottom" constant="16" id="Sal-Jp-imU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6kJ-Hx-FMJ" secondAttribute="trailing" constant="16" id="XPf-zb-5f5"/>
+                <constraint firstItem="GAM-Sd-P0o" firstAttribute="top" secondItem="R7Q-he-D1X" secondAttribute="bottom" constant="8" id="Zwg-yo-byi"/>
+                <constraint firstItem="mzo-Zd-pbM" firstAttribute="top" secondItem="6kJ-Hx-FMJ" secondAttribute="bottom" constant="8" id="bKN-tZ-onx"/>
+                <constraint firstItem="GAM-Sd-P0o" firstAttribute="trailing" secondItem="R7Q-he-D1X" secondAttribute="trailing" id="bVU-lI-g2P"/>
+                <constraint firstItem="GAM-Sd-P0o" firstAttribute="leading" secondItem="R7Q-he-D1X" secondAttribute="leading" id="gZV-z6-XjR"/>
+                <constraint firstItem="mzo-Zd-pbM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jep-Lf-OaO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iOg-Mj-t8J" secondAttribute="bottom" constant="20" id="k0l-Mq-XEF"/>
+                <constraint firstItem="AGS-Ko-oC9" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qIq-1j-q8v"/>
+                <constraint firstItem="iOg-Mj-t8J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="t1N-oI-0qZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iOg-Mj-t8J" secondAttribute="trailing" constant="16" id="twx-dg-AcO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mzo-Zd-pbM" secondAttribute="trailing" constant="16" id="vaD-wX-gDo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-926" y="-11"/>
+        </view>
+    </objects>
+</document>
