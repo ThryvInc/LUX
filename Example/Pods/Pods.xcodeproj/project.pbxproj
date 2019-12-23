@@ -54,6 +54,7 @@
 		49197B5C23B12F2D0003298E /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B5B23B12F2D0003298E /* Id.swift */; };
 		49197B7223B145410003298E /* UIViewController+PushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B7123B145410003298E /* UIViewController+PushPop.swift */; };
 		49197B7423B145730003298E /* UIViewController+Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B7323B145730003298E /* UIViewController+Tabs.swift */; };
+		49197B7623B148920003298E /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B7523B148920003298E /* Configure.swift */; };
 		519BD9C0673BDF7DAA656CA3EA8E60CF /* LUXListDetailFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */; };
 		51D9DDC90A7FB59FF979635C191B9B73 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AA3D7956FB6F4E49353E29F105000 /* OHHTTPStubsResponse.m */; };
 		53BF4F977FE575B3E3E2321453DC2D3C /* SSPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DF916300ED4407FF8390A3EB01F693 /* SSPullToRefresh.framework */; };
@@ -349,6 +350,7 @@
 		49197B5B23B12F2D0003298E /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		49197B7123B145410003298E /* UIViewController+PushPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PushPop.swift"; sourceTree = "<group>"; };
 		49197B7323B145730003298E /* UIViewController+Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Tabs.swift"; sourceTree = "<group>"; };
+		49197B7523B148920003298E /* Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
 		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		494FCD30E864A8B221AA7131704CF132 /* LithoOperators-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LithoOperators-dummy.m"; sourceTree = "<group>"; };
 		4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXListDetailFlowController.swift; sourceTree = "<group>"; };
@@ -747,6 +749,7 @@
 			children = (
 				49197B7123B145410003298E /* UIViewController+PushPop.swift */,
 				49197B7323B145730003298E /* UIViewController+Tabs.swift */,
+				49197B7523B148920003298E /* Configure.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1686,6 +1689,7 @@
 				E0C45E19C1817C505FA507FF09F5E930 /* CombineModelFunctions.swift in Sources */,
 				D68DFFDA45BEAEF9666D7481173422DA /* CombineNetCall.swift in Sources */,
 				266E5472C3D8E21E95F07241A81A977B /* LUX-dummy.m in Sources */,
+				49197B7623B148920003298E /* Configure.swift in Sources */,
 				B1CA5025769FF34D2D854ECD9C3F9718 /* LUXAppOpenFlowController.swift in Sources */,
 				743A62F197A93D702E190374DB8A9C2A /* LUXDetailTableViewCell.swift in Sources */,
 				F73B6A5DAD1116076C4EC2F3C9FBDC6D /* LUXFlowCoordinator.swift in Sources */,
