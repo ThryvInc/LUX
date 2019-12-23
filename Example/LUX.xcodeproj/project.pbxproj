@@ -19,6 +19,7 @@
 		4978124C23A01E21007DFA9F /* ModelViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978124B23A01E21007DFA9F /* ModelViewModelTests.swift */; };
 		4978124E23A02F7A007DFA9F /* TableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978124D23A02F7A007DFA9F /* TableViewModelTests.swift */; };
 		4978125023A02F8C007DFA9F /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978124F23A02F8C007DFA9F /* ListViewModelTests.swift */; };
+		498DB66523B03E9100112A46 /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498DB66423B03E9100112A46 /* SplashViewModelTests.swift */; };
 		49D3C363239C414700D59DF0 /* config.yml in Resources */ = {isa = PBXBuildFile; fileRef = 49D3C362239C414700D59DF0 /* config.yml */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		4978124B23A01E21007DFA9F /* ModelViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModelTests.swift; sourceTree = "<group>"; };
 		4978124D23A02F7A007DFA9F /* TableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelTests.swift; sourceTree = "<group>"; };
 		4978124F23A02F8C007DFA9F /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		498DB66423B03E9100112A46 /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
 		49D3C362239C414700D59DF0 /* config.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = config.yml; path = ../.circleci/config.yml; sourceTree = "<group>"; };
 		49D3C364239C416900D59DF0 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		49D3C365239C416900D59DF0 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				49781241239DCE78007DFA9F /* TestHelpers.swift */,
 				49D3C364239C416900D59DF0 /* LoginViewModelTests.swift */,
+				498DB66423B03E9100112A46 /* SplashViewModelTests.swift */,
 				49D3C367239C416900D59DF0 /* PagingDelegateTests.swift */,
 				4978123D239DCC38007DFA9F /* RefreshCallTests.swift */,
 				4978123F239DCDC9007DFA9F /* RefreshModelsTests.swift */,
@@ -259,10 +262,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HK6WSAR793;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HK6WSAR793;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -417,6 +422,7 @@
 				4978124E23A02F7A007DFA9F /* TableViewModelTests.swift in Sources */,
 				49781239239DB84C007DFA9F /* PagingModelsTests.swift in Sources */,
 				4978124C23A01E21007DFA9F /* ModelViewModelTests.swift in Sources */,
+				498DB66523B03E9100112A46 /* SplashViewModelTests.swift in Sources */,
 				4978124A239DF285007DFA9F /* SinkThroughTests.swift in Sources */,
 				49781242239DCE78007DFA9F /* TestHelpers.swift in Sources */,
 			);
@@ -562,6 +568,7 @@
 			baseConfigurationReference = 69E2072452A596824D56C8B0 /* Pods-LUX_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HK6WSAR793;
 				INFOPLIST_FILE = LUX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -578,6 +585,7 @@
 			baseConfigurationReference = B7F7F45FCAC1859F0E260A0B /* Pods-LUX_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HK6WSAR793;
 				INFOPLIST_FILE = LUX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -593,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78446B6F9C76610C44BC3389 /* Pods-LUX_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HK6WSAR793;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -616,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C7201E062FAC19F20FADC1E /* Pods-LUX_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HK6WSAR793;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

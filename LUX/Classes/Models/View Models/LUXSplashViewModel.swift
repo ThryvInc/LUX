@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 import THUXAuth
+import Prelude
 
 public protocol LUXSplashTask {
     func execute(completion: @escaping () -> Void)
@@ -55,6 +56,8 @@ open class LUXSplashViewModel: LUXSplashInputs, LUXSplashOutputs, LUXSplashProto
     
     @Published public var semaphore = 0
     
+    private var cancelBag = Set<AnyCancellable?>()
+    
     public init(minimumVisibleTime: Double?, _ versionChecker: LUXVersionChecker? = nil, _ session: THUXSession? = THUXSessionManager.primarySession, otherTasks: [LUXSplashTask]?) {
         performAnimationsPublisher = performAnimations.eraseToAnyPublisher()
         advanceAuthedPublisher = advanceAuthed.eraseToAnyPublisher()
@@ -68,7 +71,7 @@ open class LUXSplashViewModel: LUXSplashInputs, LUXSplashOutputs, LUXSplashProto
         semaphore += versionChecker == nil ? 0 : 1      // check version
         semaphore += session == nil ? 0 : 1             // check session
         
-        viewDidLoadSubject.eraseToAnyPublisher().sink { _ in
+        cancelBag.insert(viewDidLoadSubject.eraseToAnyPublisher().sink { _ in
             versionChecker?.isCurrentVersion(appVersion: versionChecker?.appVersionString() ?? "0.0.0", completion: { isCurrent in
                 if isCurrent {
                     self.semaphore -= 1
@@ -88,30 +91,30 @@ open class LUXSplashViewModel: LUXSplashInputs, LUXSplashOutputs, LUXSplashProto
             if let isAuthed = session?.isAuthenticated() {
                 self.isAuthed = isAuthed
             }
-        }
+        })
         
-        viewDidAppearSubject.eraseToAnyPublisher().sink { _ in
+        cancelBag.insert(viewDidAppearSubject.eraseToAnyPublisher().sink{ _ in
             self.semaphore -= 1
             
             self.performAnimations.send(())
-        }
+        })
         
         if let minTime = minimumVisibleTime {
             semaphore += 1
-            viewWillAppearSubject.eraseToAnyPublisher().sink { _ in
+            cancelBag.insert(viewWillAppearSubject.eraseToAnyPublisher().sink { _ in
                 DispatchQueue.main.asyncAfter(deadline: (.now() + minTime)) {
                     self.semaphore -= 1
                 }
-            }
+            })
         }
         
-        $isAuthed.eraseToAnyPublisher().sink { (isAuthed) in
+        cancelBag.insert($isAuthed.eraseToAnyPublisher().sink { (isAuthed) in
             self.semaphore -= 1
-        }
+        })
         
         self.semaphore = semaphore
         
-        $semaphore.sink { value in
+        cancelBag.insert($semaphore.sink { value in
             if value == 0 {
                 if self.isAuthed {
                     self.advanceAuthed.send(())
@@ -119,7 +122,7 @@ open class LUXSplashViewModel: LUXSplashInputs, LUXSplashOutputs, LUXSplashProto
                     self.advanceUnauthed.send(())
                 }
             }
-        }
+        })
     }
     
     open func versionUpdatePrompt() -> UIViewController {

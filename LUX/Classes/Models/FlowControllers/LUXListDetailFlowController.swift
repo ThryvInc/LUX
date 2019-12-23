@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class THUXListDetailFlowController: NSObject {
+open class LUXListDetailFlowController: NSObject {
     
     open func detailFor(model: Any, sender: UIViewController) {
         

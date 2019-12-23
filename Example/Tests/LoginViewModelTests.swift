@@ -180,4 +180,33 @@ class LoginViewModelTests: XCTestCase {
         cancel.cancel()
     }
 
+    func testCallsSaveCredsAndAdvancesOnSuccess() {
+        var wasCalled = false
+        var calledSaveToken = false
+        var shouldAdvance = false
+        
+        let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
+        call.firingFunc = { _ in
+            wasCalled = true
+            call.responder?.data = "hi".data(using: .utf8)
+        }
+        let viewModel = LUXLoginViewModel(credsCall: call, loginModelToJson: { _, _ in Human() }) { _ in
+            calledSaveToken = true
+            return true
+        }
+        
+        let cancel = viewModel.outputs.advanceAuthedPublisher.sink { _ in
+            shouldAdvance = true
+        }
+        
+        viewModel.inputs.usernameChanged(username: "elliot")
+        viewModel.inputs.passwordChanged(password: "password")
+        viewModel.inputs.submitButtonPressed()
+        
+        XCTAssert(wasCalled)
+        XCTAssert(calledSaveToken)
+        XCTAssert(shouldAdvance)
+        cancel.cancel()
+    }
+
 }

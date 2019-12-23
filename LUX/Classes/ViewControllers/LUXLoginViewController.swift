@@ -21,15 +21,17 @@ open class LUXLoginViewController: LUXFunctionalViewController {
     
     open var loginViewModel: LUXLoginProtocol?
     
+    private var cancelBag = Set<AnyCancellable?>()
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
-
-        loginViewModel?.outputs.submitButtonEnabledPublisher.sink { enabled in
+        
+        cancelBag.insert(loginViewModel?.outputs.submitButtonEnabledPublisher.sink { enabled in
             self.loginButton?.isEnabled = enabled
-        }
-        loginViewModel?.outputs.activityIndicatorVisiblePublisher.sink { (visible) in
+        })
+        cancelBag.insert(loginViewModel?.outputs.activityIndicatorVisiblePublisher.sink { (visible) in
             self.spinner?.isHidden = !visible
-        }
+        })
         loginViewModel?.inputs.viewDidLoad()
     }
     

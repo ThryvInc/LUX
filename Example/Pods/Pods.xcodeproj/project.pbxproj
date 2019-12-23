@@ -51,6 +51,9 @@
 		4709060854F9CF1F6089A998A586C559 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F9534A2360A1EA9C05452A23EBB568 /* Application.swift */; };
 		47B152F60771C4721440ED0E31F6CE4A /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D9ED31C7A06A1D37766717B6BCE47 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
 		486B079CB808A3F0882F460DE5A38517 /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CEE2AC642DD105A0781B6BE313C408 /* OHPathHelpers.m */; };
+		49197B5C23B12F2D0003298E /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B5B23B12F2D0003298E /* Id.swift */; };
+		49197B7223B145410003298E /* UIViewController+PushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B7123B145410003298E /* UIViewController+PushPop.swift */; };
+		49197B7423B145730003298E /* UIViewController+Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B7323B145730003298E /* UIViewController+Tabs.swift */; };
 		519BD9C0673BDF7DAA656CA3EA8E60CF /* LUXListDetailFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */; };
 		51D9DDC90A7FB59FF979635C191B9B73 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AA3D7956FB6F4E49353E29F105000 /* OHHTTPStubsResponse.m */; };
 		53BF4F977FE575B3E3E2321453DC2D3C /* SSPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DF916300ED4407FF8390A3EB01F693 /* SSPullToRefresh.framework */; };
@@ -343,6 +346,9 @@
 		4288AFF519E19690C2BACEB6F6DB1E0A /* Prelude.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Prelude.swift; path = Prelude/Prelude.swift; sourceTree = "<group>"; };
 		44DF916300ED4407FF8390A3EB01F693 /* SSPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CDA47363AB07452186680FC5C43018 /* FunNet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FunNet.modulemap; sourceTree = "<group>"; };
+		49197B5B23B12F2D0003298E /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		49197B7123B145410003298E /* UIViewController+PushPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PushPop.swift"; sourceTree = "<group>"; };
+		49197B7323B145730003298E /* UIViewController+Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Tabs.swift"; sourceTree = "<group>"; };
 		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		494FCD30E864A8B221AA7131704CF132 /* LithoOperators-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LithoOperators-dummy.m"; sourceTree = "<group>"; };
 		4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXListDetailFlowController.swift; sourceTree = "<group>"; };
@@ -663,6 +669,7 @@
 		1E890ADC4B08ED0FE1B31D87161FD34D /* LUX */ = {
 			isa = PBXGroup;
 			children = (
+				49197B7023B145280003298E /* Extensions */,
 				DE5D8C6408F10CBF19EEE20AC5FD8BE6 /* Models */,
 				0DF11B298C054805A19EFA00B73BA47C /* Networking */,
 				5B63A3ADFD16A0BBD707CFD7E369D8D1 /* Pod */,
@@ -733,6 +740,15 @@
 			);
 			name = Views;
 			path = LUX/Classes/Views;
+			sourceTree = "<group>";
+		};
+		49197B7023B145280003298E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49197B7123B145410003298E /* UIViewController+PushPop.swift */,
+				49197B7323B145730003298E /* UIViewController+Tabs.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4B9EC46E0A3299FA9428A9B00ADFA8BF /* Support Files */ = {
@@ -1053,6 +1069,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCDAB7AF8913E4220B5521BC09DB348 /* CombineModelFunctions.swift */,
+				49197B5B23B12F2D0003298E /* Id.swift */,
 				5D719CAFF13B509BAB23D7A4D37F5A58 /* LUXJsonProvider.swift */,
 				16C3E0F67BA70393DF296663A9DE5E6F /* LUXPageableModelManager.swift */,
 				1174A015E9B012FEED647C2CFF886830 /* LUXPageCallModelsManager.swift */,
@@ -1674,6 +1691,7 @@
 				F73B6A5DAD1116076C4EC2F3C9FBDC6D /* LUXFlowCoordinator.swift in Sources */,
 				66814FBB60D0696D900FE33BD5BBD1B3 /* LUXForgotPasswordViewController.swift in Sources */,
 				D5E37580E2F2D38BF8AFCD972C31CCE7 /* LUXFunctionalViewController.swift in Sources */,
+				49197B7223B145410003298E /* UIViewController+PushPop.swift in Sources */,
 				0D466A5A17DD8E67FF42B105E80A3159 /* LUXJsonProvider.swift in Sources */,
 				519BD9C0673BDF7DAA656CA3EA8E60CF /* LUXListDetailFlowController.swift in Sources */,
 				89946A3FD1290477F7D7A849858C92D5 /* LUXLoginViewController.swift in Sources */,
@@ -1692,10 +1710,12 @@
 				2B7A8D1E1CC191E6A880D6F80708BDA6 /* LUXSearchTableViewCell.swift in Sources */,
 				0A3103A04DFEAB82627B71251F821220 /* LUXSearchViewController.swift in Sources */,
 				84ED141E9138FA8F2ECEFB9684FB6F93 /* LUXSplashViewController.swift in Sources */,
+				49197B5C23B12F2D0003298E /* Id.swift in Sources */,
 				AF7F0F55E9DF60C82837CCAF8514DB92 /* LUXSplashViewModel.swift in Sources */,
 				1988253E6AE9898BC16ABA086850C41D /* LUXTableViewDelegates.swift in Sources */,
 				E7D2C7B5312C50EBF24874500BAAEA58 /* LUXTextValidator.swift in Sources */,
 				6DFEF0931E016A5ADAEE7F2D04655F2F /* LUXVersionChecker.swift in Sources */,
+				49197B7423B145730003298E /* UIViewController+Tabs.swift in Sources */,
 				62F00B806CEF2F3BC569DDB824D32713 /* ServerAuth.swift in Sources */,
 				B88D2771BC628899D41C1A65CB115002 /* StubbableReactiveNetCall.swift in Sources */,
 				8E02B9706B6113064F9927FB789A5E00 /* LUXCommentTableViewCell.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class THUXAppOpenFlowController: THUXFlowCoordinator {
+open class LUXAppOpenFlowController: LUXFlowCoordinator {
     open var splashViewModel: LUXSplashViewModel?
     open var loginViewModel: LUXLoginViewModel?
     open var registrationViewModel: LUXRegistrationViewModel?

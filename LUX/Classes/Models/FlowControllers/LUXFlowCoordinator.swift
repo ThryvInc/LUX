@@ -7,6 +7,6 @@
 
 import UIKit
 
-public protocol THUXFlowCoordinator: class {
+public protocol LUXFlowCoordinator: class {
     func initialVC() -> UIViewController?
 }
