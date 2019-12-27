@@ -10,8 +10,8 @@ import Combine
 
 open class LUXMultiModelTableViewController<T>: LUXFunctionalViewController {
     @IBOutlet public var tableView: UITableView?
-    open var tableViewDelegate: LUXTappableTableDelegate? { didSet { configureTableView() }}
-    open var viewModel: T? { didSet { configureTableView() }}
+    open var tableViewDelegate: LUXTappableTableDelegate? { didSet { didSetTableDelegate() }}
+    open var viewModel: T? { didSet { didSetViewModel() }}
     open var refreshableModelManager: LUXRefreshableNetworkCallManager? {
         didSet {
             if let call = refreshableModelManager?.call as? CombineNetCall {
@@ -43,6 +43,14 @@ open class LUXMultiModelTableViewController<T>: LUXFunctionalViewController {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refresh()
+    }
+    
+    open func didSetViewModel() {
+        configureTableView()
+    }
+    
+    open func didSetTableDelegate() {
+        configureTableView()
     }
     
     @objc
