@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-open class LUXMultiModelTableViewController<T>: LUXFunctionalViewController {
+open class LUXMultiModelTableViewController<T>: LUXFunctionalViewController, Refreshable {
     @IBOutlet public var tableView: UITableView?
     open var tableViewDelegate: LUXTappableTableDelegate? { didSet { didSetTableDelegate() }}
     open var viewModel: T? { didSet { didSetViewModel() }}
