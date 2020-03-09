@@ -52,6 +52,11 @@
 		47B152F60771C4721440ED0E31F6CE4A /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D9ED31C7A06A1D37766717B6BCE47 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
 		486B079CB808A3F0882F460DE5A38517 /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CEE2AC642DD105A0781B6BE313C408 /* OHPathHelpers.m */; };
 		49197B5C23B12F2D0003298E /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49197B5B23B12F2D0003298E /* Id.swift */; };
+		495127182416B65F00C42ED5 /* LUXTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495127172416B65F00C42ED5 /* LUXTableViewModel.swift */; };
+		4951271A2416D82100C42ED5 /* LUXRefreshNetCallsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495127192416D82100C42ED5 /* LUXRefreshNetCallsManager.swift */; };
+		4951271C2416DD9D00C42ED5 /* LUXMetaRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4951271B2416DD9D00C42ED5 /* LUXMetaRefresher.swift */; };
+		495127212416E74B00C42ED5 /* LUXFunctionalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4951271F2416E74B00C42ED5 /* LUXFunctionalTableViewController.swift */; };
+		495127222416E74B00C42ED5 /* LUXFunctionalTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495127202416E74B00C42ED5 /* LUXFunctionalTableViewController.xib */; };
 		49E528DE23B57F5F00881634 /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E528DA23B57F5F00881634 /* Configure.swift */; };
 		49E528DF23B57F5F00881634 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E528DB23B57F5F00881634 /* UIColor+Hex.swift */; };
 		49E528E023B57F5F00881634 /* UIViewController+PushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E528DC23B57F5F00881634 /* UIViewController+PushPop.swift */; };
@@ -351,6 +356,11 @@
 		49197B5B23B12F2D0003298E /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		494FCD30E864A8B221AA7131704CF132 /* LithoOperators-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LithoOperators-dummy.m"; sourceTree = "<group>"; };
+		495127172416B65F00C42ED5 /* LUXTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUXTableViewModel.swift; sourceTree = "<group>"; };
+		495127192416D82100C42ED5 /* LUXRefreshNetCallsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUXRefreshNetCallsManager.swift; sourceTree = "<group>"; };
+		4951271B2416DD9D00C42ED5 /* LUXMetaRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUXMetaRefresher.swift; sourceTree = "<group>"; };
+		4951271F2416E74B00C42ED5 /* LUXFunctionalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUXFunctionalTableViewController.swift; sourceTree = "<group>"; };
+		495127202416E74B00C42ED5 /* LUXFunctionalTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LUXFunctionalTableViewController.xib; sourceTree = "<group>"; };
 		4957FDEAE2F10980363E61F1BEA0FFC1 /* LUXListDetailFlowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXListDetailFlowController.swift; sourceTree = "<group>"; };
 		49E528DA23B57F5F00881634 /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
 		49E528DB23B57F5F00881634 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
@@ -836,6 +846,7 @@
 				FCD0AFF0B1B75D6C2E05BD74D2F393BB /* LUXModelTableViewModel.swift */,
 				B6A2FA7927366893DE2E6CF5A8994A8C /* LUXRegistrationViewModel.swift */,
 				CC86F1BB96627AC4DB42BB1E34E4E6DF /* LUXSplashViewModel.swift */,
+				495127172416B65F00C42ED5 /* LUXTableViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -847,6 +858,8 @@
 				3A21A4AFC5D2B3C0F4E1F216B1ADF5A9 /* LUXFunctionalViewController.swift */,
 				6E3E9D91E2D2DF9BF6EACE6585C078F7 /* LUXLoginViewController.swift */,
 				AB9A105F865B899E524F82283663D399 /* LUXMultiModelTableViewController.swift */,
+				4951271F2416E74B00C42ED5 /* LUXFunctionalTableViewController.swift */,
+				495127202416E74B00C42ED5 /* LUXFunctionalTableViewController.xib */,
 				B7537492D3CD7861D6AEFA263A2599A3 /* LUXRegistrationViewController.swift */,
 				4D6446997F4F61B8461F25BD0C5E4943 /* LUXResetPasswordViewController.swift */,
 				9B594638A3AC673BDCCD24E59E8EF234 /* LUXSearchViewController.swift */,
@@ -1082,6 +1095,8 @@
 				1174A015E9B012FEED647C2CFF886830 /* LUXPageCallModelsManager.swift */,
 				07FFEF135521EF53E1E6212F89B6DB56 /* LUXRefreshableModelManager.swift */,
 				D1A92DB897233046BFCEF54B72AF7059 /* LUXRefreshCallModelsManager.swift */,
+				495127192416D82100C42ED5 /* LUXRefreshNetCallsManager.swift */,
+				4951271B2416DD9D00C42ED5 /* LUXMetaRefresher.swift */,
 				6F531428A777B1EE08401A5454FBF88D /* LUXTableViewDelegates.swift */,
 				ABBFEF5D76E8B698F0A820C283148F4A /* LUXTextValidator.swift */,
 				9C65A44B40D938B6DC3359B68BB9AD69 /* LUXVersionChecker.swift */,
@@ -1640,6 +1655,7 @@
 				6D5626ECDBFC49481C6951E71F867219 /* LUXLoginViewController.xib in Resources */,
 				A00EC946993C1AB25194626E5570973B /* LUXMultiModelTableViewController.xib in Resources */,
 				CB9AB0AA15FE324CAA99B246EB486C3F /* LUXRefreshablePagedTableViewController.xib in Resources */,
+				495127222416E74B00C42ED5 /* LUXFunctionalTableViewController.xib in Resources */,
 				61C00B14EE5A74B94504E303AA68B8F4 /* LUXRegistrationViewController.xib in Resources */,
 				274555F21E1999A0CE9B276A2ACE1C97 /* LUXResetPasswordViewController.xib in Resources */,
 				F367AB510890DDE41F88751AF940ED69 /* LUXSearchTableViewCell.xib in Resources */,
@@ -1693,6 +1709,8 @@
 				E0C45E19C1817C505FA507FF09F5E930 /* CombineModelFunctions.swift in Sources */,
 				D68DFFDA45BEAEF9666D7481173422DA /* CombineNetCall.swift in Sources */,
 				266E5472C3D8E21E95F07241A81A977B /* LUX-dummy.m in Sources */,
+				4951271A2416D82100C42ED5 /* LUXRefreshNetCallsManager.swift in Sources */,
+				495127182416B65F00C42ED5 /* LUXTableViewModel.swift in Sources */,
 				B1CA5025769FF34D2D854ECD9C3F9718 /* LUXAppOpenFlowController.swift in Sources */,
 				743A62F197A93D702E190374DB8A9C2A /* LUXDetailTableViewCell.swift in Sources */,
 				F73B6A5DAD1116076C4EC2F3C9FBDC6D /* LUXFlowCoordinator.swift in Sources */,
@@ -1706,6 +1724,7 @@
 				519BD9C0673BDF7DAA656CA3EA8E60CF /* LUXListDetailFlowController.swift in Sources */,
 				89946A3FD1290477F7D7A849858C92D5 /* LUXLoginViewController.swift in Sources */,
 				E5D5A4BB35AF0B5208A33C794B6C1145 /* LUXLoginViewModel.swift in Sources */,
+				495127212416E74B00C42ED5 /* LUXFunctionalTableViewController.swift in Sources */,
 				CA1BF28E5F1F25FE1734594BA6B8E3E3 /* LUXModelCallViewModel.swift in Sources */,
 				BEE31815B2EFF204E4170FDAE86DFBD1 /* LUXModelListViewModel.swift in Sources */,
 				E2C09054E1767FF5B3F876689A9ABD6B /* LUXModelTableViewModel.swift in Sources */,
@@ -1722,6 +1741,7 @@
 				84ED141E9138FA8F2ECEFB9684FB6F93 /* LUXSplashViewController.swift in Sources */,
 				49197B5C23B12F2D0003298E /* Id.swift in Sources */,
 				AF7F0F55E9DF60C82837CCAF8514DB92 /* LUXSplashViewModel.swift in Sources */,
+				4951271C2416DD9D00C42ED5 /* LUXMetaRefresher.swift in Sources */,
 				1988253E6AE9898BC16ABA086850C41D /* LUXTableViewDelegates.swift in Sources */,
 				E7D2C7B5312C50EBF24874500BAAEA58 /* LUXTextValidator.swift in Sources */,
 				6DFEF0931E016A5ADAEE7F2D04655F2F /* LUXVersionChecker.swift in Sources */,

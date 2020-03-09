@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1CDCE1150B473AE788C4BA83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4951271E2416E28700C42ED5 /* TableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4978123D239DCC38007DFA9F /* RefreshCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCallTests.swift; sourceTree = "<group>"; };
 		4978123F239DCDC9007DFA9F /* RefreshModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModelsTests.swift; sourceTree = "<group>"; };
 		49781241239DCE78007DFA9F /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		4978124D23A02F7A007DFA9F /* TableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelTests.swift; sourceTree = "<group>"; };
 		4978124F23A02F8C007DFA9F /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		498DB66423B03E9100112A46 /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
+		49BD4A4723E9FA0400175EBD /* ComparisonExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ComparisonExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		49D3C362239C414700D59DF0 /* config.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = config.yml; path = ../.circleci/config.yml; sourceTree = "<group>"; };
 		49D3C364239C416900D59DF0 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		49D3C365239C416900D59DF0 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -135,6 +137,8 @@
 		607FACD21AFB9204008FA782 /* Example for LUX */ = {
 			isa = PBXGroup;
 			children = (
+				4951271E2416E28700C42ED5 /* TableViewModel.playground */,
+				49BD4A4723E9FA0400175EBD /* ComparisonExample.playground */,
 				49781243239DCF2A007DFA9F /* Examples.playground */,
 				49781244239DCF2A007DFA9F /* Login.playground */,
 				49781246239DCF2B007DFA9F /* Pipelines.playground */,

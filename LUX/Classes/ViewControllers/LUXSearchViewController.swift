@@ -19,6 +19,7 @@ open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T>, U
     open var searcher: LUXSearcher<U>?
     
     open var shouldRefresh = true
+    open var savedSearch: String?
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,16 @@ open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T>, U
         searchBar?.delegate = self
     }
     
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        shouldRefresh = (savedSearch == nil || savedSearch == "")
+        if let searchText = savedSearch {
+            searchBar?.text = searchText
+            searchBar?.resignFirstResponder()
+        }
+    }
+    
     open override func viewDidAppear(_ animated: Bool) {
-        shouldRefresh = (searchBar?.text == nil || searchBar?.text == "")
         super.viewDidAppear(animated)
         
         if let _ = self.lastScreenYForAnimation {
@@ -43,6 +52,11 @@ open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T>, U
                 self.searchBar?.becomeFirstResponder()
             }
         }
+    }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        savedSearch = searchBar?.text
     }
     
     open override func refresh() {
