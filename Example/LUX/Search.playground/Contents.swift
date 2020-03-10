@@ -80,14 +80,14 @@ let dataSignal = (call.responder?.$data)!.eraseToAnyPublisher()
 let modelsSignal: AnyPublisher<[Reign], Never> = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
 let onTap: () -> Void = {}
 
-let searcher = LUXSearcher<Reign> { text, reign in
-    guard let text = text, text != "" else {
-        return true
-    }
-    return reignToHouseString(reign).prefix(text.count) == text
-}
-vc.searcher = searcher
-vc.onSearch = { text in
+let searcher = LUXSearcher<Reign>(reignToHouseString, .allMatchNilAndEmpty, .prefix) //{ text, reign in
+//    guard let text = text, text != "" else {
+//        return true
+//    }
+//    return reignToHouseString(reign).prefix(text.count) == text
+//}
+vc.searchViewModel?.searcher = searcher
+vc.searchViewModel?.onSearch = { text in
     searcher.updateSearch(text: text)
 }
 

@@ -3,9 +3,9 @@ PODS:
     - LithoOperators
     - OHHTTPStubs/Swift
   - ISO8601DateFormatter (0.8)
-  - LithoOperators (0.0.6):
+  - LithoOperators (0.0.9):
     - Prelude
-  - LUX (0.0.1):
+  - LUX (0.0.4):
     - FunNet
     - ISO8601DateFormatter
     - MultiModelTableViewDataSource
@@ -13,6 +13,8 @@ PODS:
     - SSPullToRefresh
     - THUXAuth
   - MultiModelTableViewDataSource (0.0.8)
+  - OHHTTPStubs (8.0.0):
+    - OHHTTPStubs/Default (= 8.0.0)
   - OHHTTPStubs/Core (8.0.0)
   - OHHTTPStubs/Default (8.0.0):
     - OHHTTPStubs/Core
@@ -26,21 +28,22 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (8.0.0)
   - OHHTTPStubs/Swift (8.0.0):
     - OHHTTPStubs/Default
-  - PlaygroundVCHelpers (0.0.1)
+  - PlaygroundVCHelpers (0.0.2)
   - Prelude (3.0.0)
   - SSPullToRefresh (1.3.0)
   - THUXAuth (0.1.0)
 
 DEPENDENCIES:
   - FunNet (from `https://github.com/schrockblock/funnet`)
+  - LithoOperators (from `https://github.com/ThryvInc/LithoOperators`)
   - LUX (from `../`)
+  - OHHTTPStubs (~> 8.0.0)
   - PlaygroundVCHelpers (from `https://github.com/ThryvInc/playground-vc-helpers`)
   - THUXAuth (from `https://github.com/ThryvInc/thux-auth`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - ISO8601DateFormatter
-    - LithoOperators
     - MultiModelTableViewDataSource
     - OHHTTPStubs
     - Prelude
@@ -49,6 +52,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   FunNet:
     :git: https://github.com/schrockblock/funnet
+  LithoOperators:
+    :git: https://github.com/ThryvInc/LithoOperators
   LUX:
     :path: "../"
   PlaygroundVCHelpers:
@@ -58,10 +63,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FunNet:
-    :commit: 3e133558ba2f0914e63f812abc94611a03242a75
+    :commit: 97012628feaf75bd4f8a01ff81729b0c986d8e76
     :git: https://github.com/schrockblock/funnet
+  LithoOperators:
+    :commit: 971e91c51ba44f3d60f57008240c9a4af9ea8598
+    :git: https://github.com/ThryvInc/LithoOperators
   PlaygroundVCHelpers:
-    :commit: 426a3ad58d8bd70066b2d06a78fba3de9fcf0740
+    :commit: 1b1f5ed572a1965e1d52bbc1b21f3796a6f144e2
     :git: https://github.com/ThryvInc/playground-vc-helpers
   THUXAuth:
     :commit: 85218d0b78dba3c2fee80409113c7d11c6f985ba
@@ -70,15 +78,15 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   FunNet: 782eb82ce25a8a0499eef8533edbc192817a0b33
   ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
-  LithoOperators: 132c317f7f57bef52b76f18335c825243ecbadcb
-  LUX: 098707bf66b3b33f8db7089f93d6fdb7c1471f7e
+  LithoOperators: ceed8cb3b6c3adeac7ef5e61c36977f8977ac432
+  LUX: f3fb46a3da600387cdd010f318a9cf640a879caf
   MultiModelTableViewDataSource: 798f682408933a269de09e5c73b54cd5cb86b851
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
-  PlaygroundVCHelpers: b368165b6bff8bfb8111ea704038878377f3b835
+  PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
   SSPullToRefresh: 3a47e116692b60e7da5a8c60418488133bcc9550
   THUXAuth: 3d5cfdca13a9c7d1093bb8a5663d96c6a9ce3179
 
-PODFILE CHECKSUM: c63ee1d9b64020afd2569d7779b153dae9c02b7c
+PODFILE CHECKSUM: dc7e21d29e86a740aefde629037692606e017a47
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.9.0

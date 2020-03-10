@@ -9,6 +9,7 @@
 import XCTest
 import Combine
 @testable import LUX
+import LithoOperators
 
 class SearchTests: XCTestCase {
 
@@ -22,6 +23,60 @@ class SearchTests: XCTestCase {
             }
             return (human.name ?? "").contains(search)
         }
+        
+        let modelsSignal = humansProperty.compactMap({ $0 }).eraseToAnyPublisher()
+        
+        let listSignal = searcher.filteredPublisher(from: modelsSignal)
+        
+        let cancel = listSignal.sink { (humans) in
+            count += 1
+            switch count {
+            case 1:
+                XCTAssertEqual(humans.count, 3)
+                break
+            case 2:
+                XCTAssertEqual(humans.count, 1)
+                break
+            case 3:
+                XCTAssertEqual(humans.count, 3)
+                break
+            case 4:
+                XCTAssertEqual(humans.count, 2)
+                break
+            case 5:
+                XCTAssertEqual(humans.count, 2)
+                XCTAssertEqual(searcher.searchText, "e")
+                break
+            case 6:
+                XCTAssertEqual(humans.count, 3)
+                break
+            default:
+                XCTAssertEqual(count, 0)
+                break
+            }
+        }
+        
+        let humans = [Human(id: 1, name: "Neo"), Human(id: 2, name: "Morpheus"), Human(id: 3, name: "Trinity")]
+        
+        humansProperty.send(humans)
+        
+        searcher.updateSearch(text: "N")
+        searcher.updateSearch(text: "")
+        searcher.updateSearch(text: "e")
+        
+        humansProperty.send(humans)
+        
+        searcher.updateSearch(text: "")
+        
+        XCTAssertEqual(count, 6)
+        cancel.cancel()
+    }
+
+    func testSearchString() {
+        var count = 0
+        
+        let humansProperty = PassthroughSubject<[Human]?, Never>()
+        let searcher = LUXSearcher<Human>(^\Human.name, .allMatchNilAndEmpty, .contains)
         
         let modelsSignal = humansProperty.compactMap({ $0 }).eraseToAnyPublisher()
         

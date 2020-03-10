@@ -41,7 +41,6 @@ class PagingModelsTests: XCTestCase {
             print("was called")
             wasCalled = true
         }
-        pageManager.viewDidLoad()
         XCTAssert(!wasCalled)
         
         pageManager.refresh()
@@ -59,7 +58,6 @@ class PagingModelsTests: XCTestCase {
             XCTAssertEqual(humans.first?.id, 1)
             wasCalled = true
         }
-        pageManager.viewDidLoad()
         pageManager.refresh()
         
         XCTAssert(wasCalled)
@@ -91,7 +89,6 @@ class PagingModelsTests: XCTestCase {
             }
         }
         print("start next")
-        pageManager.viewDidLoad()
         print("next refresh")
         pageManager.refresh()
         pageManager.nextPage()
@@ -118,7 +115,6 @@ class PagingModelsTests: XCTestCase {
                 XCTAssertEqual(humans.first?.id, 1)
             }
         }
-        pageManager.viewDidLoad()
         pageManager.refresh()
         pageManager.nextPage()
         pageManager.refresh()

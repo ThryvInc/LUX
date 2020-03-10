@@ -14,18 +14,31 @@ import Combine
 class PagingCallTests: XCTestCase {
     var call: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
     
-    func testPageNotCalledOnViewLoad() {
+    func testPageNotCalledOnInstantiation() {
         var wasCalled = false
-        
-        let manager = LUXPageableModelManager(call, firstPageValue: 1)
         
         call.firingFunc = { _ in
             wasCalled = true
         }
         
-        manager.viewDidLoad()
+        let manager = LUXPageableModelManager(call, firstPageValue: 1)
         
         XCTAssert(!wasCalled)
+        
+        manager.refresh()
+    }
+    
+    func testPageUpdateNotNil() {
+        var wasCalled = false
+        
+        call.firingFunc = { _ in
+            wasCalled = true
+        }
+        
+        let manager = LUXPageableModelManager(call, firstPageValue: 1)
+        
+        XCTAssert(!wasCalled)
+        XCTAssertNotNil(manager.onPageUpdate)
     }
 
     func testRefresh() {
@@ -37,7 +50,6 @@ class PagingCallTests: XCTestCase {
             wasCalled = true
         }
         
-        manager.viewDidLoad()
         manager.refresh()
         
         XCTAssertEqual(manager.page, 1)
@@ -55,7 +67,6 @@ class PagingCallTests: XCTestCase {
             callCount += 1
         }
         
-        manager.viewDidLoad()
         XCTAssertEqual(manager.page, 1)
         manager.refresh()
         XCTAssertEqual(manager.page, 1)
@@ -76,8 +87,6 @@ class PagingCallTests: XCTestCase {
         call.firingFunc = { _ in
             wasCalled = true
         }
-        
-        manager.viewDidLoad()
         
         manager.refresh()
         XCTAssertEqual(manager.page, 1)

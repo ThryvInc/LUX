@@ -10,16 +10,14 @@ import Combine
 import LithoOperators
 import Prelude
 
-open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T>, UISearchBarDelegate {
+open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T> {
     @IBOutlet open weak var searchBar: UISearchBar?
     @IBOutlet open weak var searchTopConstraint: NSLayoutConstraint?
     
     open var lastScreenYForAnimation: CGFloat?
-    open var onSearch: (String) -> Void = { _ in }
-    open var searcher: LUXSearcher<U>?
     
+    open var searchViewModel: LUXSearchViewModel<U>? = LUXSearchViewModel<U>()
     open var shouldRefresh = true
-    open var savedSearch: String?
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +27,16 @@ open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T>, U
             tableView?.alpha = 0
         }
         
-        searchBar?.delegate = self
+        searchBar?.delegate = searchViewModel
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        shouldRefresh = (savedSearch == nil || savedSearch == "")
-        if let searchText = savedSearch {
+        shouldRefresh = (searchViewModel?.savedSearch == nil || searchViewModel?.savedSearch == "")
+        if let searchText = searchViewModel?.savedSearch {
             searchBar?.text = searchText
             searchBar?.resignFirstResponder()
         }
@@ -56,7 +57,11 @@ open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T>, U
     
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        savedSearch = searchBar?.text
+        searchViewModel?.savedSearch = searchBar?.text
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     open override func refresh() {
@@ -67,60 +72,5 @@ open class LUXSearchViewController<T, U>: LUXMultiModelTableViewController<T>, U
         } else {
             shouldRefresh = true
         }
-    }
-    
-    //MARK: - search
-    
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        onSearch(searchText)
-    }
-    
-    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    
-    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    
-    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-}
-
-open class LUXSearcher<T> {
-    @Published public var searchText: String?
-    open var isIncluded: (String?, T) -> Bool
-    
-    public init(isIncluded: @escaping (String?, T) -> Bool) {
-        self.isIncluded = isIncluded
-    }
-    
-    open func updateSearch(text: String?) {
-        searchText = text
-    }
-    
-    open func filter(_ t: T) -> Bool {
-        guard let text = searchText, text != "" else {
-            return true
-        }
-        return isIncluded(text, t)
-    }
-    
-    open func filter(text: String?, array: [T]) -> [T] {
-        guard let t = text, t != "" else {
-            return array
-        }
-        return array.filter(t >|> isIncluded)
-    }
-    
-    open func filter(tuple: (String?, [T])) -> [T] {
-        return tuple |> ~filter(text:array:)
-    }
-}
-
-extension LUXSearcher {
-    open func filteredPublisher(from modelsPublisher: AnyPublisher<[T], Never>) -> AnyPublisher<[T], Never> {
-        return $searchText.combineLatest(modelsPublisher).map(filter(tuple:)).eraseToAnyPublisher()
     }
 }

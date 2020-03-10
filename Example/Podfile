@@ -6,6 +6,8 @@ target 'LUX_Example' do
   pod 'PlaygroundVCHelpers', git: 'https://github.com/ThryvInc/playground-vc-helpers'
   pod 'THUXAuth', git: 'https://github.com/ThryvInc/thux-auth'
   pod 'FunNet', git: 'https://github.com/schrockblock/funnet'
+  pod 'LithoOperators', git: 'https://github.com/ThryvInc/LithoOperators'
+  pod 'OHHTTPStubs', '~> 8.0.0'
 
   target 'LUX_Tests' do
     inherit! :search_paths

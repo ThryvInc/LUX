@@ -68,9 +68,6 @@ open class LUXMultiModelTableViewController<T>: LUXFunctionalViewController, Ref
             vm.dataSource.tableView = tableView
             tableView?.dataSource = vm.dataSource
         }
-        if let pageableModelManager = refreshableModelManager as? LUXPageableModelManager {
-            pageableModelManager.viewDidLoad()
-        }
         tableView?.delegate = tableViewDelegate
         
         tableView?.refreshControl = UIRefreshControl()

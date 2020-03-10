@@ -30,3 +30,7 @@ public struct FunNetCall: NetworkCall, Stubbable, Fireable {
         firingFunc(self)
     }
 }
+
+public func fireCall(_ call: Fireable) {
+    call.fire()
+}

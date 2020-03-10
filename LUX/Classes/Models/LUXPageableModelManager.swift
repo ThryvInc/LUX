@@ -19,7 +19,7 @@ open class LUXPageableModelManager: LUXRefreshableNetworkCallManager, Pageable {
         }
     }
     private let firstPageValue: Int
-    private var onPageUpdate: ((Int) -> Void)?
+    var onPageUpdate: ((Int) -> Void)?
     
     public init(_ call: CombineNetCall, firstPageValue: Int = 0) {
         self.firstPageValue = firstPageValue

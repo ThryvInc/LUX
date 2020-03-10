@@ -33,7 +33,7 @@ public func <><A>(f: @escaping (A) -> Void, g: @escaping (A) -> Void) -> (A) -> 
     }
 }
 
-//allows mutating A, as opposded to <>
+//allows mutating A, as opposed to <>
 infix operator <~>: Composition
 public func <~><A>(f: @escaping (inout A) -> Void, g: @escaping (inout A) -> Void) -> (inout A) -> Void {
     return { a in
@@ -60,6 +60,30 @@ public func >||><A, B, C>(b: B, f: @escaping (A, B) -> C) -> (A) -> C {
     return { a in f(a, b) }
 }
 
+//...and so on...
+infix operator >|||>: Composition
+public func >|||><A, B, C, D>(c: C, f: @escaping (A, B, C) -> D) -> (A, B) -> D {
+    return { a, b in f(a, b, c) }
+}
+
+//...and so on.
+infix operator >||||>: Composition
+public func >||||><A, B, C, D, E>(d: D, f: @escaping (A, B, C, D) -> E) -> (A, B, C) -> E {
+    return { a, b, c in f(a, b, c, d) }
+}
+
+//...and so on...
+infix operator >|||||>: Composition
+public func >|||||><A, B, C, D, E, F>(e: E, f: @escaping (A, B, C, D, E) -> F) -> (A, B, C, D) -> F {
+    return { a, b, c, d in f(a, b, c, d, e) }
+}
+
+//...and so on.
+infix operator >||||||>: Composition
+public func >||||||><A, B, C, D, E, F, G>(eff: F, f: @escaping (A, B, C, D, E, F) -> G) -> (A, B, C, D, E) -> G {
+    return { a, b, c, d, e in f(a, b, c, d, e, eff) }
+}
+
 prefix operator ^
 public prefix func ^ <Root, Value>(kp: KeyPath<Root, Value>) -> (Root) -> Value {
   return get(kp)
@@ -83,24 +107,32 @@ public prefix func ^ <Root, Value>(
     }
 }
 
-//other useful higher order functions
+//higher order functions
 
-public func map<U, V>(array: [U], f: (U) -> V) -> [V] {
-    return array.map(f)
+public func union<T>(_ functions: ((T) -> Void)...) -> (T) -> Void {
+    return { (t: T) in
+        for f in functions {
+            f(t)
+        }
+    }
 }
 
-public extension Sequence {
-  func map<Value>(_ kp: KeyPath<Element, Value>) -> [Value] {
-    return self.map { $0[keyPath: kp] }
-  }
-}
-
-public func map<Element, Value>(array: [Element], _ kp: KeyPath<Element, Value>) -> [Value] {
-    return array.map(kp)
+public func union(_ functions: (() -> Void)...) -> () -> Void {
+    return {
+        for f in functions {
+            f()
+        }
+    }
 }
 
 public func voidCurry<T>(_ t: T, _ f: @escaping (T) -> Void) -> () -> Void {
     return { f(t) }
+}
+
+public func ignoreSecondArg<T, U, V>(f: @escaping (T) -> V) -> (T, U) -> V {
+    return { t, _ in
+        return f(t)
+    }
 }
 
 public func ifExecute<T>(_ t: T?, _ f: (T) -> Void) {
@@ -127,7 +159,29 @@ extension ConditionalApply {
     }
 }
 
+//other functions
 
+public func map<U, V>(array: [U], f: (U) -> V) -> [V] {
+    return array.map(f)
+}
+
+public extension Sequence {
+  func map<Value>(_ kp: KeyPath<Element, Value>) -> [Value] {
+    return self.map { $0[keyPath: kp] }
+  }
+  
+  func compactMap<Value>(_ kp: KeyPath<Element, Value?>) -> [Value] {
+    return self.compactMap { $0[keyPath: kp] }
+  }
+}
+
+public func map<Element, Value>(array: [Element], _ kp: KeyPath<Element, Value>) -> [Value] {
+    return array.map(kp)
+}
+
+public func optionalCast<T, U>(object: U) -> T? {
+    return object as? T
+}
 
 public func prop<Root, Value>(_ kp: WritableKeyPath<Root, Value>)
   -> (@escaping (Value) -> Value)
