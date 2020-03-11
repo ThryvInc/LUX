@@ -47,9 +47,12 @@ open class LUXPageableTableViewDelegate: LUXTappableTableDelegate {
     }
 
     @objc open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
-        if numberOfRows - indexPath.row == pageTrigger && numberOfRows % pageSize == 0  {
-            pageableModelManager?.nextPage()
+        let previousIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
+        if tableView.indexPathsForVisibleRows?.contains(previousIndexPath) == true {
+            let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
+            if numberOfRows - indexPath.row == pageTrigger && numberOfRows % pageSize == 0  {
+                pageableModelManager?.nextPage()
+            }
         }
     }
 }

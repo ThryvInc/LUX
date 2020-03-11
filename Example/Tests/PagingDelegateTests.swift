@@ -26,6 +26,7 @@ class PagingDelegateTests: XCTestCase {
         
         let tv = MockTableView()
         tv.numberOfRows = 20
+        tv.previousRow = 14
         let cell = UITableViewCell()
         let indexPath = IndexPath.init(row: 15, section: 0)
         delegate.tableView(tv, willDisplay: cell, forRowAt: indexPath)
@@ -43,6 +44,7 @@ class PagingDelegateTests: XCTestCase {
         
         let tv = MockTableView()
         tv.numberOfRows = 40
+        tv.previousRow = 34
         let cell = UITableViewCell()
         let indexPath = IndexPath.init(row: 35, section: 0)
         delegate.tableView(tv, willDisplay: cell, forRowAt: indexPath)
@@ -60,6 +62,7 @@ class PagingDelegateTests: XCTestCase {
         
         let tv = MockTableView()
         tv.numberOfRows = 40
+        tv.previousRow = 14
         let cell = UITableViewCell()
         let indexPath = IndexPath.init(row: 15, section: 0)
         delegate.tableView(tv, willDisplay: cell, forRowAt: indexPath)
@@ -77,6 +80,7 @@ class PagingDelegateTests: XCTestCase {
         
         let tv = MockTableView()
         tv.numberOfRows = 42
+        tv.previousRow = 36
         let cell = UITableViewCell()
         let indexPath = IndexPath.init(row: 37, section: 0)
         delegate.tableView(tv, willDisplay: cell, forRowAt: indexPath)
@@ -99,7 +103,9 @@ class MockPageManager: LUXPageableModelManager {
 }
 
 class MockTableView: UITableView {
+    var previousRow: Int?
     var numberOfRows: Int?
+    override var indexPathsForVisibleRows: [IndexPath]? { return [IndexPath(row: previousRow!, section: 0)] }
     
     override func numberOfRows(inSection section: Int) -> Int {
         return numberOfRows ?? 0
