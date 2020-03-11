@@ -31,7 +31,7 @@ open class LUXTableViewModel {
 open class LUXRefreshableTableViewModel: LUXTableViewModel, Refreshable {
     public var refresher: Refreshable
     
-    init(_ refresher: Refreshable) {
+    public init(_ refresher: Refreshable) {
         self.refresher = refresher
     }
     
@@ -57,7 +57,7 @@ open class LUXRefreshableTableViewModel: LUXTableViewModel, Refreshable {
 open class LUXItemsTableViewModel: LUXRefreshableTableViewModel {
     public var sectionsPublisher: AnyPublisher<[MultiModelTableViewDataSourceSection], Never>
     
-    init(_ refresher: Refreshable, itemsPublisher: AnyPublisher<[MultiModelTableViewDataSourceItem], Never>) {
+    public init(_ refresher: Refreshable, itemsPublisher: AnyPublisher<[MultiModelTableViewDataSourceItem], Never>) {
         let toSections = itemsToSection >>> arrayOfSingleObject
         sectionsPublisher = itemsPublisher.map(toSections).eraseToAnyPublisher()
         
