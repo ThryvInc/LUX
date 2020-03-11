@@ -76,7 +76,7 @@ class SearchTests: XCTestCase {
         var count = 0
         
         let humansProperty = PassthroughSubject<[Human]?, Never>()
-        let searcher = LUXSearcher<Human>(^\Human.name, .allMatchNilAndEmpty, .contains)
+        let searcher = LUXSearcher<Human>(^\Human.name, .allMatchNilAndEmpty, .wordPrefixes)
         
         let modelsSignal = humansProperty.compactMap({ $0 }).eraseToAnyPublisher()
         
@@ -95,13 +95,22 @@ class SearchTests: XCTestCase {
                 XCTAssertEqual(humans.count, 3)
                 break
             case 4:
-                XCTAssertEqual(humans.count, 2)
+                XCTAssertEqual(humans.count, 1)
                 break
             case 5:
-                XCTAssertEqual(humans.count, 2)
-                XCTAssertEqual(searcher.searchText, "e")
+                XCTAssertEqual(humans.count, 3)
                 break
             case 6:
+                XCTAssertEqual(humans.count, 1)
+                break
+            case 7:
+                XCTAssertEqual(humans.count, 1)
+                XCTAssertEqual(searcher.searchText, "N A")
+                break
+            case 8:
+                XCTAssertEqual(humans.count, 3)
+                break
+            case 9:
                 XCTAssertEqual(humans.count, 3)
                 break
             default:
@@ -110,19 +119,28 @@ class SearchTests: XCTestCase {
             }
         }
         
-        let humans = [Human(id: 1, name: "Neo"), Human(id: 2, name: "Morpheus"), Human(id: 3, name: "Trinity")]
+        let humans = [Human(id: 1, name: "Neo Anderson"), Human(id: 2, name: "Morpheus"), Human(id: 3, name: "Trinity")]
         
         humansProperty.send(humans)
         
         searcher.updateSearch(text: "N")
         searcher.updateSearch(text: "")
-        searcher.updateSearch(text: "e")
+        searcher.updateSearch(text: "A")
+        searcher.updateSearch(text: "")
+        searcher.updateSearch(text: "N A")
         
         humansProperty.send(humans)
         
         searcher.updateSearch(text: "")
         
-        XCTAssertEqual(count, 6)
+        XCTAssertEqual(count, 8)
         cancel.cancel()
+    }
+    
+    func testWordPrefixes() {
+        let search = "N A"
+        let text = "Neo Anderson"
+        
+        XCTAssert(matchesWordsPrefixes(search, text))
     }
 }
