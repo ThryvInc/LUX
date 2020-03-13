@@ -200,7 +200,7 @@ public func matchesWordsPrefixes(_ search: String, _ text: String) -> Bool {
     return true
 }
 
-func defaultOnSearch<T>(_ searcher: LUXSearcher<T>, _ call: CombineNetCall) -> (String) -> Void {
+public func defaultOnSearch<T>(_ searcher: LUXSearcher<T>, _ call: CombineNetCall) -> (String) -> Void {
     return { text in
         searcher.updateSearch(text: text)
         call.endpoint.getParams.updateValue(text, forKey: "query")
@@ -208,13 +208,13 @@ func defaultOnSearch<T>(_ searcher: LUXSearcher<T>, _ call: CombineNetCall) -> (
     }
 }
 
-func onWillReturnToSearch<T>(_ searchBar: UISearchBar?, _ searchViewModel: LUXSearchViewModel<T>?) {
+public func onWillReturnToSearch<T>(_ searchBar: UISearchBar?, _ searchViewModel: LUXSearchViewModel<T>?) {
     if let searchText = searchViewModel?.savedSearch {
         searchBar?.text = searchText
         searchBar?.resignFirstResponder()
     }
 }
 
-func saveSearch<T>(_ searchBar: UISearchBar?, _ searchViewModel: LUXSearchViewModel<T>?) {
+public func saveSearch<T>(_ searchBar: UISearchBar?, _ searchViewModel: LUXSearchViewModel<T>?) {
     searchViewModel?.savedSearch = searchBar?.text
 }
