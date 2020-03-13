@@ -53,6 +53,28 @@ open class LUXRefreshableTableViewModel: LUXTableViewModel, Refreshable {
         tableView?.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
 }
+extension LUXRefreshableTableViewModel {
+    public func setupEndRefreshing(from call: CombineNetCall) {
+        cancelBag.insert(call.responder?.$data.sink { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.endRefreshing()
+            }
+        })
+        
+        cancelBag.insert(call.responder?.$error.sink { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.endRefreshing()
+            }
+        })
+        
+        cancelBag.insert(call.responder?.$serverError.sink { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.endRefreshing()
+            }
+        })
+        
+    }
+}
 
 open class LUXItemsTableViewModel: LUXRefreshableTableViewModel {
     public var sectionsPublisher: AnyPublisher<[MultiModelTableViewDataSourceSection], Never>
