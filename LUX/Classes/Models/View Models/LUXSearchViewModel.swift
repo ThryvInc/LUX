@@ -200,10 +200,10 @@ public func matchesWordsPrefixes(_ search: String, _ text: String) -> Bool {
     return true
 }
 
-public func defaultOnSearch<T>(_ searcher: LUXSearcher<T>, _ call: CombineNetCall) -> (String) -> Void {
+public func defaultOnSearch<T>(_ searcher: LUXSearcher<T>, _ call: CombineNetCall, paramName: String = "query") -> (String) -> Void {
     return { text in
         searcher.updateSearch(text: text)
-        call.endpoint.getParams.updateValue(text, forKey: "query")
+        call.endpoint.getParams.updateValue(text, forKey: paramName)
         call.fire()
     }
 }
