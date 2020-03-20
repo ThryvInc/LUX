@@ -73,7 +73,7 @@ open class LUXSearcher<T> {
         isIncluded = { search, t in defaultIsIncluded(search, t, modelToString, nilMatcher, emptyMatcher, matcher)}
     }
     
-    public init(_ modelToString: @escaping (T) -> String, _ nilAndEmptyStrategy: NilAndEmptyMatchStrategy, _ matchStrategy: MatchStrategy) {
+    public init(_ modelToString: @escaping (T) -> String, _ nilAndEmptyStrategy: NilAndEmptyMatchStrategy, _ matchStrategy: MatchStrategy, _ isCaseSensitive: Bool = false) {
         let nilMatcher: () -> Bool
         let emptyMatcher: () -> Bool
         switch nilAndEmptyStrategy {
@@ -101,7 +101,13 @@ open class LUXSearcher<T> {
             matcher = matchesWithContains(_:_:)
         }
         
-        isIncluded = { search, t in defaultIsIncluded(search, t, modelToString, nilMatcher, emptyMatcher, matcher)}
+        if isCaseSensitive {
+            isIncluded = { search, t in defaultIsIncluded(search, t, modelToString, nilMatcher, emptyMatcher, matcher)}
+        } else {
+            isIncluded = { search, t in
+                defaultIsIncluded(search?.lowercased(), t, modelToString >>> lowercased(string:), nilMatcher, emptyMatcher, matcher)
+            }
+        }
     }
     
     open func updateSearch(text: String?) {
@@ -133,6 +139,8 @@ extension LUXSearcher {
     }
 }
 
+func lowercased(string: String) -> String { return string.lowercased() }
+
 func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> String?, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
     if let searchText = search {
         if searchText.isEmpty {
@@ -163,6 +171,11 @@ public enum MatchStrategy {
     case prefix
     case wordPrefixes
     case contains
+}
+
+public enum CaseSensitivity {
+    case caseInsensitive
+    case caseSensitive
 }
 
 public enum NilAndEmptyMatchStrategy {
