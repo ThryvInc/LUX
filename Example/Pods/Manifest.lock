@@ -5,13 +5,32 @@ PODS:
   - ISO8601DateFormatter (0.8)
   - LithoOperators (0.0.9):
     - Prelude
-  - LUX (0.0.4):
+  - LUX (0.0.5):
+    - ISO8601DateFormatter
+    - LUX/AppOpenFlow (= 0.0.5)
+    - LUX/Networking (= 0.0.5)
+    - LUX/Search (= 0.0.5)
+    - LUX/TableViews (= 0.0.5)
+    - LUX/Utilities (= 0.0.5)
+  - LUX/AppOpenFlow (0.0.5):
+    - ISO8601DateFormatter
+    - LUX/Networking
+    - THUXAuth
+  - LUX/Networking (0.0.5):
     - FunNet
     - ISO8601DateFormatter
-    - MultiModelTableViewDataSource
-    - Prelude (~> 3.0)
-    - SSPullToRefresh
+    - LUX/Utilities
     - THUXAuth
+  - LUX/Search (0.0.5):
+    - ISO8601DateFormatter
+    - LUX/TableViews
+  - LUX/TableViews (0.0.5):
+    - ISO8601DateFormatter
+    - LUX/Networking
+    - MultiModelTableViewDataSource
+  - LUX/Utilities (0.0.5):
+    - ISO8601DateFormatter
+    - Prelude (~> 3.0)
   - MultiModelTableViewDataSource (0.0.8)
   - OHHTTPStubs (8.0.0):
     - OHHTTPStubs/Default (= 8.0.0)
@@ -30,7 +49,6 @@ PODS:
     - OHHTTPStubs/Default
   - PlaygroundVCHelpers (0.0.2)
   - Prelude (3.0.0)
-  - SSPullToRefresh (1.3.0)
   - THUXAuth (0.1.0)
 
 DEPENDENCIES:
@@ -47,7 +65,6 @@ SPEC REPOS:
     - MultiModelTableViewDataSource
     - OHHTTPStubs
     - Prelude
-    - SSPullToRefresh
 
 EXTERNAL SOURCES:
   FunNet:
@@ -79,12 +96,11 @@ SPEC CHECKSUMS:
   FunNet: 782eb82ce25a8a0499eef8533edbc192817a0b33
   ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
   LithoOperators: ceed8cb3b6c3adeac7ef5e61c36977f8977ac432
-  LUX: f3fb46a3da600387cdd010f318a9cf640a879caf
+  LUX: 694527816d4578aa8d35e43af351bbe7971d1c08
   MultiModelTableViewDataSource: 798f682408933a269de09e5c73b54cd5cb86b851
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
-  SSPullToRefresh: 3a47e116692b60e7da5a8c60418488133bcc9550
   THUXAuth: 3d5cfdca13a9c7d1093bb8a5663d96c6a9ce3179
 
 PODFILE CHECKSUM: dc7e21d29e86a740aefde629037692606e017a47

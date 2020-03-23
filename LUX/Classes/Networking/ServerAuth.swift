@@ -6,10 +6,9 @@
 //
 
 import FunNet
-import THUXAuth
 
 public func authorize(_ endpoint: inout Endpoint) {
-    if let headers = THUXSessionManager.primarySession?.authHeaders() {
+    if let headers = LUXSessionManager.primarySession?.authHeaders() {
         endpoint.addHeaders(headers: headers)
     }
 }

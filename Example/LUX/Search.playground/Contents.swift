@@ -87,14 +87,14 @@ let searcher = LUXSearcher<Reign>(reignToHouseString, .allMatchNilAndEmpty, .pre
 //    return reignToHouseString(reign).prefix(text.count) == text
 //}
 vc.searchViewModel?.searcher = searcher
-vc.searchViewModel?.onSearch = { text in
-    searcher.updateSearch(text: text)
+vc.searchViewModel?.onIncrementalSearch = { text in
+    searcher.updateIncrementalSearch(text: text)
 }
 
 let refreshManager = LUXRefreshCallModelsManager<Reign>(call, modelsSignal)
 vc.refreshableModelManager = refreshManager
 
-let viewModel = LUXModelListViewModel(modelsPublisher: searcher.filteredPublisher(from: modelsSignal), modelToItem: buildHouseConfigurator >>> configuratorToItem)
+let viewModel = LUXModelListViewModel(modelsPublisher: searcher.filteredIncrementalPublisher(from: modelsSignal), modelToItem: buildHouseConfigurator >>> configuratorToItem)
 vc.viewModel = viewModel
 vc.tableViewDelegate = LUXTappableTableDelegate(viewModel.dataSource)
 

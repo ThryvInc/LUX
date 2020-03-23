@@ -356,7 +356,6 @@
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework",
 				"${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework",
-				"${BUILT_PRODUCTS_DIR}/SSPullToRefresh/SSPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/THUXAuth/THUXAuth.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -369,7 +368,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlaygroundVCHelpers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Prelude.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/THUXAuth.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

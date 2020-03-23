@@ -205,7 +205,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SSPullToRefresh/SSPullToRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/THUXAuth/THUXAuth.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -217,7 +216,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SSPullToRefresh/SSPullToRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/THUXAuth/THUXAuth.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

@@ -1,6 +1,6 @@
 {
   "name": "LUX",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "summary": "LUX contains everything you need to create a simple app.",
   "description": "There's a bunch of really cool stuff in this pod, all targeted at letting you build the things that are *different* about your app, not the reproducing the same things over and over. Customizable, extendable, bare bones implementations of common UX components like splash, login, creds creation, commenting, and view/edit profile screens, an app delegate implementation that sets up fabric and crashlytics for you, a simple framework for handling user sessions, a material design based controller for table views... and more coming!",
   "homepage": "https://github.com/ThryvInc/LUX",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ThryvInc/LUX.git",
-    "tag": "0.0.4"
+    "tag": "0.0.5"
   },
   "social_media_url": "https://twitter.com/elliot_schrock",
   "platforms": {
@@ -22,23 +22,72 @@
   "source_files": "LUX/Classes/**/*.swift",
   "resources": "LUX/**/*.xib",
   "dependencies": {
-    "SSPullToRefresh": [
-
-    ],
     "ISO8601DateFormatter": [
 
-    ],
-    "MultiModelTableViewDataSource": [
-
-    ],
-    "FunNet": [
-
-    ],
-    "THUXAuth": [
-
-    ],
-    "Prelude": [
-      "~> 3.0"
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Utilities",
+      "source_files": "LUX/Classes/Utilities/**/*.swift",
+      "resources": "LUX/Classes/Utilities/**/*.xib",
+      "dependencies": {
+        "Prelude": [
+          "~> 3.0"
+        ]
+      }
+    },
+    {
+      "name": "Networking",
+      "source_files": "LUX/Classes/Networking/**/*.swift",
+      "resources": "LUX/Classes/Networking/**/*.xib",
+      "dependencies": {
+        "FunNet": [
+
+        ],
+        "THUXAuth": [
+
+        ],
+        "LUX/Utilities": [
+
+        ]
+      }
+    },
+    {
+      "name": "TableViews",
+      "source_files": "LUX/Classes/TableViews/**/*.swift",
+      "resources": "LUX/Classes/TableViews/**/*.xib",
+      "dependencies": {
+        "LUX/Networking": [
+
+        ],
+        "MultiModelTableViewDataSource": [
+
+        ]
+      }
+    },
+    {
+      "name": "AppOpenFlow",
+      "source_files": "LUX/Classes/AppOpenFlow/**/*.swift",
+      "resources": "LUX/Classes/AppOpenFlow/**/*.xib",
+      "dependencies": {
+        "THUXAuth": [
+
+        ],
+        "LUX/Networking": [
+
+        ]
+      }
+    },
+    {
+      "name": "Search",
+      "source_files": "LUX/Classes/Search/**/*.swift",
+      "resources": "LUX/Classes/Search/**/*.xib",
+      "dependencies": {
+        "LUX/TableViews": [
+
+        ]
+      }
+    }
+  ]
 }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LUX'
-    s.version          = '0.0.5'
+    s.version          = '0.1.0'
     s.summary          = 'LUX contains everything you need to create a simple app.'
 
     s.description      = <<-DESC
@@ -25,14 +25,52 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
 
   s.source_files = 'LUX/Classes/**/*.swift'
-  
   s.resources = 'LUX/**/*.xib'
+  
+  s.subspec 'Utilities' do |sp|
+    sp.source_files = 'LUX/Classes/Utilities/**/*.swift'
+    sp.resources = 'LUX/Classes/Utilities/**/*.xib'
+    sp.dependency 'Prelude', '~> 3.0'
+  end
+  
+  s.subspec 'Auth' do |sp|
+    sp.source_files = 'LUX/Classes/Auth/**/*.swift'
+    sp.resources = 'LUX/Classes/Auth/**/*.xib'
+  end
+  
+  s.subspec 'Networking' do |sp|
+    sp.source_files = 'LUX/Classes/Networking/**/*.swift'
+    sp.resources = 'LUX/Classes/Networking/**/*.xib'
+    
+    sp.dependency 'FunNet'
+    sp.dependency 'LUX/Auth'
+    sp.dependency 'LUX/Utilities'
+  end
+  
+  s.subspec 'TableViews' do |sp|
+    sp.source_files = 'LUX/Classes/TableViews/**/*.swift'
+    sp.resources = 'LUX/Classes/TableViews/**/*.xib'
+    
+    sp.dependency 'LUX/Networking'
+    sp.dependency 'MultiModelTableViewDataSource'
+  end
+  
+  s.subspec 'AppOpenFlow' do |sp|
+    sp.source_files = 'LUX/Classes/AppOpenFlow/**/*.swift'
+    sp.resources = 'LUX/Classes/AppOpenFlow/**/*.xib'
+    
+    sp.dependency 'LUX/Auth'
+    sp.dependency 'LUX/Networking'
+  end
+  
+  s.subspec 'Search' do |sp|
+    sp.source_files = 'LUX/Classes/Search/**/*.swift'
+    sp.resources = 'LUX/Classes/Search/**/*.xib'
+    
+    sp.dependency 'LUX/TableViews'
+  end
 
-  s.dependency 'SSPullToRefresh'
   s.dependency 'ISO8601DateFormatter'
   #s.dependency 'SBTextInputView'
-  s.dependency 'MultiModelTableViewDataSource'
-  s.dependency 'FunNet'
-  s.dependency 'THUXAuth'
-  s.dependency 'Prelude', '~> 3.0'
+  
 end
