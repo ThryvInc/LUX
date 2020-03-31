@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
     sp.resources = 'LUX/Classes/TableViews/**/*.xib'
     
     sp.dependency 'LUX/Networking'
-    sp.dependency 'MultiModelTableViewDataSource'
+    sp.dependency 'FlexDataSource'
   end
   
   s.subspec 'AppOpenFlow' do |sp|

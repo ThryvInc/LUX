@@ -6,19 +6,19 @@
 //
 
 import UIKit
-import MultiModelTableViewDataSource
+import FlexDataSource
 import Prelude
 import Combine
 
 public protocol LUXDataSourceProvider {
-    var dataSource: MultiModelTableViewDataSource { get }
+    var dataSource: FlexDataSource { get }
 }
 
 open class LUXModelListViewModel<T>: LUXModelTableViewModel<T>, LUXDataSourceProvider {
-    public let dataSource: MultiModelTableViewDataSource
+    public let dataSource: FlexDataSource
     
-    public override init(modelsPublisher: AnyPublisher<[T], Never>, modelToItem: @escaping (T) -> MultiModelTableViewDataSourceItem) {
-        dataSource = MultiModelTableViewDataSource()
+    public override init(modelsPublisher: AnyPublisher<[T], Never>, modelToItem: @escaping (T) -> FlexDataSourceItem) {
+        dataSource = FlexDataSource()
         super.init(modelsPublisher: modelsPublisher, modelToItem: modelToItem)
         
         cancelBag.insert(self.sectionsPublisher.sink {
@@ -29,7 +29,7 @@ open class LUXModelListViewModel<T>: LUXModelTableViewModel<T>, LUXDataSourcePro
 }
 
 open class LUXFilteredModelListViewModel<T>: LUXModelListViewModel<T> {
-    public init(modelsPublisher: AnyPublisher<[T], Never>, filter: @escaping (T) -> Bool, modelToItem: @escaping (T) -> MultiModelTableViewDataSourceItem) {
+    public init(modelsPublisher: AnyPublisher<[T], Never>, filter: @escaping (T) -> Bool, modelToItem: @escaping (T) -> FlexDataSourceItem) {
         super.init(modelsPublisher: modelsPublisher.map { $0.filter(filter) }.eraseToAnyPublisher(), modelToItem: modelToItem)
     }
 }

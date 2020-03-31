@@ -1,5 +1,5 @@
 //
-//  LUXMultiModelTableViewController.swift
+//  LUXFlexController.swift
 //  LithoUXComponents
 //
 //  Created by Elliot Schrock on 10/12/19.
@@ -8,9 +8,9 @@
 import UIKit
 import Combine
 
-open class LUXMultiModelTableViewController<T>: LUXFunctionalViewController, Refreshable {
+open class LUXFlexController<T>: LUXFunctionalViewController, Refreshable {
     @IBOutlet public var tableView: UITableView?
-    open var tableViewDelegate: LUXTappableTableDelegate? { didSet { didSetTableDelegate() }}
+    open var tableViewDelegate: LUXFunctionalTableDelegate? { didSet { didSetTableDelegate() }}
     open var viewModel: T? { didSet { didSetViewModel() }}
     open var refreshableModelManager: LUXRefreshableNetworkCallManager? {
         didSet {

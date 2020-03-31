@@ -197,22 +197,22 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FlexDataSource/FlexDataSource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FunNet/FunNet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ISO8601DateFormatter/ISO8601DateFormatter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LUX/LUX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MultiModelTableViewDataSource/MultiModelTableViewDataSource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/THUXAuth/THUXAuth.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FlexDataSource/FlexDataSource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FunNet/FunNet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ISO8601DateFormatter/ISO8601DateFormatter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LUX/LUX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MultiModelTableViewDataSource/MultiModelTableViewDataSource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework"

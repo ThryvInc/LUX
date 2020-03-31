@@ -6,52 +6,39 @@
 //
 
 import UIKit
-import MultiModelTableViewDataSource
+import FlexDataSource
 
-open class LUXTappableTableDelegate: NSObject, UITableViewDelegate {
-    public var onTap: (IndexPath) -> Void = { _ in }
-    
-    public init(_ onTap: ((IndexPath) -> Void)? = nil) {
-        if let onTap = onTap {
-            self.onTap = onTap
-        }
-    }
-    
-    public init(_ dataSource: MultiModelTableViewDataSource) {
-        onTap = { indexPath in
-            if let tappable = dataSource.sections?[indexPath.section].items?[indexPath.row] as? Tappable {
-                tappable.onTap()
-            }
-        }
-    }
+open class LUXFunctionalTableDelegate: NSObject, UITableViewDelegate {
+    public var onSelect: (UITableView, IndexPath) -> Void = { _,_ in }
+    public var onWillDisplay: (UITableViewCell, UITableView, IndexPath) -> Void = { _,_,_ in }
     
     @objc open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        onTap(indexPath)
+        onSelect(tableView, indexPath)
+    }
+    
+    @objc open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        onWillDisplay(cell, tableView, indexPath)
     }
 }
 
-open class LUXPageableTableViewDelegate: LUXTappableTableDelegate {
-    open var pageableModelManager: LUXPageableModelManager?
-    open var pageTrigger: Int = 5
-    open var pageSize: Int = 20
-    
-    public init(_ pageableModelManager: LUXPageableModelManager?, _ onTap: ((IndexPath) -> Void)? = nil) {
-        super.init(onTap)
-        self.pageableModelManager = pageableModelManager
+public extension FlexDataSource {
+    func onSelect(_ tableView: UITableView, _ indexPath: IndexPath) -> Void {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let tappable = sections?[indexPath.section].items?[indexPath.row] as? Tappable {
+            tappable.onTap()
+        }
     }
-    
-    public init(_ pageableModelManager: LUXPageableModelManager?, _ dataSource: MultiModelTableViewDataSource) {
-        super.init(dataSource)
-        self.pageableModelManager = pageableModelManager
-    }
+}
 
-    @objc open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let previousIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
-        if tableView.indexPathsForVisibleRows?.contains(previousIndexPath) == true {
-            let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
-            if numberOfRows - indexPath.row == pageTrigger && numberOfRows % pageSize == 0  {
-                pageableModelManager?.nextPage()
+public extension LUXPageableModelManager {
+    func willDisplayFunction(pageSize: Int = 20, pageTrigger: Int = 5) -> (UITableViewCell, UITableView, IndexPath) -> Void {
+        return { (cell: UITableViewCell, tableView: UITableView, indexPath: IndexPath) in
+            let previousIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
+            if tableView.indexPathsForVisibleRows?.contains(previousIndexPath) == true {
+                let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
+                if numberOfRows - indexPath.row == pageTrigger && numberOfRows % pageSize == 0  {
+                    self.nextPage()
+                }
             }
         }
     }

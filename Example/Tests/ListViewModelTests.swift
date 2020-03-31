@@ -9,7 +9,7 @@
 import XCTest
 @testable import LUX
 import Combine
-import MultiModelTableViewDataSource
+import FlexDataSource
 import Prelude
 
 class ListViewModelTests: XCTestCase {

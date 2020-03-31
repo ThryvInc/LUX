@@ -8,7 +8,7 @@
 
 import Foundation
 import Combine
-import MultiModelTableViewDataSource
+import FlexDataSource
 import LUX
 
 struct Human: Codable {
@@ -40,4 +40,4 @@ func humanConfigurer(_ human: Human) -> (UITableViewCell) -> Void {
     }
 }
 
-func configurerToItem(configurer: @escaping (UITableViewCell) -> Void) -> MultiModelTableViewDataSourceItem { return FunctionalMultiModelTableViewDataSourceItem<LUXDetailTableViewCell>(identifier: "cell", configurer) }
+func configurerToItem(configurer: @escaping (UITableViewCell) -> Void) -> FlexDataSourceItem { return FunctionalFlexDataSourceItem<LUXDetailTableViewCell>(identifier: "cell", configurer) }

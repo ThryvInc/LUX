@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MultiModelTableViewDataSource
+import FlexDataSource
 import Prelude
 import Combine
 

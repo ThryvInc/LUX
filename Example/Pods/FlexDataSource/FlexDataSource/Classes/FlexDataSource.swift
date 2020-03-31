@@ -1,19 +1,19 @@
 //
-//  MultiModelTableViewDataSource.swift
-//  MultiModelTableViewDataSource
+//  FlexDataSource.swift
+//  FlexDataSource
 //
 //  Created by Elliot Schrock on 2/10/18.
 //
 
 import UIKit
 
-open class MultiModelTableViewDataSource: NSObject, UITableViewDataSource {
+open class FlexDataSource: NSObject, UITableViewDataSource {
     public var tableView: UITableView? {
         didSet {
             registerCells()
         }
     }
-    public var sections: [MultiModelTableViewDataSourceSection]? {
+    public var sections: [FlexDataSourceSection]? {
         didSet {
             registerCells()
         }

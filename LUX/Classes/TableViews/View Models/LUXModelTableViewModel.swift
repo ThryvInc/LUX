@@ -6,17 +6,17 @@
 //
 
 import UIKit
-import MultiModelTableViewDataSource
+import FlexDataSource
 import Prelude
 import FunNet
 import Combine
 import LithoOperators
 
 open class LUXModelTableViewModel<T>: LUXModelCallViewModel<T> {
-    public var sectionsPublisher: AnyPublisher<[MultiModelTableViewDataSourceSection], Never>!
-    public var modelToItem: ((T) -> MultiModelTableViewDataSourceItem)
+    public var sectionsPublisher: AnyPublisher<[FlexDataSourceSection], Never>!
+    public var modelToItem: ((T) -> FlexDataSourceItem)
     
-    public init(modelsPublisher: AnyPublisher<[T], Never>, modelToItem: @escaping (T) -> MultiModelTableViewDataSourceItem) {
+    public init(modelsPublisher: AnyPublisher<[T], Never>, modelToItem: @escaping (T) -> FlexDataSourceItem) {
         self.modelToItem = modelToItem
         
         super.init(modelsPublisher: modelsPublisher)

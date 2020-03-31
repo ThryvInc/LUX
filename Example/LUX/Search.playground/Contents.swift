@@ -4,7 +4,7 @@ import PlaygroundSupport
 @testable import FunNet
 import Prelude
 import Combine
-import MultiModelTableViewDataSource
+import FlexDataSource
 import LithoOperators
 
 //Models ------------------------------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ let reignToHouseString: (Reign) -> String = ^\Reign.house >>> houseToString >>> 
 let buildHouseConfigurator: (Reign) -> (UITableViewCell) -> Void = { reign in return { $0.textLabel?.text = reignToHouseString(reign) }}
 
 //go from configuring functions to a table view data source ---------------------------------------------------
-func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void) -> MultiModelTableViewDataSourceItem { return FunctionalMultiModelTableViewDataSourceItem<DetailTableViewCell>(identifier: "cell", configurer) }
+func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void) -> FlexDataSourceItem { return FunctionalFlexDataSourceItem<DetailTableViewCell>(identifier: "cell", configurer) }
 let configsToDataSource = configuratorToItem >||> map >>> itemsToSection >>> arrayOfSingleObject >>> sectionsToDataSource
 
 //setup

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double MultiModelTableViewDataSourceVersionNumber;
-FOUNDATION_EXPORT const unsigned char MultiModelTableViewDataSourceVersionString[];
+FOUNDATION_EXPORT double FlexDataSourceVersionNumber;
+FOUNDATION_EXPORT const unsigned char FlexDataSourceVersionString[];
 

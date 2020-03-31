@@ -4,7 +4,7 @@ import PlaygroundSupport
 @testable import FunNet
 import Combine
 import Prelude
-import MultiModelTableViewDataSource
+import FlexDataSource
 import LithoOperators
 
 //Models
@@ -59,7 +59,7 @@ class DetailTableViewCell: UITableViewCell {
     }
 }
 
-func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void, onTap: @escaping () -> Void) -> MultiModelTableViewDataSourceItem { return TappableFunctionalMultiModelItem<DetailTableViewCell>(identifier: "cell", configurer, onTap) }
+func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void, onTap: @escaping () -> Void) -> FlexDataSourceItem { return TappableFunctionalMultiModelItem<DetailTableViewCell>(identifier: "cell", configurer, onTap) }
 
 //linking models to views
 let buildConfigurator: (Reign) -> (UITableViewCell) -> Void = { reign in
@@ -84,7 +84,7 @@ call.firingFunc = {
 let dataSignal = (call.responder?.$data)!.eraseToAnyPublisher()
 let modelsSignal: AnyPublisher<[Reign], Never> = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
 
-let vc = LUXMultiModelTableViewController<LUXModelListViewModel<Reign>>(nibName: "LUXMultiModelTableViewController", bundle: Bundle(for: LUXMultiModelTableViewController<LUXModelListViewModel<Reign>>.self))
+let vc = LUXFlexController<LUXModelListViewModel<Reign>>(nibName: "LUXFlexController", bundle: Bundle(for: LUXFlexController<LUXModelListViewModel<Reign>>.self))
 
 let nc = UINavigationController(rootViewController: vc)
 let onTap: () -> Void = {}

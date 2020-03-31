@@ -4,7 +4,7 @@ import PlaygroundSupport
 @testable import FunNet
 import Combine
 import Prelude
-import MultiModelTableViewDataSource
+import FlexDataSource
 import LithoOperators
 
 //Models
@@ -59,7 +59,7 @@ class DetailTableViewCell: UITableViewCell {
     }
 }
 
-func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void, onTap: @escaping () -> Void) -> MultiModelTableViewDataSourceItem { return TappableFunctionalMultiModelItem<DetailTableViewCell>(identifier: "cell", configurer, onTap) }
+func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void, onTap: @escaping () -> Void) -> FlexDataSourceItem { return TappableFunctionalMultiModelItem<DetailTableViewCell>(identifier: "cell", configurer, onTap) }
 
 //linking models to views
 let buildConfigurator: (Reign) -> (UITableViewCell) -> Void = { reign in
@@ -104,7 +104,7 @@ let cancel3 = dataSignal.sink { _ in
     vm.endRefreshing()
 }
 
-if let ds = vm.dataSource as? MultiModelTableViewDataSource {
+if let ds = vm.dataSource as? FlexDataSource {
     vm.tableDelegate = LUXTappableTableDelegate(ds)
 }
 

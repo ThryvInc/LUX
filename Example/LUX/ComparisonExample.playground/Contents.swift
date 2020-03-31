@@ -4,7 +4,7 @@ import PlaygroundSupport
 @testable import FunNet
 import Combine
 import Prelude
-import MultiModelTableViewDataSource
+import FlexDataSource
 import LithoOperators
 
 //Models

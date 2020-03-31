@@ -8,6 +8,7 @@ target 'LUX_Example' do
   pod 'FunNet', git: 'https://github.com/schrockblock/funnet'
   pod 'LithoOperators', git: 'https://github.com/ThryvInc/LithoOperators'
   pod 'OHHTTPStubs', '~> 8.0.0'
+  pod 'FlexDataSource', git: 'https://github.com/ThryvInc/flex-data-source'
 
   target 'LUX_Tests' do
     inherit! :search_paths

@@ -1,19 +1,19 @@
 //
-//  MultiModelTableViewDataSourceItem.swift
-//  MultiModelTableViewDataSource
+//  FlexDataSourceItem.swift
+//  FlexDataSource
 //
 //  Created by Elliot Schrock on 2/10/18.
 //
 
 import UIKit
 
-public protocol MultiModelTableViewDataSourceItem {
+public protocol FlexDataSourceItem {
     func cellIdentifier() -> String
     func cellClass() -> UITableViewCell.Type
     func configureCell(_ cell: UITableViewCell)
 }
 
-open class ConcreteMultiModelTableViewDataSourceItem<T>: MultiModelTableViewDataSourceItem where T: UITableViewCell {
+open class ConcreteFlexDataSourceItem<T>: FlexDataSourceItem where T: UITableViewCell {
     private let identifier: String
     
     public init(identifier: String) {
@@ -33,7 +33,7 @@ open class ConcreteMultiModelTableViewDataSourceItem<T>: MultiModelTableViewData
     }
 }
 
-open class FunctionalMultiModelTableViewDataSourceItem<T>: ConcreteMultiModelTableViewDataSourceItem<T> where T: UITableViewCell {
+open class FunctionalFlexDataSourceItem<T>: ConcreteFlexDataSourceItem<T> where T: UITableViewCell {
     var identifier: String = "cell"
     private let configureCell: (UITableViewCell) -> Void
 
@@ -51,7 +51,7 @@ public protocol Tappable {
     var onTap: () -> Void { get }
 }
 
-open class TappableFunctionalMultiModelItem<T>: FunctionalMultiModelTableViewDataSourceItem<T>, Tappable where T: UITableViewCell {
+open class TappableFunctionalMultiModelItem<T>: FunctionalFlexDataSourceItem<T>, Tappable where T: UITableViewCell {
     public var onTap: () -> Void
     
     public init(identifier: String, _ configureCell: @escaping (UITableViewCell) -> Void, _ onTap: @escaping () -> Void) {

@@ -3,7 +3,7 @@ import PlaygroundSupport
 @testable import LUX
 @testable import FunNet
 import Prelude
-import MultiModelTableViewDataSource
+import FlexDataSource
 import LithoOperators
 
 //Models ------------------------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ let buildReignConfigs: ([Reign]) -> [(UITableViewCell) -> Void] = buildReignConf
 
 
 //go from configuring functions to a table view data source ---------------------------------------------------
-func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void) -> MultiModelTableViewDataSourceItem { return FunctionalMultiModelTableViewDataSourceItem<DetailTableViewCell>(identifier: "cell", configurer) }
+func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void) -> FlexDataSourceItem { return FunctionalFlexDataSourceItem<DetailTableViewCell>(identifier: "cell", configurer) }
 let configsToDataSource = configuratorToItem >||> map >>> itemsToSection >>> arrayOfSingleObject >>> sectionsToDataSource
 
 
@@ -123,7 +123,7 @@ class CycleViewController : UITableViewController {
             }
         }
     }
-    var dataSource: MultiModelTableViewDataSource? {
+    var dataSource: FlexDataSource? {
         didSet {
             setupDataSource()
         }

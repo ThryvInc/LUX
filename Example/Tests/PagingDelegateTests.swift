@@ -22,7 +22,9 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXPageableTableViewDelegate(pageManager)
+        let delegate = LUXFunctionalTableDelegate()
+        delegate.onWillDisplay = pageManager.willDisplayFunction()
+//        delegate
         
         let tv = MockTableView()
         tv.numberOfRows = 20
@@ -40,7 +42,8 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXPageableTableViewDelegate(pageManager)
+        let delegate = LUXFunctionalTableDelegate()
+        delegate.onWillDisplay = pageManager.willDisplayFunction()
         
         let tv = MockTableView()
         tv.numberOfRows = 40
@@ -58,7 +61,8 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXPageableTableViewDelegate(pageManager)
+        let delegate = LUXFunctionalTableDelegate()
+        delegate.onWillDisplay = pageManager.willDisplayFunction()
         
         let tv = MockTableView()
         tv.numberOfRows = 40
@@ -76,7 +80,8 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXPageableTableViewDelegate(pageManager)
+        let delegate = LUXFunctionalTableDelegate()
+        delegate.onWillDisplay = pageManager.willDisplayFunction()
         
         let tv = MockTableView()
         tv.numberOfRows = 42

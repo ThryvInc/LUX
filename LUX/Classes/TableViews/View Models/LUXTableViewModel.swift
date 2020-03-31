@@ -7,7 +7,7 @@
 
 import UIKit
 import Combine
-import MultiModelTableViewDataSource
+import FlexDataSource
 import Prelude
 
 open class LUXTableViewModel {
@@ -21,7 +21,7 @@ open class LUXTableViewModel {
     open func didSetTableDelegate() { configureTableView() }
     open func configureTableView() {
         tableView?.dataSource = dataSource
-        if let ds = dataSource as? MultiModelTableViewDataSource {
+        if let ds = dataSource as? FlexDataSource {
             ds.tableView = tableView
         }
         tableView?.delegate = tableDelegate
@@ -77,15 +77,15 @@ extension LUXRefreshableTableViewModel {
 }
 
 open class LUXItemsTableViewModel: LUXRefreshableTableViewModel {
-    public var sectionsPublisher: AnyPublisher<[MultiModelTableViewDataSourceSection], Never>
+    public var sectionsPublisher: AnyPublisher<[FlexDataSourceSection], Never>
     
-    public init(_ refresher: Refreshable, itemsPublisher: AnyPublisher<[MultiModelTableViewDataSourceItem], Never>) {
+    public init(_ refresher: Refreshable, itemsPublisher: AnyPublisher<[FlexDataSourceItem], Never>) {
         let toSections = itemsToSection >>> arrayOfSingleObject
         sectionsPublisher = itemsPublisher.map(toSections).eraseToAnyPublisher()
         
         super.init(refresher)
         
-        let dataSource = MultiModelTableViewDataSource()
+        let dataSource = FlexDataSource()
         cancelBag.insert(self.sectionsPublisher.sink {
             dataSource.sections = $0
             dataSource.tableView?.reloadData()
