@@ -52,6 +52,7 @@
 		47B152F60771C4721440ED0E31F6CE4A /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D7581440B074813F7E904D478D5145 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
 		48681A466015F76871AF55F64C65C9AE /* LUXMultiModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2DF470499A16DC8160E9642F143BF /* LUXMultiModelTableViewController.swift */; };
 		486B079CB808A3F0882F460DE5A38517 /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 608107E9794EA7F45AD869B65F683094 /* OHPathHelpers.m */; };
+		4957A5C12435058900CBC424 /* FlexItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957A5C02435058900CBC424 /* FlexItems.swift */; };
 		4B2AEFA4512FE69CEAB8A344AA73F402 /* LUXDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A3124C5E79A59A1FB275153F093AD6 /* LUXDetailTableViewCell.swift */; };
 		4B4B93FB0CD030A631FCD2357E3566D8 /* LUXSplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7613DEC8B197559A0D5809C458FF4 /* LUXSplashViewModel.swift */; };
 		4FAED26E77EBA018CB2CBAF9E2F24547 /* LUXRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F843EA0D358F2628C009B777169224 /* LUXRegistrationViewController.xib */; };
@@ -280,7 +281,7 @@
 		0D791D8F12816325BBCF21A55A607E6C /* LUXMetaRefresher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXMetaRefresher.swift; sourceTree = "<group>"; };
 		0E5AA2EB4431CF0BDCBC1AF1DA1B76BC /* FlexDataSource.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlexDataSource.modulemap; sourceTree = "<group>"; };
 		0EED654C03D0AD71D92B15CA405D7374 /* LUXRegistrationViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXRegistrationViewModel.swift; sourceTree = "<group>"; };
-		0FC679A41D0D34FD873B7D9F9E6BE8BB /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Prelude.framework; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC679A41D0D34FD873B7D9F9E6BE8BB /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD9AC89CE6CEB1C063D5CBC5AA395DA /* LUXVersionChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXVersionChecker.swift; sourceTree = "<group>"; };
 		126B634975953F7788AD1D35EA0CC741 /* OHHTTPStubs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OHHTTPStubs.debug.xcconfig; sourceTree = "<group>"; };
 		12FD799F1F4180626859EB2F6AF464F4 /* Prelude-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Prelude-umbrella.h"; sourceTree = "<group>"; };
@@ -291,20 +292,20 @@
 		14EF31E98120BFD4ABE07734D0819E54 /* OHHTTPStubs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubs.h; path = OHHTTPStubs/Sources/OHHTTPStubs.h; sourceTree = "<group>"; };
 		152077488ACC400AC222EC4E979F0C3F /* ISO8601DateFormatter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ISO8601DateFormatter-Info.plist"; sourceTree = "<group>"; };
 		17BCFDA90C14184A4845B4230C18A6A5 /* OHHTTPStubsSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OHHTTPStubsSwift.swift; path = OHHTTPStubs/Sources/Swift/OHHTTPStubsSwift.swift; sourceTree = "<group>"; };
-		17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OHHTTPStubs.framework; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		180EEBD891D900E58892AAA1B62A0705 /* Pods-LUX_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LUX_Example-Info.plist"; sourceTree = "<group>"; };
 		18314C9F33A52C7B458C40090029450C /* LUXFunctionalTableViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXFunctionalTableViewController.xib; sourceTree = "<group>"; };
 		191E66F9A4583C579DEB23DEDD145B2D /* ISO8601DateFormatter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ISO8601DateFormatter.modulemap; sourceTree = "<group>"; };
 		1A8ABDF6B5C8B8E34E14C30549B4CB0A /* FlexDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlexDataSource.swift; path = FlexDataSource/Classes/FlexDataSource.swift; sourceTree = "<group>"; };
 		1AEEC23ADDBBA4299DC9B619F60FCFE0 /* Flip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flip.swift; path = Prelude/Flip.swift; sourceTree = "<group>"; };
 		1B6F745A285A0F038DD80E535B5FEA72 /* Compose.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compose.swift; path = Prelude/Compose.swift; sourceTree = "<group>"; };
-		1BD7F2896BA474AA551824A90DA5CDC8 /* LUX.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LUX.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1BD7F2896BA474AA551824A90DA5CDC8 /* LUX.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LUX.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1C244D3DA5C3D545D4460D48D24B1860 /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsResponse.h; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.h; sourceTree = "<group>"; };
 		1D6091AA26AC9E81031E5736EADDD4F7 /* OHHTTPStubs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OHHTTPStubs-Info.plist"; sourceTree = "<group>"; };
-		1DBD3ED97E78348E3A5AF510095CA968 /* FlexDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlexDataSource.framework; path = FlexDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DBD3ED97E78348E3A5AF510095CA968 /* FlexDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF1DCD3055227A6C2C1BA8E8D865CBD /* OHHTTPStubs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs-dummy.m"; sourceTree = "<group>"; };
 		1EF5560311FD7CCFB773203C12724153 /* Prelude.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Prelude.release.xcconfig; sourceTree = "<group>"; };
-		20574C340C819F6F8A2A6D65C9FC616C /* FunNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FunNet.framework; path = FunNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20574C340C819F6F8A2A6D65C9FC616C /* FunNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FunNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2082401DFE360024EC63EF2703ECFA52 /* NetworkResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkResponder.swift; path = FunNet/Classes/NetworkResponder.swift; sourceTree = "<group>"; };
 		2168D0FFF3E2B66D212DB1F47A71D734 /* FunNet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FunNet-Info.plist"; sourceTree = "<group>"; };
 		22E0E69BB08C23F323348455B1960B3F /* OHHTTPStubsMethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsMethodSwizzling.h; path = OHHTTPStubs/Sources/NSURLSession/OHHTTPStubsMethodSwizzling.h; sourceTree = "<group>"; };
@@ -338,6 +339,7 @@
 		469A4566F816A6B3EEB6801084F4E927 /* LUX.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LUX.modulemap; sourceTree = "<group>"; };
 		48D7581440B074813F7E904D478D5145 /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubs+NSURLSessionConfiguration.m"; path = "OHHTTPStubs/Sources/NSURLSession/OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
 		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4957A5C02435058900CBC424 /* FlexItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexItems.swift; sourceTree = "<group>"; };
 		4C5589E6B2209A395E9EDFB28DED5546 /* Tuple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tuple.swift; path = Prelude/Tuple.swift; sourceTree = "<group>"; };
 		4D2786865F782B436E6BEE418435D272 /* ISO8601DateFormatter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISO8601DateFormatter-prefix.pch"; sourceTree = "<group>"; };
 		4E2E2458F6AD5BF6D7E03042E552F31B /* LUXResetPasswordViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXResetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -377,13 +379,13 @@
 		7E61490EBB63AA80286D2CF49425325C /* ISO8601DateFormatter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISO8601DateFormatter-umbrella.h"; sourceTree = "<group>"; };
 		7E6CC91AE01F98A48A42A80D4E0EB1C0 /* Id.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		7EFD504E308A15A4F4B2EE7BBCA95D35 /* NSURLRequest+HTTPBodyTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+HTTPBodyTesting.h"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.h"; sourceTree = "<group>"; };
-		7F4290EFF5FD0AC2709B45A32093D64E /* LUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LUX.framework; path = LUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4290EFF5FD0AC2709B45A32093D64E /* LUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB9B1FF87AE8870858B4CC57560A3F2 /* LUXJsonProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXJsonProvider.swift; sourceTree = "<group>"; };
 		8362557026240D59EAA3AFD32451EE3E /* PlaygroundVCHelpers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlaygroundVCHelpers.release.xcconfig; sourceTree = "<group>"; };
 		83748D024238E159B257FD72E0DE8380 /* LUXTableViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXTableViewDelegates.swift; sourceTree = "<group>"; };
 		881A2965734E922288C46B0757711CD5 /* UIViewController+PushPop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+PushPop.swift"; sourceTree = "<group>"; };
-		88BFD543FFD40E08D9B56815D32B4E81 /* Pods_LUX_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LUX_Tests.framework; path = "Pods-LUX_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B3620F145E912842BC32F818B308789 /* Pods_LUX_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LUX_Example.framework; path = "Pods-LUX_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BFD543FFD40E08D9B56815D32B4E81 /* Pods_LUX_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUX_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3620F145E912842BC32F818B308789 /* Pods_LUX_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUX_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5DA139E14C1B30504A63E2388BD4AF /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubsResponse+JSON.m"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
 		8B6C468A9275D8BD610212116B42EDC5 /* LUXSearchViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXSearchViewController.xib; sourceTree = "<group>"; };
 		8BEA1D1860C971915771D9C8C89C816D /* Pods-LUX_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LUX_Tests.modulemap"; sourceTree = "<group>"; };
@@ -400,14 +402,14 @@
 		96B560EBAAB73AC934A71BE1297DFCE4 /* PlaygroundVCHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlaygroundVCHelpers.swift; path = PlaygroundVCHelpers/Classes/PlaygroundVCHelpers.swift; sourceTree = "<group>"; };
 		9853D90465FBCBF47CA795B7FDDFECEE /* Pods-LUX_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LUX_Example-umbrella.h"; sourceTree = "<group>"; };
 		9D5E7E52B5AB3855ED8F248D93FAA793 /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D969AB3FD298579E66AC8FF3F21C0A5 /* LUX-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LUX-umbrella.h"; sourceTree = "<group>"; };
 		9E6CD6A486BD4563FCD7E8D9C0B51090 /* PlaygroundVCHelpers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlaygroundVCHelpers-dummy.m"; sourceTree = "<group>"; };
-		9F4E1F84551FEEB14D1E5B8A1C2A5559 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9F4E1F84551FEEB14D1E5B8A1C2A5559 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9FC9C26250E7BBE74C3196D6F3DA9F71 /* OHHTTPStubsMethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsMethodSwizzling.m; path = OHHTTPStubs/Sources/NSURLSession/OHHTTPStubsMethodSwizzling.m; sourceTree = "<group>"; };
 		A0750D5AA65934CEA1F562B203709042 /* THUXAuth-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "THUXAuth-Info.plist"; sourceTree = "<group>"; };
 		A1B88971BEDEFEC3765BF0F8ADB85250 /* FlexDataSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlexDataSource.release.xcconfig; sourceTree = "<group>"; };
-		A4071336C6493504572EF9BFAA64638D /* ISO8601DateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ISO8601DateFormatter.framework; path = ISO8601DateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4071336C6493504572EF9BFAA64638D /* ISO8601DateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISO8601DateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51B40B114E5DF92886A0F24E21B395B /* NSURLRequest+HTTPBodyTesting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+HTTPBodyTesting.m"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.m"; sourceTree = "<group>"; };
 		A5C761F27EB0425F5618F8ADC3FA32F4 /* UIViewController+Tabs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Tabs.swift"; sourceTree = "<group>"; };
 		A7A7942420C1EF25C421775361FC2349 /* FlexDataSource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlexDataSource-prefix.pch"; sourceTree = "<group>"; };
@@ -415,7 +417,7 @@
 		A999AB179B645710D612386D3D55C448 /* Pods-LUX_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AE370CF1097C7134FE16621AF794B029 /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		B2F35A8A6C492BD465F240708A771A26 /* LUXSearchViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSearchViewModel.swift; sourceTree = "<group>"; };
-		B33FABC603387ACD51B4C7324BEBE429 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B33FABC603387ACD51B4C7324BEBE429 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B6C4291376B33EAEC088CE907986177A /* LUX-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LUX-prefix.pch"; sourceTree = "<group>"; };
 		B7E8F3691552A5FB6AC7A7D645414575 /* Pods-LUX_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LUX_Tests-dummy.m"; sourceTree = "<group>"; };
 		B8EA63857A8E23D0CC5A183ADD714513 /* THUXAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THUXAuth-prefix.pch"; sourceTree = "<group>"; };
@@ -434,7 +436,7 @@
 		CBD9AFD2E6685213FE0B43885FB7B9B1 /* LUXModelCallViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXModelCallViewModel.swift; sourceTree = "<group>"; };
 		CC83E54E688839AEB7BB747ED2AADEBA /* THUXAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "THUXAuth-dummy.m"; sourceTree = "<group>"; };
 		CCC02F25B4F1453A71E3C6A7AB616D06 /* PlaygroundVCHelpers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PlaygroundVCHelpers.modulemap; sourceTree = "<group>"; };
-		CD19C0192248F56E220F7BBD82B6C2BB /* PlaygroundVCHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PlaygroundVCHelpers.framework; path = PlaygroundVCHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD19C0192248F56E220F7BBD82B6C2BB /* PlaygroundVCHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlaygroundVCHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDAAF473CBF046303DC0F96CD0C7E14 /* Curry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Curry.swift; path = Prelude/Curry.swift; sourceTree = "<group>"; };
 		CFEECAD273A4F1130D782C129D540CC4 /* LUXLoginViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXLoginViewController.xib; sourceTree = "<group>"; };
 		D1A920FE9E4FC4362C2406A4D211B09F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -444,7 +446,7 @@
 		D2AFFBD8DE35E5E7E4C2F18C7B96C525 /* THUXAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = THUXAuth.debug.xcconfig; sourceTree = "<group>"; };
 		D55594919DEF470AE69BD5A29D63A553 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B5E3B5C1CD76719A634B7AC3910DCE /* FunNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FunNet.release.xcconfig; sourceTree = "<group>"; };
-		DDD41C2A5488D17C300285739B804203 /* THUXAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = THUXAuth.framework; path = THUXAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDD41C2A5488D17C300285739B804203 /* THUXAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THUXAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE91869759BD338043C3C05342CBDC6A /* Pods-LUX_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LUX_Example.modulemap"; sourceTree = "<group>"; };
 		DFDA8E3921BC82215377F2A36415399F /* Prelude.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Prelude.modulemap; sourceTree = "<group>"; };
 		E14DE2C0925E37C1D0ACDA76F7BB208B /* LithoOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LithoOperators.swift; path = LithoOperators/Classes/LithoOperators.swift; sourceTree = "<group>"; };
@@ -453,7 +455,7 @@
 		EAD37E71A971F17CED4687162C3040FB /* LUXFunctionalViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXFunctionalViewController.swift; sourceTree = "<group>"; };
 		EE7AC8ECED654C5D61932914FE4F0F9C /* LUX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LUX-dummy.m"; sourceTree = "<group>"; };
 		EFB7613DEC8B197559A0D5809C458FF4 /* LUXSplashViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSplashViewModel.swift; sourceTree = "<group>"; };
-		F02BB82B3FFD1B4A5BE1C7443584444C /* LithoOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LithoOperators.framework; path = LithoOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02BB82B3FFD1B4A5BE1C7443584444C /* LithoOperators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LithoOperators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F089C11CB51131D68E0C37FC1E351288 /* LUXSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSearchViewController.swift; sourceTree = "<group>"; };
 		F0EA629D0AB3E42B566853B671DED84E /* FunNet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FunNet-umbrella.h"; sourceTree = "<group>"; };
 		F3CAF36ABF87BBECF000F3E2F798D1E8 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
@@ -592,7 +594,6 @@
 				96B560EBAAB73AC934A71BE1297DFCE4 /* PlaygroundVCHelpers.swift */,
 				491EDEC920E214BEAB904E16B732319A /* Support Files */,
 			);
-			name = PlaygroundVCHelpers;
 			path = PlaygroundVCHelpers;
 			sourceTree = "<group>";
 		};
@@ -630,7 +631,6 @@
 				F3CAF36ABF87BBECF000F3E2F798D1E8 /* ISO8601DateFormatter.m */,
 				5611A1BFB3BFB38F4F8124602D0226E3 /* Support Files */,
 			);
-			name = ISO8601DateFormatter;
 			path = ISO8601DateFormatter;
 			sourceTree = "<group>";
 		};
@@ -649,7 +649,6 @@
 				53A0A33C19B43F133EEED55984087681 /* LUXFlowCoordinator.swift */,
 				BA85E36A8A25E323EAC9DCB1CC62B807 /* LUXListDetailFlowController.swift */,
 			);
-			name = FlowControllers;
 			path = FlowControllers;
 			sourceTree = "<group>";
 		};
@@ -777,7 +776,6 @@
 				2613CD9A2E7A3CF70192209CEB1EA0C6 /* FlexDataSourceSection.swift */,
 				A6B6144B5400ACB81DFA3EF185E4A4AC /* Support Files */,
 			);
-			name = FlexDataSource;
 			path = FlexDataSource;
 			sourceTree = "<group>";
 		};
@@ -800,7 +798,6 @@
 				65103B705E7E7B721B786D14EA61F7FC /* LUXTextValidator.swift */,
 				2B5418D7598F821DEA21658855177140 /* FlowControllers */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -811,7 +808,6 @@
 				56A3124C5E79A59A1FB275153F093AD6 /* LUXDetailTableViewCell.swift */,
 				3B7DDDD3AA6ADCBE01214B5377D2354A /* LUXSearchTableViewCell.swift */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -828,7 +824,6 @@
 				BEA1405FCF8B7AE54EC31DB402A24B64 /* THUXSessionManager.swift */,
 				E95C5965E8320E6565531B4C98340307 /* Support Files */,
 			);
-			name = THUXAuth;
 			path = THUXAuth;
 			sourceTree = "<group>";
 		};
@@ -869,6 +864,7 @@
 				4200EFDC12548CF8C3441B3F1E581110 /* LUXRefreshCallModelsManager.swift */,
 				C2EFB00EE467E4FC9194BF249A4BF7A1 /* LUXRefreshNetCallsManager.swift */,
 				83748D024238E159B257FD72E0DE8380 /* LUXTableViewDelegates.swift */,
+				4957A5C02435058900CBC424 /* FlexItems.swift */,
 				9B9D993086D235AEBD1173F06E6BDDD8 /* Resources */,
 				AFBFF9DE8B35E1C313DC993E113EE83C /* View Models */,
 				7E6DA866CA20E6EBB6D2E2E79005F33E /* Views */,
@@ -890,7 +886,6 @@
 				E14DE2C0925E37C1D0ACDA76F7BB208B /* LithoOperators.swift */,
 				117B26DE8E7A6E80C9AFEBFAF878392B /* Support Files */,
 			);
-			name = LithoOperators;
 			path = LithoOperators;
 			sourceTree = "<group>";
 		};
@@ -989,7 +984,6 @@
 				9187B892B7FF3E4D343CE2471767D012 /* LUXCommentTableViewCell.xib */,
 				232A0B1E2ED2C8F2BA1A958434AEA081 /* LUXSearchTableViewCell.xib */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -1012,7 +1006,6 @@
 				28D0CB1B31BA45A069B6F046D8215CCA /* LUXModelTableViewModel.swift */,
 				69F52FBC884BB816308A238FE95F1B7C /* LUXTableViewModel.swift */,
 			);
-			name = "View Models";
 			path = "View Models";
 			sourceTree = "<group>";
 		};
@@ -1050,7 +1043,6 @@
 				4C5589E6B2209A395E9EDFB28DED5546 /* Tuple.swift */,
 				A65450C41F41DEF76599167590759633 /* Support Files */,
 			);
-			name = Prelude;
 			path = Prelude;
 			sourceTree = "<group>";
 		};
@@ -1073,7 +1065,6 @@
 				ABB1BB67B995D5DDEE50527B757CDAA8 /* Support Files */,
 				F3748F7F0B805BE4477038638303233D /* Swift */,
 			);
-			name = OHHTTPStubs;
 			path = OHHTTPStubs;
 			sourceTree = "<group>";
 		};
@@ -1091,7 +1082,6 @@
 				345A67CD5DD58100E2BF4D441AE54023 /* StubHolder.swift */,
 				4E187D712BFBF475C686D33E432EA1CD /* Support Files */,
 			);
-			name = FunNet;
 			path = FunNet;
 			sourceTree = "<group>";
 		};
@@ -1103,7 +1093,6 @@
 				881A2965734E922288C46B0757711CD5 /* UIViewController+PushPop.swift */,
 				A5C761F27EB0425F5618F8ADC3FA32F4 /* UIViewController+Tabs.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -1703,6 +1692,7 @@
 				3C82D52CBD89F374D90E1FF5F75A3E92 /* LUXTableViewModel.swift in Sources */,
 				8D5509A496E27A3DC9F664338DA1CE16 /* LUXTextValidator.swift in Sources */,
 				91CB4A45F7BF155DC0346BC907CA2AF7 /* LUXVersionChecker.swift in Sources */,
+				4957A5C12435058900CBC424 /* FlexItems.swift in Sources */,
 				39D0D80AB7C6AD0D43E28EE4CF4162F5 /* ServerAuth.swift in Sources */,
 				B34115F330AD0AC721BFF32EBC715511 /* UIColor+Hex.swift in Sources */,
 				5CA0CD156002AD69E7FAF2F72FE8D08B /* UIViewController+PushPop.swift in Sources */,
@@ -2065,8 +2055,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
