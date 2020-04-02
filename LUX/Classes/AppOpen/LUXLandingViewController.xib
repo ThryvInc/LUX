@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LUXLandingViewController" customModule="LUX" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="vDR-gU-hQd" id="qVo-9x-CmN"/>
+                <outlet property="loginButton" destination="Dbf-Qd-x8P" id="pg9-wl-GXz"/>
+                <outlet property="logoImageView" destination="XHm-9r-6W6" id="MA5-LF-2gX"/>
+                <outlet property="signUpButton" destination="Rmo-Hf-o0k" id="65N-8Y-KWt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vDR-gU-hQd">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmo-Hf-o0k">
+                    <rect key="frame" x="217" y="832" width="181" height="30"/>
+                    <state key="normal" title="Sign Up"/>
+                    <connections>
+                        <action selector="signUpPressed" destination="-1" eventType="touchUpInside" id="DkL-14-bX4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbf-Qd-x8P">
+                    <rect key="frame" x="20" y="832" width="181" height="30"/>
+                    <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="loginPressed" destination="-1" eventType="touchUpInside" id="KNL-2Q-PbX"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHm-9r-6W6">
+                    <rect key="frame" x="87" y="193" width="240" height="128"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rmo-Hf-o0k" firstAttribute="centerY" secondItem="Dbf-Qd-x8P" secondAttribute="centerY" id="2k0-Rn-s7i"/>
+                <constraint firstItem="XHm-9r-6W6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="149" id="DBw-OP-faS"/>
+                <constraint firstItem="Dbf-Qd-x8P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JEx-OU-zC9"/>
+                <constraint firstItem="vDR-gU-hQd" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="Jt0-kr-q7z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dbf-Qd-x8P" secondAttribute="bottom" id="LGe-u8-IjY"/>
+                <constraint firstItem="Rmo-Hf-o0k" firstAttribute="width" secondItem="Dbf-Qd-x8P" secondAttribute="width" id="P3r-iB-Kl0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rmo-Hf-o0k" secondAttribute="trailing" constant="16" id="QaD-AR-PWN"/>
+                <constraint firstItem="Rmo-Hf-o0k" firstAttribute="bottom" secondItem="Dbf-Qd-x8P" secondAttribute="bottom" id="TgC-Ie-ZTU"/>
+                <constraint firstAttribute="top" secondItem="vDR-gU-hQd" secondAttribute="top" id="dFj-be-3rm"/>
+                <constraint firstItem="Rmo-Hf-o0k" firstAttribute="leading" secondItem="Dbf-Qd-x8P" secondAttribute="trailing" constant="16" id="eXN-B6-osI"/>
+                <constraint firstItem="vDR-gU-hQd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iFq-gM-ZMm"/>
+                <constraint firstAttribute="trailing" secondItem="vDR-gU-hQd" secondAttribute="trailing" id="qN8-63-oLu"/>
+                <constraint firstItem="XHm-9r-6W6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uLj-Kb-AI5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

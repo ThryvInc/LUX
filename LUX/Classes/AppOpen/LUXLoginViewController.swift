@@ -16,7 +16,8 @@ open class LUXLoginViewController: LUXFunctionalViewController {
     @IBOutlet open weak var loginButton: UIButton?
     @IBOutlet open weak var loginHeight: NSLayoutConstraint!
     @IBOutlet open weak var signUpButton: UIButton?
-    @IBOutlet open weak var forgotPasswordButton: UIButton!
+    @IBOutlet open weak var forgotPasswordButton: UIButton?
+    @IBOutlet open weak var legalButton: UIButton?
     @IBOutlet open weak var spinner: UIActivityIndicatorView?
     
     open var loginViewModel: LUXLoginProtocol?
@@ -50,4 +51,6 @@ open class LUXLoginViewController: LUXFunctionalViewController {
     @IBAction @objc open func signUpPressed() {}
     
     @IBAction @objc open func forgotPasswordPressed() {}
+    
+    @IBAction @objc open func termsPressed() {}
 }
