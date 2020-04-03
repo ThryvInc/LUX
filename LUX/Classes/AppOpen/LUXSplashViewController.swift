@@ -7,7 +7,12 @@
 
 import UIKit
 
-open class LUXSplashViewController: UIViewController {
+open class LUXSplashViewController: LUXFunctionalViewController {
+    @IBOutlet open weak var logoTopConstraint: NSLayoutConstraint?
+    @IBOutlet open weak var bgImageView: UIImageView?
+    @IBOutlet open weak var logoImageView: UIImageView?
+    @IBOutlet open weak var activityIndicator: UIActivityIndicatorView?
+    
     public var viewModel: LUXSplashProtocol?
 
     override open func viewDidLoad() {
@@ -27,5 +32,4 @@ open class LUXSplashViewController: UIViewController {
         
         viewModel?.inputs.viewDidAppear()
     }
-
 }
