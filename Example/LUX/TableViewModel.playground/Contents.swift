@@ -6,6 +6,7 @@ import Combine
 import Prelude
 import FlexDataSource
 import LithoOperators
+import PlaygroundVCHelpers
 
 //Models
 enum House: String, Codable, CaseIterable {
@@ -23,7 +24,7 @@ struct Cycle: Codable {
 
 let json = """
 { "ordinal": 18,
-  "reigns":[{"house":"phoenix", "emperors": [{"name":"Zerika IV"}]},
+  "reigns":[{"house":"phoenix", "emperors": [{"name":"Tortaalik I"},{"name":"Zerika IV"}]},
             {"house":"dragon", "emperors": [{"name":"Norathar II"}]},
             {"house":"lyorn"},
             {"house":"tiassa"},
@@ -59,54 +60,42 @@ class DetailTableViewCell: UITableViewCell {
     }
 }
 
-func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void, onTap: @escaping () -> Void) -> FlexDataSourceItem { return TappableFunctionalMultiModelItem<DetailTableViewCell>(identifier: "cell", configurer, onTap) }
-
 //linking models to views
-let buildConfigurator: (Reign) -> (UITableViewCell) -> Void = { reign in
+let emperorToItemCreator: (@escaping (Emperor) -> Void) -> (Emperor) -> FlexDataSourceItem = emperorConfigurator >||> (onTap >|||> LUXTappableModelItem.init)
+func reignToSection(_ emperorToItem: @escaping (Emperor) -> FlexDataSourceItem) -> (Reign) -> FlexDataSourceSection {
     return {
-        if let emperorName = reign.emperors?.first?.name {
-            $0.textLabel?.text = emperorName
-        } else {
-            $0.textLabel?.text = "<Unknown>"
-        }
-        $0.detailTextLabel?.text = reignToHouseString(reign)
+        let section = FlexDataSourceSection()
+        section.title = reignToHouseString($0)
+        section.items = $0.emperors?.map(emperorToItem)
+        return section
     }
 }
 
+let emperorConfigurator: (Emperor, UITableViewCell) -> Void = { emperor, cell in
+    cell.textLabel?.text = emperor.name ?? "<Unknown>"
+}
+
 //setup
+let vc = LUXFunctionalTableViewController.makeFromXIB()
+let nc = UINavigationController(rootViewController: vc)
+let onTap: (Emperor) -> Void = { _ in }
+
 let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
 
 //just for stubbing purposes
-call.firingFunc = {
-    $0.responder?.data = json.data(using: .utf8)
-}
+call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
 
 let dataSignal = (call.responder?.$data)!.eraseToAnyPublisher()
-let modelsSignal: AnyPublisher<[Reign], Never> = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
-
-let vc = LUXFunctionalTableViewController(nibName: "LUXFunctionalTableViewController", bundle: Bundle(for: LUXFunctionalTableViewController.self))
-
-let nc = UINavigationController(rootViewController: vc)
-let onTap: () -> Void = {}
+let modelsSignal = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
 
 let cycleSignal: AnyPublisher<Cycle, Never> = modelPublisher(from: dataSignal)
-let cancel = cycleSignal.sink {
-    vc.title = "\($0.ordinal ?? 0)th Cycle"
-}
-
-let modelToItem = buildConfigurator >>> (onTap >||> configuratorToItem)
+let cancel = cycleSignal.sink { vc.title = "\($0.ordinal ?? 0)th Cycle" }
 
 let refreshManager = LUXRefreshableNetworkCallManager(call)
-let modelsToItems = modelToItem >||> map
-let vm = LUXItemsTableViewModel(refreshManager, itemsPublisher: modelsSignal.map(modelsToItems).eraseToAnyPublisher())
+let vm = LUXSectionsTableViewModel(refreshManager, modelsSignal.map(reignToSection(emperorToItemCreator(onTap)) >||> map).eraseToAnyPublisher())
+let cancel3 = dataSignal.sink { _ in vm.endRefreshing() }
 
-let cancel3 = dataSignal.sink { _ in
-    vm.endRefreshing()
-}
-
-if let ds = vm.dataSource as? FlexDataSource {
-    vm.tableDelegate = LUXTappableTableDelegate(ds)
-}
+vm.tableDelegate = LUXFunctionalTableDelegate(onSelect: (vm.dataSource as! FlexDataSource).onSelect)
 
 vc.onViewDidLoad = {
     $0.view.backgroundColor = UIColor.white

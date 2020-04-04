@@ -6,6 +6,7 @@ import Combine
 import Prelude
 import FlexDataSource
 import LithoOperators
+import PlaygroundVCHelpers
 
 //Models
 enum House: String, Codable, CaseIterable {
@@ -59,47 +60,36 @@ class DetailTableViewCell: UITableViewCell {
     }
 }
 
-func configuratorToItem(configurer: @escaping (UITableViewCell) -> Void, onTap: @escaping () -> Void) -> FlexDataSourceItem { return TappableFunctionalMultiModelItem<DetailTableViewCell>(identifier: "cell", configurer, onTap) }
+func reignToItem(onTap: @escaping (Reign) -> Void) -> (Reign) -> FlexDataSourceItem { return reignConfigurator >||> (onTap >|||> LUXTappableModelItem.init) }
 
 //linking models to views
-let buildConfigurator: (Reign) -> (UITableViewCell) -> Void = { reign in
-    return {
-        if let emperorName = reign.emperors?.first?.name {
-            $0.textLabel?.text = emperorName
-        } else {
-            $0.textLabel?.text = "<Unknown>"
-        }
-        $0.detailTextLabel?.text = reignToHouseString(reign)
-    }
+let reignConfigurator: (Reign, DetailTableViewCell) -> Void = { reign, cell in
+    cell.textLabel?.text = reign.emperors?.first?.name ?? "<Unknown>"
+    cell.detailTextLabel?.text = reignToHouseString(reign)
 }
 
 //setup
-let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
-
-//just for stubbing purposes
-call.firingFunc = {
-    $0.responder?.data = json.data(using: .utf8)
-}
-
-let dataSignal = (call.responder?.$data)!.eraseToAnyPublisher()
-let modelsSignal: AnyPublisher<[Reign], Never> = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
-
-let vc = LUXFlexController<LUXModelListViewModel<Reign>>(nibName: "LUXFlexController", bundle: Bundle(for: LUXFlexController<LUXModelListViewModel<Reign>>.self))
-
+let vc = LUXFlexController<LUXModelListViewModel<Reign>>.makeFromXIB()
 let nc = UINavigationController(rootViewController: vc)
 let onTap: () -> Void = {}
 
+let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
+
+//just for stubbing purposes
+call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
+
+let dataSignal = (call.responder?.$data)!.eraseToAnyPublisher()
+let modelsSignal = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
+
 let cycleSignal: AnyPublisher<Cycle, Never> = modelPublisher(from: dataSignal)
-let cancel = cycleSignal.sink {
-    vc.title = "\($0.ordinal ?? 0)th Cycle"
-}
+let cancel = cycleSignal.sink { vc.title = "\($0.ordinal ?? 0)th Cycle" }
 
 let refreshManager = LUXRefreshCallModelsManager<Reign>(call, modelsSignal)
 vc.refreshableModelManager = refreshManager
 
-let viewModel = LUXModelListViewModel(modelsPublisher: refreshManager.$models.eraseToAnyPublisher(), modelToItem: buildConfigurator >>> (onTap >||> configuratorToItem))
+let viewModel = LUXModelListViewModel(modelsPublisher: modelsSignal, modelToItem: reignToItem(onTap: onTap))
 vc.viewModel = viewModel
-vc.tableViewDelegate = LUXTappableTableDelegate(viewModel.dataSource)
+vc.tableViewDelegate = LUXFunctionalTableDelegate(onSelect: viewModel.dataSource.onSelect)
 
 PlaygroundPage.current.liveView = nc
 PlaygroundPage.current.needsIndefiniteExecution = true

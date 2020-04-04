@@ -51,7 +51,7 @@ public protocol Tappable {
     var onTap: () -> Void { get }
 }
 
-open class TappableFunctionalMultiModelItem<T>: FunctionalFlexDataSourceItem<T>, Tappable where T: UITableViewCell {
+open class TappableFunctionalFlexItem<T>: FunctionalFlexDataSourceItem<T>, Tappable where T: UITableViewCell {
     public var onTap: () -> Void
     
     public init(identifier: String, _ configureCell: @escaping (UITableViewCell) -> Void, _ onTap: @escaping () -> Void) {

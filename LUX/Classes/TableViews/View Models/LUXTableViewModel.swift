@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import FunNet
 import FlexDataSource
 import Prelude
 
@@ -76,12 +77,12 @@ extension LUXRefreshableTableViewModel {
     }
 }
 
-open class LUXItemsTableViewModel: LUXRefreshableTableViewModel {
+open class LUXSectionsTableViewModel: LUXRefreshableTableViewModel {
     public var sectionsPublisher: AnyPublisher<[FlexDataSourceSection], Never>
     
-    public init(_ refresher: Refreshable, itemsPublisher: AnyPublisher<[FlexDataSourceItem], Never>) {
-        let toSections = itemsToSection >>> arrayOfSingleObject
-        sectionsPublisher = itemsPublisher.map(toSections).eraseToAnyPublisher()
+    public init(_ refresher: Refreshable,
+                _ sectionsPublisher: AnyPublisher<[FlexDataSourceSection], Never>) {
+        self.sectionsPublisher = sectionsPublisher
         
         super.init(refresher)
         
@@ -91,5 +92,13 @@ open class LUXItemsTableViewModel: LUXRefreshableTableViewModel {
             dataSource.tableView?.reloadData()
         })
         self.dataSource = dataSource
+    }
+}
+
+open class LUXItemsTableViewModel: LUXSectionsTableViewModel {
+    public init(_ refresher: Refreshable,
+                itemsPublisher: AnyPublisher<[FlexDataSourceItem], Never>,
+                toSections: @escaping ([FlexDataSourceItem]) -> [FlexDataSourceSection] = itemsToSection >>> arrayOfSingleObject) {
+        super.init(refresher, itemsPublisher.map(toSections).eraseToAnyPublisher())
     }
 }

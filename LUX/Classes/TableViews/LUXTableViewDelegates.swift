@@ -12,6 +12,12 @@ open class LUXFunctionalTableDelegate: NSObject, UITableViewDelegate {
     public var onSelect: (UITableView, IndexPath) -> Void = { _,_ in }
     public var onWillDisplay: (UITableViewCell, UITableView, IndexPath) -> Void = { _,_,_ in }
     
+    public init(onSelect: @escaping (UITableView, IndexPath) -> Void = { _,_ in },
+                onWillDisplay: @escaping (UITableViewCell, UITableView, IndexPath) -> Void = { _,_,_ in }) {
+        self.onSelect = onSelect
+        self.onWillDisplay = onWillDisplay
+    }
+    
     @objc open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         onSelect(tableView, indexPath)
     }

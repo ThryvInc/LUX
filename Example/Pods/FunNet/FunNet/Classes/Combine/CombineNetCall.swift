@@ -5,7 +5,6 @@
 //  Created by Elliot Schrock on 12/5/19.
 //
 
-import FunNet
 import Combine
 
 @available(iOS 13.0, *)

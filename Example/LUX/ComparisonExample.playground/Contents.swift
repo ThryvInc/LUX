@@ -6,6 +6,7 @@ import Combine
 import Prelude
 import FlexDataSource
 import LithoOperators
+import PlaygroundVCHelpers
 
 //Models
 enum House: String, Codable, CaseIterable {
@@ -71,19 +72,27 @@ class ComparisonTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
+        
         tableView.register(DetailTableViewCell.self, forCellReuseIdentifier: "cell")
+        
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
-        call.firingFunc = {
-            $0.responder?.data = json.data(using: .utf8)
-        }
+        // stubbing
+        call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
+        
         cancelBag.insert(call.responder?.$data
             .compactMap({ $0 })
-            .compactMap({ LUXJsonProvider.decode(Cycle.self, from: $0) })
-            .sink {
+            .compactMap({
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .iso8601
+                return try? decoder.decode(Cycle.self, from: $0)
+            }).sink {
                 self.title = "\($0.ordinal ?? 0)th Cycle"
                 self.reigns = $0.reigns
                 self.tableView.refreshControl?.endRefreshing()
@@ -100,16 +109,25 @@ class ComparisonTableViewController: UITableViewController {
         call.fire()
     }
     
+    func onTap(reign: Reign) {}
+    
     // MARK: - Table data source
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return reigns.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reigns[section].emperors?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return reignToHouseString(reigns[section])
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-            cell.textLabel?.text = reigns[indexPath.row].emperors?.first?.name ?? "<Unknown>"
-            cell.detailTextLabel?.text = reignToHouseString(reigns[indexPath.row])
+            cell.textLabel?.text = reigns[indexPath.section].emperors?[indexPath.row].name ?? "<Unknown>"
             return cell
         }
         return UITableViewCell()
@@ -119,6 +137,8 @@ class ComparisonTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        onTap(reign: reigns[indexPath.row])
     }
 }
 

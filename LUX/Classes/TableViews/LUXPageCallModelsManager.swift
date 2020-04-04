@@ -5,6 +5,7 @@
 //  Created by Elliot Schrock on 10/6/19.
 //
 
+import FunNet
 import Combine
 
 open class LUXPageCallModelsManager<T>: LUXPageableModelManager where T: Decodable {

@@ -53,6 +53,10 @@ public func addJsonHeaders<T>(_ endpoint: inout T) where T: EndpointProtocol {
     endpoint.addHeaders(headers: ["Content-Type": "application/json", "Accept": "application/json"])
 }
 
+public func setToGet<T>(_ endpoint: inout T) where T: EndpointProtocol {
+    endpoint.httpMethod = "POST"
+}
+
 public func setToPost<T>(_ endpoint: inout T) where T: EndpointProtocol {
     endpoint.httpMethod = "POST"
 }
@@ -61,6 +65,30 @@ public func setToPut<T>(_ endpoint: inout T) where T: EndpointProtocol {
     endpoint.httpMethod = "PUT"
 }
 
+public func setToPatch<T>(_ endpoint: inout T) where T: EndpointProtocol {
+    endpoint.httpMethod = "PATCH"
+}
+
 public func setToDelete<T>(_ endpoint: inout T) where T: EndpointProtocol {
+    endpoint.httpMethod = "DELETE"
+}
+
+public func setToGET<T>(_ endpoint: inout T) where T: EndpointProtocol {
+    setToGet(&endpoint)
+}
+
+public func setToPOST<T>(_ endpoint: inout T) where T: EndpointProtocol {
+    endpoint.httpMethod = "POST"
+}
+
+public func setToPUT<T>(_ endpoint: inout T) where T: EndpointProtocol {
+    endpoint.httpMethod = "PUT"
+}
+
+public func setToPATCH<T>(_ endpoint: inout T) where T: EndpointProtocol {
+    endpoint.httpMethod = "PATCH"
+}
+
+public func setToDELETE<T>(_ endpoint: inout T) where T: EndpointProtocol {
     endpoint.httpMethod = "DELETE"
 }

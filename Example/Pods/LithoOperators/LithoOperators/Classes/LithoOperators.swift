@@ -109,6 +109,14 @@ public prefix func ^ <Root, Value>(
 
 //higher order functions
 
+public func union(_ functions: (() -> Void)...) -> () -> Void {
+    return {
+        for f in functions {
+            f()
+        }
+    }
+}
+
 public func union<T>(_ functions: ((T) -> Void)...) -> (T) -> Void {
     return { (t: T) in
         for f in functions {
@@ -117,10 +125,18 @@ public func union<T>(_ functions: ((T) -> Void)...) -> (T) -> Void {
     }
 }
 
-public func union(_ functions: (() -> Void)...) -> () -> Void {
-    return {
+public func union<T, U>(_ functions: ((T, U) -> Void)...) -> (T, U) -> Void {
+    return { (t: T, u: U) in
         for f in functions {
-            f()
+            f(t, u)
+        }
+    }
+}
+
+public func union<T, U, V>(_ functions: ((T, U, V) -> Void)...) -> (T, U, V) -> Void {
+    return { (t: T, u: U, v: V) in
+        for f in functions {
+            f(t, u, v)
         }
     }
 }

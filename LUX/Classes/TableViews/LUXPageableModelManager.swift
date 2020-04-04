@@ -5,7 +5,7 @@
 //  Created by Elliot Schrock on 10/6/19.
 //
 
-import Foundation
+import FunNet
 
 public protocol Pageable {
     func nextPage()

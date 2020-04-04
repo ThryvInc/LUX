@@ -47,7 +47,7 @@
       "source_files": "LUX/Classes/Networking/**/*.swift",
       "resources": "LUX/Classes/Networking/**/*.xib",
       "dependencies": {
-        "FunNet": [
+        "FunNet/Combine": [
 
         ],
         "LUX/Auth": [

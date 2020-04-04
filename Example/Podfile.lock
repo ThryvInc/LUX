@@ -1,10 +1,12 @@
 PODS:
   - FlexDataSource (0.1.0)
-  - FunNet (0.0.1):
+  - FunNet/Combine (0.0.1):
+    - FunNet/Core
     - LithoOperators
-    - OHHTTPStubs/Swift
+  - FunNet/Core (0.0.1):
+    - LithoOperators
   - ISO8601DateFormatter (0.8)
-  - LithoOperators (0.0.9):
+  - LithoOperators (0.0.10):
     - Prelude
   - LUX (0.1.0):
     - ISO8601DateFormatter
@@ -21,7 +23,7 @@ PODS:
   - LUX/Auth (0.1.0):
     - ISO8601DateFormatter
   - LUX/Networking (0.1.0):
-    - FunNet
+    - FunNet/Combine
     - ISO8601DateFormatter
     - LUX/Auth
     - LUX/Utilities
@@ -48,15 +50,13 @@ PODS:
   - OHHTTPStubs/NSURLSession (8.0.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (8.0.0)
-  - OHHTTPStubs/Swift (8.0.0):
-    - OHHTTPStubs/Default
   - PlaygroundVCHelpers (0.0.2)
   - Prelude (3.0.0)
   - THUXAuth (0.1.0)
 
 DEPENDENCIES:
   - FlexDataSource (from `https://github.com/ThryvInc/flex-data-source`)
-  - FunNet (from `https://github.com/schrockblock/funnet`)
+  - FunNet/Combine (from `https://github.com/schrockblock/funnet`)
   - LithoOperators (from `https://github.com/ThryvInc/LithoOperators`)
   - LUX (from `../`)
   - OHHTTPStubs (~> 8.0.0)
@@ -85,13 +85,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FlexDataSource:
-    :commit: e2416f2cde989d52acab159f301e458acd82c03d
+    :commit: 327c48129a20906c978b9420473cd35779fccf7e
     :git: https://github.com/ThryvInc/flex-data-source
   FunNet:
-    :commit: 97012628feaf75bd4f8a01ff81729b0c986d8e76
+    :commit: cb3aa35ee25f931a3a84a07bbc470be692688ba4
     :git: https://github.com/schrockblock/funnet
   LithoOperators:
-    :commit: 971e91c51ba44f3d60f57008240c9a4af9ea8598
+    :commit: 9f0fc2e6c27a7d2f403a7dc7c945cb66ba123692
     :git: https://github.com/ThryvInc/LithoOperators
   PlaygroundVCHelpers:
     :commit: 1b1f5ed572a1965e1d52bbc1b21f3796a6f144e2
@@ -102,15 +102,15 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   FlexDataSource: 77c91077c71a09624a3999054bf1d2ad7745ca0b
-  FunNet: 782eb82ce25a8a0499eef8533edbc192817a0b33
+  FunNet: 7ff876fcd10ab9ff3f10c74ca4c3575d22feed93
   ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
-  LithoOperators: ceed8cb3b6c3adeac7ef5e61c36977f8977ac432
-  LUX: ed01d1e887482e18b65537711a62629be3b7ab0d
+  LithoOperators: 48197a90d7666cb1e62fbb3b90125dca197159ae
+  LUX: 04d0a2a70e5241cc0d9e34db1f2bfe3c3232d52a
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
   THUXAuth: 3d5cfdca13a9c7d1093bb8a5663d96c6a9ce3179
 
-PODFILE CHECKSUM: b755479071faaef7bd0ae99934751d1240f806b0
+PODFILE CHECKSUM: 1f7afefdcc8e52925095dbf97722a31b222fa2d7
 
 COCOAPODS: 1.9.0

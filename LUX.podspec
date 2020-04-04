@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
     sp.source_files = 'LUX/Classes/Networking/**/*.swift'
     sp.resources = 'LUX/Classes/Networking/**/*.xib'
     
-    sp.dependency 'FunNet'
+    sp.dependency 'FunNet/Combine'
     sp.dependency 'LUX/Auth'
     sp.dependency 'LUX/Utilities'
   end

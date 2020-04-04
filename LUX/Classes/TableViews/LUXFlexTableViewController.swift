@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import FunNet
 
 open class LUXFlexController<T>: LUXFunctionalViewController, Refreshable {
     @IBOutlet public var tableView: UITableView?

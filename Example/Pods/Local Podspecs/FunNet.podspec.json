@@ -21,11 +21,40 @@
   },
   "source_files": "FunNet/Classes/**/*",
   "dependencies": {
-    "OHHTTPStubs/Swift": [
-
-    ],
     "LithoOperators": [
 
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "FunNet/Classes/Core/**/*.swift",
+      "dependencies": {
+        "LithoOperators": [
+
+        ]
+      }
+    },
+    {
+      "name": "Combine",
+      "source_files": "FunNet/Classes/Combine/**/*.swift",
+      "dependencies": {
+        "FunNet/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "ReactiveSwift",
+      "source_files": "FunNet/Classes/ReactiveSwift/**/*",
+      "dependencies": {
+        "FunNet/Core": [
+
+        ],
+        "ReactiveSwift": [
+
+        ]
+      }
+    }
+  ]
 }
