@@ -23,22 +23,22 @@ struct Cycle: Codable {
 }
 
 let json = """
-{ "ordinal": 18,
-  "reigns":[{"house":"phoenix", "emperors": [{"name":"Tortaalik I"},{"name":"Zerika IV"}]},
-            {"house":"dragon", "emperors": [{"name":"Norathar II"}]},
-            {"house":"lyorn"},
+{ "ordinal": 11,
+  "reigns":[{"house":"phoenix", "emperors": []},
+            {"house":"dragon", "emperors": [{"name":"Norathar I"}]},
+            {"house":"lyorn", "emperors": [{"name":"Cuorfor II"}]},
             {"house":"tiassa"},
-            {"house":"hawk", "emperors": [{"name":"??Paarfi I of Roundwood (the Wise)??"}]},
+            {"house":"hawk", "emperors": []},
             {"house":"dzur"},
-            {"house":"issola"},
-            {"house":"tsalmoth"},
-            {"house":"vallista"},
+            {"house":"issola", "emperors": [{"name":"Juzai XI"}]},
+            {"house":"tsalmoth", "emperors": [{"name":"Faarith III"}]},
+            {"house":"vallista", "emperors": [{"name":"Fecila III"}]},
             {"house":"jhereg"},
-            {"house":"iorich"},
+            {"house":"iorich", "emperors": [{"name":"Synna IV"}]},
             {"house":"chreotha"},
             {"house":"yendi"},
             {"house":"orca"},
-            {"house":"teckla"},
+            {"house":"teckla", "emperors": [{"name":"Kiva IV"}]},
             {"house":"jhegaala"},
             {"house":"athyra"}]
 }
@@ -60,8 +60,13 @@ class DetailTableViewCell: UITableViewCell {
     }
 }
 
+let onTap: (Emperor) -> Void = { _ in }
+let emperorConfigurator: (Emperor, UITableViewCell) -> Void = { emperor, cell in
+    cell.textLabel?.text = emperor.name ?? "<Unknown>"
+}
+
 //linking models to views
-let emperorToItemCreator: (@escaping (Emperor) -> Void) -> (Emperor) -> FlexDataSourceItem = emperorConfigurator >||> (onTap >|||> LUXTappableModelItem.init)
+let emperorToItemCreator: (@escaping (Emperor) -> Void) -> (Emperor) -> FlexDataSourceItem = { onTap in  emperorConfigurator >||> (onTap >|||> LUXTappableModelItem.init) }
 func reignToSection(_ emperorToItem: @escaping (Emperor) -> FlexDataSourceItem) -> (Reign) -> FlexDataSourceSection {
     return {
         let section = FlexDataSourceSection()
@@ -71,14 +76,9 @@ func reignToSection(_ emperorToItem: @escaping (Emperor) -> FlexDataSourceItem) 
     }
 }
 
-let emperorConfigurator: (Emperor, UITableViewCell) -> Void = { emperor, cell in
-    cell.textLabel?.text = emperor.name ?? "<Unknown>"
-}
-
 //setup
 let vc = LUXFunctionalTableViewController.makeFromXIB()
 let nc = UINavigationController(rootViewController: vc)
-let onTap: (Emperor) -> Void = { _ in }
 
 let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
 
