@@ -79,6 +79,10 @@ open class LUXUserDefaultsSession: LUXSession {
         UserDefaults.standard.set(authString, forKey: host)
         UserDefaults.standard.synchronize()
     }
+
+    open func clearAuthValue() {
+        UserDefaults.standard.removeObject(forKey: host)
+    }
     
     open func isAuthenticated() -> Bool {
         let apiKey = UserDefaults.standard.string(forKey: host)

@@ -24,7 +24,6 @@ class PagingDelegateTests: XCTestCase {
         
         let delegate = LUXFunctionalTableDelegate()
         delegate.onWillDisplay = pageManager.willDisplayFunction()
-//        delegate
         
         let tv = MockTableView()
         tv.numberOfRows = 20
