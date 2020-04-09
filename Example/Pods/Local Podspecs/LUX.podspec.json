@@ -21,12 +21,23 @@
   },
   "source_files": "LUX/Classes/**/*.swift",
   "resources": "LUX/**/*.xib",
-  "dependencies": {
-    "ISO8601DateFormatter": [
-
-    ]
-  },
   "subspecs": [
+    {
+      "name": "Base",
+      "source_files": "LUX/Classes/Base/**/*.swift",
+      "resources": "LUX/Classes/Base/**/*.xib",
+      "dependencies": {
+        "Prelude": [
+          "~> 3.0"
+        ],
+        "FlexDataSource": [
+
+        ],
+        "LithoOperators": [
+
+        ]
+      }
+    },
     {
       "name": "Utilities",
       "source_files": "LUX/Classes/Utilities/**/*.swift",
@@ -43,6 +54,11 @@
       "resources": "LUX/Classes/Auth/**/*.xib"
     },
     {
+      "name": "BaseFunctional",
+      "source_files": "LUX/Classes/Base/Functional/**/*.swift",
+      "resources": "LUX/Classes/Base/Functional/**/*.xib"
+    },
+    {
       "name": "Networking",
       "source_files": "LUX/Classes/Networking/**/*.swift",
       "resources": "LUX/Classes/Networking/**/*.xib",
@@ -50,10 +66,17 @@
         "FunNet/Combine": [
 
         ],
-        "LUX/Auth": [
+        "LUX/BaseNetworking": [
 
-        ],
-        "LUX/Utilities": [
+        ]
+      }
+    },
+    {
+      "name": "BaseNetworking",
+      "source_files": "LUX/Classes/Base/Networking/**/*.swift",
+      "resources": "LUX/Classes/Base/Networking/**/*.xib",
+      "dependencies": {
+        "LUX/Auth": [
 
         ]
       }
@@ -63,7 +86,17 @@
       "source_files": "LUX/Classes/TableViews/**/*.swift",
       "resources": "LUX/Classes/TableViews/**/*.xib",
       "dependencies": {
-        "LUX/Networking": [
+        "LUX/BaseTableViews": [
+
+        ]
+      }
+    },
+    {
+      "name": "BaseTableViews",
+      "source_files": "LUX/Classes/Base/TableViews/**/*.swift",
+      "resources": "LUX/Classes/Base/TableViews/**/*.xib",
+      "dependencies": {
+        "LUX/BaseFunctional": [
 
         ],
         "FlexDataSource": [
@@ -80,6 +113,16 @@
 
         ],
         "LUX/Networking": [
+
+        ]
+      }
+    },
+    {
+      "name": "BaseAppOpenFlow",
+      "source_files": "LUX/Classes/Base/AppOpen/**/*.swift",
+      "resources": "LUX/Classes/Base/AppOpen/**/*.xib",
+      "dependencies": {
+        "LUX/BaseFunctional": [
 
         ]
       }

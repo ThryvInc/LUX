@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LUX'
-    s.version          = '0.1.0'
+    s.version          = '0.1.1'
     s.summary          = 'LUX contains everything you need to create a simple app.'
 
     s.description      = <<-DESC
@@ -27,6 +27,14 @@ Pod::Spec.new do |s|
   s.source_files = 'LUX/Classes/**/*.swift'
   s.resources = 'LUX/**/*.xib'
   
+  s.subspec 'Base' do |sp|
+    sp.source_files = 'LUX/Classes/Base/**/*.swift'
+    sp.resources = 'LUX/Classes/Base/**/*.xib'
+    sp.dependency 'Prelude', '~> 3.0'
+    sp.dependency 'FlexDataSource'
+    sp.dependency 'LithoOperators'
+  end
+  
   s.subspec 'Utilities' do |sp|
     sp.source_files = 'LUX/Classes/Utilities/**/*.swift'
     sp.resources = 'LUX/Classes/Utilities/**/*.xib'
@@ -38,20 +46,38 @@ Pod::Spec.new do |s|
     sp.resources = 'LUX/Classes/Auth/**/*.xib'
   end
   
+  s.subspec 'BaseFunctional' do |sp|
+    sp.source_files = 'LUX/Classes/Base/Functional/**/*.swift'
+    sp.resources = 'LUX/Classes/Base/Functional/**/*.xib'
+  end
+  
   s.subspec 'Networking' do |sp|
     sp.source_files = 'LUX/Classes/Networking/**/*.swift'
     sp.resources = 'LUX/Classes/Networking/**/*.xib'
     
     sp.dependency 'FunNet/Combine'
+    sp.dependency 'LUX/BaseNetworking'
+  end
+  
+  s.subspec 'BaseNetworking' do |sp|
+    sp.source_files = 'LUX/Classes/Base/Networking/**/*.swift'
+    sp.resources = 'LUX/Classes/Base/Networking/**/*.xib'
+    
     sp.dependency 'LUX/Auth'
-    sp.dependency 'LUX/Utilities'
   end
   
   s.subspec 'TableViews' do |sp|
     sp.source_files = 'LUX/Classes/TableViews/**/*.swift'
     sp.resources = 'LUX/Classes/TableViews/**/*.xib'
     
-    sp.dependency 'LUX/Networking'
+    sp.dependency 'LUX/BaseTableViews'
+  end
+  
+  s.subspec 'BaseTableViews' do |sp|
+    sp.source_files = 'LUX/Classes/Base/TableViews/**/*.swift'
+    sp.resources = 'LUX/Classes/Base/TableViews/**/*.xib'
+    
+    sp.dependency 'LUX/BaseFunctional'
     sp.dependency 'FlexDataSource'
   end
   
@@ -63,14 +89,18 @@ Pod::Spec.new do |s|
     sp.dependency 'LUX/Networking'
   end
   
+  s.subspec 'BaseAppOpenFlow' do |sp|
+    sp.source_files = 'LUX/Classes/Base/AppOpen/**/*.swift'
+    sp.resources = 'LUX/Classes/Base/AppOpen/**/*.xib'
+    
+    sp.dependency 'LUX/BaseFunctional'
+  end
+  
   s.subspec 'Search' do |sp|
     sp.source_files = 'LUX/Classes/Search/**/*.swift'
     sp.resources = 'LUX/Classes/Search/**/*.xib'
     
     sp.dependency 'LUX/TableViews'
   end
-
-  s.dependency 'ISO8601DateFormatter'
-  #s.dependency 'SBTextInputView'
   
 end

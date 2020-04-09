@@ -38,11 +38,15 @@
     {
       "name": "Combine",
       "source_files": "FunNet/Classes/Combine/**/*.swift",
+      "platforms": {
+        "ios": "13.0"
+      },
       "dependencies": {
         "FunNet/Core": [
 
         ]
-      }
+      },
+      "frameworks": "Combine"
     },
     {
       "name": "ReactiveSwift",

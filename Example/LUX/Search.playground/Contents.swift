@@ -81,7 +81,7 @@ let modelsSignal: AnyPublisher<[Reign], Never> = unwrappedModelPublisher(from: d
 let onTap: () -> Void = {}
 
 let searcher = LUXSearcher<Reign>(reignToHouseString, .allMatchNilAndEmpty, .prefix)
-vc.searchViewModel?.searcher = searcher
+//vc.searchViewModel?.searcher = searcher
 vc.searchViewModel?.onIncrementalSearch = { text in
     searcher.updateIncrementalSearch(text: text)
 }

@@ -248,6 +248,13 @@ public func set<S, T, A, B>(
     return over(setter) { _ in value }
 }
 
+public func set<Root, Value>(_ kp: WritableKeyPath<Root, Value>, _ value: Value) -> (Root) -> Void {
+    return {
+        var copy = $0
+        copy[keyPath: kp] = value
+    }
+}
+
 public func get<Root, Value>(_ kp: KeyPath<Root, Value>) -> (Root) -> Value {
   return { root in
     root[keyPath: kp]

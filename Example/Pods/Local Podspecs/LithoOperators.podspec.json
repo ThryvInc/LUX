@@ -1,6 +1,6 @@
 {
   "name": "LithoOperators",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "summary": "LithoOperators contains some nice operators to make functional programming easier.",
   "swift_versions": [
     "4.0",
@@ -19,7 +19,7 @@
   },
   "source": {
     "git": "https://github.com/ThryvInc/LithoOperators.git",
-    "tag": "0.0.10"
+    "tag": "0.0.11"
   },
   "social_media_url": "https://twitter.com/elliot_schrock",
   "platforms": {

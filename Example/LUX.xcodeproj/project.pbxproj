@@ -350,7 +350,6 @@
 				"${PODS_ROOT}/Target Support Files/Pods-LUX_Example/Pods-LUX_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlexDataSource/FlexDataSource.framework",
 				"${BUILT_PRODUCTS_DIR}/FunNet/FunNet.framework",
-				"${BUILT_PRODUCTS_DIR}/ISO8601DateFormatter/ISO8601DateFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/LUX/LUX.framework",
 				"${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
@@ -362,7 +361,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexDataSource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FunNet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISO8601DateFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LUX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LithoOperators.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",

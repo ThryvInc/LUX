@@ -5,37 +5,44 @@ PODS:
     - LithoOperators
   - FunNet/Core (0.0.1):
     - LithoOperators
-  - ISO8601DateFormatter (0.8)
-  - LithoOperators (0.0.10):
+  - LithoOperators (0.0.11):
     - Prelude
   - LUX (0.1.0):
-    - ISO8601DateFormatter
     - LUX/AppOpenFlow (= 0.1.0)
     - LUX/Auth (= 0.1.0)
+    - LUX/Base (= 0.1.0)
+    - LUX/BaseAppOpenFlow (= 0.1.0)
+    - LUX/BaseFunctional (= 0.1.0)
+    - LUX/BaseNetworking (= 0.1.0)
+    - LUX/BaseTableViews (= 0.1.0)
     - LUX/Networking (= 0.1.0)
     - LUX/Search (= 0.1.0)
     - LUX/TableViews (= 0.1.0)
     - LUX/Utilities (= 0.1.0)
   - LUX/AppOpenFlow (0.1.0):
-    - ISO8601DateFormatter
     - LUX/Auth
     - LUX/Networking
-  - LUX/Auth (0.1.0):
-    - ISO8601DateFormatter
+  - LUX/Auth (0.1.0)
+  - LUX/Base (0.1.0):
+    - FlexDataSource
+    - LithoOperators
+    - Prelude (~> 3.0)
+  - LUX/BaseAppOpenFlow (0.1.0):
+    - LUX/BaseFunctional
+  - LUX/BaseFunctional (0.1.0)
+  - LUX/BaseNetworking (0.1.0):
+    - LUX/Auth
+  - LUX/BaseTableViews (0.1.0):
+    - FlexDataSource
+    - LUX/BaseFunctional
   - LUX/Networking (0.1.0):
     - FunNet/Combine
-    - ISO8601DateFormatter
-    - LUX/Auth
-    - LUX/Utilities
+    - LUX/BaseNetworking
   - LUX/Search (0.1.0):
-    - ISO8601DateFormatter
     - LUX/TableViews
   - LUX/TableViews (0.1.0):
-    - FlexDataSource
-    - ISO8601DateFormatter
-    - LUX/Networking
+    - LUX/BaseTableViews
   - LUX/Utilities (0.1.0):
-    - ISO8601DateFormatter
     - Prelude (~> 3.0)
   - OHHTTPStubs (8.0.0):
     - OHHTTPStubs/Default (= 8.0.0)
@@ -65,7 +72,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - ISO8601DateFormatter
     - OHHTTPStubs
     - Prelude
 
@@ -88,10 +94,10 @@ CHECKOUT OPTIONS:
     :commit: 327c48129a20906c978b9420473cd35779fccf7e
     :git: https://github.com/ThryvInc/flex-data-source
   FunNet:
-    :commit: cb3aa35ee25f931a3a84a07bbc470be692688ba4
+    :commit: 09f75e96fd03931cee016a26a2dcf21ff96358ae
     :git: https://github.com/schrockblock/funnet
   LithoOperators:
-    :commit: 9f0fc2e6c27a7d2f403a7dc7c945cb66ba123692
+    :commit: 8398ac3d35a30c5c29583764342b53a72fd239c8
     :git: https://github.com/ThryvInc/LithoOperators
   PlaygroundVCHelpers:
     :commit: 1b1f5ed572a1965e1d52bbc1b21f3796a6f144e2
@@ -102,10 +108,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   FlexDataSource: 77c91077c71a09624a3999054bf1d2ad7745ca0b
-  FunNet: 7ff876fcd10ab9ff3f10c74ca4c3575d22feed93
-  ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
-  LithoOperators: 48197a90d7666cb1e62fbb3b90125dca197159ae
-  LUX: 04d0a2a70e5241cc0d9e34db1f2bfe3c3232d52a
+  FunNet: 08de074e98b1bc00a6340f1316e4deb07056462c
+  LithoOperators: 4c48d2951a4999d9c3ac194d44933782710c5201
+  LUX: 1ea6ef18bc1bb72f3ec10abe860dba110596debd
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
