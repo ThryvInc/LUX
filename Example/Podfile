@@ -4,10 +4,8 @@ platform :ios, '13.0'
 target 'LUX_Example' do
   pod 'LUX', :path => '../'
   pod 'PlaygroundVCHelpers', git: 'https://github.com/ThryvInc/playground-vc-helpers'
-  pod 'THUXAuth', git: 'https://github.com/ThryvInc/thux-auth'
   pod 'FunNet/Combine', git: 'https://github.com/schrockblock/funnet'
   pod 'LithoOperators', git: 'https://github.com/ThryvInc/LithoOperators'
-  pod 'OHHTTPStubs', '~> 8.0.0'
   pod 'FlexDataSource', git: 'https://github.com/ThryvInc/flex-data-source'
 
   target 'LUX_Tests' do

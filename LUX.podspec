@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/ThryvInc/LUX.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/elliot_schrock'
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'LUX/Classes/**/*.swift'
   s.resources = 'LUX/**/*.xib'
@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
   s.subspec 'Base' do |sp|
     sp.source_files = 'LUX/Classes/Base/**/*.swift'
     sp.resources = 'LUX/Classes/Base/**/*.xib'
+    
     sp.dependency 'Prelude', '~> 3.0'
     sp.dependency 'FlexDataSource'
     sp.dependency 'LithoOperators'
@@ -54,7 +55,7 @@ Pod::Spec.new do |s|
   s.subspec 'Networking' do |sp|
     sp.source_files = 'LUX/Classes/Networking/**/*.swift'
     sp.resources = 'LUX/Classes/Networking/**/*.xib'
-    
+    sp.ios.deployment_target = '13.0'
     sp.dependency 'FunNet/Combine'
     sp.dependency 'LUX/BaseNetworking'
   end
@@ -69,7 +70,7 @@ Pod::Spec.new do |s|
   s.subspec 'TableViews' do |sp|
     sp.source_files = 'LUX/Classes/TableViews/**/*.swift'
     sp.resources = 'LUX/Classes/TableViews/**/*.xib'
-    
+    sp.ios.deployment_target = '13.0'
     sp.dependency 'LUX/BaseTableViews'
   end
   
@@ -84,7 +85,7 @@ Pod::Spec.new do |s|
   s.subspec 'AppOpenFlow' do |sp|
     sp.source_files = 'LUX/Classes/AppOpenFlow/**/*.swift'
     sp.resources = 'LUX/Classes/AppOpenFlow/**/*.xib'
-    
+    sp.ios.deployment_target = '13.0'
     sp.dependency 'LUX/Auth'
     sp.dependency 'LUX/Networking'
   end
@@ -99,7 +100,7 @@ Pod::Spec.new do |s|
   s.subspec 'Search' do |sp|
     sp.source_files = 'LUX/Classes/Search/**/*.swift'
     sp.resources = 'LUX/Classes/Search/**/*.xib'
-    
+    sp.ios.deployment_target = '13.0'
     sp.dependency 'LUX/TableViews'
   end
   
