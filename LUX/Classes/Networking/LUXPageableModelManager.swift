@@ -7,11 +7,6 @@
 
 import FunNet
 
-public protocol Pageable {
-    func nextPage()
-    func fetchPage(_ page: Int)
-}
-
 open class LUXPageableModelManager: LUXRefreshableNetworkCallManager, Pageable {
     public var page: Int {
         didSet {
