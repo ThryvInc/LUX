@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
     sp.dependency 'Prelude', '~> 3.0'
     sp.dependency 'FlexDataSource'
     sp.dependency 'LithoOperators'
+    sp.dependency 'FunNet/Core'
   end
   
   s.subspec 'Utilities' do |sp|
@@ -65,6 +66,7 @@ Pod::Spec.new do |s|
     sp.resources = 'LUX/Classes/Base/Networking/**/*.xib'
     
     sp.dependency 'LUX/Auth'
+    sp.dependency 'FunNet/Core'
   end
   
   s.subspec 'TableViews' do |sp|
