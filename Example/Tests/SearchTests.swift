@@ -24,7 +24,7 @@ class SearchTests: XCTestCase {
             return (human.name ?? "").contains(search)
         }
         
-        let modelsSignal = humansProperty.compactMap({ $0 }).eraseToAnyPublisher()
+        let modelsSignal = humansProperty.skipNils().eraseToAnyPublisher()
         
         let listSignal = searcher.filteredPublisher(from: modelsSignal)
         

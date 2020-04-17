@@ -51,7 +51,7 @@ open class LUXLoginViewModel: LUXLoginProtocol, LUXLoginInputs, LUXLoginOutputs 
     
     public let credentialLoginCall: CombineNetCall?
     
-    private var cancelBag = Set<AnyCancellable?>()
+    private var cancelBag = Set<AnyCancellable>()
     
     public init<T>(credsCall: CombineNetCall? = nil, loginModelToJson: @escaping (String, String) -> T, saveAuth: ((Data) -> Bool)? = nil) where T: Encodable {
         credentialLoginCall = credsCall
@@ -59,7 +59,7 @@ open class LUXLoginViewModel: LUXLoginProtocol, LUXLoginInputs, LUXLoginOutputs 
         activityIndicatorVisiblePublisher = activityIndicatorVisibleSubject.eraseToAnyPublisher()
         
         if let authSaved = saveAuth, let responder = credsCall?.responder {
-            advanceAuthedPublisher = responder.$data.compactMap({ $0 }).map(authSaved).filter { $0 }.map { _ in () }.eraseToAnyPublisher()
+            advanceAuthedPublisher = responder.$data.skipNils().map(authSaved).filter { $0 }.map { _ in () }.eraseToAnyPublisher()
         } else {
             advanceAuthedPublisher = advanceAuthed.eraseToAnyPublisher()
         }
@@ -71,14 +71,15 @@ open class LUXLoginViewModel: LUXLoginProtocol, LUXLoginInputs, LUXLoginOutputs 
             self.activityIndicatorVisiblePublisher.map({ visible in !visible}).eraseToAnyPublisher()).eraseToAnyPublisher()
         
             
-        cancelBag.insert(submitButtonPressedProperty.sink { _ in
+        submitButtonPressedProperty.sink { _ in
             let model = loginModelToJson(self.username, self.password)
             self.credentialLoginCall?.endpoint.postData = try? LUXJsonProvider.jsonEncoder.encode(model)
             self.credentialLoginCall?.fire()
             self.activityIndicatorVisibleSubject.send(true)
-        })
+            }.store(in: &cancelBag)
         
-        cancelBag.insert(credentialLoginCall?.responder?.$httpResponse.compactMap({ $0 }).sinkThrough(authResponseReceived))
+        credentialLoginCall?.responder?.$httpResponse.skipNils().dropFirst().sink(receiveValue: authResponseReceived).store(in: &cancelBag)
+        credentialLoginCall?.responder?.$error.skipNils().dropFirst().sink { _ in self.activityIndicatorVisibleSubject.send(false) }.store(in: &cancelBag)
     }
     
     open func usernameChanged(username: String?) {
