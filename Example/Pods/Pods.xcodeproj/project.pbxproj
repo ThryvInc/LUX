@@ -43,6 +43,7 @@
 		418F42402B4DF2E2E2CD56745A1039F2 /* FunNet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF62F40C97D02CC44157980C74557B30 /* FunNet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45AA6C72A9E0471B5C467A8ACD0C99E9 /* LUXRefreshCallModelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B344DDFC3C7B0F4EBE6AB7D62952C87 /* LUXRefreshCallModelsManager.swift */; };
 		461B1BFFA3C872A898AD7B7FED3DCE3D /* Stubbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9E85303CB3F5E0E1C276F970EB606 /* Stubbable.swift */; };
+		491D44DB2449FD0A009D6A3A /* Array+Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D44DA2449FD0A009D6A3A /* Array+Paging.swift */; };
 		4964F4F7400951D2551ACA598F3B6769 /* LUXVersionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7C928069DFE153275061F08452CDF /* LUXVersionChecker.swift */; };
 		49F3B3B2243F9F6E0017605D /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F3B3B1243F9F6E0017605D /* Refreshable.swift */; };
 		49F3B3B4243F9F9F0017605D /* Pageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F3B3B3243F9F9F0017605D /* Pageable.swift */; };
@@ -300,6 +301,7 @@
 		42AFA28A4121996D539EA0AAB3126CDF /* LUXTableViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXTableViewDelegates.swift; sourceTree = "<group>"; };
 		4415F3028C8B8EB30836940545DCD9A2 /* LUXSearchViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXSearchViewModel.swift; sourceTree = "<group>"; };
 		459EB84081931146A35CF1E5F85DA1BB /* NetworkCall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkCall.swift; path = FunNet/Classes/Core/NetworkCall.swift; sourceTree = "<group>"; };
+		491D44DA2449FD0A009D6A3A /* Array+Paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Paging.swift"; sourceTree = "<group>"; };
 		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		49E8F648FFC21E3D8C604D9720192211 /* LUXPageableModelManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LUXPageableModelManager.swift; sourceTree = "<group>"; };
 		49F3B3B1243F9F6E0017605D /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
@@ -763,6 +765,7 @@
 				1F02CBC852139C0FBB24F6EC0A251A25 /* UIColor+Hex.swift */,
 				F6E61C03E8966C3AE1C4C7C041CB4652 /* UIViewController+PushPop.swift */,
 				08A4DC94E1B031034D165FBB4CBDA0B3 /* UIViewController+Tabs.swift */,
+				491D44DA2449FD0A009D6A3A /* Array+Paging.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1698,6 +1701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491D44DB2449FD0A009D6A3A /* Array+Paging.swift in Sources */,
 				031F521E1C9860A904B90E23EB52844F /* CombineModelFunctions.swift in Sources */,
 				AD4CF3DA9FA7F17385B6A1DAB7E791B3 /* Configure.swift in Sources */,
 				B3CEE36FA78632A02E2524A9648170E6 /* FlexItems.swift in Sources */,

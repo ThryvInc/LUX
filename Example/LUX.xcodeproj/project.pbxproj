@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491D44E1244A22BA009D6A3A /* ArrayPagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D44E0244A22BA009D6A3A /* ArrayPagingTests.swift */; };
 		49781239239DB84C007DFA9F /* PagingModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C366239C416900D59DF0 /* PagingModelsTests.swift */; };
 		4978123A239DB850007DFA9F /* PagingDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C367239C416900D59DF0 /* PagingDelegateTests.swift */; };
 		4978123B239DB854007DFA9F /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C364239C416900D59DF0 /* LoginViewModelTests.swift */; };
@@ -26,7 +27,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B5DDDA9015D5B0752B631707 /* Pods_LUX_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42B4BEA58B69C8BD8FE4014 /* Pods_LUX_Example.framework */; };
 		CDA5AA489BA6AEB8016EA9DC /* Pods_LUX_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AB7549E70A7D5F45143895 /* Pods_LUX_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1CDCE1150B473AE788C4BA83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		491D44E0244A22BA009D6A3A /* ArrayPagingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayPagingTests.swift; sourceTree = "<group>"; };
 		4951271E2416E28700C42ED5 /* TableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4978123D239DCC38007DFA9F /* RefreshCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCallTests.swift; sourceTree = "<group>"; };
 		4978123F239DCDC9007DFA9F /* RefreshModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModelsTests.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* LUX_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUX_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		69E2072452A596824D56C8B0 /* Pods-LUX_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUX_Example.debug.xcconfig"; path = "Target Support Files/Pods-LUX_Example/Pods-LUX_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		78446B6F9C76610C44BC3389 /* Pods-LUX_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUX_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LUX_Tests/Pods-LUX_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		84AB7549E70A7D5F45143895 /* Pods_LUX_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUX_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +178,7 @@
 				4978124B23A01E21007DFA9F /* ModelViewModelTests.swift */,
 				4978124D23A02F7A007DFA9F /* TableViewModelTests.swift */,
 				4978124F23A02F8C007DFA9F /* ListViewModelTests.swift */,
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				491D44E0244A22BA009D6A3A /* ArrayPagingTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -416,9 +416,9 @@
 				49781248239DD490007DFA9F /* PagingCallTests.swift in Sources */,
 				4978123E239DCC38007DFA9F /* RefreshCallTests.swift in Sources */,
 				49781240239DCDC9007DFA9F /* RefreshModelsTests.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				4978123C239DB85C007DFA9F /* SearchTests.swift in Sources */,
 				4978123A239DB850007DFA9F /* PagingDelegateTests.swift in Sources */,
+				491D44E1244A22BA009D6A3A /* ArrayPagingTests.swift in Sources */,
 				4978124E23A02F7A007DFA9F /* TableViewModelTests.swift in Sources */,
 				49781239239DB84C007DFA9F /* PagingModelsTests.swift in Sources */,
 				4978124C23A01E21007DFA9F /* ModelViewModelTests.swift in Sources */,
