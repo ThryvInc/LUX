@@ -20,7 +20,7 @@ open class LUXPageableModelManager: LUXRefreshableNetworkCallManager, Pageable {
         self.firstPageValue = firstPageValue
         self.page = firstPageValue
         super.init(call)
-        onPageUpdate = { page in
+        onPageUpdate = { [unowned self] page in
             if let call = self.call as? CombineNetCall {
                 call.endpoint.getParams.updateValue(page, forKey: "page")
             }
