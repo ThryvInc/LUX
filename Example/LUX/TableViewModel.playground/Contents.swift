@@ -60,20 +60,10 @@ class DetailTableViewCell: UITableViewCell {
     }
 }
 
-let onTap: (Emperor) -> Void = { _ in }
-let emperorConfigurator: (Emperor, UITableViewCell) -> Void = { emperor, cell in
-    cell.textLabel?.text = emperor.name ?? "<Unknown>"
-}
-
 //linking models to views
-let emperorToItemCreator: (@escaping (Emperor) -> Void) -> (Emperor) -> FlexDataSourceItem = { onTap in  emperorConfigurator >||> (onTap >|||> LUXTappableModelItem.init) }
-func reignToSection(_ emperorToItem: @escaping (Emperor) -> FlexDataSourceItem) -> (Reign) -> FlexDataSourceSection {
-    return {
-        let section = FlexDataSourceSection()
-        section.title = reignToHouseString($0)
-        section.items = $0.emperors?.map(emperorToItem)
-        return section
-    }
+let reignConfigurator: (Reign, DetailTableViewCell) -> Void = { reign, cell in
+    cell.textLabel?.text = reign.emperors?.first?.name ?? "<Unknown>"
+    cell.detailTextLabel?.text = reignToHouseString(reign)
 }
 
 //setup
@@ -85,23 +75,16 @@ let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co
 //just for stubbing purposes
 call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
 
-let dataSignal = (call.responder?.$data)!.eraseToAnyPublisher()
-let modelsSignal = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
-
-let cycleSignal: AnyPublisher<Cycle, Never> = modelPublisher(from: dataSignal)
+let cycleSignal: AnyPublisher<Cycle, Never> = modelPublisher(from: call.publisher.$data.eraseToAnyPublisher())
 let cancel = cycleSignal.sink { vc.title = "\($0.ordinal ?? 0)th Cycle" }
 
-let refreshManager = LUXRefreshableNetworkCallManager(call)
-let vm = LUXSectionsTableViewModel(refreshManager, modelsSignal.map(reignToSection(emperorToItemCreator(onTap)) >||> map).eraseToAnyPublisher())
-let cancel3 = dataSignal.sink { _ in vm.endRefreshing() }
-
-vm.tableDelegate = LUXFunctionalTableDelegate(onSelect: (vm.dataSource as! FlexDataSource).onSelect)
+let vm = refreshableTableViewModel(call, modelUnwrapper: ^\Cycle.reigns, reignConfigurator) { _ in }
 
 vc.onViewDidLoad = {
     $0.view.backgroundColor = UIColor.white
     
-    vm.tableView = $0.tableView
-    vm.refresh()
+    vm?.tableView = $0.tableView
+    vm?.refresh()
 }
 
 PlaygroundPage.current.liveView = nc

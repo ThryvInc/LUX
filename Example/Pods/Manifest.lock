@@ -7,72 +7,57 @@ PODS:
     - LithoOperators
   - LithoOperators (0.0.11):
     - Prelude
-  - LUX (0.1.0):
-    - LUX/AppOpenFlow (= 0.1.0)
-    - LUX/Auth (= 0.1.0)
-    - LUX/Base (= 0.1.0)
-    - LUX/BaseAppOpenFlow (= 0.1.0)
-    - LUX/BaseFunctional (= 0.1.0)
-    - LUX/BaseNetworking (= 0.1.0)
-    - LUX/BaseTableViews (= 0.1.0)
-    - LUX/Networking (= 0.1.0)
-    - LUX/Search (= 0.1.0)
-    - LUX/TableViews (= 0.1.0)
-    - LUX/Utilities (= 0.1.0)
-  - LUX/AppOpenFlow (0.1.0):
+  - LUX (0.1.1):
+    - LUX/AppOpenFlow (= 0.1.1)
+    - LUX/Auth (= 0.1.1)
+    - LUX/Base (= 0.1.1)
+    - LUX/BaseAppOpenFlow (= 0.1.1)
+    - LUX/BaseFunctional (= 0.1.1)
+    - LUX/BaseNetworking (= 0.1.1)
+    - LUX/BaseTableViews (= 0.1.1)
+    - LUX/Networking (= 0.1.1)
+    - LUX/Search (= 0.1.1)
+    - LUX/TableViews (= 0.1.1)
+    - LUX/Utilities (= 0.1.1)
+  - LUX/AppOpenFlow (0.1.1):
     - LUX/Auth
     - LUX/Networking
-  - LUX/Auth (0.1.0)
-  - LUX/Base (0.1.0):
+  - LUX/Auth (0.1.1)
+  - LUX/Base (0.1.1):
     - FlexDataSource
+    - FunNet/Core
     - LithoOperators
     - Prelude (~> 3.0)
-  - LUX/BaseAppOpenFlow (0.1.0):
+  - LUX/BaseAppOpenFlow (0.1.1):
     - LUX/BaseFunctional
-  - LUX/BaseFunctional (0.1.0)
-  - LUX/BaseNetworking (0.1.0):
+  - LUX/BaseFunctional (0.1.1)
+  - LUX/BaseNetworking (0.1.1):
+    - FunNet/Core
     - LUX/Auth
-  - LUX/BaseTableViews (0.1.0):
+  - LUX/BaseTableViews (0.1.1):
     - FlexDataSource
     - LUX/BaseFunctional
-  - LUX/Networking (0.1.0):
+  - LUX/Networking (0.1.1):
     - FunNet/Combine
     - LUX/BaseNetworking
-  - LUX/Search (0.1.0):
+  - LUX/Search (0.1.1):
     - LUX/TableViews
-  - LUX/TableViews (0.1.0):
+  - LUX/TableViews (0.1.1):
     - LUX/BaseTableViews
-  - LUX/Utilities (0.1.0):
+  - LUX/Utilities (0.1.1):
     - Prelude (~> 3.0)
-  - OHHTTPStubs (8.0.0):
-    - OHHTTPStubs/Default (= 8.0.0)
-  - OHHTTPStubs/Core (8.0.0)
-  - OHHTTPStubs/Default (8.0.0):
-    - OHHTTPStubs/Core
-    - OHHTTPStubs/JSON
-    - OHHTTPStubs/NSURLSession
-    - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (8.0.0):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (8.0.0):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (8.0.0)
   - PlaygroundVCHelpers (0.0.2)
   - Prelude (3.0.0)
-  - THUXAuth (0.1.0)
 
 DEPENDENCIES:
   - FlexDataSource (from `https://github.com/ThryvInc/flex-data-source`)
   - FunNet/Combine (from `https://github.com/schrockblock/funnet`)
   - LithoOperators (from `https://github.com/ThryvInc/LithoOperators`)
   - LUX (from `../`)
-  - OHHTTPStubs (~> 8.0.0)
   - PlaygroundVCHelpers (from `https://github.com/ThryvInc/playground-vc-helpers`)
-  - THUXAuth (from `https://github.com/ThryvInc/thux-auth`)
 
 SPEC REPOS:
   trunk:
-    - OHHTTPStubs
     - Prelude
 
 EXTERNAL SOURCES:
@@ -86,36 +71,29 @@ EXTERNAL SOURCES:
     :path: "../"
   PlaygroundVCHelpers:
     :git: https://github.com/ThryvInc/playground-vc-helpers
-  THUXAuth:
-    :git: https://github.com/ThryvInc/thux-auth
 
 CHECKOUT OPTIONS:
   FlexDataSource:
     :commit: 327c48129a20906c978b9420473cd35779fccf7e
     :git: https://github.com/ThryvInc/flex-data-source
   FunNet:
-    :commit: 09f75e96fd03931cee016a26a2dcf21ff96358ae
+    :commit: 421395a64a5e70853dde6c1c9f59ea762a4ad1cf
     :git: https://github.com/schrockblock/funnet
   LithoOperators:
-    :commit: 8398ac3d35a30c5c29583764342b53a72fd239c8
+    :commit: 25fe2f11b4ee42a0046b4c68857b30d513647124
     :git: https://github.com/ThryvInc/LithoOperators
   PlaygroundVCHelpers:
     :commit: 1b1f5ed572a1965e1d52bbc1b21f3796a6f144e2
     :git: https://github.com/ThryvInc/playground-vc-helpers
-  THUXAuth:
-    :commit: 85218d0b78dba3c2fee80409113c7d11c6f985ba
-    :git: https://github.com/ThryvInc/thux-auth
 
 SPEC CHECKSUMS:
   FlexDataSource: 77c91077c71a09624a3999054bf1d2ad7745ca0b
   FunNet: 08de074e98b1bc00a6340f1316e4deb07056462c
   LithoOperators: 4c48d2951a4999d9c3ac194d44933782710c5201
-  LUX: 1ea6ef18bc1bb72f3ec10abe860dba110596debd
-  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
+  LUX: caefe0c5fe1e6a7c53d344196ba0d0ba3e5eae60
   PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
-  THUXAuth: 3d5cfdca13a9c7d1093bb8a5663d96c6a9ce3179
 
-PODFILE CHECKSUM: 1f7afefdcc8e52925095dbf97722a31b222fa2d7
+PODFILE CHECKSUM: cc22b42238312bef64ff2e31d918cbd99d8c2814
 
 COCOAPODS: 1.9.0

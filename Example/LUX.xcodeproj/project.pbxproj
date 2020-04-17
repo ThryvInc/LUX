@@ -44,6 +44,7 @@
 /* Begin PBXFileReference section */
 		1CDCE1150B473AE788C4BA83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		491D44E0244A22BA009D6A3A /* ArrayPagingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayPagingTests.swift; sourceTree = "<group>"; };
+		491D44E2244A29F1009D6A3A /* SectionTableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SectionTableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4951271E2416E28700C42ED5 /* TableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4978123D239DCC38007DFA9F /* RefreshCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCallTests.swift; sourceTree = "<group>"; };
 		4978123F239DCDC9007DFA9F /* RefreshModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModelsTests.swift; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		607FACD21AFB9204008FA782 /* Example for LUX */ = {
 			isa = PBXGroup;
 			children = (
+				491D44E2244A29F1009D6A3A /* SectionTableViewModel.playground */,
 				4951271E2416E28700C42ED5 /* TableViewModel.playground */,
 				49BD4A4723E9FA0400175EBD /* ComparisonExample.playground */,
 				49781243239DCF2A007DFA9F /* Examples.playground */,
@@ -352,10 +354,8 @@
 				"${BUILT_PRODUCTS_DIR}/FunNet/FunNet.framework",
 				"${BUILT_PRODUCTS_DIR}/LUX/LUX.framework",
 				"${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework",
 				"${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework",
-				"${BUILT_PRODUCTS_DIR}/THUXAuth/THUXAuth.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -363,10 +363,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FunNet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LUX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LithoOperators.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlaygroundVCHelpers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Prelude.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/THUXAuth.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

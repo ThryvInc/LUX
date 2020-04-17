@@ -17,6 +17,13 @@ public func >?><A, B, C>(f: @escaping (A) -> B?, g: @escaping (B) -> C) -> (A) -
         }
     }
 }
+public func >?><A, B>(f: @escaping (A) -> B?, g: @escaping (B) -> Void) -> (A) -> Void {
+    return { a in
+        if let b = f(a) {
+            g(b)
+        }
+    }
+}
 
 prefix operator ~
 public prefix func ~<A, B, C>(f: @escaping (A, B) -> C) -> ((A, B)) -> C {
@@ -156,12 +163,24 @@ public func ifExecute<T>(_ t: T?, _ f: (T) -> Void) {
         f(t)
     }
 }
-
 public func ifExecute<T, U>(_ t: T?, _ f: (T) -> U) -> U? {
     if let t = t {
         return f(t)
     }
     return nil
+}
+
+infix operator ?>
+public func ?><T, U>(t: T?, f: (T) -> U) -> U? {
+    if let t = t {
+        return f(t)
+    }
+    return nil
+}
+public func ?><T>(t: T?, f: (T) -> Void) {
+    if let t = t {
+        f(t)
+    }
 }
 
 public protocol ConditionalApply {}

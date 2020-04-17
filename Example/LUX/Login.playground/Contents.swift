@@ -5,10 +5,6 @@ import LUX
 import LithoOperators
 import Prelude
 
-func optionalCast<T, U>(object: U) -> T? {
-    return object as? T
-}
-
 let styleVC: (LUXLoginViewController) -> Void = { loginVC in
     print(loginVC.view)
     loginVC.forgotPasswordButton?.isHidden = true

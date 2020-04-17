@@ -9,7 +9,7 @@ import UIKit
 import LithoOperators
 import Prelude
 
-open class LUXSearchViewController<T, U>: LUXFlexController<T> {
+open class LUXSearchViewController<T, U>: LUXFlexViewController<T> {
     @IBOutlet open weak var searchBar: UISearchBar?
     @IBOutlet open weak var searchTopConstraint: NSLayoutConstraint?
     

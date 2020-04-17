@@ -28,10 +28,19 @@ open class LUXFunctionalTableDelegate: NSObject, UITableViewDelegate {
 }
 
 public extension FlexDataSource {
-    func onSelect(_ tableView: UITableView, _ indexPath: IndexPath) -> Void {
+    func tappableOnSelect(_ tableView: UITableView, _ indexPath: IndexPath) -> Void {
         tableView.deselectRow(at: indexPath, animated: true)
         if let tappable = sections?[indexPath.section].items?[indexPath.row] as? Tappable {
             tappable.onTap()
+        }
+    }
+    
+    func itemTapOnSelect(onTap: @escaping (FlexDataSourceItem) -> Void) -> (UITableView, IndexPath) -> Void {
+        return { tableView, indexPath in
+            tableView.deselectRow(at: indexPath, animated: true)
+            if let item = self.sections?[indexPath.section].items?[indexPath.row] {
+                onTap(item)
+            }
         }
     }
 }

@@ -8,10 +8,6 @@ import FlexDataSource
 import LithoOperators
 import PlaygroundVCHelpers
 
-NSSetUncaughtExceptionHandler { exception in
-    print("💥 Exception thrown: \(exception)")
-}
-
 //Models
 enum House: String, Codable, CaseIterable {
     case phoenix, dragon, lyorn, tiassa, hawk, dzur, issola, tsalmoth, vallista, jhereg, iorich, chreotha, yendi, orca, teckla, jhegaala, athyra
@@ -27,22 +23,22 @@ struct Cycle: Codable {
 }
 
 let json = """
-{ "ordinal": 18,
-  "reigns":[{"house":"phoenix", "emperors": [{"name":"Zerika IV"}]},
-            {"house":"dragon", "emperors": [{"name":"Norathar II"}]},
-            {"house":"lyorn"},
+{ "ordinal": 11,
+  "reigns":[{"house":"phoenix", "emperors": []},
+            {"house":"dragon", "emperors": [{"name":"Norathar I"}]},
+            {"house":"lyorn", "emperors": [{"name":"Cuorfor II"}]},
             {"house":"tiassa"},
-            {"house":"hawk", "emperors": [{"name":"??Paarfi I of Roundwood (the Wise)??"}]},
+            {"house":"hawk", "emperors": []},
             {"house":"dzur"},
-            {"house":"issola"},
-            {"house":"tsalmoth"},
-            {"house":"vallista"},
+            {"house":"issola", "emperors": [{"name":"Juzai XI"}]},
+            {"house":"tsalmoth", "emperors": [{"name":"Faarith III"}]},
+            {"house":"vallista", "emperors": [{"name":"Fecila III"}]},
             {"house":"jhereg"},
-            {"house":"iorich"},
+            {"house":"iorich", "emperors": [{"name":"Synna IV"}]},
             {"house":"chreotha"},
             {"house":"yendi"},
             {"house":"orca"},
-            {"house":"teckla"},
+            {"house":"teckla", "emperors": [{"name":"Kiva IV"}]},
             {"house":"jhegaala"},
             {"house":"athyra"}]
 }
@@ -64,18 +60,25 @@ class DetailTableViewCell: UITableViewCell {
     }
 }
 
-func reignToItem(onTap: @escaping (Reign) -> Void) -> (Reign) -> FlexDataSourceItem { return reignConfigurator >||> (onTap >|||> LUXTappableModelItem.init) }
+let onTap: (Emperor) -> Void = { _ in }
+let emperorConfigurator: (Emperor, UITableViewCell) -> Void = { emperor, cell in
+    cell.textLabel?.text = emperor.name ?? "<Unknown>"
+}
 
 //linking models to views
-let reignConfigurator: (Reign, DetailTableViewCell) -> Void = { reign, cell in
-    cell.textLabel?.text = reign.emperors?.first?.name ?? "<Unknown>"
-    cell.detailTextLabel?.text = reignToHouseString(reign)
+let emperorToItemCreator: (@escaping (Emperor) -> Void) -> (Emperor) -> FlexDataSourceItem = { onTap in  emperorConfigurator >||> (onTap >|||> LUXTappableModelItem.init) }
+func reignToSection(_ emperorToItem: @escaping (Emperor) -> FlexDataSourceItem) -> (Reign) -> FlexDataSourceSection {
+    return {
+        let section = FlexDataSourceSection()
+        section.title = reignToHouseString($0)
+        section.items = $0.emperors?.map(emperorToItem)
+        return section
+    }
 }
 
 //setup
-let vc = LUXFlexViewController<LUXModelListViewModel<Reign>>.makeFromXIB(name: "LUXFlexViewController")
+let vc = LUXFunctionalTableViewController.makeFromXIB()
 let nc = UINavigationController(rootViewController: vc)
-let onTap: (Reign) -> Void = { _ in }
 
 let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
 
@@ -88,12 +91,18 @@ let modelsSignal = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
 let cycleSignal: AnyPublisher<Cycle, Never> = modelPublisher(from: dataSignal)
 let cancel = cycleSignal.sink { vc.title = "\($0.ordinal ?? 0)th Cycle" }
 
-let refreshManager = LUXRefreshCallModelsManager<Reign>(call, modelsSignal)
-vc.refreshableModelManager = refreshManager
+let refreshManager = LUXRefreshableNetworkCallManager(call)
+let vm = LUXSectionsTableViewModel(refreshManager, modelsSignal.map(reignToSection(emperorToItemCreator(onTap)) >||> map).eraseToAnyPublisher())
+let cancel3 = dataSignal.sink { _ in vm.endRefreshing() }
 
-let viewModel = LUXModelListViewModel(modelsPublisher: modelsSignal, modelToItem: reignToItem(onTap: onTap))
-vc.viewModel = viewModel
-vc.tableViewDelegate = LUXFunctionalTableDelegate(onSelect: viewModel.dataSource.tappableOnSelect)
+vm.tableDelegate = LUXFunctionalTableDelegate(onSelect: (vm.dataSource as! FlexDataSource).tappableOnSelect)
+
+vc.onViewDidLoad = {
+    $0.view.backgroundColor = UIColor.white
+    
+    vm.tableView = $0.tableView
+    vm.refresh()
+}
 
 PlaygroundPage.current.liveView = nc
 PlaygroundPage.current.needsIndefiniteExecution = true

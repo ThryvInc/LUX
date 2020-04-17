@@ -9,7 +9,7 @@ import UIKit
 import Combine
 import FunNet
 
-open class LUXFlexController<T>: LUXFunctionalViewController, Refreshable {
+open class LUXFlexViewController<T>: LUXFunctionalViewController, Refreshable {
     @IBOutlet public var tableView: UITableView?
     open var tableViewDelegate: LUXFunctionalTableDelegate? { didSet { didSetTableDelegate() }}
     open var viewModel: T? { didSet { didSetViewModel() }}

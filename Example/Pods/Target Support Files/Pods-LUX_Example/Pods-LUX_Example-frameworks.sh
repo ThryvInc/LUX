@@ -201,20 +201,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FunNet/FunNet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LUX/LUX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/THUXAuth/THUXAuth.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FlexDataSource/FlexDataSource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FunNet/FunNet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LUX/LUX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/THUXAuth/THUXAuth.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
