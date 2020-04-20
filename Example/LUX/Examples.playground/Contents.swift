@@ -82,7 +82,7 @@ let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co
 //just for stubbing purposes
 call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
 
-let dataSignal = (call.responder?.$data)!.eraseToAnyPublisher()
+let dataSignal = call.publisher.$data.eraseToAnyPublisher()
 let modelsSignal = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
 
 let cycleSignal: AnyPublisher<Cycle, Never> = modelPublisher(from: dataSignal)

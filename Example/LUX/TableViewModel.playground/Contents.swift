@@ -83,8 +83,8 @@ let vm = refreshableTableViewModel(call, modelUnwrapper: ^\Cycle.reigns, reignCo
 vc.onViewDidLoad = {
     $0.view.backgroundColor = UIColor.white
     
-    vm?.tableView = $0.tableView
-    vm?.refresh()
+    vm.tableView = $0.tableView
+    vm.refresh()
 }
 
 PlaygroundPage.current.liveView = nc

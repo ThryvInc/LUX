@@ -91,7 +91,7 @@ vc.refreshableModelManager = refreshManager
 
 let viewModel = LUXModelListViewModel(modelsPublisher: searcher.filteredIncrementalPublisher(from: modelsSignal), modelToItem: buildHouseConfigurator >>> configuratorToItem)
 vc.viewModel = viewModel
-vc.tableViewDelegate = LUXTappableTableDelegate(viewModel.dataSource)
+vc.tableViewDelegate = LUXFunctionalTableDelegate(onSelect: viewModel.dataSource.tappableOnSelect)
 
 PlaygroundPage.current.liveView = vc
 PlaygroundPage.current.needsIndefiniteExecution = true
