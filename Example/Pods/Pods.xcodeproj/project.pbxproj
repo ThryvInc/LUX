@@ -78,7 +78,6 @@
 		80DBEAD36E78B7E59DEBDCB96FD93FBF /* FlexDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F739C9CB529E9E5A6469EB7844BEE /* FlexDataSourceSection.swift */; };
 		82163FF3EE5AAC155E6EF853E0D905D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA84BC5A4498AD8B4328A4F0E5188CA0 /* Foundation.framework */; };
 		8844E8A1DA48318A3D049A30A85B07E2 /* LUXDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522751A74067E33E2178144978D1B5F /* LUXDetailTableViewCell.swift */; };
-		8A34C2B1CDD68E3A549CEB65BD0478DF /* UIViewController+Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E183365354ED75716460F7AE47745 /* UIViewController+Tabs.swift */; };
 		8D82CB6BFA8D4971A5BBCCC596F25202 /* LUXCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C594411F5F1AB7C9D8AE9FE6D9101D /* LUXCommentTableViewCell.swift */; };
 		8F4C34333345EEA3E804CC4F0249B229 /* FlexDataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6960941BB083C1BF4C8EF2A52FFE6F /* FlexDataSourceItem.swift */; };
 		93D99B97C615E72B6D8E75B763543DC5 /* LithoOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A537A5B213B1DA071478F6B80E576A8 /* LithoOperators.framework */; };
@@ -273,7 +272,6 @@
 		43438FDDA430812EF61F3CD8912D696D /* PlaygroundVCHelpers-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PlaygroundVCHelpers-Info.plist"; sourceTree = "<group>"; };
 		4657011CDE23B280A9E4A780B993B329 /* LUXFunctionalTableViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXFunctionalTableViewController.xib; sourceTree = "<group>"; };
 		465A17209AF4EC7A2D1FBEEFCB670831 /* LUX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LUX-dummy.m"; sourceTree = "<group>"; };
-		484E183365354ED75716460F7AE47745 /* UIViewController+Tabs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Tabs.swift"; sourceTree = "<group>"; };
 		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4958B62E187522E06E980BA2FDF4C81D /* Id.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		4974F207244DF49500129EEB /* Swiping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Swiping.swift; path = LUX/Classes/Base/TableViews/Swiping.swift; sourceTree = "<group>"; };
@@ -817,7 +815,6 @@
 				AE80AF1494C2A05785002A90684D64FB /* Configure.swift */,
 				237B08555DA1AE1EA5DC8F5D3226C2BF /* UIColor+Hex.swift */,
 				ACC3BD990B0E04EB009EB9499D90A31A /* UIViewController+PushPop.swift */,
-				484E183365354ED75716460F7AE47745 /* UIViewController+Tabs.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1513,7 +1510,6 @@
 				028FEA0AEA976A50287E5E7AF735764D /* ServerAuth.swift in Sources */,
 				1B0932B8CD23E3A884AEE06D81781F53 /* UIColor+Hex.swift in Sources */,
 				2C2E9A631A1F7458CF7CCCE4B2457552 /* UIViewController+PushPop.swift in Sources */,
-				8A34C2B1CDD68E3A549CEB65BD0478DF /* UIViewController+Tabs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
