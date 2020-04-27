@@ -35,10 +35,10 @@ open class LUXSearchViewModel<U>: NSObject, UISearchBarDelegate {
     }
 }
 
-func lowercased(string: String) -> String { return string.lowercased() }
-func lowercased(string: String?) -> String? { return string?.lowercased() }
+public func lowercased(string: String) -> String { return string.lowercased() }
+public func lowercased(string: String?) -> String? { return string?.lowercased() }
 
-func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> String?, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
+public func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> String?, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
     if let searchText = search {
         if searchText.isEmpty {
             return emptyMatcher()
@@ -53,7 +53,7 @@ func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> Str
     }
 }
 
-func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> String, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
+public func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> String, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
     if let searchText = search {
         if searchText.isEmpty {
             return emptyMatcher()
@@ -70,7 +70,7 @@ public enum MatchStrategy {
     case contains
 }
 
-func matcher(for strategy: MatchStrategy) -> (String, String) -> Bool {
+public func matcher(for strategy: MatchStrategy) -> (String, String) -> Bool {
     let matcher: (String, String) -> Bool
     switch strategy {
     case .prefix:
@@ -98,7 +98,7 @@ public enum NilAndEmptyMatchStrategy {
 public func returnTrue() -> Bool { true }
 public func returnFalse() -> Bool { true }
 
-func nilAndEmptyMatchers(for strategy: NilAndEmptyMatchStrategy) -> (() -> Bool, () -> Bool) {
+public func nilAndEmptyMatchers(for strategy: NilAndEmptyMatchStrategy) -> (() -> Bool, () -> Bool) {
     let nilMatcher: () -> Bool
     let emptyMatcher: () -> Bool
     switch strategy {
