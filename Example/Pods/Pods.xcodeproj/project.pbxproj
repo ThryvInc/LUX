@@ -46,6 +46,7 @@
 		4422D22E21A671423AC43775739FB01A /* LUXSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3EE062E3354674E0F67CE80BB54F9C2 /* LUXSearchTableViewCell.xib */; };
 		461B1BFFA3C872A898AD7B7FED3DCE3D /* Stubbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046918C8E9F46003CA39E9B15F444BB0 /* Stubbable.swift */; };
 		4974F208244DF49500129EEB /* Swiping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4974F207244DF49500129EEB /* Swiping.swift */; };
+		49BD93752457276400F131AD /* LUXFunctionalTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD93742457276400F131AD /* LUXFunctionalTextViewDelegate.swift */; };
 		4A513E2395C5C39E05916BD9735F0025 /* LUXFunctionalTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4657011CDE23B280A9E4A780B993B329 /* LUXFunctionalTableViewController.xib */; };
 		4C94FB98FD7D4EF6F426B4D2B9862909 /* CombineNetCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C569F50F2E1B3023769FCBB83E8903 /* CombineNetCall.swift */; };
 		4DD939AD62BB7415069BA1C5AB5F3457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA84BC5A4498AD8B4328A4F0E5188CA0 /* Foundation.framework */; };
@@ -275,6 +276,7 @@
 		494ECE69841242264AFA0B67D786F416 /* Pods-LUX_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LUX_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4958B62E187522E06E980BA2FDF4C81D /* Id.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		4974F207244DF49500129EEB /* Swiping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Swiping.swift; path = LUX/Classes/Base/TableViews/Swiping.swift; sourceTree = "<group>"; };
+		49BD93742457276400F131AD /* LUXFunctionalTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUXFunctionalTextViewDelegate.swift; sourceTree = "<group>"; };
 		4A4DEF060DB0F1F2AC5717E16F6003C2 /* Prelude-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Prelude-prefix.pch"; sourceTree = "<group>"; };
 		4B257C9052941D974A57047F3E8B017C /* FlexDataSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlexDataSource.release.xcconfig; sourceTree = "<group>"; };
 		54B890455C6DFD1CD4753E65D78D2CB1 /* LUXSearchViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LUXSearchViewController.xib; sourceTree = "<group>"; };
@@ -756,6 +758,7 @@
 			children = (
 				812B389ABEDC9E9932CD7885832590FE /* LUXFunctionalViewController.swift */,
 				BB02C0284222BE83EB9E7C7293F10673 /* LUXSearchViewModel.swift */,
+				49BD93742457276400F131AD /* LUXFunctionalTextViewDelegate.swift */,
 			);
 			path = Functional;
 			sourceTree = "<group>";
@@ -1488,6 +1491,7 @@
 				213D7D798CBC818F59F9C6E9BD6A945A /* LUXPageCallModelsManager.swift in Sources */,
 				7038F41C05A99D9099EA63DBC4F57344 /* LUXRefreshableModelManager.swift in Sources */,
 				D21503D8E73624D2C62BD00660C0A245 /* LUXRefreshCallModelsManager.swift in Sources */,
+				49BD93752457276400F131AD /* LUXFunctionalTextViewDelegate.swift in Sources */,
 				2FFE8E0766A801134E248E3053DCD0F3 /* LUXRefreshNetCallsManager.swift in Sources */,
 				0C79D6D61FD464F1B6F11B4099623242 /* LUXRegistrationViewController.swift in Sources */,
 				1742D63A6A44FC1D9357C33D28E75EE4 /* LUXRegistrationViewModel.swift in Sources */,
