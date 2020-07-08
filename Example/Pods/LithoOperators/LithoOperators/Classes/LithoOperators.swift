@@ -148,8 +148,13 @@ public func union<T, U, V>(_ functions: ((T, U, V) -> Void)...) -> (T, U, V) -> 
     }
 }
 
-public func voidCurry<T>(_ t: T, _ f: @escaping (T) -> Void) -> () -> Void {
+public func voidCurry<T, U>(_ t: T, _ f: @escaping (T) -> U) -> () -> U {
     return { f(t) }
+}
+
+infix operator *>: Composition
+public func *><T, U>(t: T, f: @escaping (T) -> U) -> () -> U {
+    return { return f(t) }
 }
 
 public func ignoreSecondArg<T, U, V>(f: @escaping (T) -> V) -> (T, U) -> V {

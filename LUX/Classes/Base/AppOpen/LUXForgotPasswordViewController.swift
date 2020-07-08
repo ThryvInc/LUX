@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import fuikit
 
-open class LUXForgotPasswordViewController: LUXFunctionalViewController {
+open class LUXForgotPasswordViewController: FUIViewController {
     @IBOutlet open weak var identifierTextField: UITextField?
     @IBOutlet open weak var resetButton: UIButton?
     

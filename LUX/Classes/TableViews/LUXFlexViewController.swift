@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import fuikit
 import Combine
 import FunNet
+import fuikit
 
-open class LUXFlexViewController<T>: LUXFunctionalViewController, Refreshable {
+open class LUXFlexViewController<T>: FUIViewController, Refreshable {
     @IBOutlet public var tableView: UITableView?
-    open var tableViewDelegate: LUXFunctionalTableDelegate? { didSet { didSetTableDelegate() }}
+    open var tableViewDelegate: FUITableViewDelegate? { didSet { didSetTableDelegate() }}
     open var viewModel: T? { didSet { didSetViewModel() }}
     open var refreshableModelManager: LUXRefreshableNetworkCallManager? {
         didSet {

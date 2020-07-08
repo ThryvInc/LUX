@@ -7,6 +7,7 @@ import Prelude
 import FlexDataSource
 import LithoOperators
 import PlaygroundVCHelpers
+import fuikit
 
 //Models
 enum House: String, Codable, CaseIterable {
@@ -77,7 +78,7 @@ func reignToSection(_ emperorToItem: @escaping (Emperor) -> FlexDataSourceItem) 
 }
 
 //setup
-let vc = LUXFunctionalTableViewController.makeFromXIB()
+let vc = FUITableViewViewController.makeFromXIB()
 let nc = UINavigationController(rootViewController: vc)
 
 let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
@@ -95,7 +96,7 @@ let refreshManager = LUXRefreshableNetworkCallManager(call)
 let vm = LUXSectionsTableViewModel(refreshManager, modelsSignal.map(reignToSection(emperorToItemCreator(onTap)) >||> map).eraseToAnyPublisher())
 let cancel3 = dataSignal.sink { _ in vm.endRefreshing() }
 
-vm.tableDelegate = LUXFunctionalTableDelegate(onSelect: (vm.dataSource as! FlexDataSource).tappableOnSelect)
+vm.tableDelegate = FUITableViewDelegate(onSelect: (vm.dataSource as! FlexDataSource).tappableOnSelect)
 
 vc.onViewDidLoad = {
     $0.view.backgroundColor = UIColor.white

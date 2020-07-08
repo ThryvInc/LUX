@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import fuikit
 
-open class LUXResetPasswordViewController: LUXFunctionalViewController {
+open class LUXResetPasswordViewController: FUIViewController {
     @IBOutlet open weak var newPasswordTextField: UITextField?
     @IBOutlet open weak var confirmPasswordTextField: UITextField?
     @IBOutlet open weak var submitButton: UIButton?

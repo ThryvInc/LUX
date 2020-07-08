@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import fuikit
 import Combine
 import FunNet
 import FlexDataSource
@@ -117,7 +118,7 @@ func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
         let itemsPub = pageManager.$models.dropFirst().map(modelsToItems).eraseToAnyPublisher()
         let vm = LUXItemsTableViewModel(pageManager, itemsPublisher: itemsPub.map { models in models.map { $0 as FlexDataSourceItem } }.eraseToAnyPublisher())
         if let ds = vm.dataSource as? FlexDataSource {
-            let delegate = LUXFunctionalTableDelegate()
+            let delegate = FUITableViewDelegate()
             delegate.onWillDisplay = pageManager.willDisplayFunction()
             delegate.onSelect = ds.itemTapOnSelect(onTap: (optionalCast(object:) >?> ^\LUXModelItem<U, C>.model) >>> (onTap >||> ifExecute))
             vm.tableDelegate = delegate
@@ -139,7 +140,7 @@ func refreshableTableViewModel<T, U, C>(_ call: CombineNetCall,
         let itemsPub = modelPub.map(modelsToItems).eraseToAnyPublisher()
         let vm = LUXItemsTableViewModel(refreshManager, itemsPublisher: itemsPub.map { models in models.map { $0 as FlexDataSourceItem } }.eraseToAnyPublisher())
         if let ds = vm.dataSource as? FlexDataSource {
-            let delegate = LUXFunctionalTableDelegate()
+            let delegate = FUITableViewDelegate()
             delegate.onSelect = ds.itemTapOnSelect(onTap: (optionalCast(object:) >?> ^\LUXModelItem<U, C>.model) >>> (onTap >||> ifExecute))
             vm.tableDelegate = delegate
         }
