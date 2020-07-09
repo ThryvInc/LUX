@@ -11,7 +11,7 @@ import Slippers
 open class LUXCallPager: Pager {
     open var call: Fireable?
     
-    public init(pageKeyName: String = "page", countKeyName: String = "count", defaultCount: Int = 20, firstPageValue: Int = 0, _ call: CombineNetCall?) {
+    public init(pageKeyName: String = "page", countKeyName: String = "count", defaultCount: Int = 20, firstPageValue: Int = 0, _ call: Fireable?) {
         self.call = call
         super.init(firstPageValue: firstPageValue, onPageUpdate: nil)
         self.onPageUpdate = { [unowned self] page in
