@@ -7,47 +7,49 @@ PODS:
     - LithoOperators
   - LithoOperators (0.0.11):
     - Prelude
-  - LUX (0.1.1):
-    - LUX/AppOpenFlow (= 0.1.1)
-    - LUX/Auth (= 0.1.1)
-    - LUX/Base (= 0.1.1)
-    - LUX/BaseAppOpenFlow (= 0.1.1)
-    - LUX/BaseFunctional (= 0.1.1)
-    - LUX/BaseNetworking (= 0.1.1)
-    - LUX/BaseTableViews (= 0.1.1)
-    - LUX/Networking (= 0.1.1)
-    - LUX/Search (= 0.1.1)
-    - LUX/TableViews (= 0.1.1)
-    - LUX/Utilities (= 0.1.1)
-  - LUX/AppOpenFlow (0.1.1):
+  - LUX (0.1.2):
+    - LUX/AppOpenFlow (= 0.1.2)
+    - LUX/Auth (= 0.1.2)
+    - LUX/Base (= 0.1.2)
+    - LUX/BaseAppOpenFlow (= 0.1.2)
+    - LUX/BaseFunctional (= 0.1.2)
+    - LUX/BaseNetworking (= 0.1.2)
+    - LUX/BaseTableViews (= 0.1.2)
+    - LUX/Networking (= 0.1.2)
+    - LUX/Search (= 0.1.2)
+    - LUX/TableViews (= 0.1.2)
+    - LUX/Utilities (= 0.1.2)
+  - LUX/AppOpenFlow (0.1.2):
     - LUX/Auth
     - LUX/Networking
-  - LUX/Auth (0.1.1)
-  - LUX/Base (0.1.1):
+  - LUX/Auth (0.1.2)
+  - LUX/Base (0.1.2):
     - FlexDataSource
     - FunNet/Core
     - LithoOperators
     - Prelude (~> 3.0)
-  - LUX/BaseAppOpenFlow (0.1.1):
+  - LUX/BaseAppOpenFlow (0.1.2):
     - LUX/BaseFunctional
-  - LUX/BaseFunctional (0.1.1)
-  - LUX/BaseNetworking (0.1.1):
+  - LUX/BaseFunctional (0.1.2)
+  - LUX/BaseNetworking (0.1.2):
     - FunNet/Core
     - LUX/Auth
-  - LUX/BaseTableViews (0.1.1):
+    - Slippers
+  - LUX/BaseTableViews (0.1.2):
     - FlexDataSource
     - LUX/BaseFunctional
-  - LUX/Networking (0.1.1):
+  - LUX/Networking (0.1.2):
     - FunNet/Combine
     - LUX/BaseNetworking
-  - LUX/Search (0.1.1):
+  - LUX/Search (0.1.2):
     - LUX/TableViews
-  - LUX/TableViews (0.1.1):
+  - LUX/TableViews (0.1.2):
     - LUX/BaseTableViews
-  - LUX/Utilities (0.1.1):
+  - LUX/Utilities (0.1.2):
     - Prelude (~> 3.0)
   - PlaygroundVCHelpers (0.0.2)
   - Prelude (3.0.0)
+  - Slippers (0.0.1)
 
 DEPENDENCIES:
   - FlexDataSource (from `https://github.com/ThryvInc/flex-data-source`)
@@ -55,6 +57,7 @@ DEPENDENCIES:
   - LithoOperators (from `https://github.com/ThryvInc/LithoOperators`)
   - LUX (from `../`)
   - PlaygroundVCHelpers (from `https://github.com/ThryvInc/playground-vc-helpers`)
+  - Slippers (from `https://github.com/ThryvInc/slippers`)
 
 SPEC REPOS:
   trunk:
@@ -71,6 +74,8 @@ EXTERNAL SOURCES:
     :path: "../"
   PlaygroundVCHelpers:
     :git: https://github.com/ThryvInc/playground-vc-helpers
+  Slippers:
+    :git: https://github.com/ThryvInc/slippers
 
 CHECKOUT OPTIONS:
   FlexDataSource:
@@ -80,20 +85,24 @@ CHECKOUT OPTIONS:
     :commit: 421395a64a5e70853dde6c1c9f59ea762a4ad1cf
     :git: https://github.com/schrockblock/funnet
   LithoOperators:
-    :commit: 25fe2f11b4ee42a0046b4c68857b30d513647124
+    :commit: 06fef9fe7a966d7a3e554401c7ea77e0fbfcb015
     :git: https://github.com/ThryvInc/LithoOperators
   PlaygroundVCHelpers:
     :commit: 1b1f5ed572a1965e1d52bbc1b21f3796a6f144e2
     :git: https://github.com/ThryvInc/playground-vc-helpers
+  Slippers:
+    :commit: 4e2f5b6f5e367ebc01b172bb688268768256928d
+    :git: https://github.com/ThryvInc/slippers
 
 SPEC CHECKSUMS:
   FlexDataSource: 77c91077c71a09624a3999054bf1d2ad7745ca0b
   FunNet: 08de074e98b1bc00a6340f1316e4deb07056462c
   LithoOperators: 4c48d2951a4999d9c3ac194d44933782710c5201
-  LUX: caefe0c5fe1e6a7c53d344196ba0d0ba3e5eae60
+  LUX: 51f30a1e2703f063bda332c0ed15fcd74b982951
   PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
+  Slippers: ecb06bb170b29462e767a70a20eb06e172135d53
 
-PODFILE CHECKSUM: cc22b42238312bef64ff2e31d918cbd99d8c2814
+PODFILE CHECKSUM: a487c7698508721187ca82266052dbc9a7e1f3d2
 
 COCOAPODS: 1.9.0

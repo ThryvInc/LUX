@@ -67,6 +67,7 @@ Pod::Spec.new do |s|
     
     sp.dependency 'LUX/Auth'
     sp.dependency 'FunNet/Core'
+    sp.dependency 'Slippers'
   end
   
   s.subspec 'TableViews' do |sp|

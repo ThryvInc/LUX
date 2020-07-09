@@ -1,6 +1,0 @@
-framework module LithoOperators {
-  umbrella header "LithoOperators-umbrella.h"
-
-  export *
-  module * { export * }
-}
