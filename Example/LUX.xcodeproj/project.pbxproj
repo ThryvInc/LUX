@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		1CDCE1150B473AE788C4BA83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		491D44E2244A29F1009D6A3A /* SectionTableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SectionTableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		492899F124B8E3F000B38533 /* SwiftUIComparison.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftUIComparison.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4951271E2416E28700C42ED5 /* TableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4978123D239DCC38007DFA9F /* RefreshCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCallTests.swift; sourceTree = "<group>"; };
 		49781241239DCE78007DFA9F /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		607FACD21AFB9204008FA782 /* Example for LUX */ = {
 			isa = PBXGroup;
 			children = (
+				492899F124B8E3F000B38533 /* SwiftUIComparison.playground */,
 				491D44E2244A29F1009D6A3A /* SectionTableViewModel.playground */,
 				4951271E2416E28700C42ED5 /* TableViewModel.playground */,
 				49BD4A4723E9FA0400175EBD /* ComparisonExample.playground */,

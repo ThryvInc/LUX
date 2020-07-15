@@ -47,21 +47,10 @@ let json = """
 //model manipulation
 let capitalizeFirstLetter: (String) -> String = { $0.prefix(1).uppercased() + $0.lowercased().dropFirst() }
 let houseToString: (House) -> String = { String(describing: $0) }
-let reignToHouseString: (Reign) -> String = get(\Reign.house) >>> houseToString >>> capitalizeFirstLetter
-
-//table view cell subclass
-class DetailTableViewCell: UITableViewCell {
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .value1, reuseIdentifier: reuseIdentifier)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-}
+let reignToHouseString: (Reign) -> String = ^\.house >>> houseToString >>> capitalizeFirstLetter
 
 //linking models to views
-let reignConfigurator: (Reign, DetailTableViewCell) -> Void = { reign, cell in
+let reignConfigurator: (Reign, LUXDetailTableViewCell) -> Void = { reign, cell in
     cell.textLabel?.text = reign.emperors?.first?.name ?? "<Unknown>"
     cell.detailTextLabel?.text = reignToHouseString(reign)
 }
