@@ -105,7 +105,7 @@ open class LUXItemsTableViewModel: LUXSectionsTableViewModel {
     }
 }
 
-func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
+public func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
                                      modelUnwrapper: @escaping (T) -> [U],
                                      _ configurer: @escaping (U, C) -> Void,
                                      _ onTap: @escaping (U) -> Void)
@@ -127,7 +127,7 @@ func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
         return vm
 }
 
-func refreshableTableViewModel<T, U, C>(_ call: CombineNetCall,
+public func refreshableTableViewModel<T, U, C>(_ call: CombineNetCall,
                                         modelUnwrapper: @escaping (T) -> [U],
                                         _ configurer: @escaping (U, C) -> Void,
                                         _ onTap: @escaping (U) -> Void)
