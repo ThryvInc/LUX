@@ -36,7 +36,7 @@ class PagingModelsTests: XCTestCase {
     func testPageNotCalledOnViewLoad() {
         var wasCalled = false
         
-        let pageManager = LUXPageCallModelsManager<Human>(call)
+        let pageManager = LUXPageCallModelsManager<Human>(call, firstPageValue: 1)
         let cancel = pageManager.$models.sinkThrough { (humans) in
             print("was called")
             wasCalled = true
@@ -52,7 +52,7 @@ class PagingModelsTests: XCTestCase {
     func testRefresh() {
         var wasCalled = false
         
-        let pageManager = LUXPageCallModelsManager<Human>(call)
+        let pageManager = LUXPageCallModelsManager<Human>(call, firstPageValue: 1)
         let cancel = pageManager.$models.sinkThrough { (humans) in
             XCTAssertEqual(humans.count, 1)
             XCTAssertEqual(humans.first?.id, 1)
@@ -66,7 +66,7 @@ class PagingModelsTests: XCTestCase {
 
     func testNextPage() {
         var callCount = 0
-        let pageManager = LUXPageCallModelsManager<Human>(call)
+        let pageManager = LUXPageCallModelsManager<Human>(call, firstPageValue: 1)
         let cancel = pageManager.$models.sinkThrough { (humans) in
             callCount += 1
                 print("next callCount: \(callCount)")
@@ -100,7 +100,7 @@ class PagingModelsTests: XCTestCase {
 
     func testRefreshAfterNextPage() {
         var callCount = 0
-        let pageManager = LUXPageCallModelsManager<Human>(call)
+        let pageManager = LUXPageCallModelsManager<Human>(call, firstPageValue: 1)
         let cancel = pageManager.$models.sinkThrough { (humans) in
             callCount += 1
             if callCount == 2 {
