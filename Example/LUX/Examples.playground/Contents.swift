@@ -88,7 +88,7 @@ let modelsSignal = unwrappedModelPublisher(from: dataSignal, ^\Cycle.reigns)
 let cycleSignal: AnyPublisher<Cycle, Never> = modelPublisher(from: dataSignal)
 let cancel = cycleSignal.sink { vc.title = "\($0.ordinal ?? 0)th Cycle" }
 
-let refreshManager = LUXRefreshableNetworkCallManager(call)
+let refreshManager = LUXRefreshCallModelsManager<Reign>(call, modelsSignal)
 vc.refreshableModelManager = refreshManager
 
 let viewModel = LUXModelListViewModel(modelsPublisher: modelsSignal, modelToItem: reignToItem(onTap: onTap))

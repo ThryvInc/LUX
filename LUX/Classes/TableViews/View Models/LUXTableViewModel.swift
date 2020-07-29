@@ -8,7 +8,6 @@
 import UIKit
 import Combine
 import FunNet
-import Slippers
 import FlexDataSource
 import Prelude
 import LithoOperators
@@ -105,14 +104,14 @@ open class LUXItemsTableViewModel: LUXSectionsTableViewModel {
     }
 }
 
-public func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
+func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
                                      modelUnwrapper: @escaping (T) -> [U],
                                      _ configurer: @escaping (U, C) -> Void,
                                      _ onTap: @escaping (U) -> Void)
     -> LUXItemsTableViewModel where T: Decodable, U: Decodable, C: UITableViewCell {
         let dataPub = call.publisher.$data.eraseToAnyPublisher()
         let modelPub = unwrappedModelPublisher(from: dataPub, modelUnwrapper)
-        let pageManager = LUXPageCallModelsManager(call, modelPub)
+        let pageManager = LUXPageCallModelsManager(call, modelPub, firstPageValue: 1)
         let modelToItem = configurer >||> LUXModelItem<U, C>.init
         let modelsToItems = modelToItem >||> map
         let itemsPub = pageManager.$models.dropFirst().map(modelsToItems).eraseToAnyPublisher()
@@ -127,7 +126,7 @@ public func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
         return vm
 }
 
-public func refreshableTableViewModel<T, U, C>(_ call: CombineNetCall,
+func refreshableTableViewModel<T, U, C>(_ call: CombineNetCall,
                                         modelUnwrapper: @escaping (T) -> [U],
                                         _ configurer: @escaping (U, C) -> Void,
                                         _ onTap: @escaping (U) -> Void)

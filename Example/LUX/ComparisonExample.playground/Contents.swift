@@ -21,6 +21,7 @@ struct Cycle: Codable {
     var ordinal: Int?
     var reigns = [Reign]()
 }
+
 let json = """
 { "ordinal": 18,
   "reigns":[{"house":"phoenix", "emperors": [{"name":"Zerika IV"}]},

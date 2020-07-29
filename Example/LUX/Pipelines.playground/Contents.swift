@@ -1,6 +1,5 @@
 import UIKit
 import PlaygroundSupport
-import Slippers
 @testable import LUX
 @testable import FunNet
 import Prelude
@@ -66,7 +65,7 @@ class DetailTableViewCell: UITableViewCell {
 
 //model manipulation functions -------------------------------------------------------------------------------------
 let capitalizeFirstLetter: (String) -> String = { $0.prefix(1).uppercased() + $0.lowercased().dropFirst() }
-let parseCycle: (Data) -> Cycle? = { JsonProvider.decode(Cycle.self, from: $0) }
+let parseCycle: (Data) -> Cycle? = { LUXJsonProvider.decode(Cycle.self, from: $0) }
 let houseToString: (House) -> String = { String(describing: $0) }
 let reignToHouseString: (Reign) -> String = ^\Reign.house >>> houseToString >>> capitalizeFirstLetter
 

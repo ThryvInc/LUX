@@ -8,7 +8,6 @@
 import Combine
 import Prelude
 import LithoOperators
-import Slippers
 import FunNet
 
 open class LUXSearcher<T> {

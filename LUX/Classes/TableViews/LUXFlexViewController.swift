@@ -7,7 +7,6 @@
 
 import UIKit
 import Combine
-import Slippers
 import FunNet
 
 open class LUXFlexViewController<T>: LUXFunctionalViewController, Refreshable {
