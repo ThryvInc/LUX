@@ -9,16 +9,6 @@ import UIKit
 import Combine
 import Prelude
 
-public protocol LUXSplashTask {
-    func execute(completion: @escaping () -> Void)
-}
-
-public protocol LUXSplashInputs {
-    func viewDidLoad()
-    func viewWillAppear()
-    func viewDidAppear()
-}
-
 public protocol LUXSplashOutputs {
     var performAnimationsPublisher: AnyPublisher<(), Never> { get }
     var advanceUnauthedPublisher: AnyPublisher<(), Never> { get }

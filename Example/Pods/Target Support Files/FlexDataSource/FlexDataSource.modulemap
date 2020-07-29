@@ -1,6 +1,0 @@
-framework module FlexDataSource {
-  umbrella header "FlexDataSource-umbrella.h"
-
-  export *
-  module * { export * }
-}

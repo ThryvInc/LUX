@@ -1,6 +1,0 @@
-framework module PlaygroundVCHelpers {
-  umbrella header "PlaygroundVCHelpers-umbrella.h"
-
-  export *
-  module * { export * }
-}

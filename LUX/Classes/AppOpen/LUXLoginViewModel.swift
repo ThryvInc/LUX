@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 import FunNet
+import Slippers
 import Prelude
 
 public protocol LUXLoginInputs {
@@ -73,7 +74,7 @@ open class LUXLoginViewModel: LUXLoginProtocol, LUXLoginInputs, LUXLoginOutputs 
             
         submitButtonPressedProperty.sink { _ in
             let model = loginModelToJson(self.username, self.password)
-            self.credentialLoginCall?.endpoint.postData = try? LUXJsonProvider.jsonEncoder.encode(model)
+            self.credentialLoginCall?.endpoint.postData = try? JsonProvider.jsonEncoder.encode(model)
             self.credentialLoginCall?.fire()
             self.activityIndicatorVisibleSubject.send(true)
             }.store(in: &cancelBag)

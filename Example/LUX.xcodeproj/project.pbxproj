@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		491D44E1244A22BA009D6A3A /* ArrayPagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D44E0244A22BA009D6A3A /* ArrayPagingTests.swift */; };
 		49781239239DB84C007DFA9F /* PagingModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C366239C416900D59DF0 /* PagingModelsTests.swift */; };
 		4978123A239DB850007DFA9F /* PagingDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C367239C416900D59DF0 /* PagingDelegateTests.swift */; };
 		4978123B239DB854007DFA9F /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C364239C416900D59DF0 /* LoginViewModelTests.swift */; };
 		4978123C239DB85C007DFA9F /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C365239C416900D59DF0 /* SearchTests.swift */; };
 		4978123E239DCC38007DFA9F /* RefreshCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978123D239DCC38007DFA9F /* RefreshCallTests.swift */; };
-		49781240239DCDC9007DFA9F /* RefreshModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978123F239DCDC9007DFA9F /* RefreshModelsTests.swift */; };
 		49781242239DCE78007DFA9F /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49781241239DCE78007DFA9F /* TestHelpers.swift */; };
 		49781248239DD490007DFA9F /* PagingCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49781247239DD490007DFA9F /* PagingCallTests.swift */; };
 		4978124A239DF285007DFA9F /* SinkThroughTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49781249239DF285007DFA9F /* SinkThroughTests.swift */; };
@@ -43,11 +41,9 @@
 
 /* Begin PBXFileReference section */
 		1CDCE1150B473AE788C4BA83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		491D44E0244A22BA009D6A3A /* ArrayPagingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayPagingTests.swift; sourceTree = "<group>"; };
 		491D44E2244A29F1009D6A3A /* SectionTableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SectionTableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4951271E2416E28700C42ED5 /* TableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4978123D239DCC38007DFA9F /* RefreshCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCallTests.swift; sourceTree = "<group>"; };
-		4978123F239DCDC9007DFA9F /* RefreshModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModelsTests.swift; sourceTree = "<group>"; };
 		49781241239DCE78007DFA9F /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		49781243239DCF2A007DFA9F /* Examples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Examples.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		49781244239DCF2A007DFA9F /* Login.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Login.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -172,7 +168,6 @@
 				498DB66423B03E9100112A46 /* SplashViewModelTests.swift */,
 				49D3C367239C416900D59DF0 /* PagingDelegateTests.swift */,
 				4978123D239DCC38007DFA9F /* RefreshCallTests.swift */,
-				4978123F239DCDC9007DFA9F /* RefreshModelsTests.swift */,
 				49781247239DD490007DFA9F /* PagingCallTests.swift */,
 				49D3C366239C416900D59DF0 /* PagingModelsTests.swift */,
 				49D3C365239C416900D59DF0 /* SearchTests.swift */,
@@ -180,7 +175,6 @@
 				4978124B23A01E21007DFA9F /* ModelViewModelTests.swift */,
 				4978124D23A02F7A007DFA9F /* TableViewModelTests.swift */,
 				4978124F23A02F8C007DFA9F /* ListViewModelTests.swift */,
-				491D44E0244A22BA009D6A3A /* ArrayPagingTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -356,6 +350,7 @@
 				"${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework",
 				"${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework",
 				"${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework",
+				"${BUILT_PRODUCTS_DIR}/Slippers/Slippers.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -365,6 +360,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LithoOperators.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlaygroundVCHelpers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Prelude.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Slippers.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -413,10 +409,8 @@
 				4978123B239DB854007DFA9F /* LoginViewModelTests.swift in Sources */,
 				49781248239DD490007DFA9F /* PagingCallTests.swift in Sources */,
 				4978123E239DCC38007DFA9F /* RefreshCallTests.swift in Sources */,
-				49781240239DCDC9007DFA9F /* RefreshModelsTests.swift in Sources */,
 				4978123C239DB85C007DFA9F /* SearchTests.swift in Sources */,
 				4978123A239DB850007DFA9F /* PagingDelegateTests.swift in Sources */,
-				491D44E1244A22BA009D6A3A /* ArrayPagingTests.swift in Sources */,
 				4978124E23A02F7A007DFA9F /* TableViewModelTests.swift in Sources */,
 				49781239239DB84C007DFA9F /* PagingModelsTests.swift in Sources */,
 				4978124C23A01E21007DFA9F /* ModelViewModelTests.swift in Sources */,
