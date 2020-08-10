@@ -1,4 +1,6 @@
 import UIKit
+import fuikit
+
 import PlaygroundSupport
 @testable import LUX
 @testable import FunNet
@@ -93,7 +95,7 @@ vc.refreshableModelManager = refreshManager
 
 let viewModel = LUXModelListViewModel(modelsPublisher: modelsSignal, modelToItem: reignToItem(onTap: onTap))
 vc.viewModel = viewModel
-vc.tableViewDelegate = LUXFunctionalTableDelegate(onSelect: viewModel.dataSource.tappableOnSelect)
+vc.tableViewDelegate = FUITableViewDelegate(onSelect: viewModel.dataSource.tappableOnSelect)
 
 PlaygroundPage.current.liveView = nc
 PlaygroundPage.current.needsIndefiniteExecution = true

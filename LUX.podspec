@@ -30,11 +30,11 @@ Pod::Spec.new do |s|
   s.subspec 'Base' do |sp|
     sp.source_files = 'LUX/Classes/Base/**/*.swift'
     sp.resources = 'LUX/Classes/Base/**/*.xib'
-    
     sp.dependency 'Prelude', '~> 3.0'
     sp.dependency 'FlexDataSource'
     sp.dependency 'LithoOperators'
     sp.dependency 'FunNet/Core'
+    sp.dependency 'fuikit'
   end
   
   s.subspec 'Utilities' do |sp|

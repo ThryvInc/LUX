@@ -7,7 +7,11 @@ import Prelude
 import FlexDataSource
 import LithoOperators
 import PlaygroundVCHelpers
+import fuikit
 
+NSSetUncaughtExceptionHandler { exception in
+    print("💥 Exception thrown: \(exception)")
+}
 //Models
 enum House: String, Codable, CaseIterable {
     case phoenix, dragon, lyorn, tiassa, hawk, dzur, issola, tsalmoth, vallista, jhereg, iorich, chreotha, yendi, orca, teckla, jhegaala, athyra
@@ -67,7 +71,7 @@ let reignConfigurator: (Reign, DetailTableViewCell) -> Void = { reign, cell in
 }
 
 //setup
-let vc = LUXFunctionalTableViewController.makeFromXIB()
+let vc =  FUITableViewViewController.makeFromXIB()
 let nc = UINavigationController(rootViewController: vc)
 
 let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())

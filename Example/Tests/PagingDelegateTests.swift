@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import fuikit
 @testable import LUX
 @testable import FunNet
 
@@ -22,7 +23,7 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXFunctionalTableDelegate()
+        let delegate = FUITableViewDelegate()
         delegate.onWillDisplay = pageManager.willDisplayFunction()
         
         let tv = MockTableView()
@@ -41,7 +42,7 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXFunctionalTableDelegate()
+        let delegate = FUITableViewDelegate()
         delegate.onWillDisplay = pageManager.willDisplayFunction()
         
         let tv = MockTableView()
@@ -60,7 +61,7 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXFunctionalTableDelegate()
+        let delegate = FUITableViewDelegate()
         delegate.onWillDisplay = pageManager.willDisplayFunction()
         
         let tv = MockTableView()
@@ -79,7 +80,7 @@ class PagingDelegateTests: XCTestCase {
             wasCalled = true
         })
         
-        let delegate = LUXFunctionalTableDelegate()
+        let delegate = FUITableViewDelegate()
         delegate.onWillDisplay = pageManager.willDisplayFunction()
         
         let tv = MockTableView()
