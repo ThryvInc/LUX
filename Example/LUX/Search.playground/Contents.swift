@@ -1,4 +1,5 @@
 import UIKit
+import fuikit
 import PlaygroundSupport
 @testable import LUX
 @testable import FunNet
@@ -91,7 +92,7 @@ vc.refreshableModelManager = refreshManager
 
 let viewModel = LUXModelListViewModel(modelsPublisher: searcher.filteredIncrementalPublisher(from: modelsSignal), modelToItem: buildHouseConfigurator >>> configuratorToItem)
 vc.viewModel = viewModel
-vc.tableViewDelegate = LUXFunctionalTableDelegate(onSelect: viewModel.dataSource.tappableOnSelect)
+vc.tableViewDelegate = FUITableViewDelegate(onSelect: viewModel.dataSource.tappableOnSelect)
 
 PlaygroundPage.current.liveView = vc
 PlaygroundPage.current.needsIndefiniteExecution = true

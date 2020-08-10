@@ -1,5 +1,5 @@
 PODS:
-  - FlexDataSource (0.1.0)
+  - FlexDataSource (0.1.1)
   - fuikit (0.1.0)
   - FunNet/Combine (0.0.1):
     - FunNet/Core
@@ -53,7 +53,7 @@ PODS:
 
 DEPENDENCIES:
   - FlexDataSource (from `https://github.com/ThryvInc/flex-data-source`)
-  - fuikit (from `https://github.com/ThryvInc/fuikit`, branch `origin/eddy/name-change`)
+  - fuikit (from `https://github.com/ThryvInc/fuikit`)
   - FunNet/Combine (from `https://github.com/schrockblock/funnet`)
   - LithoOperators (from `https://github.com/ThryvInc/LithoOperators`)
   - LUX (from `../`)
@@ -67,7 +67,6 @@ EXTERNAL SOURCES:
   FlexDataSource:
     :git: https://github.com/ThryvInc/flex-data-source
   fuikit:
-    :branch: origin/eddy/name-change
     :git: https://github.com/ThryvInc/fuikit
   FunNet:
     :git: https://github.com/schrockblock/funnet
@@ -80,30 +79,30 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FlexDataSource:
-    :commit: 327c48129a20906c978b9420473cd35779fccf7e
+    :commit: c6c4b89cbf91a395d517e891aae67a32170aab8e
     :git: https://github.com/ThryvInc/flex-data-source
   fuikit:
-    :commit: 1a0d238673354a5100e0fcd523ea96e38b19ef5b
+    :commit: 9091e3918432d48d986ee7e266df543794faf2dd
     :git: https://github.com/ThryvInc/fuikit
   FunNet:
-    :commit: 421395a64a5e70853dde6c1c9f59ea762a4ad1cf
+    :commit: e56bc9bdb94db1df53f6a84c4041b2dc72bbd6cb
     :git: https://github.com/schrockblock/funnet
   LithoOperators:
-    :commit: 9842f69967e5f16b4782b18c6ff3057ae23fff6d
+    :commit: 02373c43292c098a6d57bbaf47260a2a6ae2649f
     :git: https://github.com/ThryvInc/LithoOperators
   PlaygroundVCHelpers:
     :commit: 1b1f5ed572a1965e1d52bbc1b21f3796a6f144e2
     :git: https://github.com/ThryvInc/playground-vc-helpers
 
 SPEC CHECKSUMS:
-  FlexDataSource: 77c91077c71a09624a3999054bf1d2ad7745ca0b
+  FlexDataSource: 03e287688dcd2a8cd2b51c73dcebdb4e8a2cdb64
   fuikit: d63a03b02599720f690f3a7cc063289d5656a59b
-  FunNet: 08de074e98b1bc00a6340f1316e4deb07056462c
-  LithoOperators: 4c48d2951a4999d9c3ac194d44933782710c5201
+  FunNet: d3a58cf3092d9ec4c9ca9338c4f20fcc7e0eebad
+  LithoOperators: 32d71d8b556291ee1e6abe7dd44a4f1a4c3653c4
   LUX: 66fa2a63651a00f60bdc12b77209a667acd66bea
   PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
 
-PODFILE CHECKSUM: 23bb433dc3d1109778cf51ac3fbd3d0e6498a6ff
+PODFILE CHECKSUM: a6868316a6bc5ac816e4061ce1b4e7157d804f61
 
 COCOAPODS: 1.8.4

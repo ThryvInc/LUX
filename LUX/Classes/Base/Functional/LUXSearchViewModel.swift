@@ -6,33 +6,27 @@
 //
 
 import UIKit
+import LithoOperators
+import fuikit
 
-open class LUXSearchViewModel<U>: NSObject, UISearchBarDelegate {
+open class LUXSearchViewModel<U>: NSObject {
     open var onIncrementalSearch: (String) -> Void = { _ in }
     open var onFullSearch: (String) -> Void = { _ in }
     open var savedSearch: String?
+    open var searchBarDelegate = FUISearchBarDelegate()
     
-    //MARK: - search
-    
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        onIncrementalSearch(searchText)
-    }
-    
-    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+    public override init() {
+        super.init()
         
-        if let searchText = searchBar.text {
-            onFullSearch(searchText)
-        }
+        searchBarDelegate.onSearchBarTextDidEndEditing = resignSearchBarResponder(_:)
+        searchBarDelegate.onSearchBarTextDidChange = ignoreFirstArg(f: onIncrementalSearch)
+        searchBarDelegate.onSearchBarCancelButtonClicked = resignSearchBarResponder(_:)
+        searchBarDelegate.onSearchBarSearchButtonClicked = resignSearchBarResponder(_:) <> (^\UISearchBar.text >?> onFullSearch)
     }
-    
-    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    
-    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
+}
+
+public func resignSearchBarResponder(_ searchBar: UISearchBar){
+    searchBar.resignFirstResponder()
 }
 
 public func lowercased(string: String) -> String { return string.lowercased() }

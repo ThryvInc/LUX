@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import fuikit
 import LithoOperators
 import Prelude
 
@@ -26,7 +27,7 @@ open class LUXSearchViewController<T, U>: LUXFlexViewController<T> {
             tableView?.alpha = 0
         }
         
-        searchBar?.delegate = searchViewModel
+        searchBar?.delegate = searchViewModel?.searchBarDelegate
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
