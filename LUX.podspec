@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LUX'
-    s.version          = '0.1.2'
+    s.version          = '0.2.0'
     s.summary          = 'LUX contains everything you need to create a simple app.'
 
     s.description      = <<-DESC
@@ -35,6 +35,7 @@ Pod::Spec.new do |s|
     sp.dependency 'LithoOperators'
     sp.dependency 'FunNet/Core'
     sp.dependency 'fuikit'
+    sp.dependency 'Slippers'
   end
   
   s.subspec 'Utilities' do |sp|
@@ -67,6 +68,7 @@ Pod::Spec.new do |s|
     
     sp.dependency 'LUX/Auth'
     sp.dependency 'FunNet/Core'
+    sp.dependency 'Slippers'
   end
   
   s.subspec 'TableViews' do |sp|

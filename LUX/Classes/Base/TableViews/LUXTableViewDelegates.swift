@@ -44,17 +44,3 @@ public extension FlexDataSource {
         }
     }
 }
-
-public extension Pageable {
-    func willDisplayFunction(pageSize: Int = 20, pageTrigger: Int = 5) -> (UITableViewCell, UITableView, IndexPath) -> Void {
-        return { (cell: UITableViewCell, tableView: UITableView, indexPath: IndexPath) in
-            let previousIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
-            if tableView.indexPathsForVisibleRows?.contains(previousIndexPath) == true {
-                let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
-                if numberOfRows - indexPath.row == pageTrigger && numberOfRows % pageSize == 0  {
-                    self.nextPage()
-                }
-            }
-        }
-    }
-}

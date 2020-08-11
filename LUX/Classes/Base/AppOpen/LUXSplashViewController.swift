@@ -14,23 +14,23 @@ open class LUXSplashViewController: FUIViewController {
     @IBOutlet open weak var logoImageView: UIImageView?
     @IBOutlet open weak var activityIndicator: UIActivityIndicatorView?
     
-    public var viewModel: LUXSplashProtocol?
+    public var viewModel: LUXSplashInputs?
 
     override open func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel?.inputs.viewDidLoad()
+        viewModel?.viewDidLoad()
     }
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        viewModel?.inputs.viewWillAppear()
+        viewModel?.viewWillAppear()
     }
     
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        viewModel?.inputs.viewDidAppear()
+        viewModel?.viewDidAppear()
     }
 }

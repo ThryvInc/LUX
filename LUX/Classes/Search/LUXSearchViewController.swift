@@ -30,6 +30,7 @@ open class LUXSearchViewController<T, U>: LUXFlexViewController<T> {
         searchBar?.delegate = searchViewModel?.searchBarDelegate
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     

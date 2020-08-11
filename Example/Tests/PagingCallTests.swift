@@ -21,7 +21,7 @@ class PagingCallTests: XCTestCase {
             wasCalled = true
         }
         
-        let manager = LUXPageableModelManager(call, firstPageValue: 1)
+        let manager = LUXCallPager(call)
         
         XCTAssert(!wasCalled)
         
@@ -35,7 +35,7 @@ class PagingCallTests: XCTestCase {
             wasCalled = true
         }
         
-        let manager = LUXPageableModelManager(call, firstPageValue: 1)
+        let manager = LUXCallPager(call)
         
         XCTAssert(!wasCalled)
         XCTAssertNotNil(manager.onPageUpdate)
@@ -44,7 +44,7 @@ class PagingCallTests: XCTestCase {
     func testRefresh() {
         var wasCalled = false
         
-        let manager = LUXPageableModelManager(call, firstPageValue: 1)
+        let manager = LUXCallPager(firstPageValue: 1, call)
         
         call.firingFunc = { _ in
             wasCalled = true
@@ -60,7 +60,7 @@ class PagingCallTests: XCTestCase {
         var wasCalled = false
         var callCount = 0
         
-        let manager = LUXPageableModelManager(call, firstPageValue: 1)
+        let manager = LUXCallPager(firstPageValue: 1, call)
         
         call.firingFunc = { _ in
             wasCalled = true
@@ -82,7 +82,7 @@ class PagingCallTests: XCTestCase {
     func testRefreshAfterNextPage() {
         var wasCalled = false
         
-        let manager = LUXPageableModelManager(call, firstPageValue: 1)
+        let manager = LUXCallPager(firstPageValue: 1, call)
         
         call.firingFunc = { _ in
             wasCalled = true
