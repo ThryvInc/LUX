@@ -94,7 +94,7 @@ class PagingDelegateTests: XCTestCase {
     }
 }
 
-class MockPageManager: LUXPageableModelManager {
+class MockPageManager: LUXCallPager {
     var nextPageCalled: () -> Void
     
     init(_ nextPageCalled: @escaping () -> Void) {

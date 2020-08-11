@@ -6,16 +6,13 @@
 //
 
 import FunNet
+import Slippers
 
-open class LUXRefreshableNetworkCallManager: Refreshable {
+open class LUXRefreshableNetworkCallManager: Refresher {
     open var call: Fireable?
     
     public init(_ call: Fireable) {
+        super.init(call.fire)
         self.call = call
     }
-    
-    open func refresh() {
-        call?.fire()
-    }
-    
 }

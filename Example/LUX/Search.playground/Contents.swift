@@ -1,6 +1,7 @@
 import UIKit
 import fuikit
 import PlaygroundSupport
+import Slippers
 @testable import LUX
 @testable import FunNet
 import Prelude
@@ -56,7 +57,7 @@ class DetailTableViewCell: UITableViewCell {
 
 //model manipulation functions -------------------------------------------------------------------------------------
 let capitalizeFirstLetter: (String) -> String = { $0.prefix(1).uppercased() + $0.lowercased().dropFirst() }
-let parseCycle: (Data) -> Cycle? = { try? LUXJsonProvider.jsonDecoder.decode(Cycle.self, from: $0) }
+let parseCycle: (Data) -> Cycle? = { try? JsonProvider.jsonDecoder.decode(Cycle.self, from: $0) }
 let houseToString: (House) -> String = { String(describing: $0) }
 let reignToHouseString: (Reign) -> String = ^\Reign.house >>> houseToString >>> capitalizeFirstLetter
 
@@ -87,7 +88,7 @@ vc.searchViewModel?.onIncrementalSearch = { text in
     searcher.updateIncrementalSearch(text: text)
 }
 
-let refreshManager = LUXRefreshCallModelsManager<Reign>(call, modelsSignal)
+let refreshManager = LUXRefreshableNetworkCallManager(call)
 vc.refreshableModelManager = refreshManager
 
 let viewModel = LUXModelListViewModel(modelsPublisher: searcher.filteredIncrementalPublisher(from: modelsSignal), modelToItem: buildHouseConfigurator >>> configuratorToItem)
