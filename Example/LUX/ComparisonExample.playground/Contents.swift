@@ -61,7 +61,7 @@ class DetailTableViewCell: UITableViewCell {
 
 class ComparisonTableViewController: UITableViewController {
     var cancelBag = Set<AnyCancellable?>()
-    let call = CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint())
+    var shouldStub = true
     var reigns = [Reign]() {
         didSet {
             self.tableView.reloadData()
@@ -81,21 +81,35 @@ class ComparisonTableViewController: UITableViewController {
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
-        // stubbing
-        call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
-        
-        cancelBag.insert(call.responder?.$data
-            .compactMap({ $0 })
-            .compactMap({
+        let urlString = "https://lithobyte.co/api/v1/endpoint"
+        if let url = URL(string: urlString) {
+            let request = MutableURLRequest(url: url)
+            let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+            let handleCycleData: (Data) -> Void = {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 decoder.dateDecodingStrategy = .iso8601
-                return try? decoder.decode(Cycle.self, from: $0)
-            }).sink {
-                self.title = "\($0.ordinal ?? 0)th Cycle"
-                self.reigns = $0.reigns
-                self.tableView.refreshControl?.endRefreshing()
-        })
+                if let cycle = try? decoder.decode(Cycle.self, from: $0) {
+                    self.title = "\(cycle.ordinal ?? 0)th Cycle"
+                    self.reigns = cycle.reigns
+                    self.tableView.refreshControl?.endRefreshing()
+                }
+            }
+            let completion: (Data?, URLResponse?, Error?) -> Void = {
+                if let data = $0 {
+                    handleCycleData(data)
+                }
+            }
+            let task = session.dataTask(with: request, completionHandler: completion)
+            tableView.refreshControl?.startRefreshing()
+            if shouldStub {
+                if let data = json.data(using: .utf8) {
+                    handleCycleData(data)
+                }
+            } else {
+                task.resume()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
