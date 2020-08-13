@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LUX'
-    s.version          = '0.2.0'
+    s.version          = '0.2.1'
     s.summary          = 'LUX contains everything you need to create a simple app.'
-
+    s.swift_versions   = ['4.0', '4.1', '4.2', '5.0', '5.1', '5.2']
     s.description      = <<-DESC
   There's a bunch of really cool stuff in this pod, all targeted at letting you build the things that are *different* about your app, not the reproducing the same things over and over. Customizable, extendable, bare bones implementations of common UX components like splash, login, creds creation, commenting, and view/edit profile screens, an app delegate implementation that sets up fabric and crashlytics for you, a simple framework for handling user sessions, a material design based controller for table views... and more coming!
                          DESC
