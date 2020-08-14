@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LUX'
-    s.version          = '0.2.1'
+    s.version          = '0.2.2'
     s.summary          = 'LUX contains everything you need to create a simple app.'
     s.swift_versions   = ['4.0', '4.1', '4.2', '5.0', '5.1', '5.2']
     s.description      = <<-DESC

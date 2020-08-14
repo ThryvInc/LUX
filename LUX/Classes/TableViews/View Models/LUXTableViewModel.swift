@@ -15,7 +15,7 @@ import Prelude
 import LithoOperators
 
 open class LUXTableViewModel {
-    public var cancelBag = Set<AnyCancellable?>()
+    public var cancelBag = Set<AnyCancellable>()
     public var dataSource: UITableViewDataSource? { didSet { didSetDataSource() }}
     public var tableDelegate: UITableViewDelegate? { didSet { didSetTableDelegate() }}
     
@@ -59,23 +59,23 @@ open class LUXRefreshableTableViewModel: LUXTableViewModel, Refreshable {
 }
 extension LUXRefreshableTableViewModel {
     public func setupEndRefreshing(from call: CombineNetCall) {
-        cancelBag.insert(call.responder?.$data.sink { _ in
+        call.responder?.$data.sink { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.endRefreshing()
             }
-        })
+        }.store(in: &cancelBag)
         
-        cancelBag.insert(call.responder?.$error.sink { _ in
+        call.responder?.$error.sink { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.endRefreshing()
             }
-        })
+        }.store(in: &cancelBag)
         
-        cancelBag.insert(call.responder?.$serverError.sink { _ in
+        call.responder?.$serverError.sink { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.endRefreshing()
             }
-        })
+        }.store(in: &cancelBag)
         
     }
 }
@@ -116,8 +116,8 @@ public func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
         let pageManager = LUXPageCallModelsManager(call, modelPub)
         let modelToItem = configurer >||> LUXModelItem<U, C>.init
         let modelsToItems = modelToItem >||> map
-        let itemsPub = pageManager.$models.dropFirst().map(modelsToItems).eraseToAnyPublisher()
-        let vm = LUXItemsTableViewModel(pageManager, itemsPublisher: itemsPub.map { models in models.map { $0 as FlexDataSourceItem } }.eraseToAnyPublisher())
+        let itemsPub: AnyPublisher<[FlexDataSourceItem], Never> = pageManager.$models.dropFirst().map(modelsToItems).eraseToAnyPublisher()
+        let vm = LUXItemsTableViewModel(pageManager, itemsPublisher: itemsPub)
         if let ds = vm.dataSource as? FlexDataSource {
             let delegate = FUITableViewDelegate()
             delegate.onWillDisplay = pageManager.willDisplayFunction()
@@ -138,8 +138,8 @@ public func refreshableTableViewModel<T, U, C>(_ call: CombineNetCall,
         let refreshManager = LUXRefreshableNetworkCallManager(call)
         let modelToItem = configurer >||> LUXModelItem<U, C>.init
         let modelsToItems = modelToItem >||> map
-        let itemsPub = modelPub.map(modelsToItems).eraseToAnyPublisher()
-        let vm = LUXItemsTableViewModel(refreshManager, itemsPublisher: itemsPub.map { models in models.map { $0 as FlexDataSourceItem } }.eraseToAnyPublisher())
+        let itemsPub: AnyPublisher<[FlexDataSourceItem], Never> = modelPub.map(modelsToItems).eraseToAnyPublisher()
+        let vm = LUXItemsTableViewModel(refreshManager, itemsPublisher: itemsPub)
         if let ds = vm.dataSource as? FlexDataSource {
             let delegate = FUITableViewDelegate()
             delegate.onSelect = ds.itemTapOnSelect(onTap: (optionalCast(object:) >?> ^\LUXModelItem<U, C>.model) >>> (onTap >||> ifExecute))
