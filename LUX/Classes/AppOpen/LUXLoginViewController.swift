@@ -10,6 +10,7 @@ import fuikit
 import Combine
 
 open class LUXLoginViewController: FUIViewController {
+    @IBOutlet open weak var backgroundImageView: UIImageView!
     @IBOutlet open weak var logoImageView: UIImageView?
     @IBOutlet open weak var logoHeight: NSLayoutConstraint!
     @IBOutlet open weak var usernameTextField: UITextField?

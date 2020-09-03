@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LUXCommentTableViewCell: UITableViewCell {
+open class LUXCommentTableViewCell: UITableViewCell {
     @IBOutlet var userImageView: UIImageView!
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
@@ -24,7 +24,7 @@ class LUXCommentTableViewCell: UITableViewCell {
     @IBOutlet var commentBottomMargin: NSLayoutConstraint!
     @IBOutlet var commentRightMargin: NSLayoutConstraint!
     
-    override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

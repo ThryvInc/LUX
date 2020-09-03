@@ -34,3 +34,15 @@ open class LUXTappableModelItem<T, C>: LUXModelItem<T, C>, Tappable where C: UIT
         super.init(model, configurer)
     }
 }
+
+open class LUXSwipeTapModelItem<T, C>: LUXTappableModelItem<T, C>, Swipable where C: UITableViewCell {
+    public var onSwipe: () -> Void
+    
+    public init(model: T,
+                configurer: @escaping (T, C) -> Void,
+                tap: @escaping (T) -> Void,
+                swipe: @escaping () -> Void) {
+        self.onSwipe = swipe
+        super.init(model: model, configurer: configurer, tap: tap)
+    }
+}

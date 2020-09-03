@@ -19,7 +19,6 @@ public protocol LUXLoginInputs {
 }
 
 public protocol LUXLoginOutputs {
-    var submitButtonEnabledSubject: PassthroughSubject<Bool, Never> { get }
     var submitButtonEnabledPublisher: AnyPublisher<Bool, Never> { get }
     var activityIndicatorVisiblePublisher: AnyPublisher<Bool, Never> { get }
     var advanceAuthedPublisher: AnyPublisher<(), Never> { get }
@@ -77,10 +76,11 @@ open class LUXLoginViewModel: LUXLoginProtocol, LUXLoginInputs, LUXLoginOutputs 
             self.credentialLoginCall?.endpoint.postData = try? JsonProvider.jsonEncoder.encode(model)
             self.credentialLoginCall?.fire()
             self.activityIndicatorVisibleSubject.send(true)
-            }.store(in: &cancelBag)
+        }.store(in: &cancelBag)
         
         credentialLoginCall?.responder?.$httpResponse.skipNils().dropFirst().sink(receiveValue: authResponseReceived).store(in: &cancelBag)
         credentialLoginCall?.responder?.$error.skipNils().dropFirst().sink { _ in self.activityIndicatorVisibleSubject.send(false) }.store(in: &cancelBag)
+        credentialLoginCall?.responder?.$response.skipNils().dropFirst().sink { _ in self.activityIndicatorVisibleSubject.send(false) }.store(in: &cancelBag)
     }
     
     open func usernameChanged(username: String?) {

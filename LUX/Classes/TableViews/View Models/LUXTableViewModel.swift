@@ -121,7 +121,7 @@ public func pageableTableViewModel<T, U, C>(_ call: CombineNetCall,
         if let ds = vm.dataSource as? FlexDataSource {
             let delegate = FUITableViewDelegate()
             delegate.onWillDisplay = pageManager.willDisplayFunction()
-            delegate.onSelect = ds.itemTapOnSelect(onTap: (optionalCast(object:) >?> ^\LUXModelItem<U, C>.model) >>> (onTap >||> ifExecute))
+            delegate.onSelect = ds.itemTapOnSelect(onTap: (optionalCast >?> ^\LUXModelItem<U, C>.model) >>> (onTap >||> ifExecute))
             vm.tableDelegate = delegate
         }
         vm.setupEndRefreshing(from: call)
@@ -142,7 +142,7 @@ public func refreshableTableViewModel<T, U, C>(_ call: CombineNetCall,
         let vm = LUXItemsTableViewModel(refreshManager, itemsPublisher: itemsPub)
         if let ds = vm.dataSource as? FlexDataSource {
             let delegate = FUITableViewDelegate()
-            delegate.onSelect = ds.itemTapOnSelect(onTap: (optionalCast(object:) >?> ^\LUXModelItem<U, C>.model) >>> (onTap >||> ifExecute))
+            delegate.onSelect = ds.itemTapOnSelect(onTap: (optionalCast >?> ^\LUXModelItem<U, C>.model) >>> (onTap >||> ifExecute))
             vm.tableDelegate = delegate
         }
         vm.setupEndRefreshing(from: call)

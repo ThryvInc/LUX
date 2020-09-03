@@ -7,12 +7,12 @@
 
 import UIKit
 
-class LUXLeftDetailTableViewCell: UITableViewCell {
+open class LUXLeftDetailTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .value2, reuseIdentifier: reuseIdentifier)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
