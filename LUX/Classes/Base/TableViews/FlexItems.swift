@@ -45,4 +45,12 @@ open class LUXSwipeTapModelItem<T, C>: LUXTappableModelItem<T, C>, Swipable wher
         self.onSwipe = swipe
         super.init(model: model, configurer: configurer, tap: tap)
     }
+    
+    public init(model: T,
+                configurer: @escaping (T, C) -> Void,
+                tap: @escaping (T) -> Void,
+                swipe: @escaping (T) -> Void) {
+        self.onSwipe = voidCurry(model, swipe)
+        super.init(model: model, configurer: configurer, tap: tap)
+    }
 }
