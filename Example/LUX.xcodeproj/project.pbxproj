@@ -56,6 +56,7 @@
 		4978124F23A02F8C007DFA9F /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		498DB66423B03E9100112A46 /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
 		49BD4A4723E9FA0400175EBD /* ComparisonExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ComparisonExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		49CBFADB2540F8250007D7E6 /* CollectionViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CollectionViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		49D3C362239C414700D59DF0 /* config.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = config.yml; path = ../.circleci/config.yml; sourceTree = "<group>"; };
 		49D3C364239C416900D59DF0 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		49D3C365239C416900D59DF0 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		607FACD21AFB9204008FA782 /* Example for LUX */ = {
 			isa = PBXGroup;
 			children = (
+				49CBFADB2540F8250007D7E6 /* CollectionViewModel.playground */,
 				491D44E2244A29F1009D6A3A /* SectionTableViewModel.playground */,
 				4951271E2416E28700C42ED5 /* TableViewModel.playground */,
 				49BD4A4723E9FA0400175EBD /* ComparisonExample.playground */,
@@ -350,6 +352,7 @@
 				"${BUILT_PRODUCTS_DIR}/LithoOperators/LithoOperators.framework",
 				"${BUILT_PRODUCTS_DIR}/PlaygroundVCHelpers/PlaygroundVCHelpers.framework",
 				"${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Slippers/Slippers.framework",
 				"${BUILT_PRODUCTS_DIR}/fuikit/fuikit.framework",
 			);
@@ -361,6 +364,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LithoOperators.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlaygroundVCHelpers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Prelude.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Slippers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fuikit.framework",
 			);

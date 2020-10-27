@@ -143,4 +143,28 @@ class SearchTests: XCTestCase {
         
         XCTAssert(matchesWordsPrefixes(search, text))
     }
+    
+    func testIncrementalSearchDelegate() {
+        let searchViewModel = LUXSearchViewModel<Human>()
+        var wasCalled = false
+        searchViewModel.onIncrementalSearch = { _ in
+            wasCalled = true
+        }
+        if let function = searchViewModel.searchBarDelegate.onSearchBarTextDidChange {
+            function(UISearchBar(), "")
+        }
+        XCTAssert(wasCalled)
+    }
+    
+    func testFullSearchDelegate() {
+        let searchViewModel = LUXSearchViewModel<Human>()
+        var wasCalled = false
+        searchViewModel.onFullSearch = { _ in
+            wasCalled = true
+        }
+        if let function = searchViewModel.searchBarDelegate.onSearchBarSearchButtonClicked {
+            function(UISearchBar())
+        }
+        XCTAssert(wasCalled)
+    }
 }

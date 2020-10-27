@@ -10,8 +10,8 @@ import LithoOperators
 import fuikit
 
 open class LUXSearchViewModel<U>: NSObject {
-    open var onIncrementalSearch: (String) -> Void = { _ in }
-    open var onFullSearch: (String) -> Void = { _ in }
+    open var onIncrementalSearch: (String) -> Void = { _ in } { didSet { assignSearchFunctions() }}
+    open var onFullSearch: (String) -> Void = { _ in }  { didSet { assignSearchFunctions() }}
     open var savedSearch: String?
     open var searchBarDelegate = FUISearchBarDelegate()
     
@@ -19,8 +19,11 @@ open class LUXSearchViewModel<U>: NSObject {
         super.init()
         
         searchBarDelegate.onSearchBarTextDidEndEditing = resignSearchBarResponder(_:)
-        searchBarDelegate.onSearchBarTextDidChange = ignoreFirstArg(f: onIncrementalSearch)
         searchBarDelegate.onSearchBarCancelButtonClicked = resignSearchBarResponder(_:)
+    }
+    
+    open func assignSearchFunctions() {
+        searchBarDelegate.onSearchBarTextDidChange = ignoreFirstArg(f: onIncrementalSearch)
         searchBarDelegate.onSearchBarSearchButtonClicked = resignSearchBarResponder(_:) <> (^\UISearchBar.text >?> onFullSearch)
     }
 }

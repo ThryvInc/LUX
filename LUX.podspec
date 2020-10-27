@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LUX'
-    s.version          = '0.2.4'
+    s.version          = '0.2.5'
     s.summary          = 'LUX contains everything you need to create a simple app.'
     s.swift_versions   = ['4.0', '4.1', '4.2', '5.0', '5.1', '5.2']
     s.description      = <<-DESC
@@ -36,6 +36,7 @@ Pod::Spec.new do |s|
     sp.dependency 'FunNet/Core'
     sp.dependency 'fuikit'
     sp.dependency 'Slippers'
+    sp.dependency 'SDWebImage'
   end
   
   s.subspec 'Utilities' do |sp|
@@ -78,9 +79,24 @@ Pod::Spec.new do |s|
     sp.dependency 'LUX/BaseTableViews'
   end
   
+  s.subspec 'CollectionViews' do |sp|
+    sp.source_files = 'LUX/Classes/CollectionViews/**/*.swift'
+    sp.resources = 'LUX/Classes/CollectionViews/**/*.xib'
+    sp.ios.deployment_target = '13.0'
+    sp.dependency 'LUX/BaseCollectionViews'
+  end
+  
   s.subspec 'BaseTableViews' do |sp|
     sp.source_files = 'LUX/Classes/Base/TableViews/**/*.swift'
     sp.resources = 'LUX/Classes/Base/TableViews/**/*.xib'
+    
+    sp.dependency 'LUX/BaseFunctional'
+    sp.dependency 'FlexDataSource'
+  end
+  
+  s.subspec 'BaseCollectionViews' do |sp|
+    sp.source_files = 'LUX/Classes/Base/CollectionViews/**/*.swift'
+    sp.resources = 'LUX/Classes/Base/CollectionViews/**/*.xib'
     
     sp.dependency 'LUX/BaseFunctional'
     sp.dependency 'FlexDataSource'
