@@ -9,26 +9,26 @@ PODS:
     - LithoOperators
   - LithoOperators (0.0.15):
     - Prelude
-  - LUX (0.2.5):
-    - LUX/AppOpenFlow (= 0.2.5)
-    - LUX/Auth (= 0.2.5)
-    - LUX/Base (= 0.2.5)
-    - LUX/BaseAppOpenFlow (= 0.2.5)
-    - LUX/BaseCollectionViews (= 0.2.5)
-    - LUX/BaseFunctional (= 0.2.5)
-    - LUX/BaseNetworking (= 0.2.5)
-    - LUX/BaseTableViews (= 0.2.5)
-    - LUX/CollectionViews (= 0.2.5)
-    - LUX/Ecommerce (= 0.2.5)
-    - LUX/Networking (= 0.2.5)
-    - LUX/Search (= 0.2.5)
-    - LUX/TableViews (= 0.2.5)
-    - LUX/Utilities (= 0.2.5)
-  - LUX/AppOpenFlow (0.2.5):
+  - LUX (0.2.6):
+    - LUX/AppOpenFlow (= 0.2.6)
+    - LUX/Auth (= 0.2.6)
+    - LUX/Base (= 0.2.6)
+    - LUX/BaseAppOpenFlow (= 0.2.6)
+    - LUX/BaseCollectionViews (= 0.2.6)
+    - LUX/BaseFunctional (= 0.2.6)
+    - LUX/BaseNetworking (= 0.2.6)
+    - LUX/BaseSearch (= 0.2.6)
+    - LUX/BaseTableViews (= 0.2.6)
+    - LUX/CollectionViews (= 0.2.6)
+    - LUX/Networking (= 0.2.6)
+    - LUX/Search (= 0.2.6)
+    - LUX/TableViews (= 0.2.6)
+    - LUX/Utilities (= 0.2.6)
+  - LUX/AppOpenFlow (0.2.6):
     - LUX/Auth
     - LUX/Networking
-  - LUX/Auth (0.2.5)
-  - LUX/Base (0.2.5):
+  - LUX/Auth (0.2.6)
+  - LUX/Base (0.2.6):
     - FlexDataSource
     - fuikit
     - FunNet/Core
@@ -36,33 +36,32 @@ PODS:
     - Prelude (~> 3.0)
     - SDWebImage
     - Slippers
-  - LUX/BaseAppOpenFlow (0.2.5):
+  - LUX/BaseAppOpenFlow (0.2.6):
     - LUX/BaseFunctional
-  - LUX/BaseCollectionViews (0.2.5):
+  - LUX/BaseCollectionViews (0.2.6):
     - FlexDataSource
     - LUX/BaseFunctional
-  - LUX/BaseFunctional (0.2.5)
-  - LUX/BaseNetworking (0.2.5):
+  - LUX/BaseFunctional (0.2.6)
+  - LUX/BaseNetworking (0.2.6):
     - FunNet/Core
     - LUX/Auth
     - Slippers
-  - LUX/BaseTableViews (0.2.5):
+  - LUX/BaseSearch (0.2.6):
+    - LUX/BaseFunctional
+  - LUX/BaseTableViews (0.2.6):
     - FlexDataSource
     - LUX/BaseFunctional
-  - LUX/CollectionViews (0.2.5):
+  - LUX/CollectionViews (0.2.6):
     - LUX/BaseCollectionViews
-  - LUX/Ecommerce (0.2.5):
-    - LUX/CollectionViews
-    - LUX/Search
-    - PlaygroundVCHelpers
-  - LUX/Networking (0.2.5):
+  - LUX/Networking (0.2.6):
     - FunNet/Combine
     - LUX/BaseNetworking
-  - LUX/Search (0.2.5):
+  - LUX/Search (0.2.6):
+    - LUX/BaseSearch
     - LUX/TableViews
-  - LUX/TableViews (0.2.5):
+  - LUX/TableViews (0.2.6):
     - LUX/BaseTableViews
-  - LUX/Utilities (0.2.5):
+  - LUX/Utilities (0.2.6):
     - Prelude (~> 3.0)
   - PlaygroundVCHelpers (0.0.2)
   - Prelude (3.0.0)
@@ -109,7 +108,7 @@ CHECKOUT OPTIONS:
     :commit: 19d514bd7f9278645973d1811cd867ebe8e8c696
     :git: https://github.com/ThryvInc/fuikit
   FunNet:
-    :commit: e56bc9bdb94db1df53f6a84c4041b2dc72bbd6cb
+    :commit: 4e2c037ed371f1780b81c94bbe4287dc9297b55e
     :git: https://github.com/schrockblock/funnet
   LithoOperators:
     :commit: b2ad9e7bf37efebe935c661f6dbb7c1b0a16acd6
@@ -124,9 +123,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   FlexDataSource: 411e77d3a933d71ae3094e3d4d6ccedd3419f29e
   fuikit: 9e4c918280be6b292e4564564dd11495e5f91861
-  FunNet: d3a58cf3092d9ec4c9ca9338c4f20fcc7e0eebad
+  FunNet: c7da8924cc8ec1f4b7126b2ad1f8c3f35b8a9e7a
   LithoOperators: ce63ed2535e2fa279d521eb76ac3d23743a3fdc6
-  LUX: 00f135aca62815017f3563c238ef114751946b12
+  LUX: ef2b680663684f3bf7339c2009d2e6df05db3e98
   PlaygroundVCHelpers: c7cc8994d2851ebd1590217101b4c6888d1c9cc8
   Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1

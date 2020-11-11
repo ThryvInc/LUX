@@ -8,7 +8,11 @@
 import FunNet
 import Slippers
 
-open class LUXRefreshableNetworkCallManager: Refresher {
+public protocol CallManager {
+    var call: Fireable? { get set }
+}
+
+open class LUXRefreshableNetworkCallManager: Refresher, CallManager {
     open var call: Fireable?
     
     public init(_ call: Fireable) {

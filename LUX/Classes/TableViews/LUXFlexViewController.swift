@@ -16,7 +16,7 @@ open class LUXFlexViewController<T>: FUIViewController, Refreshable {
     @IBOutlet public var tableView: UITableView?
     open var tableViewDelegate: FUITableViewDelegate? { didSet { didSetTableDelegate() }}
     open var viewModel: T? { didSet { didSetViewModel() }}
-    open var refreshableModelManager: LUXRefreshableNetworkCallManager? {
+    open var refreshableModelManager: (Refreshable & CallManager)? {
         didSet {
             if let call = refreshableModelManager?.call as? CombineNetCall {
                 indicatingCall = call
