@@ -74,4 +74,8 @@ open class LUXSearchViewController<T, U>: LUXFlexViewController<T> {
             shouldRefresh = true
         }
     }
+    
+    open func clearSearchBar() {
+        searchBar?.text = ""
+    }
 }

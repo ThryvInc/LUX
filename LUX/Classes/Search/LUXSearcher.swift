@@ -11,7 +11,7 @@ import LithoOperators
 import Slippers
 import FunNet
 
-open class LUXSearcher<T> {
+open class LUXSearcher<T>: LUXSearchable {
     @Published public var incrementalSearchText: String?
     @Published public var searchText: String?
     open var isIncluded: (String?, T) -> Bool
@@ -79,17 +79,5 @@ extension LUXSearcher {
     }
     open func filteredIncrementalPublisher(from modelsPublisher: AnyPublisher<[T], Never>) -> AnyPublisher<[T], Never> {
         return $incrementalSearchText.combineLatest(modelsPublisher).map(filter(tuple:)).eraseToAnyPublisher()
-    }
-}
-
-public func defaultOnSearch<T>(_ searcher: LUXSearcher<T>, _ call: CombineNetCall, _ refresher: Refreshable? = nil, paramName: String = "query") -> (String) -> Void {
-    return { text in
-        searcher.updateSearch(text: text)
-        call.endpoint.getParams.updateValue(text, forKey: paramName)
-        if let refresher = refresher {
-            refresher.refresh()
-        } else {
-            call.fire()
-        }
     }
 }

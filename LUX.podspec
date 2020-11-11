@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LUX'
-    s.version          = '0.2.5'
+    s.version          = '0.2.6'
     s.summary          = 'LUX contains everything you need to create a simple app.'
     s.swift_versions   = ['4.0', '4.1', '4.2', '5.0', '5.1', '5.2']
     s.description      = <<-DESC
@@ -117,11 +117,19 @@ Pod::Spec.new do |s|
     sp.dependency 'LUX/BaseFunctional'
   end
   
+  s.subspec 'BaseSearch' do |sp|
+    sp.source_files = 'LUX/Classes/Base/Search/**/*.swift'
+    sp.resources = 'LUX/Classes/Base/Search/**/*.xib'
+    
+    sp.dependency 'LUX/BaseFunctional'
+  end
+  
   s.subspec 'Search' do |sp|
     sp.source_files = 'LUX/Classes/Search/**/*.swift'
     sp.resources = 'LUX/Classes/Search/**/*.xib'
     sp.ios.deployment_target = '13.0'
     sp.dependency 'LUX/TableViews'
+    sp.dependency 'LUX/BaseSearch'
   end
   
 end

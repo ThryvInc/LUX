@@ -10,6 +10,8 @@ import XCTest
 import Combine
 @testable import LUX
 import LithoOperators
+import FunNet
+import Slippers
 
 class SearchTests: XCTestCase {
 
@@ -144,6 +146,64 @@ class SearchTests: XCTestCase {
         XCTAssert(matchesWordsPrefixes(search, text))
     }
     
+    func testDefaultSearchAddsParam() {
+        let searcher = Searcher()
+        let call = FunNetCall(configuration: ServerConfiguration(host: "", apiRoute: ""), Endpoint())
+        call.firingFunc = { _ in }
+        let search = defaultOnSearch(searcher, call, paramName: "search")
+        
+        search("hullo")
+        
+        XCTAssertEqual(call.endpoint.getParams["search"] as? String, "hullo")
+    }
+    
+    func testDefaultSearchFiresCall() {
+        var wasFired = false
+        let searcher = Searcher()
+        let call = FunNetCall(configuration: ServerConfiguration(host: "", apiRoute: ""), Endpoint())
+        call.firingFunc = { _ in wasFired = true }
+        let search = defaultOnSearch(searcher, call, paramName: "search")
+        
+        search("hullo")
+        
+        XCTAssertTrue(wasFired)
+    }
+    
+    func testDefaultSearchRefreshes() {
+        var wasFired = false
+        var wasCalled = false
+        let searcher = Searcher()
+        let call = FunNetCall(configuration: ServerConfiguration(host: "", apiRoute: ""), Endpoint())
+        call.firingFunc = { _ in wasFired = true }
+        let refresher = Refresher { wasCalled = true }
+        let search = defaultOnSearch(searcher, call, refresher, paramName: "search")
+        
+        search("hullo")
+        XCTAssertEqual(call.endpoint.getParams["search"] as? String, "hullo")
+        XCTAssertTrue(wasCalled)
+        XCTAssertFalse(wasFired)
+        
+    }
+    func testDefaultSearchRemovesParam() {
+        var wasFired = false
+        let searcher = Searcher()
+        let call = FunNetCall(configuration: ServerConfiguration(host: "", apiRoute: ""), Endpoint())
+        call.firingFunc = { _ in wasFired = true }
+        let search = defaultOnSearch(searcher, call, paramName: "search")
+        
+        search("hullo")
+        
+        XCTAssertEqual(call.endpoint.getParams["search"] as? String, "hullo")
+        XCTAssert(wasFired)
+        
+        wasFired = false
+        
+        search("")
+        
+        XCTAssert(wasFired)
+        XCTAssertNil(call.endpoint.getParams["search"])
+    }
+    
     func testIncrementalSearchDelegate() {
         let searchViewModel = LUXSearchViewModel<Human>()
         var wasCalled = false
@@ -166,5 +226,18 @@ class SearchTests: XCTestCase {
             function(UISearchBar())
         }
         XCTAssert(wasCalled)
+    }
+}
+
+class Searcher: LUXSearchable {
+    var onIncUpdate: ((String?) -> Void)?
+    var onSearchUpdate: ((String?) -> Void)?
+    
+    func updateIncrementalSearch(text: String?) {
+        onIncUpdate?(text)
+    }
+    
+    func updateSearch(text: String?) {
+        onSearchUpdate?(text)
     }
 }
