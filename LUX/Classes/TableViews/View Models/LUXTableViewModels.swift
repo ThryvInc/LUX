@@ -1,5 +1,5 @@
 //
-//  LUXTableViewModel.swift
+//  LUXTableViewModels.swift
 //  LUX
 //
 //  Created by Elliot Schrock on 3/9/20.
@@ -14,27 +14,8 @@ import FlexDataSource
 import Prelude
 import LithoOperators
 
-open class LUXTableViewModel {
-    public var cancelBag = Set<AnyCancellable>()
-    public var dataSource: UITableViewDataSource? { didSet { didSetDataSource() }}
-    public var tableDelegate: UITableViewDelegate? { didSet { didSetTableDelegate() }}
-    
-    public var tableView: UITableView? { didSet { configureTableView() }}
-    
-    public init() {}
-    
-    open func didSetDataSource() { configureTableView() }
-    open func didSetTableDelegate() { configureTableView() }
-    open func configureTableView() {
-        tableView?.dataSource = dataSource
-        if let ds = dataSource as? FlexDataSource {
-            ds.tableView = tableView
-        }
-        tableView?.delegate = tableDelegate
-    }
-}
-
 open class LUXRefreshableTableViewModel: LUXTableViewModel, Refreshable {
+    public var cancelBag = Set<AnyCancellable>()
     public var refresher: Refreshable
     
     public init(_ refresher: Refreshable) {
