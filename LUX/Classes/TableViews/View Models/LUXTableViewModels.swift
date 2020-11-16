@@ -66,7 +66,8 @@ extension LUXRefreshableTableViewModel {
     }
 }
 
-open class LUXSectionsTableViewModel: LUXRefreshableTableViewModel {
+open class LUXSectionsTableViewModel: LUXRefreshableTableViewModel, LUXDataSourceProvider {
+    public var flexDataSource = FlexDataSource() { didSet { dataSource = flexDataSource }}
     public var sectionsPublisher: AnyPublisher<[FlexDataSourceSection], Never>
     
     public init(_ refresher: Refreshable,
@@ -74,13 +75,12 @@ open class LUXSectionsTableViewModel: LUXRefreshableTableViewModel {
         self.sectionsPublisher = sectionsPublisher
         
         super.init(refresher)
-        
-        let dataSource = FlexDataSource()
-        cancelBag.insert(self.sectionsPublisher.sink {
-            dataSource.sections = $0
-            dataSource.tableView?.reloadData()
+
+        cancelBag.insert(self.sectionsPublisher.sink { [weak self] in
+            self?.flexDataSource.sections = $0
+            self?.flexDataSource.tableView?.reloadData()
         })
-        self.dataSource = dataSource
+        self.dataSource = flexDataSource
     }
 }
 

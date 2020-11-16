@@ -11,19 +11,19 @@ import Prelude
 import Combine
 
 public protocol LUXDataSourceProvider {
-    var dataSource: FlexDataSource { get }
+    var flexDataSource: FlexDataSource { get }
 }
 
 open class LUXModelListViewModel<T>: LUXModelTableViewModel<T>, LUXDataSourceProvider {
-    public let dataSource: FlexDataSource
+    public let flexDataSource: FlexDataSource
     
     public override init(modelsPublisher: AnyPublisher<[T], Never>, modelToItem: @escaping (T) -> FlexDataSourceItem) {
-        dataSource = FlexDataSource()
+        flexDataSource = FlexDataSource()
         super.init(modelsPublisher: modelsPublisher, modelToItem: modelToItem)
         
         cancelBag.insert(self.sectionsPublisher.sink {
-            self.dataSource.sections = $0
-            self.dataSource.tableView?.reloadData()
+            self.flexDataSource.sections = $0
+            self.flexDataSource.tableView?.reloadData()
         })
     }
 }

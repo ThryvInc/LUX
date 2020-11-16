@@ -9,8 +9,8 @@ import FlexDataSource
 import Slippers
 
 open class LUXTableViewModel {
-    public var dataSource: UITableViewDataSource? { didSet { didSetDataSource() }}
-    public var tableDelegate: UITableViewDelegate? { didSet { didSetTableDelegate() }}
+    open var dataSource: UITableViewDataSource? { didSet { didSetDataSource() }}
+    open var tableDelegate: UITableViewDelegate? { didSet { didSetTableDelegate() }}
     
     public var tableView: UITableView? { didSet { configureTableView() }}
     
