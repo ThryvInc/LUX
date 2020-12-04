@@ -62,31 +62,38 @@ open class LUXMultiHeaderDefaultsSession: LUXSession {
     }
 }
 
-open class LUXUserDefaultsSession: LUXSession {
+open class LUXAppGroupUserDefaultsSession: LUXSession {
     public let host: String
     public let authHeaderKey: String
+    public let userDefaults: UserDefaults
     
-    public init(host: String, authHeaderKey: String) {
+    public init(host: String, authHeaderKey: String, userDefaults: UserDefaults = UserDefaults.standard) {
         self.host = host
         self.authHeaderKey = authHeaderKey
+        self.userDefaults = userDefaults
     }
     
     open func authHeaders() -> [String: String]? {
-        return [authHeaderKey: UserDefaults.standard.string(forKey: host) ?? ""]
+        return [authHeaderKey: userDefaults.string(forKey: host) ?? ""]
     }
     
     open func setAuthValue(authString: String) {
-        UserDefaults.standard.set(authString, forKey: host)
-        UserDefaults.standard.synchronize()
+        userDefaults.set(authString, forKey: host)
+        userDefaults.synchronize()
     }
 
     open func clearAuthValue() {
-        UserDefaults.standard.removeObject(forKey: host)
+        userDefaults.removeObject(forKey: host)
     }
     
     open func isAuthenticated() -> Bool {
-        let apiKey = UserDefaults.standard.string(forKey: host)
+        let apiKey = userDefaults.string(forKey: host)
         return apiKey != nil && apiKey != ""
     }
 }
 
+open class LUXUserDefaultsSession: LUXAppGroupUserDefaultsSession {
+    public init(host: String, authHeaderKey: String) {
+        super.init(host: host, authHeaderKey: authHeaderKey)
+    }
+}
