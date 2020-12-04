@@ -139,13 +139,6 @@ class SearchTests: XCTestCase {
         cancel.cancel()
     }
     
-    func testWordPrefixes() {
-        let search = "N A"
-        let text = "Neo Anderson"
-        
-        XCTAssert(matchesWordsPrefixes(search, text))
-    }
-    
     func testDefaultSearchAddsParam() {
         let searcher = Searcher()
         let call = FunNetCall(configuration: ServerConfiguration(host: "", apiRoute: ""), Endpoint())
@@ -184,6 +177,7 @@ class SearchTests: XCTestCase {
         XCTAssertFalse(wasFired)
         
     }
+    
     func testDefaultSearchRemovesParam() {
         var wasFired = false
         let searcher = Searcher()

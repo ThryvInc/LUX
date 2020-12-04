@@ -36,26 +36,23 @@ public func lowercased(string: String) -> String { return string.lowercased() }
 public func lowercased(string: String?) -> String? { return string?.lowercased() }
 
 public func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> String?, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
-    if let searchText = search {
-        if searchText.isEmpty {
-            return emptyMatcher()
-        }
-        if let text = modelToString(t) {
-            return matcher(searchText, text)
-        } else {
-            return nilMatcher()
-        }
+    if let text = modelToString(t) {
+        return defaultMatches(search, text, nilMatcher, emptyMatcher, matcher)
     } else {
         return nilMatcher()
     }
 }
 
 public func defaultIsIncluded<T>(_ search: String?, _ t: T, _ modelToString: (T) -> String, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
+    return defaultMatches(search, modelToString(t), nilMatcher, emptyMatcher, matcher)
+}
+
+public func defaultMatches(_ search: String?, _ text: String, _ nilMatcher: () -> Bool, _ emptyMatcher: () -> Bool, _ matcher: (String, String) -> Bool) -> Bool {
     if let searchText = search {
         if searchText.isEmpty {
             return emptyMatcher()
         }
-        return matcher(searchText, modelToString(t))
+        return matcher(searchText, text)
     } else {
         return nilMatcher()
     }
@@ -80,11 +77,6 @@ public func matcher(for strategy: MatchStrategy) -> (String, String) -> Bool {
     return matcher
 }
 
-public enum CaseSensitivity {
-    case caseInsensitive
-    case caseSensitive
-}
-
 public enum NilAndEmptyMatchStrategy {
     case allMatchNilAndEmpty
     case allMatchNilNoneMatchEmpty
@@ -92,8 +84,8 @@ public enum NilAndEmptyMatchStrategy {
     case noneMatchNilNoneMatchEmpty
 }
 
-public func returnTrue() -> Bool { true }
-public func returnFalse() -> Bool { true }
+public let returnTrue = returnValue(true)
+public let returnFalse = returnValue(false)
 
 public func nilAndEmptyMatchers(for strategy: NilAndEmptyMatchStrategy) -> (() -> Bool, () -> Bool) {
     let nilMatcher: () -> Bool
@@ -103,8 +95,8 @@ public func nilAndEmptyMatchers(for strategy: NilAndEmptyMatchStrategy) -> (() -
         nilMatcher = returnTrue
         emptyMatcher = returnTrue
     case .allMatchNilNoneMatchEmpty:
-        nilMatcher = returnFalse
-        emptyMatcher = returnTrue
+        nilMatcher = returnTrue
+        emptyMatcher = returnFalse
     case .noneMatchNilAllMatchEmpty:
         nilMatcher = returnFalse
         emptyMatcher = returnTrue

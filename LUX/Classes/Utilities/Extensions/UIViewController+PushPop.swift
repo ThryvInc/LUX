@@ -8,6 +8,50 @@
 import UIKit
 
 public extension UIViewController {
+    func pushClosure() -> (UIViewController) -> Void {
+        return { [weak self] vc in
+            self?.pushAnimated(vc)
+        }
+    }
+    
+    func popClosure() -> () -> Void {
+        return { [weak self] in
+            self?.popAnimated()
+        }
+    }
+    
+    func presentClosure() -> (UIViewController) -> Void {
+        return { [weak self] vc in
+            self?.presentAnimated(vc)
+        }
+    }
+    
+    func dismissClosure() -> ((() -> Void)?) -> Void {
+        return { [weak self] completion in
+            self?.dismissAnimated(completion)
+        }
+    }
+    
+    func tabPushClosure() -> (UIViewController) -> Void {
+        return { [weak self] vc in
+            self?.tabPushAnimated(vc)
+        }
+    }
+    
+    func tabPopClosure() -> () -> Void {
+        return { [weak self] in
+            self?.tabPopAnimated()
+        }
+    }
+    
+    func tabPresentClosure() -> (UIViewController) -> Void {
+        return { [weak self] vc in
+            self?.tabPresentAnimated(vc)
+        }
+    }
+}
+
+public extension UIViewController {
     func pushAnimated(_ vc: UIViewController) {
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -18,6 +62,10 @@ public extension UIViewController {
     
     func presentAnimated(_ vc: UIViewController) {
         present(vc, animated: true, completion: nil)
+    }
+    
+    func dismissAnimated(_ completion: (() -> Void)?) {
+        self.dismiss(animated: true, completion: completion)
     }
     
     func tabContainer() -> UITabBarController? {

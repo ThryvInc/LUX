@@ -10,6 +10,7 @@ import Combine
 import FunNet
 import Slippers
 import Prelude
+import LithoOperators
 
 public protocol LUXLoginInputs {
     func usernameChanged(username: String?)
@@ -64,12 +65,9 @@ open class LUXLoginViewModel: LUXLoginProtocol, LUXLoginInputs, LUXLoginOutputs 
             advanceAuthedPublisher = advanceAuthed.eraseToAnyPublisher()
         }
         
-        submitButtonEnabledPublisher = self.viewDidLoadProperty
-            .map { _ in false }.eraseToAnyPublisher()
-        
-        submitButtonEnabledPublisher = submitButtonEnabledPublisher.merge(with: Publishers.CombineLatest($username, $password).map(type(of: self).isCredsPresent(username:password:)).eraseToAnyPublisher(),
+        submitButtonEnabledPublisher = viewDidLoadProperty.map(returnValue(false)).eraseToAnyPublisher()
+        submitButtonEnabledPublisher = Publishers.Merge(Publishers.CombineLatest($username, $password).map(type(of: self).isCredsPresent(username:password:)).eraseToAnyPublisher(),
             self.activityIndicatorVisiblePublisher.map({ visible in !visible}).eraseToAnyPublisher()).eraseToAnyPublisher()
-        
             
         submitButtonPressedProperty.sink { _ in
             let model = loginModelToJson(self.username, self.password)

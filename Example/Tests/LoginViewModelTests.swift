@@ -27,6 +27,33 @@ class LoginViewModelTests: XCTestCase {
         XCTAssert(wasCalled)
         cancel.cancel()
     }
+    
+    func testSubmitButtonEnabledOnLoadWhenCredsPresent() {
+        var wasCalled = false
+        var wasEnabled = false
+        
+        let viewModel = LUXLoginViewModel(credsCall: CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint()), loginModelToJson: { _, _ in Human() })
+        
+        let cancel = viewModel.outputs.submitButtonEnabledPublisher.sink { enable in
+            wasEnabled = enable
+            wasCalled = true
+        }
+        
+        XCTAssert(wasCalled)
+        XCTAssert(!wasEnabled)
+        
+        viewModel.inputs.usernameChanged(username: "username")
+        viewModel.inputs.passwordChanged(password: "password")
+        
+        XCTAssert(wasCalled)
+        XCTAssert(wasEnabled)
+        
+        viewModel.inputs.viewDidLoad()
+        
+        XCTAssert(wasEnabled)
+        
+        cancel.cancel()
+    }
 
     func testSubmitButtonDisabledOnEmptyCredentials() {
         var wasCalled = false
@@ -73,7 +100,7 @@ class LoginViewModelTests: XCTestCase {
         let viewModel = LUXLoginViewModel(credsCall: CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: "api/v1"), Endpoint()),
                                            loginModelToJson: { _, _ in Human() })
         
-        let cancel = viewModel.outputs.submitButtonEnabledPublisher.sinkThrough { enable in
+        let cancel = viewModel.outputs.submitButtonEnabledPublisher.sink { enable in
             XCTAssertFalse(enable)
             if wasCalled {
                 wasCalledTwice = !enable
@@ -96,7 +123,7 @@ class LoginViewModelTests: XCTestCase {
         
         let cancel = viewModel.outputs.submitButtonEnabledPublisher.sinkThrough { enable in
             callCount += 1
-            if callCount != 3 {
+            if callCount != 2 {
                 XCTAssertFalse(enable)
             }
         }
@@ -106,7 +133,7 @@ class LoginViewModelTests: XCTestCase {
         viewModel.inputs.passwordChanged(password: "password")
         viewModel.activityIndicatorVisibleSubject.send(true)
         
-        XCTAssertEqual(callCount, 4)
+        XCTAssertEqual(callCount, 3)
         cancel.cancel()
     }
 
@@ -139,7 +166,7 @@ class LoginViewModelTests: XCTestCase {
         
         let cancel = viewModel.outputs.submitButtonEnabledPublisher.sinkThrough { enable in
             callCount += 1
-            if callCount < 7 {
+            if callCount < 6 {
                 XCTAssertFalse(enable)
             } else {
                 XCTAssert(enable)
@@ -155,7 +182,7 @@ class LoginViewModelTests: XCTestCase {
         viewModel.inputs.usernameChanged(username: "elliot")
         viewModel.activityIndicatorVisibleSubject.send(false)
         
-        XCTAssertEqual(callCount, 8)
+        XCTAssertEqual(callCount, 7)
         cancel.cancel()
     }
 
