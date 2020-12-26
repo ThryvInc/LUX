@@ -10,6 +10,7 @@ import XCTest
 import Combine
 @testable import LUX
 import LithoOperators
+import fuikit
 import FunNet
 import Slippers
 
@@ -221,6 +222,15 @@ class SearchTests: XCTestCase {
         }
         XCTAssert(wasCalled)
     }
+  
+  func testSaveSearchBarText() {
+    let searchVC = LUXSearchViewController<LUXSearchViewModel<Human>, Human>()
+    let searchBar = UISearchBar()
+    searchVC.searchBar = searchBar
+    searchVC.searchBar?.text = "Hello"
+    searchVC.viewWillDisappear(false)
+    XCTAssert(searchVC.searchViewModel?.savedSearch == "Hello")
+  }
 }
 
 class Searcher: LUXSearchable {
