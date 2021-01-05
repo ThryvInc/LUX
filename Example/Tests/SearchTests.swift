@@ -15,7 +15,7 @@ import FunNet
 import Slippers
 
 class SearchTests: XCTestCase {
-
+    
     func testSearch() {
         var count = 0
         
@@ -74,7 +74,7 @@ class SearchTests: XCTestCase {
         XCTAssertEqual(count, 6)
         cancel.cancel()
     }
-
+    
     func testSearchString() {
         var count = 0
         
@@ -222,15 +222,45 @@ class SearchTests: XCTestCase {
         }
         XCTAssert(wasCalled)
     }
-  
-  func testSaveSearchBarText() {
-    let searchVC = LUXSearchViewController<LUXSearchViewModel<Human>, Human>()
-    let searchBar = UISearchBar()
-    searchVC.searchBar = searchBar
-    searchVC.searchBar?.text = "Hello"
-    searchVC.viewWillDisappear(false)
-    XCTAssert(searchVC.searchViewModel?.savedSearch == "Hello")
-  }
+    
+    func testSaveSearchBarText() {
+        let searchVC = LUXSearchViewController<LUXSearchViewModel<Human>, Human>()
+        let searchBar = UISearchBar()
+        searchVC.searchBar = searchBar
+        searchVC.viewDidLoad()
+        XCTAssert((searchVC.searchBar?.delegate as? FUISearchBarDelegate) != nil)
+        searchVC.viewWillAppear(true)
+        XCTAssert(searchVC.shouldRefresh)
+        searchVC.searchBar?.text = "Hello"
+        searchVC.viewWillDisappear(false)
+        XCTAssert(searchVC.searchViewModel?.savedSearch == "Hello")
+        searchVC.viewWillAppear(true)
+        XCTAssert(searchVC.searchBar?.text == "Hello")
+        searchVC.clearSearchBar()
+        XCTAssert(searchVC.searchBar?.text == "")
+        
+        let searchCollectionVC = LUXSearchCollectionViewController<LUXSearchViewModel<Human>>()
+        searchCollectionVC.searchBar = searchBar
+        searchCollectionVC.searchBar?.text = "Hello"
+        searchCollectionVC.viewDidLoad()
+        XCTAssert(searchCollectionVC.searchViewModel != nil)
+        XCTAssert((searchCollectionVC.searchBar?.delegate as? FUISearchBarDelegate) != nil)
+        searchCollectionVC.viewWillDisappear(true)
+        XCTAssert(searchCollectionVC.searchViewModel?.savedSearch == "Hello")
+        searchCollectionVC.viewWillAppear(true)
+        XCTAssert(searchCollectionVC.searchBar?.text == "Hello")
+    }
+    
+    func testSearchViewModel() {
+        let vm = LUXSearchViewModel<Human>()
+        let humans = [Human(id: 123, name: "Calvin Collins"), Human(id: 123, name: "Elliot Schrock")]
+        let searcher = LUXSearcher<Human>(^\.name, .allMatchNilAndEmpty, .prefix)
+        vm.onIncrementalSearch = { text in
+            searcher.updateIncrementalSearch(text: text)
+        }
+        XCTAssert(vm.onIncrementalSearch != nil)
+        
+    }
 }
 
 class Searcher: LUXSearchable {
