@@ -255,11 +255,24 @@ class SearchTests: XCTestCase {
         let vm = LUXSearchViewModel<Human>()
         let humans = [Human(id: 123, name: "Calvin Collins"), Human(id: 123, name: "Elliot Schrock")]
         let searcher = LUXSearcher<Human>(^\.name, .allMatchNilAndEmpty, .prefix)
+        let searcher2 = LUXSearcher<Human>({$0.name!}, .allMatchNilAndEmpty, .prefix)
         vm.onIncrementalSearch = { text in
             searcher.updateIncrementalSearch(text: text)
         }
+        vm.onFullSearch = { text in
+            searcher.updateSearch(text: text)
+        }
         XCTAssert(vm.onIncrementalSearch != nil)
+        XCTAssert(vm.onFullSearch != nil)
         
+        searcher.updateSearch(text: "search text")
+        searcher.updateIncrementalSearch(text: "incremental text")
+        searcher2.updateSearch(text: "search text")
+        searcher2.updateIncrementalSearch(text: "incremental text")
+        XCTAssertEqual(searcher.searchText!, "search text")
+        XCTAssertEqual(searcher.incrementalSearchText!, "incremental text")
+        XCTAssertEqual(searcher2.searchText!, "search text")
+        XCTAssertEqual(searcher2.incrementalSearchText!, "incremental text")
     }
 }
 

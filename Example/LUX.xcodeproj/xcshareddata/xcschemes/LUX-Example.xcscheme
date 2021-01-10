@@ -62,6 +62,16 @@
                ReferencedContainer = "container:LUX.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6418E0C525AA75850050BEFB"
+               BuildableName = "LUX_ExampleUITests.xctest"
+               BlueprintName = "LUX_ExampleUITests"
+               ReferencedContainer = "container:LUX.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

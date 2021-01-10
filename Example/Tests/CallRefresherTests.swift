@@ -33,4 +33,18 @@ class CallRefresherTests: XCTestCase {
             XCTAssert(refresher.isFetching)
         }
     }
+    
+    func testNetCallsRefresher() {
+        var firstCalled: Bool = false
+        var secondCalled: Bool = false
+        let call1: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "https://lithobyte.co", apiRoute: "/v1/api"), Endpoint())
+        let call2: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "https://lithobyte.co", apiRoute: "/v1/api"), Endpoint())
+        call1.firingFunc = { _ in firstCalled = true }
+        call2.firingFunc = { _ in secondCalled = true }
+        
+        let callRefresher = LUXNetCallsRefresher(call1, call2)
+        callRefresher.refresh()
+        
+        XCTAssertTrue(firstCalled && secondCalled)
+    }
 }

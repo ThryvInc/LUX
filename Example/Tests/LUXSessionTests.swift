@@ -19,6 +19,17 @@ class LUXSessionTests: XCTestCase {
         var endpoint = Endpoint()
         authorize(&endpoint)
         XCTAssert(endpoint.httpHeaders["Authorization"] == "abcdefg")
+        session.clearAuthValue()
+        XCTAssertTrue(session.authHeaders()?["Authorization"] == "")
+    }
+    
+    func testLUXMultiHeaderSession() {
+        let session = LUXMultiHeaderDefaultsSession(host: "host", authHeaders: [:])
+        session.setAuthHeaders(authString: "abcdefg")
+        LUXSessionManager.primarySession = session
+        UserDefaults.standard.setValue(["Authorization": "abcdefg"], forKey: "host")
+        XCTAssertEqual(session.authHeaders(), ["Authorization": "abcdefg"])
+        XCTAssertTrue(session.isAuthenticated())
     }
 
 }
