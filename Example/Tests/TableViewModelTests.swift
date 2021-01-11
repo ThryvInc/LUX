@@ -10,6 +10,7 @@ import XCTest
 @testable import LUX
 import Combine
 import Prelude
+import LithoOperators
 import FunNet
 
 class TableModelViewModelTests: XCTestCase {
@@ -79,4 +80,43 @@ class RefreshableTableViewModelTests: XCTestCase {
         vm.sectionsPublisher.sinkThrough({ XCTAssert($0.count > 0)}).cancel()
         
     }
+    
+//    func testUnwrapPageableTableViewModel() {
+//        let call: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "https://lithobyte.co", apiRoute: "/v1/api"), Endpoint())
+//        let configurer: (Human, UITableViewCell) -> Void = {
+//            humanConfigurer($0)($1)
+//        }
+//        let getHumans: (HumanHolder) -> [Human] = ^\HumanHolder.humans
+//        let vm: LUXItemsTableViewModel = pageableTableViewModel(call, modelUnwrapper: getHumans, configurer, { _ in })
+//    }
+    
+    func testRefreshableTableViewModel() {
+        let call: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "https://lithobyte.co", apiRoute: "/v1/api"), Endpoint())
+        call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
+        let configurer: (Human, UITableViewCell) -> Void = {
+            humanConfigurer($0)($1)
+        }
+        
+        var wasTapped: Bool = false
+        let vm: LUXRefreshableTableViewModel = refreshableTableViewModel(call, configurer, { _ in
+            wasTapped = true
+        })
+        vm.refresh()
+    }
+    
+//    func testUnwrapRefreshableTableViewModel() {
+//        struct HumanHolder: Codable {
+//            var humans: [Human]
+//        }
+//        let call: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "https://lithobyte.co", apiRoute: "/v1/api"), Endpoint())
+//        call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
+//        let configurer: (Human, UITableViewCell) -> Void = {
+//            humanConfigurer($0)($1)
+//        }
+//        let getHumans: (HumanHolder) -> [Human] = ^\HumanHolder.humans
+//        let vm: LUXRefreshableTableViewModel = refreshableTableViewModel(call, modelUnwrapper: getHumans, configurer, { _ in
+//            
+//        })
+//        vm.refresh()
+//    }
 }

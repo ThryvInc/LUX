@@ -10,8 +10,9 @@ import XCTest
 @testable import LUX
 import LithoOperators
 import FunNet
-
-
+import Combine
+import Prelude
+import FlexDataSource
 let setBackground: (UICollectionViewCell) -> Void = set(\UICollectionViewCell.backgroundColor, .gray)
 let configurer: (Human, UICollectionViewCell) -> Void = ignoreFirstArg(f: setBackground)
 
@@ -115,6 +116,12 @@ class CollectionViewModelItemTests: XCTestCase {
         delegate.onDidSelectItem(UICollectionView(frame: .zero, collectionViewLayout: .init()), IndexPath(row: 0, section: 0))
         
         XCTAssert(wasSelected && willDisplay)
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
+        collectionView.delegate = delegate
+        delegate.collectionView(collectionView, didSelectItemAt: IndexPath(row: 3, section: 3))
+        delegate.collectionView(collectionView, willDisplay: UICollectionViewCell(), forItemAt: IndexPath(row: 3, section: 3))
+        
+        XCTAssertTrue(!(wasSelected || willDisplay))
         
         let delegateTwo = LUXCollectionDelegate()
         delegateTwo.onDidSelectItem = onDidSelectItem
@@ -123,8 +130,54 @@ class CollectionViewModelItemTests: XCTestCase {
         delegateTwo.onWillDisplayCell(UICollectionView(frame: .zero, collectionViewLayout: .init()), UICollectionViewCell(), IndexPath(row: 0, section: 0))
         delegateTwo.onDidSelectItem(UICollectionView(frame: .zero, collectionViewLayout: .init()), IndexPath(row: 0, section: 0))
         
-        XCTAssert(!(wasSelected || willDisplay))
+        XCTAssert(wasSelected && willDisplay)
         
         
     }
+    
+    func testSectionsCollectionViewModel() {
+        let refresher = LUXCallRefresher(CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: nil), Endpoint()))
+        let publisher = PassthroughSubject<[FlexCollectionSection], Never>().eraseToAnyPublisher()
+        let _ = LUXSectionsCollectionViewModel(refresher, publisher)
+    }
+    
+    func testItemsCollectionViewModel() {
+        let refresher = LUXCallRefresher(CombineNetCall(configuration: ServerConfiguration(host: "lithobyte.co", apiRoute: nil), Endpoint()))
+        let publisher = PassthroughSubject<[FlexCollectionItem], Never>().eraseToAnyPublisher()
+        let _ = LUXItemsCollectionViewModel(refresher, itemsPublisher: publisher, toSections: { items in
+            return [FlexCollectionSection(title: "Title", items: items)]
+        })
+    }
+    
+    func testFuncRefreshableCVM() {
+        let humanCollectionViewCell: (Human, UICollectionViewCell) -> Void = {
+            $1.backgroundColor = .black
+        }
+        let call: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "https://lithobyte.co", apiRoute: "/v1/api"), Endpoint())
+        call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
+        
+        let vm = refreshableCollectionViewModel(call, id, humanCollectionViewCell, { _ in
+            
+        })
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        vm.collectionView = collectionView
+        vm.configureCollectionView()
+    }
+    
+    func testFuncPageableCVM() {
+        let humanCollectionViewCell: (Human, UICollectionViewCell) -> Void = {
+            $1.backgroundColor = .black
+        }
+        let call: CombineNetCall = CombineNetCall(configuration: ServerConfiguration(host: "https://lithobyte.co", apiRoute: "/v1/api"), Endpoint())
+        call.firingFunc = { $0.responder?.data = json.data(using: .utf8) }
+        
+        let vm = pageableCollectionViewModel(call, id, humanCollectionViewCell, { _ in })
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        vm.collectionView = collectionView
+        vm.configureCollectionView()
+    }
 }
+
+

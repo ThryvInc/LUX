@@ -21,7 +21,15 @@ let parseHuman: (Data) -> [Human]? = {
 let encodeHuman: ([Human]) -> Data? = {
     return try? JSONEncoder().encode($0)
 }
+let encodeHumanHolder: (HumanHolder) -> Data? = {
+    return try? JSONEncoder().encode($0)
+}
 let json:String = String(data: encodeHuman(humans)!, encoding: .utf8)!
+let jsonHolder: String = String(data: encodeHumanHolder(HumanHolder(humans: humans))!, encoding: .utf8)!
+struct HumanHolder: Codable {
+    var humans: [Human]
+}
+
 
 class CallRefresherTests: XCTestCase {
     func testRefresh() {

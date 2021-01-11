@@ -31,12 +31,14 @@ class SplashViewModelTests: XCTestCase {
         
         let vm = MyViewModel(minimumVisibleTime: 10, nil, nil, otherTasks: nil)
         XCTAssertEqual(vm.semaphore, 2)
-        vm.viewDidLoad()
-        vm.viewDidAppear()
-        vm.viewWillAppear()
-        XCTAssertTrue(vm.loadCalled)
-        XCTAssertTrue(vm.didAppearCalled)
-        XCTAssertTrue(vm.willAppearCalled)
+        
+        let vc = LUXSplashViewController()
+        vc.viewModel = vm
+        vc.viewDidLoad()
+        vc.viewWillAppear(true)
+        vc.viewDidAppear(true)
+        
+        XCTAssertTrue(vm.loadCalled && vm.didAppearCalled && vm.willAppearCalled)
     }
 
     func testAdvanceAuthed() {

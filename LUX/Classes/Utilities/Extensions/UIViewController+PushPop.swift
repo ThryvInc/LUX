@@ -83,6 +83,10 @@ public extension UIViewController {
     func tabPresentAnimated(_ vc: UIViewController) {
         tabBarController?.present(vc, animated: true, completion: nil)
     }
+    
+    func tabDismissAnimated(_ vc: UIViewController) {
+        vc.dismiss(animated: true, completion: nil)
+    }
 }
 
 public func pushAnimated<T>(_ pusher: T, _ pushee: UIViewController) where T: UIViewController {
