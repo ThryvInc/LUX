@@ -93,7 +93,12 @@ vc.refreshableModelManager = refreshManager
 
 let viewModel = LUXModelListViewModel(modelsPublisher: searcher.filteredIncrementalPublisher(from: modelsSignal), modelToItem: buildHouseConfigurator >>> configuratorToItem)
 vc.viewModel = viewModel
-vc.tableViewDelegate = FUITableViewDelegate(onSelect: viewModel.dataSource.tappableOnSelect)
+vc.tableViewDelegate = FUITableViewDelegate(onSelect: viewModel.flexDataSource.tappableOnSelect)
 
-PlaygroundPage.current.liveView = vc
+let nc = UINavigationController(rootViewController: vc)
+PlaygroundPage.current.liveView = nc
 PlaygroundPage.current.needsIndefiniteExecution = true
+
+let nextVC = UIViewController()
+nc.pushViewController(nextVC, animated: true)
+

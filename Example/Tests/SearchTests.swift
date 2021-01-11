@@ -10,11 +10,12 @@ import XCTest
 import Combine
 @testable import LUX
 import LithoOperators
+import fuikit
 import FunNet
 import Slippers
 
 class SearchTests: XCTestCase {
-
+    
     func testSearch() {
         var count = 0
         
@@ -73,7 +74,7 @@ class SearchTests: XCTestCase {
         XCTAssertEqual(count, 6)
         cancel.cancel()
     }
-
+    
     func testSearchString() {
         var count = 0
         
@@ -220,6 +221,58 @@ class SearchTests: XCTestCase {
             function(UISearchBar())
         }
         XCTAssert(wasCalled)
+    }
+    
+    func testSaveSearchBarText() {
+        let searchVC = LUXSearchViewController<LUXSearchViewModel<Human>, Human>()
+        let searchBar = UISearchBar()
+        searchVC.searchBar = searchBar
+        searchVC.viewDidLoad()
+        XCTAssert((searchVC.searchBar?.delegate as? FUISearchBarDelegate) != nil)
+        searchVC.viewWillAppear(true)
+        XCTAssert(searchVC.shouldRefresh)
+        searchVC.searchBar?.text = "Hello"
+        searchVC.viewWillDisappear(false)
+        XCTAssert(searchVC.searchViewModel?.savedSearch == "Hello")
+        searchVC.viewWillAppear(true)
+        XCTAssert(searchVC.searchBar?.text == "Hello")
+        searchVC.clearSearchBar()
+        XCTAssert(searchVC.searchBar?.text == "")
+        
+        let searchCollectionVC = LUXSearchCollectionViewController<LUXSearchViewModel<Human>>()
+        searchCollectionVC.searchBar = searchBar
+        searchCollectionVC.searchBar?.text = "Hello"
+        searchCollectionVC.viewDidLoad()
+        XCTAssert(searchCollectionVC.searchViewModel != nil)
+        XCTAssert((searchCollectionVC.searchBar?.delegate as? FUISearchBarDelegate) != nil)
+        searchCollectionVC.viewWillDisappear(true)
+        XCTAssert(searchCollectionVC.searchViewModel?.savedSearch == "Hello")
+        searchCollectionVC.viewWillAppear(true)
+        XCTAssert(searchCollectionVC.searchBar?.text == "Hello")
+    }
+    
+    func testSearchViewModel() {
+        let vm = LUXSearchViewModel<Human>()
+        let humans = [Human(id: 123, name: "Calvin Collins"), Human(id: 123, name: "Elliot Schrock")]
+        let searcher = LUXSearcher<Human>(^\.name, .allMatchNilAndEmpty, .prefix)
+        let searcher2 = LUXSearcher<Human>({$0.name!}, .allMatchNilAndEmpty, .prefix)
+        vm.onIncrementalSearch = { text in
+            searcher.updateIncrementalSearch(text: text)
+        }
+        vm.onFullSearch = { text in
+            searcher.updateSearch(text: text)
+        }
+        XCTAssert(vm.onIncrementalSearch != nil)
+        XCTAssert(vm.onFullSearch != nil)
+        
+        searcher.updateSearch(text: "search text")
+        searcher.updateIncrementalSearch(text: "incremental text")
+        searcher2.updateSearch(text: "search text")
+        searcher2.updateIncrementalSearch(text: "incremental text")
+        XCTAssertEqual(searcher.searchText!, "search text")
+        XCTAssertEqual(searcher.incrementalSearchText!, "incremental text")
+        XCTAssertEqual(searcher2.searchText!, "search text")
+        XCTAssertEqual(searcher2.incrementalSearchText!, "incremental text")
     }
 }
 
