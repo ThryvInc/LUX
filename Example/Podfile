@@ -5,6 +5,7 @@ target 'LUX_Example' do
   pod 'LUX', :path => '../'
   pod 'PlaygroundVCHelpers', git: 'https://github.com/ThryvInc/playground-vc-helpers'
   pod 'FunNet/Combine', git: 'https://github.com/schrockblock/funnet'
+  pod 'FunNet/Multipart', git: 'https://github.com/schrockblock/funnet'
   pod 'Slippers', git: 'https://github.com/ThryvInc/slippers'
   pod 'LithoOperators', git: 'https://github.com/ThryvInc/LithoOperators'
   pod 'FlexDataSource', git: 'https://github.com/ThryvInc/flex-data-source'

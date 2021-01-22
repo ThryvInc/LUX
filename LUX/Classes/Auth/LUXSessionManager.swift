@@ -12,6 +12,7 @@ import Foundation
     @objc var host: String { get }
     
     @objc func isAuthenticated() -> Bool
+    @objc func clearAuth()
 }
 
 open class LUXSessionManager: NSObject {
@@ -25,40 +26,6 @@ open class LUXSessionManager: NSObject {
             }
         }
         return nil
-    }
-}
-
-open class LUXMultiHeaderDefaultsSession: LUXSession {
-    public let host: String
-    public let headers: [String: String]
-    
-    public init(host: String, authHeaders: [String: String]) {
-        self.host = host
-        self.headers = authHeaders
-    }
-    
-    open func authHeaders() -> [String: String]? {
-        return UserDefaults.standard.dictionary(forKey: host) as? [String: String]
-    }
-    
-    open func setAuthHeaders(authString: String) {
-        UserDefaults.standard.set(authString, forKey: host)
-        UserDefaults.standard.synchronize()
-    }
-    
-    open func isAuthenticated() -> Bool {
-        if let headers = UserDefaults.standard.dictionary(forKey: host) as? [String: String] {
-            if headers.keys.count == 0 { return false }
-            for key in headers.keys {
-                if let value = headers[key] {
-                    if value.isEmpty { return false }
-                } else {
-                    return false
-                }
-            }
-            return true
-        }
-        return false
     }
 }
 
@@ -82,13 +49,53 @@ open class LUXAppGroupUserDefaultsSession: LUXSession {
         userDefaults.synchronize()
     }
 
-    open func clearAuthValue() {
+    open func clearAuth() {
         userDefaults.removeObject(forKey: host)
     }
     
     open func isAuthenticated() -> Bool {
         let apiKey = userDefaults.string(forKey: host)
         return apiKey != nil && apiKey != ""
+    }
+}
+
+open class LUXMultiHeaderDefaultsSession: LUXSession {
+    public let host: String
+    public let headers: [String: String]
+    public let userDefaults: UserDefaults
+    
+    public init(host: String, authHeaders: [String: String], userDefaults: UserDefaults = UserDefaults.standard) {
+        self.host = host
+        self.headers = authHeaders
+        self.userDefaults = userDefaults
+    }
+    
+    open func authHeaders() -> [String: String]? {
+        return userDefaults.dictionary(forKey: host) as? [String: String]
+    }
+    
+    open func setAuthHeaders(authString: String) {
+        userDefaults.set(authString, forKey: host)
+        userDefaults.synchronize()
+    }
+    
+    open func clearAuth() {
+        userDefaults.removeObject(forKey: host)
+    }
+    
+    open func isAuthenticated() -> Bool {
+        if let headers = userDefaults.dictionary(forKey: host) as? [String: String] {
+            if headers.keys.count == 0 { return false }
+            for key in headers.keys {
+                if let value = headers[key] {
+                    if value.isEmpty { return false }
+                } else {
+                    return false
+                }
+            }
+            return true
+        }
+        return false
     }
 }
 
