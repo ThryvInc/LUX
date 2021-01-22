@@ -11,6 +11,7 @@ import XCTest
 
 class MyFlowCoordinator: LUXFlowCoordinator {
     var tag: Int?
+    public var initialViewController: UIViewController? { initialVC() }
     func initialVC() -> UIViewController? {
         let vc = UIViewController()
         guard let tag = tag else { return nil }
@@ -20,6 +21,7 @@ class MyFlowCoordinator: LUXFlowCoordinator {
 }
 
 class MyFlowNavCoordinator: LUXFlowCoordinator {
+    public var initialViewController: UIViewController? { initialVC() }
     let navigationController: UINavigationController
     func initialVC() -> UIViewController? {
         return navigationController.topViewController

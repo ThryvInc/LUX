@@ -7,6 +7,12 @@
 
 import UIKit
 import fuikit
+import LithoOperators
+
+public let disableSubmitButton: (LUXResetPasswordViewController) -> Void = ^\.submitButton >?> set(\.isEnabled, false)
+public let enableSubmitButton: (LUXResetPasswordViewController) -> Void = ^\.submitButton >?> set(\.isEnabled, true)
+public let startActivity: (CanIndicateActivity) -> Void = { $0.indicateActivity() }
+public let stopActivity: (CanIndicateActivity) -> Void = { $0.activityFinished() }
 
 open class LUXResetPasswordViewController: FUIViewController {
     @IBOutlet open weak var newPasswordTextField: UITextField?
@@ -20,3 +26,4 @@ open class LUXResetPasswordViewController: FUIViewController {
         onSubmit?(self)
     }
 }
+extension LUXResetPasswordViewController: CanIndicateActivity {}

@@ -10,6 +10,7 @@ import Foundation
 open class LUXSplitFlowController<T, U>: LUXFlowCoordinator, UISplitViewControllerDelegate where T: LUXFlowCoordinator, U: LUXFlowCoordinator {
     public var leftFC: T!
     public var rightFC: U!
+    public var initialViewController: UIViewController? { initialVC() }
     
     open func initialVC() -> UIViewController? {
         let splitVC = UISplitViewController()

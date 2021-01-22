@@ -8,5 +8,6 @@
 import UIKit
 
 public protocol LUXFlowCoordinator: class {
+    var initialViewController: UIViewController? { get }
     func initialVC() -> UIViewController?
 }
