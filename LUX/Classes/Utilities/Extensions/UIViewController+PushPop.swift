@@ -49,6 +49,12 @@ public extension UIViewController {
             self?.tabPresentAnimated(vc)
         }
     }
+    
+    func showClosure() -> (UIViewController) -> Void {
+        return { [weak self] vc in
+            self?.show(vc, sender: self)
+        }
+    }
 }
 
 public extension UIViewController {

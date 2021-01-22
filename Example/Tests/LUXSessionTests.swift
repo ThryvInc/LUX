@@ -19,7 +19,7 @@ class LUXSessionTests: XCTestCase {
         var endpoint = Endpoint()
         authorize(&endpoint)
         XCTAssert(endpoint.httpHeaders["Authorization"] == "abcdefg")
-        session.clearAuthValue()
+        session.clearAuth()
         XCTAssertTrue(session.authHeaders()?["Authorization"] == "")
     }
     
