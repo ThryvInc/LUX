@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4913C59F25CA1A5B001C7EBA /* TextFitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4913C59E25CA1A5B001C7EBA /* TextFitsTests.swift */; };
 		49781239239DB84C007DFA9F /* PagingModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C366239C416900D59DF0 /* PagingModelsTests.swift */; };
 		4978123A239DB850007DFA9F /* PagingDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C367239C416900D59DF0 /* PagingDelegateTests.swift */; };
 		4978123B239DB854007DFA9F /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3C364239C416900D59DF0 /* LoginViewModelTests.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		1CDCE1150B473AE788C4BA83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4913C59E25CA1A5B001C7EBA /* TextFitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFitsTests.swift; sourceTree = "<group>"; };
 		491D44E2244A29F1009D6A3A /* SectionTableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SectionTableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4951271E2416E28700C42ED5 /* TableViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TableViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4978123D239DCC38007DFA9F /* RefreshCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCallTests.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				6418E0E725AAA3880050BEFB /* LUXOpenFlowControllerTests.swift */,
 				6418E0F825ABF1730050BEFB /* SplitFlowControllerTests.swift */,
 				6418E0FC25AC0AC50050BEFB /* FlexViewControllerTests.swift */,
+				4913C59E25CA1A5B001C7EBA /* TextFitsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				4978124A239DF285007DFA9F /* SinkThroughTests.swift in Sources */,
 				6418E0E825AAA3880050BEFB /* LUXOpenFlowControllerTests.swift in Sources */,
 				49781242239DCE78007DFA9F /* TestHelpers.swift in Sources */,
+				4913C59F25CA1A5B001C7EBA /* TextFitsTests.swift in Sources */,
 				49C9EF8B257AAEEE001D3EEE /* NilAndEmptyMatchStrategyTests.swift in Sources */,
 				49C9EF8F257AAFD4001D3EEE /* MatcherStrategyTests.swift in Sources */,
 				6418E0E025AA9E530050BEFB /* LUXCollectionViewCellTests.swift in Sources */,

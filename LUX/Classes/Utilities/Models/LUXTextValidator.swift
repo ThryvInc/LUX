@@ -62,3 +62,17 @@ open class LUXEmailTextValidator: LUXRegexTextValidator {
         regEx = "(?:[a-zA-Z0-9!#$%\\&‘*+/=?\\^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%\\&'*+/=?\\^_`{|}" + "~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\" + "x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-" + "z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5" + "]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-" + "9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21" + "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
     }
 }
+
+public func doesTextFit(in textView: UITextView, replacing range: NSRange, with text: String) -> Bool {
+    guard let font = textView.font else { return true }
+    
+    let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+
+    let magicNumber: CGFloat = 10 // found this through guessing and experiementation...
+    let rect = CGSize(width: textView.bounds.width - magicNumber, height: CGFloat.greatestFiniteMagnitude)
+    let textSize = newText.boundingRect(with: rect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font as Any], context: nil)
+    
+    let numberOfLines = textSize.height / font.lineHeight
+
+    return textSize.height < textView.bounds.height || numberOfLines < 2
+}
