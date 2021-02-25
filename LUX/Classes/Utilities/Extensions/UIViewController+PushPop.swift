@@ -14,6 +14,10 @@ public extension UIViewController {
         }
     }
     
+    var pushClosureProp: (UIViewController) -> Void {
+        return pushClosure()
+    }
+    
     func popClosure() -> () -> Void {
         return { [weak self] in
             self?.popAnimated()
@@ -24,6 +28,10 @@ public extension UIViewController {
         return { [weak self] vc in
             self?.presentAnimated(vc)
         }
+    }
+    
+    var presentClosureProp: (UIViewController) -> Void {
+        return presentClosure()
     }
     
     func dismissClosure() -> ((() -> Void)?) -> Void {
