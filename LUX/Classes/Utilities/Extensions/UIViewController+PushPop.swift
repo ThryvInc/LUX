@@ -14,6 +14,12 @@ public extension UIViewController {
         }
     }
     
+    func emptyBackClosure() -> (UIViewController) -> Void {
+        return { [weak self] vc in
+            self?.emptyBackButtonPush(vc)
+        }
+    }
+    
     func popClosure() -> () -> Void {
         return { [weak self] in
             self?.popAnimated()
@@ -62,6 +68,14 @@ public extension UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func emptyBackButtonPush(_ vc: UIViewController) {
+        let barButton = UIBarButtonItem()
+        barButton.title = " "
+        navigationItem.backBarButtonItem = barButton
+        
+        pushAnimated(vc)
+    }
+    
     func popAnimated() {
         navigationController?.popViewController(animated: true)
     }
@@ -97,6 +111,10 @@ public extension UIViewController {
 
 public func pushAnimated<T>(_ pusher: T, _ pushee: UIViewController) where T: UIViewController {
     pusher.pushAnimated(pushee)
+}
+
+public func emptyBackButtonPush<T>(_ pusher: T, _ pushee: UIViewController) where T: UIViewController {
+    pusher.emptyBackButtonPush(pushee)
 }
 
 public func popAnimated<T>(_ vc: T) where T: UIViewController {
