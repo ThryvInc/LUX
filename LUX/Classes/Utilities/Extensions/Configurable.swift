@@ -1,5 +1,5 @@
 //
-//  Configure.swift
+//  Configurable.swift
 //  LUX
 //
 //  Created by Elliot Schrock on 12/23/19.
@@ -7,10 +7,8 @@
 
 import Foundation
 
-public protocol Configure {}
-
-public extension Configure {
-    
+public protocol Configurable {}
+public extension Configurable {
     /// Makes it available to set properties with closures just after initializing.
     ///
     ///     let frame = UIView().configure {
@@ -22,4 +20,4 @@ public extension Configure {
         return copy
     }
 }
-
+extension NSObject: Configurable {}
