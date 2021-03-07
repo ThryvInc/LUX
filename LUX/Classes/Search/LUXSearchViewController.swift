@@ -61,7 +61,7 @@ open class LUXSearchViewController<T, U>: LUXFlexViewController<T> {
         searchViewModel?.savedSearch = searchBar?.text
     }
     
-    @objc func dismissKeyboard() {
+    @objc open func dismissKeyboard() {
         view.endEditing(true)
     }
     
