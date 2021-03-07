@@ -116,8 +116,8 @@ public func matchesPrefix(_ search: String, _ text: String) -> Bool {
 }
 
 public func matchesWordsPrefixes(_ search: String, _ text: String) -> Bool {
-    let textWords = text.components(separatedBy: CharacterSet.letters.inverted)
-    let searchWords = search.components(separatedBy: CharacterSet.letters.inverted)
+    let textWords = text.components(separatedBy: CharacterSet.alphanumerics.inverted)
+    let searchWords = search.components(separatedBy: CharacterSet.alphanumerics.inverted)
     for word in searchWords {
         var foundMatch = false
         for textWord in textWords {

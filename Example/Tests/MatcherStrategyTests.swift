@@ -18,6 +18,8 @@ class MatcherStrategyTests: XCTestCase {
     
     func testWordPrefixesMatcher() throws {
         XCTAssert(matchesWordsPrefixes("N A", "Neo Anderson"))
+        XCTAssert(matchesWordsPrefixes("1", "168"))
+        XCTAssertFalse(matchesWordsPrefixes("1", "Neo"))
         XCTAssertFalse(matchesWordsPrefixes("e A", "Neo Anderson"))
     }
     
