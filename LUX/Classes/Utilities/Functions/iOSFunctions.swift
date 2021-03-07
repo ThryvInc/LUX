@@ -7,7 +7,7 @@
 
 import Foundation
 
-public func ifSimulator(f: @escaping () -> Void) {
+public func ifSimulator(f: () -> Void) {
     #if targetEnvironment(simulator)
     f()
     #else
@@ -23,7 +23,7 @@ public func ifSimulator<T>(f: @escaping (T) -> Void) -> (T) -> Void {
     #endif
 }
 
-public func ifDevice(f: @escaping () -> Void) {
+public func ifDevice(f: () -> Void) {
     #if targetEnvironment(simulator)
     return
     #else
