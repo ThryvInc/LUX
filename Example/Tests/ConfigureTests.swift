@@ -12,12 +12,9 @@ import XCTest
 
 class ConfigureTests: XCTestCase {
     func testConfigure() {
-        let view = UIView()
-        view.configure {
+        let view = UIView().configure {
             $0.backgroundColor = .blue
         }
         XCTAssert(view.backgroundColor == .blue)
     }
 }
-
-extension UIView: Configure { }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension UIViewController {
+public extension UIViewController {
     func barButtonItem(for imageName: String, selector: Selector) -> UIBarButtonItem {
         let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
