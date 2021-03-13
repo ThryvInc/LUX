@@ -24,17 +24,17 @@ open class LUXLoginViewController: FUIViewController {
     
     open var loginViewModel: LUXLoginProtocol?
     
-    private var cancelBag = Set<AnyCancellable?>()
+    private var cancelBag = Set<AnyCancellable>()
     
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        cancelBag.insert(loginViewModel?.outputs.submitButtonEnabledPublisher.sink { enabled in
+        loginViewModel?.outputs.submitButtonEnabledPublisher.sink { enabled in
             self.loginButton?.isEnabled = enabled
-        })
-        cancelBag.insert(loginViewModel?.outputs.activityIndicatorVisiblePublisher.sink { (visible) in
+        }.store(in: &cancelBag)
+        loginViewModel?.outputs.activityIndicatorVisiblePublisher.sink { (visible) in
             self.spinner?.isHidden = !visible
-        })
+        }.store(in: &cancelBag)
         loginViewModel?.inputs.viewDidLoad()
     }
     
